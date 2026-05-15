@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/process/route": "app/api/process/route.js",
+  "/api/transcript/route": "app/api/transcript/route.js",
+  "/api/youtube-info/route": "app/api/youtube-info/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/tools/blog/page": "app/tools/blog/page.js",
+  "/tools/notes/page": "app/tools/notes/page.js",
+  "/tools/shorts/page": "app/tools/shorts/page.js",
+  "/tools/summary/page": "app/tools/summary/page.js",
+  "/tools/transcript/page": "app/tools/transcript/page.js"
+}
