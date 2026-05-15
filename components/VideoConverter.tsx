@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -123,6 +123,29 @@ function inlineFormat(text: string): string {
     .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
     .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-1 rounded text-sm font-mono">$1</code>')
 }
+// ─── Cookie-based usage tracker (persists across page refreshes) ─────────────
+const FREE_LIMIT = 3
+
+function getCookieKey(): string {
+  const today = new Date().toISOString().slice(0, 10)
+  return `ai_usage_${today}`
+}
+
+function getUsedFromCookie(): number {
+  if (typeof document === 'undefined') return 0
+  const key = getCookieKey()
+  const match = document.cookie.split(';').find(c => c.trim().startsWith(`${key}=`))
+  if (!match) return 0
+  return Math.min(parseInt(match.split('=')[1]) || 0, FREE_LIMIT)
+}
+
+function saveUsedToCookie(used: number): void {
+  if (typeof document === 'undefined') return
+  const key = getCookieKey()
+  const tomorrow = new Date()
+  tomorrow.setUTCHours(24, 0, 0, 0)
+  document.cookie = `${key}=${used}; expires=${tomorrow.toUTCString()}; path=/; SameSite=Strict`
+}
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function VideoConverter() {
@@ -134,10 +157,17 @@ export function VideoConverter() {
   const [error, setError] = useState('')
   const [copied, setCopied] = useState<ProcessingMode | null>(null)
   const [activeMode, setActiveMode] = useState<ProcessingMode>('transcript')
-  const [remaining, setRemaining] = useState<number>(3)
+  const [remaining, setRemaining] = useState<number>(FREE_LIMIT)
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
-  const FREE_LIMIT = 3
+
+  // Load usage from cookie on mount
+  useEffect(() => {
+    const used = getUsedFromCookie()
+    setUsedCount(used)
+    setRemaining(Math.max(0, FREE_LIMIT - used))
+    if (used >= FREE_LIMIT) setShowUpgrade(true)
+  }, [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -191,7 +221,10 @@ export function VideoConverter() {
 
       if (!res.ok) {
         if (data.error === 'rate_limit_exceeded') {
-          setUsedCount(data.used)
+          const used = FREE_LIMIT
+          setUsedCount(used)
+          setRemaining(0)
+          saveUsedToCookie(used)
           setShowUpgrade(true)
           return
         }
@@ -199,10 +232,13 @@ export function VideoConverter() {
         return
       }
 
-      // Update remaining count
+      // Update remaining count & persist to cookie
       if (typeof data.remaining === 'number') {
+        const used = data.limit - data.remaining
         setRemaining(data.remaining)
-        setUsedCount(data.limit - data.remaining)
+        setUsedCount(used)
+        saveUsedToCookie(used)
+        if (data.remaining <= 0) setShowUpgrade(true)
       }
 
       setResults((prev) => ({
