@@ -23,12 +23,15 @@ export const metadata: Metadata = {
     'VidText AI',
     'vidtextai',
   ],
-  metadataBase: new URL('https://vidtextai.com'),
+  metadataBase: new URL('https://www.vidtextai.com'),
+  verification: {
+    google: 'JoS2yB4WO0LSy_9GOdN7Vp47jM8z5pKKpcl40hHSDj8',
+  },
   openGraph: {
     title: 'VidText AI — YouTube Transcript & AI Content Platform',
     description: 'Convert YouTube videos to transcripts, summaries, blog posts, and more with AI.',
     type: 'website',
-    url: 'https://vidtextai.com',
+    url: 'https://www.vidtextai.com',
     siteName: 'VidText AI',
   },
   twitter: {
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     description: 'Convert YouTube videos to transcripts, summaries, blog posts, and more with AI.',
   },
   alternates: {
-    canonical: 'https://vidtextai.com',
+    canonical: 'https://www.vidtextai.com',
   },
 }
 
