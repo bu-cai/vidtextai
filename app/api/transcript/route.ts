@@ -91,15 +91,15 @@ export async function GET(req: NextRequest) {
     // Save to cache (fire and forget, don't block response)
     if (useCache) {
       const supabase = createServerClient()
-      Promise.all([
-        supabase.from('transcripts').upsert({
-          video_id: videoId,
-          full_text: transcript.fullText,
-          segments: transcript.transcript as unknown as never,
-          language: transcript.language,
-          source: transcript.source,
-        } as never),
-        info ? supabase.from('video_info').upsert({
+      void supabase.from('transcripts').upsert({
+        video_id: videoId,
+        full_text: transcript.fullText,
+        segments: transcript.transcript as unknown as never,
+        language: transcript.language,
+        source: transcript.source,
+      } as never)
+      if (info) {
+        void supabase.from('video_info').upsert({
           video_id: videoId,
           title: info.title,
           channel_name: info.channelName,
@@ -109,8 +109,8 @@ export async function GET(req: NextRequest) {
           thumbnail_url: info.thumbnailUrl,
           description: info.description,
           view_count: info.viewCount || null,
-        } as never) : Promise.resolve(),
-      ]).catch((e) => console.warn('Cache write failed:', e))
+        } as never)
+      }
     }
 
     return NextResponse.json({ ...transcript, videoInfo: info, cached: false })

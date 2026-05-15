@@ -106,11 +106,11 @@ export async function POST(req: NextRequest) {
       transcriptText = result.fullText
       if (useCache) {
         const supabase = createServerClient()
-        supabase.from('transcripts').upsert({
+        void supabase.from('transcripts').upsert({
           video_id: videoId, full_text: result.fullText,
           segments: result.transcript as unknown as never,
           language: result.language, source: result.source,
-        } as never).catch(() => {})
+        } as never)
       }
     }
 
@@ -138,9 +138,9 @@ export async function POST(req: NextRequest) {
     // ── Cache result ──────────────────────────────────────────────────────
     if (useCache && !customPrompt) {
       const supabase = createServerClient()
-      supabase.from('processed_results').insert({
+      void supabase.from('processed_results').insert({
         video_id: videoId, mode, provider, content, language: language || 'en',
-      } as never).catch(() => {})
+      } as never)
     }
 
     return NextResponse.json({
