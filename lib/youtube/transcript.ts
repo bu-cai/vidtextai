@@ -1,17 +1,53 @@
 import { TranscriptResult, TranscriptSegment } from '@/types'
 
+// ── Method 0: Supadata.ai API (handles YouTube IP blocking) ──────────────────
+async function fetchViaSupadata(videoId: string): Promise<TranscriptSegment[]> {
+  const apiKey = process.env.SUPADATA_API_KEY
+  if (!apiKey) throw new Error('SUPADATA_API_KEY not configured')
+
+  const res = await fetch(
+    `https://api.supadata.ai/v1/youtube/transcript?videoId=${videoId}`,
+    {
+      headers: {
+        'x-api-key': apiKey,
+        'Content-Type': 'application/json',
+      },
+    }
+  )
+
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Supadata error ${res.status}: ${text}`)
+  }
+
+  const data = await res.json()
+
+  // Supadata returns { content: [{text, offset, duration}] }
+  const items: Array<{ text: string; offset: number; duration: number }> =
+    data.content ?? data.transcript ?? []
+
+  if (!items.length) throw new Error('Supadata returned empty transcript')
+
+  return items.map((item) => ({
+    text: item.text,
+    start: (item.offset ?? 0) / 1000,
+    duration: (item.duration ?? 0) / 1000,
+  }))
+}
+
+// ── Method 1: youtube-transcript npm package ─────────────────────────────────
 async function fetchViaYoutubeTranscriptApi(videoId: string): Promise<TranscriptSegment[]> {
   const { YoutubeTranscript } = await import('youtube-transcript')
   const raw = await YoutubeTranscript.fetchTranscript(videoId)
   return raw.map((item) => ({
     text: item.text,
-    start: item.offset / 1000,    // package returns milliseconds
+    start: item.offset / 1000,
     duration: item.duration / 1000,
   }))
 }
 
+// ── Method 2: Direct timedtext API ───────────────────────────────────────────
 async function fetchViaTimedTextApi(videoId: string): Promise<TranscriptSegment[]> {
-  // Try direct timedtext endpoint (works for most videos with auto-captions)
   const langs = ['en', 'en-US', 'a.en']
   for (const lang of langs) {
     try {
@@ -46,8 +82,8 @@ async function fetchViaTimedTextApi(videoId: string): Promise<TranscriptSegment[
   throw new Error('No timedtext captions found')
 }
 
+// ── Method 3: Parse YouTube page ─────────────────────────────────────────────
 async function fetchViaPageParse(videoId: string): Promise<TranscriptSegment[]> {
-  // Parse YouTube page for caption track URLs
   const res = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
     headers: {
       'Accept-Language': 'en-US,en;q=0.9',
@@ -56,11 +92,9 @@ async function fetchViaPageParse(videoId: string): Promise<TranscriptSegment[]> 
   })
   const html = await res.text()
 
-  // Extract caption track URLs from the page
   const captionUrlMatch = html.match(/"baseUrl":"(https:\/\/www\.youtube\.com\/api\/timedtext[^"]+)"/)
   if (!captionUrlMatch) throw new Error('No caption URL found in page')
 
-  // Decode JSON-escaped URL
   const baseUrl = captionUrlMatch[1].replace(/\\u0026/g, '&').replace(/\\\//g, '/')
   const xmlRes = await fetch(`${baseUrl}&fmt=json3`)
   const data = await xmlRes.json()
@@ -81,17 +115,30 @@ async function fetchViaPageParse(videoId: string): Promise<TranscriptSegment[]> 
     .filter((s) => s.text.length > 0)
 }
 
+// ── Main export ───────────────────────────────────────────────────────────────
 export async function getTranscript(videoId: string): Promise<TranscriptResult> {
   let segments: TranscriptSegment[] = []
   let source: 'api' | 'ytdlp' | 'manual' = 'api'
   const errors: string[] = []
 
+  // Method 0: Supadata API (most reliable on hosted servers)
+  if (process.env.SUPADATA_API_KEY) {
+    try {
+      segments = await fetchViaSupadata(videoId)
+      source = 'api'
+    } catch (e0) {
+      errors.push(`supadata: ${e0 instanceof Error ? e0.message : String(e0)}`)
+    }
+  }
+
   // Method 1: youtube-transcript package
-  try {
-    segments = await fetchViaYoutubeTranscriptApi(videoId)
-    source = 'api'
-  } catch (e1) {
-    errors.push(`pkg: ${e1 instanceof Error ? e1.message : String(e1)}`)
+  if (!segments.length) {
+    try {
+      segments = await fetchViaYoutubeTranscriptApi(videoId)
+      source = 'api'
+    } catch (e1) {
+      errors.push(`pkg: ${e1 instanceof Error ? e1.message : String(e1)}`)
+    }
   }
 
   // Method 2: Direct timedtext API
