@@ -1,0 +1,56 @@
+# VidText AI
+
+> VidText AI is a free AI-powered platform that converts any YouTube video into transcripts, summaries, blog posts, study notes, and Shorts scripts.
+
+## What VidText AI Does
+
+VidText AI extracts the transcript from any public YouTube video and uses Google Gemini AI to transform it into multiple content formats:
+
+- **Transcript** — Full timestamped text of the video, free with no daily limit
+- **Summary** — Key points and main takeaways in structured format
+- **Blog Post** — SEO-optimized article ready to publish
+- **Study Notes** — Key concepts, terms, and outlines for learning
+- **Shorts Script** — 3–5 ready-to-film YouTube Shorts scripts
+
+## Key Facts
+
+- **Website:** https://www.vidtextai.com
+- **Free tier:** 3 AI generations per day, no sign-up required
+- **Transcript fetching:** Always free, unlimited
+- **Languages supported:** 10 output languages (English, Chinese, Japanese, Spanish, French, German, Korean, Portuguese, Russian, Arabic)
+- **AI model:** Google Gemini 2.5 Flash
+- **Processing time:** Under 30 seconds for most videos
+- **Compatible videos:** Any public YouTube video with captions or auto-generated subtitles
+
+## Tools
+
+- Transcript Generator: https://www.vidtextai.com/tools/transcript
+- AI Summary: https://www.vidtextai.com/tools/summary
+- Blog Post Generator: https://www.vidtextai.com/tools/blog
+- Study Notes: https://www.vidtextai.com/tools/notes
+- Shorts Script Generator: https://www.vidtextai.com/tools/shorts
+
+## Blog & Guides
+
+- How to Get a YouTube Transcript: https://www.vidtextai.com/blog/how-to-get-youtube-transcript
+- How to Turn a YouTube Video into a Blog Post: https://www.vidtextai.com/blog/youtube-to-blog-post
+- How Students Can Use YouTube Transcripts for Studying: https://www.vidtextai.com/blog/study-notes-from-youtube
+- Generate YouTube Shorts Scripts from Long Videos: https://www.vidtextai.com/blog/youtube-shorts-script-generator
+
+## Use Cases
+
+- Content creators repurposing video content into blog posts and social media
+- Students converting lecture videos into study notes and flashcards
+- Marketers creating SEO blog articles from YouTube videos
+- Researchers extracting quotes and information from video sources
+- Podcast hosts getting transcripts and show notes
+
+## Pricing
+
+- **Free:** $0/forever, 3 AI generations/day, no sign-up
+- **Pro:** $9/month, unlimited generations (coming soon)
+
+## Contact
+
+- Support: support@vidtextai.com
+- Website: https://www.vidtextai.com

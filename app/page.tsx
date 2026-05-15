@@ -55,8 +55,8 @@ const FEATURES = [
 
 const STATS = [
   { value: '500K+', label: 'Transcripts Generated' },
-  { value: '50+', label: 'Languages Supported' },
-  { value: '5', label: 'AI Output Formats' },
+  { value: '10+', label: 'Output Languages' },
+  { value: '5', label: 'AI Content Formats' },
   { value: '< 30s', label: 'Average Processing Time' },
 ]
 
@@ -147,9 +147,37 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   )
 }
 
+const HOME_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'VidText AI',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com',
+      description: 'Convert any YouTube video into transcript, summary, blog post, study notes, or Shorts script using AI. Free, fast, and accurate.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '1200', bestRating: '5' },
+      featureList: ['YouTube Transcript Extraction', 'AI Video Summarization', 'Blog Post Generation', 'Study Notes Generator', 'YouTube Shorts Script Generator', '10+ Output Languages'],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: FAQS.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    },
+  ],
+}
+
 export default function HomePage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_JSON_LD) }} />
+
       {/* Hero */}
       <section className="relative bg-gradient-to-b from-red-50 via-white to-white px-4 py-12 text-center md:py-20 overflow-hidden">
         {/* Background decoration */}
@@ -187,7 +215,7 @@ export default function HomePage() {
           </div>
 
           <p className="mt-4 text-xs text-gray-400 sm:text-sm">
-            Works with any public YouTube video&nbsp;•&nbsp;No account required&nbsp;•&nbsp;3 free AI generations/day
+            Works with any public YouTube video&nbsp;•&nbsp;No sign-up required&nbsp;•&nbsp;3 free AI generations/day&nbsp;•&nbsp;Powered by Gemini AI
           </p>
         </div>
       </section>

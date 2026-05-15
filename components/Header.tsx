@@ -4,12 +4,18 @@ import Link from 'next/link'
 import { Video, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
-const NAV_LINKS = [
+const TOOL_LINKS = [
   { href: '/tools/transcript', label: 'Transcript' },
   { href: '/tools/summary', label: 'Summary' },
   { href: '/tools/blog', label: 'Blog Post' },
   { href: '/tools/notes', label: 'Study Notes' },
   { href: '/tools/shorts', label: 'Shorts Script' },
+]
+
+const NAV_LINKS = [
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/alternatives', label: 'Alternatives' },
 ]
 
 export function Header() {
@@ -27,9 +33,24 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-5 md:flex">
+        <nav className="hidden items-center gap-1 md:flex">
+          {/* Tools dropdown */}
+          <div className="group relative">
+            <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors">
+              Tools <span className="text-gray-400 text-xs">▾</span>
+            </button>
+            <div className="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+              <div className="rounded-xl border border-gray-200 bg-white shadow-lg p-1.5 min-w-[160px]">
+                {TOOL_LINKS.map((l) => (
+                  <Link key={l.href} href={l.href} className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition-colors">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
           {NAV_LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+            <Link key={l.href} href={l.href} className="rounded-lg px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors">
               {l.label}
             </Link>
           ))}
@@ -58,6 +79,18 @@ export function Header() {
       {mobileOpen && (
         <div className="border-t border-gray-100 bg-white px-4 pb-4 md:hidden">
           <nav className="flex flex-col gap-1 pt-2">
+            <p className="px-3 pt-1 pb-0.5 text-xs font-semibold text-gray-400 uppercase tracking-wide">Tools</p>
+            {TOOL_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <div className="my-1 border-t border-gray-100" />
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}

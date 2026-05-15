@@ -64,24 +64,26 @@ export default function BlogPage() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         {POSTS.map((post) => (
-          <article key={post.slug} className="rounded-2xl border border-gray-200 p-6 hover:border-red-200 hover:shadow-sm transition-all group">
-            <div className="flex items-center gap-2 mb-3">
-              <span className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${CATEGORY_COLORS[post.category]}`}>
-                {post.category}
-              </span>
-              <span className="text-xs text-gray-400">{post.readTime}</span>
-            </div>
-            <h2 className="font-bold text-gray-900 leading-snug group-hover:text-red-600 transition-colors">
-              {post.title}
-            </h2>
-            <p className="mt-2 text-sm text-gray-500 leading-relaxed">{post.excerpt}</p>
-            <div className="mt-4 flex items-center justify-between">
-              <span className="text-xs text-gray-400">{post.date}</span>
-              <span className="flex items-center gap-1 text-sm font-medium text-red-600 group-hover:gap-2 transition-all">
-                Read more <ArrowRight className="h-4 w-4" />
-              </span>
-            </div>
-          </article>
+          <Link key={post.slug} href={`/blog/${post.slug}`}>
+            <article className="rounded-2xl border border-gray-200 p-6 hover:border-red-200 hover:shadow-sm transition-all group h-full">
+              <div className="flex items-center gap-2 mb-3">
+                <span className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${CATEGORY_COLORS[post.category]}`}>
+                  {post.category}
+                </span>
+                <span className="text-xs text-gray-400">{post.readTime}</span>
+              </div>
+              <h2 className="font-bold text-gray-900 leading-snug group-hover:text-red-600 transition-colors">
+                {post.title}
+              </h2>
+              <p className="mt-2 text-sm text-gray-500 leading-relaxed">{post.excerpt}</p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="text-xs text-gray-400">{post.date}</span>
+                <span className="flex items-center gap-1 text-sm font-medium text-red-600 group-hover:gap-2 transition-all">
+                  Read more <ArrowRight className="h-4 w-4" />
+                </span>
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
 

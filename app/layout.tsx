@@ -46,6 +46,32 @@ export const metadata: Metadata = {
   },
 }
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.vidtextai.com/#organization',
+      name: 'VidText AI',
+      url: 'https://www.vidtextai.com',
+      logo: 'https://www.vidtextai.com/icon.png',
+      sameAs: [],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.vidtextai.com/#website',
+      url: 'https://www.vidtextai.com',
+      name: 'VidText AI',
+      publisher: { '@id': 'https://www.vidtextai.com/#organization' },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://www.vidtextai.com/?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full antialiased">
@@ -56,6 +82,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7224234791121280"
           crossOrigin="anonymous"
+        />
+        {/* Global JSON-LD: Organization + WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body className="flex min-h-full flex-col bg-white text-gray-900">

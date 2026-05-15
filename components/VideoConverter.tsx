@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe } from 'lucide-react'
+import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
 import { UpgradePrompt } from '@/components/UpgradePrompt'
+import { EmailCapture } from '@/components/EmailCapture'
 import { ProcessingMode, VideoInfo, TranscriptSegment } from '@/types'
 import { formatTimestamp, wordCount } from '@/lib/utils'
 
@@ -160,6 +161,7 @@ export function VideoConverter() {
   const [remaining, setRemaining] = useState<number>(FREE_LIMIT)
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
+  const [showEmailCapture, setShowEmailCapture] = useState(false)
 
   // Load usage from cookie on mount
   useEffect(() => {
@@ -245,6 +247,11 @@ export function VideoConverter() {
         ...prev,
         [selectedMode]: { content: data.content, wordCount: data.wordCount, cached: data.cached },
       }))
+
+      // Show email capture after first AI generation (not for transcript)
+      if (selectedMode !== 'transcript' && !localStorage.getItem('vidtext_email_captured')) {
+        setShowEmailCapture(true)
+      }
     } catch {
       setError('Network error. Please try again.')
     } finally {
@@ -289,8 +296,8 @@ export function VideoConverter() {
             className="h-11 text-sm flex-1 min-w-0"
           />
           <Button type="submit" disabled={loading || !url.trim()} className="h-11 px-4 shrink-0">
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-            <span className="hidden sm:inline ml-1.5">{loading ? 'Processing...' : 'Convert'}</span>
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4" />}
+            <span className="hidden sm:inline ml-1.5">{loading ? 'Processing...' : 'Get Transcript'}</span>
           </Button>
         </div>
 
@@ -379,6 +386,11 @@ export function VideoConverter() {
           <Globe className="h-3 w-3 shrink-0" />
           AI content will be generated in {LANGUAGES.find(l => l.code === language)?.label.replace(/^.{2}\s/, '') || language}
         </div>
+      )}
+
+      {/* Email capture — shows after first AI generation */}
+      {showEmailCapture && (
+        <EmailCapture onDismiss={() => setShowEmailCapture(false)} />
       )}
 
       {/* Tabs */}

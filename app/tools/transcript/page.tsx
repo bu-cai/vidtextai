@@ -7,11 +7,32 @@ export const metadata: Metadata = {
   description:
     'Get a free, accurate, timestamped transcript from any YouTube video instantly. Supports auto-generated and manual captions in 100+ languages.',
   keywords: ['YouTube transcript', 'video transcript generator', 'YouTube to text', 'free transcript'],
+  alternates: { canonical: 'https://www.vidtextai.com/tools/transcript' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'YouTube Transcript Generator',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.vidtextai.com/tools/transcript',
+  description: 'Get a free, accurate, timestamped transcript from any YouTube video instantly.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+      { '@type': 'ListItem', position: 2, name: 'Transcript Generator', item: 'https://www.vidtextai.com/tools/transcript' },
+    ],
+  },
 }
 
 export default function TranscriptPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <div className="mb-10 text-center">
         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50">
           <FileText className="h-7 w-7 text-red-600" />
@@ -57,6 +78,11 @@ export default function TranscriptPage() {
           <li>Study and take notes from educational videos</li>
           <li>Quote specific sections for research or citations</li>
         </ul>
+        <h3 className="text-xl font-semibold text-gray-900 mt-6">Frequently Asked Questions</h3>
+        <h4 className="font-semibold text-gray-900 mt-4">Does VidText AI work with all YouTube videos?</h4>
+        <p className="text-gray-600">It works with any public YouTube video that has captions enabled — including auto-generated captions. Private or unlisted videos are not supported.</p>
+        <h4 className="font-semibold text-gray-900 mt-4">Is the transcript generator really free?</h4>
+        <p className="text-gray-600">Yes. Fetching a transcript is completely free with no daily limit. Only AI-powered features (summaries, blog posts, etc.) count toward the free tier limit.</p>
       </article>
     </div>
   )
