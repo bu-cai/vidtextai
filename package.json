@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node -e \"const fs=require('fs'); if(fs.existsSync('.next/BUILD_ID')){console.log('Pre-built .next found, skipping build.')}else{const {execSync}=require('child_process');execSync('next build',{stdio:'inherit'})}\"",
     "start": "next start",
     "lint": "eslint"
   },
