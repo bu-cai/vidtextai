@@ -13,9 +13,8 @@
 # testing
 /coverage
 
-# next.js - commit production build, exclude dev cache
-/.next/dev/
-/.next/cache/
+# next.js
+/.next/
 /out/
 
 # production
