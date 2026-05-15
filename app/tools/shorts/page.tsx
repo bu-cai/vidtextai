@@ -3,7 +3,7 @@ import { VideoConverter } from '@/components/VideoConverter'
 import { Scissors, Play, Zap, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YouTube to Shorts Script Generator — TikTok & Reels Scripts | TranscriptAI',
+  title: 'YouTube to Shorts Script Generator — TikTok & Reels Scripts | VidText AI',
   description:
     'Convert long YouTube videos into 3-5 viral short-form video scripts for YouTube Shorts, TikTok, and Instagram Reels. AI-powered, hook included.',
   keywords: ['YouTube Shorts script', 'TikTok script generator', 'short form video script', 'video repurposing AI'],

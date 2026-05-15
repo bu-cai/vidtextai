@@ -306,7 +306,7 @@ export default function HomePage() {
       <section className="bg-gray-50 px-4 py-16">
         <div className="mx-auto max-w-5xl">
           <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Who Uses TranscriptAI?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Who Uses VidText AI?</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {USE_CASES.map((item) => (
@@ -324,7 +324,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl">
           <div className="mb-10 text-center">
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">Frequently Asked Questions</h2>
-            <p className="mt-3 text-gray-500">Everything you need to know about TranscriptAI.</p>
+            <p className="mt-3 text-gray-500">Everything you need to know about VidText AI.</p>
           </div>
           <div className="space-y-3">
             {FAQS.map((faq) => (

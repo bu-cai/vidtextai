@@ -6,6 +6,8 @@
   "/api/youtube-info/route": "/api/youtube-info",
   "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/tools/blog/page": "/tools/blog",
   "/tools/notes/page": "/tools/notes",
   "/tools/shorts/page": "/tools/shorts",

@@ -3,7 +3,7 @@ import { VideoConverter } from '@/components/VideoConverter'
 import { Sparkles, Zap, Target, List } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YouTube Video Summarizer — AI Summary Generator | TranscriptAI',
+  title: 'YouTube Video Summarizer — AI Summary Generator | VidText AI',
   description:
     'Summarize any YouTube video with AI. Get key points, main takeaways, and a concise overview in seconds. Perfect for research, studying, and staying informed.',
   keywords: ['YouTube summarizer', 'video summary AI', 'summarize YouTube video', 'key points extractor'],

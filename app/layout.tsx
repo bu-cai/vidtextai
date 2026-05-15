@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'TranscriptAI — YouTube Transcript, Summary & Blog Generator',
+  title: 'VidText AI — YouTube Transcript, Summary & Blog Generator',
   description:
     'Convert any YouTube video into transcript, summary, blog post, study notes, or Shorts script using AI. Free, fast, and accurate.',
   keywords: [
@@ -20,11 +20,24 @@ export const metadata: Metadata = {
     'AI transcript generator',
     'video to text',
     'YouTube notes',
+    'VidText AI',
+    'vidtextai',
   ],
+  metadataBase: new URL('https://vidtextai.com'),
   openGraph: {
-    title: 'TranscriptAI — YouTube Transcript & AI Content Platform',
+    title: 'VidText AI — YouTube Transcript & AI Content Platform',
     description: 'Convert YouTube videos to transcripts, summaries, blog posts, and more with AI.',
     type: 'website',
+    url: 'https://vidtextai.com',
+    siteName: 'VidText AI',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VidText AI — YouTube Transcript & AI Content Platform',
+    description: 'Convert YouTube videos to transcripts, summaries, blog posts, and more with AI.',
+  },
+  alternates: {
+    canonical: 'https://vidtextai.com',
   },
 }
 

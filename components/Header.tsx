@@ -23,7 +23,7 @@ export function Header() {
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-600 sm:h-8 sm:w-8">
             <Video className="h-4 w-4 text-white sm:h-5 sm:w-5" />
           </div>
-          <span className="text-base font-bold sm:text-lg">TranscriptAI</span>
+          <span className="text-base font-bold sm:text-lg">VidText AI</span>
         </Link>
 
         {/* Desktop nav */}

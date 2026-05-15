@@ -11,7 +11,7 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600">
                 <Video className="h-5 w-5 text-white" />
               </div>
-              <span>TranscriptAI</span>
+              <span>VidText AI</span>
             </Link>
             <p className="mt-3 text-sm text-gray-500">
               Convert YouTube videos to transcripts, summaries, blog posts, and more with AI.
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} TranscriptAI. All rights reserved.
+          © {new Date().getFullYear()} VidText AI. All rights reserved.
         </div>
       </div>
     </footer>
