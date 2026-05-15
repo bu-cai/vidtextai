@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://vidtextai.com/sitemap.xml',
+    sitemap: 'https://www.vidtextai.com/sitemap.xml',
   }
 }
