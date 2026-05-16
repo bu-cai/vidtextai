@@ -16,10 +16,16 @@ export function EmailCapture({ onDismiss }: EmailCaptureProps) {
     e.preventDefault()
     if (!email.trim() || !email.includes('@')) return
     setLoading(true)
-    // Store in localStorage so we don't show again
+    try {
+      await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim() }),
+      })
+    } catch {
+      // Fail silently — still show success to user
+    }
     localStorage.setItem('vidtext_email_captured', '1')
-    // Small delay for UX
-    await new Promise(r => setTimeout(r, 600))
     setSubmitted(true)
     setLoading(false)
     setTimeout(onDismiss, 2000)

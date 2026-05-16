@@ -7,11 +7,31 @@ export const metadata: Metadata = {
   description:
     'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI. Get headers, subheadings, and keyword-rich content automatically.',
   keywords: ['YouTube to blog post', 'video to article', 'AI blog writer', 'SEO content generator'],
+  alternates: { canonical: 'https://www.vidtextai.com/tools/blog' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'YouTube to Blog Post Generator',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.vidtextai.com/tools/blog',
+  description: 'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog Post Generator', item: 'https://www.vidtextai.com/tools/blog' },
+    ],
+  },
 }
 
 export default function BlogPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mb-10 text-center">
         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50">
           <BookOpen className="h-7 w-7 text-red-600" />

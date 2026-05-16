@@ -7,11 +7,31 @@ export const metadata: Metadata = {
   description:
     'Convert long YouTube videos into 3-5 viral short-form video scripts for YouTube Shorts, TikTok, and Instagram Reels. AI-powered, hook included.',
   keywords: ['YouTube Shorts script', 'TikTok script generator', 'short form video script', 'video repurposing AI'],
+  alternates: { canonical: 'https://www.vidtextai.com/tools/shorts' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'YouTube Shorts Script Generator',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.vidtextai.com/tools/shorts',
+  description: 'Convert long YouTube videos into viral short-form scripts for Shorts, TikTok, and Reels.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+      { '@type': 'ListItem', position: 2, name: 'Shorts Script Generator', item: 'https://www.vidtextai.com/tools/shorts' },
+    ],
+  },
 }
 
 export default function ShortsPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mb-10 text-center">
         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50">
           <Scissors className="h-7 w-7 text-red-600" />

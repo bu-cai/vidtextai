@@ -7,11 +7,31 @@ export const metadata: Metadata = {
   description:
     'Summarize any YouTube video with AI. Get key points, main takeaways, and a concise overview in seconds. Perfect for research, studying, and staying informed.',
   keywords: ['YouTube summarizer', 'video summary AI', 'summarize YouTube video', 'key points extractor'],
+  alternates: { canonical: 'https://www.vidtextai.com/tools/summary' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'YouTube Video Summarizer',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.vidtextai.com/tools/summary',
+  description: 'Summarize any YouTube video with AI. Get key points and takeaways in seconds.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+      { '@type': 'ListItem', position: 2, name: 'AI Summarizer', item: 'https://www.vidtextai.com/tools/summary' },
+    ],
+  },
 }
 
 export default function SummaryPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mb-10 text-center">
         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50">
           <Sparkles className="h-7 w-7 text-red-600" />

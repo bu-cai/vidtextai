@@ -392,6 +392,330 @@ YouTube Shorts are one of the best opportunities for channel growth in 2026. The
 Try [VidText AI Shorts Script Generator](https://www.vidtextai.com/tools/shorts) — free to start, no sign-up required.
     `.trim(),
   },
+
+  'youtube-notes-generator': {
+    title: 'Best YouTube Notes Generator: Take Notes from Any Video Automatically',
+    description: 'Discover how to automatically generate structured notes from any YouTube video using AI. Perfect for students, researchers, and lifelong learners.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '4 min read',
+    content: `
+## Why You Need a YouTube Notes Generator
+
+YouTube hosts over 800 million videos. From university lectures to professional tutorials, the platform has become the world's largest learning library. But there's a fundamental problem: **you can't take notes from a video the same way you take notes from a book.**
+
+When reading, you can pause, highlight, annotate, and search. With video, you're stuck pausing and rewinding — a slow, frustrating process that breaks your flow.
+
+A YouTube notes generator solves this by automatically extracting the key information from any video and formatting it as structured, readable notes.
+
+## What Is a YouTube Notes Generator?
+
+A YouTube notes generator is a tool that:
+1. Extracts the transcript from a YouTube video
+2. Uses AI to identify the most important information
+3. Formats that information as structured notes with headings, bullet points, and key concepts
+
+The result is a clean, scannable set of notes — without you having to watch a single minute of the video.
+
+## How to Generate Notes from a YouTube Video
+
+Using [VidText AI Notes Generator](https://www.vidtextai.com/tools/notes):
+
+**Step 1:** Find a YouTube video you want to take notes from — a lecture, tutorial, podcast, or documentary.
+
+**Step 2:** Copy the video URL from your browser.
+
+**Step 3:** Paste it into VidText AI and select the **Study Notes** tab.
+
+**Step 4:** Click Generate. In under 30 seconds, you'll have structured notes including:
+- **Key Concepts** — the most important ideas from the video
+- **Definitions** — terms and their explanations
+- **Action Items** — practical takeaways you can apply
+- **Summary** — a concise overview of the whole video
+
+## What Makes Good AI-Generated Notes?
+
+Not all notes generators are equal. The best ones produce notes that are:
+
+**Structured** — organized with clear headings and bullet points, not a wall of text.
+
+**Selective** — only capturing the truly important information, not transcribing everything verbatim.
+
+**Actionable** — highlighting what you can actually do with the information.
+
+**Accurate** — faithfully representing what was said without hallucination.
+
+VidText AI uses Google Gemini 2.5 Flash to analyze the full video transcript and produce notes that meet all four criteria.
+
+## Best Types of Videos for Note Generation
+
+| Video Type | Note Quality | Why |
+|---|---|---|
+| University lectures | ⭐⭐⭐⭐⭐ | Clear structure, factual content |
+| TED Talks | ⭐⭐⭐⭐⭐ | Narrative arc, key arguments |
+| Tutorial / How-to | ⭐⭐⭐⭐ | Step-by-step structure |
+| Podcast interviews | ⭐⭐⭐⭐ | Q&A format extracts well |
+| Documentary | ⭐⭐⭐ | More narrative, less structured |
+| Entertainment | ⭐⭐ | Less factual content to extract |
+
+## 5 Ways to Use AI-Generated YouTube Notes
+
+### 1. Exam Preparation
+Generate notes from all your course's YouTube lectures, then combine them into a master study guide. Search across notes to find exactly what you need before exams.
+
+### 2. Professional Development
+Follow industry experts on YouTube and generate notes from their videos. Build a personal knowledge base of insights from the best minds in your field.
+
+### 3. Book Summaries
+Many authors discuss their books on YouTube interviews and podcasts. Generate notes from these appearances to get the core ideas without reading the full book.
+
+### 4. Meeting Preparation
+Before joining a meeting or conference, watch related YouTube videos and generate notes to show up fully informed.
+
+### 5. Content Research
+Generate notes from multiple YouTube videos on the same topic to quickly synthesize what experts say — perfect for writing articles or reports.
+
+## YouTube Notes Generator vs. Manual Note-Taking
+
+| | Manual Note-Taking | VidText AI |
+|---|---|---|
+| Time per hour of video | 45-90 minutes | Under 1 minute |
+| Structure quality | Depends on skill | Consistently structured |
+| Completeness | Easy to miss things | Captures all key points |
+| Searchability | Only if organized well | Instantly searchable text |
+| Cost | Free (your time) | Free |
+
+## Conclusion
+
+A YouTube notes generator transforms passive video watching into an active, efficient learning process. Instead of spending hours rewinding and pausing, you get structured notes in seconds — ready to review, search, and apply.
+
+Try [VidText AI Study Notes Generator](https://www.vidtextai.com/tools/notes) free — no sign-up, no credit card, 3 AI generations per day.
+    `.trim(),
+  },
+
+  'video-to-text-converter-guide': {
+    title: 'How to Convert YouTube Video to Text (Free, Instant, No Software)',
+    description: 'Learn the fastest way to convert any YouTube video to text. Get a full transcript in seconds — free, no software download, no sign-up required.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '3 min read',
+    content: `
+## The Fastest Way to Convert Video to Text
+
+Converting a YouTube video to text used to mean hours of manual transcription — listening, pausing, typing, rewinding. Today, AI-powered tools do it in seconds.
+
+This guide covers the fastest, most accurate methods to convert any YouTube video to text for free.
+
+## Method 1: VidText AI (Recommended)
+
+[VidText AI](https://www.vidtextai.com/tools/video-to-text) is the fastest way to convert YouTube video to text with zero friction.
+
+**How it works:**
+1. Copy the YouTube video URL
+2. Paste it at [vidtextai.com](https://www.vidtextai.com)
+3. Click "Get Transcript"
+4. Get the full text in under 10 seconds
+
+**What you get:**
+- Full transcript with timestamps on every line
+- Copy to clipboard with one click
+- Download as .txt file
+- No account required, completely free
+
+**Best for:** Anyone who needs a quick, clean, downloadable transcript.
+
+## Method 2: YouTube's Built-in Transcript
+
+YouTube has a hidden transcript viewer built in:
+
+1. Open any YouTube video
+2. Click the **three-dot menu (⋯)** below the video
+3. Select **"Open transcript"**
+4. The transcript panel appears on the right
+
+**Limitations:**
+- Cannot be downloaded directly
+- Difficult to copy cleanly
+- No formatting or AI processing
+- Hard to find the feature
+
+**Best for:** Quick reference while watching a video.
+
+## Method 3: YouTube Captions (CC)
+
+Turn on captions while watching:
+- Click the **CC button** on the video player
+- Captions appear as subtitles
+
+**Limitations:** Cannot be copied or downloaded. Not useful for text conversion.
+
+## Comparison: Which Method Is Best?
+
+| Method | Speed | Downloadable | Free | Sign-up |
+|---|---|---|---|---|
+| VidText AI | ⚡ 10 seconds | ✅ Yes (.txt) | ✅ Yes | ❌ Not needed |
+| YouTube Built-in | Medium | ❌ No | ✅ Yes | ❌ Not needed |
+| Manual transcription | ❌ Hours | ✅ Yes | ✅ Yes | ❌ Not needed |
+
+## What to Do With Video Text
+
+Once you have the transcript, you can:
+
+**Create written content** — use the transcript as a base for blog posts, newsletters, or social media content.
+
+**Study and research** — search the text for specific information, highlight key points, create flashcards.
+
+**Improve accessibility** — use the text to create proper subtitles for your own videos.
+
+**Translate** — paste the text into a translation tool to access content in your language.
+
+**Feed AI tools** — use the transcript as input for further AI processing (summaries, analysis, etc.).
+
+## Tips for Best Transcript Quality
+
+1. **Choose videos with manual captions** — channels like TED, Coursera, and BBC have human-reviewed captions that are near-perfect.
+
+2. **Check the CC badge** — the blue CC badge on YouTube thumbnails indicates manually created captions.
+
+3. **Use educational content** — channels focused on education, news, and professional development tend to have the best caption quality.
+
+4. **Verify timestamps** — if accuracy is critical (e.g., for citations), spot-check a few timestamps in the video.
+
+## Beyond Plain Text: AI-Powered Formats
+
+Once you have the text, VidText AI can transform it further:
+
+- **[AI Summary](https://www.vidtextai.com/tools/summary)** — condensed key points in bullet format
+- **[Blog Post](https://www.vidtextai.com/tools/blog)** — full SEO-ready article from the video
+- **[Study Notes](https://www.vidtextai.com/tools/notes)** — structured notes with key concepts
+- **[Shorts Script](https://www.vidtextai.com/tools/shorts)** — viral short-form video scripts
+
+## Conclusion
+
+Converting YouTube video to text takes less than 10 seconds with VidText AI. No software to download, no account to create, no cost. Just paste a URL and get clean, timestamped, downloadable text.
+
+Try [VidText AI Video to Text Converter](https://www.vidtextai.com/tools/video-to-text) — free, instant, no sign-up.
+    `.trim(),
+  },
+
+  'youtube-to-blog-post-ai': {
+    title: 'YouTube to Blog Post Generator: Turn Any Video into an SEO Article',
+    description: 'Automatically convert YouTube videos into SEO-optimized blog posts using AI. Step-by-step guide for content creators who want more traffic from less effort.',
+    category: 'Tutorial',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+    content: `
+## The Content Creator's Biggest Problem
+
+You spend hours filming and editing a YouTube video. You publish it. It gets views. Then... nothing. The content sits on YouTube and doesn't bring you any Google traffic.
+
+The solution is simple: **turn your YouTube videos into blog posts.**
+
+Blog posts rank on Google. Videos mostly don't. By converting your video content into written articles, you can double your audience — reaching both YouTube viewers and Google searchers — from the exact same content.
+
+## Why YouTube to Blog Post Conversion Works
+
+Every YouTube video you create contains valuable information. When you convert it to a blog post:
+
+- **Google can index it** — search engines read text, not video
+- **It ranks for long-tail keywords** — written content captures "how to..." searches
+- **It builds backlinks** — people link to articles, rarely to videos
+- **It lasts longer** — a good article can rank for years
+- **It reaches different audiences** — some people prefer reading to watching
+
+## The Old Way vs. The AI Way
+
+**Old way (3-5 hours per video):**
+1. Watch the video again (30-60 min)
+2. Write a transcript manually (2-3 hours)
+3. Rewrite as an article (1-2 hours)
+4. Add SEO elements (30 min)
+
+**AI way with VidText AI (under 3 minutes):**
+1. Copy the YouTube URL (10 seconds)
+2. Paste into VidText AI, select Blog Post (10 seconds)
+3. Click Generate, wait 20-30 seconds
+4. Get a complete, formatted blog post
+
+## How to Use VidText AI Blog Post Generator
+
+**Step 1: Choose the right video**
+
+Not every video converts equally well. Best candidates:
+- Tutorial or how-to videos (strong keyword targeting)
+- List videos ("10 ways to...")
+- Educational explanations
+- Expert interviews
+
+**Step 2: Paste the URL**
+
+Go to [VidText AI Blog Post Generator](https://www.vidtextai.com/tools/blog), paste your YouTube URL, and select the **Blog Post** tab.
+
+**Step 3: Select your language**
+
+VidText AI supports 10 output languages. If your target audience reads in Spanish, French, or Chinese, select that language before generating.
+
+**Step 4: Generate and review**
+
+Click Generate. The AI reads your full video transcript and produces a complete blog post with:
+- SEO-optimized H1 title
+- Introduction with the main value proposition
+- Multiple H2 and H3 sections
+- Bullet points and numbered lists
+- A conclusion with call-to-action
+
+**Step 5: Customize and publish**
+
+Add your personal voice, insert relevant images, add internal links to your site, and publish. The AI gives you 80% of the work — you add the 20% that makes it uniquely yours.
+
+## SEO Tips for Video-Derived Blog Posts
+
+### Target the Right Keywords
+Your video title is often a great starting point. If your video is "How to Make Cold Brew Coffee at Home," your blog post should target "how to make cold brew coffee at home" and related terms.
+
+### Add What the Video Can't
+Blog posts can include things videos can't:
+- Comparison tables
+- Downloadable resources
+- Internal links to other articles
+- Images and infographics
+- Updated information
+
+### Embed the Original Video
+Add the YouTube embed at the top or middle of the post. This increases time-on-page (a ranking signal) and gives readers the choice of watching or reading.
+
+### Optimize Meta Description
+Write a compelling 150-160 character meta description that includes your main keyword and a clear value proposition.
+
+## What Types of Blog Posts Convert Best from YouTube?
+
+| Video Format | Blog Post Type | SEO Potential |
+|---|---|---|
+| Tutorial/How-to | Step-by-step guide | ⭐⭐⭐⭐⭐ |
+| List video | Listicle article | ⭐⭐⭐⭐⭐ |
+| Expert interview | Q&A or summary post | ⭐⭐⭐⭐ |
+| Product review | Review article | ⭐⭐⭐⭐ |
+| News/commentary | Opinion piece | ⭐⭐⭐ |
+| Vlog | Behind the scenes | ⭐⭐ |
+
+## Building a Content Repurposing System
+
+The real power comes from building a system:
+
+1. **Publish YouTube video** → immediately generate blog post
+2. **Publish blog post** → share on LinkedIn, Twitter, newsletter
+3. **Blog post gets Google traffic** → more YouTube subscribers
+4. **Repeat weekly**
+
+Over 6 months, this compound effect builds a significant content library that drives traffic 24/7.
+
+## Conclusion
+
+Converting YouTube videos to blog posts is one of the highest-ROI activities for content creators in 2026. With VidText AI, the process takes 3 minutes instead of 5 hours — making it practical to do for every video you publish.
+
+Try [VidText AI Blog Post Generator](https://www.vidtextai.com/tools/blog) free — no sign-up, works on any public YouTube video.
+    `.trim(),
+  },
 }
 
 // ── Markdown renderer ────────────────────────────────────────────────────────

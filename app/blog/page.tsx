@@ -41,6 +41,30 @@ const POSTS = [
     date: 'May 15, 2026',
     readTime: '4 min read',
   },
+  {
+    slug: 'youtube-notes-generator',
+    title: 'How to Generate Study Notes from Any YouTube Video',
+    excerpt: 'Stop rewinding. Use an AI notes generator to extract structured, searchable notes from lectures, tutorials, and talks instantly.',
+    category: 'Tips',
+    date: 'May 16, 2026',
+    readTime: '4 min read',
+  },
+  {
+    slug: 'video-to-text-converter-guide',
+    title: 'Video to Text Converter: The Complete Guide (2026)',
+    excerpt: 'Everything you need to know about converting YouTube videos to text — how it works, top tools, accuracy, and use cases.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '6 min read',
+  },
+  {
+    slug: 'youtube-to-blog-post-ai',
+    title: 'How to Turn Any YouTube Video into a Blog Post with AI',
+    excerpt: 'Repurpose your video content into SEO-ready blog articles in minutes. The fastest workflow for video-first creators.',
+    category: 'Tutorial',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+  },
 ]
 
 const CATEGORY_COLORS: Record<string, string> = {

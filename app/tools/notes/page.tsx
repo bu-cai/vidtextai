@@ -7,11 +7,31 @@ export const metadata: Metadata = {
   description:
     'Convert YouTube lectures and educational videos into structured study notes with AI. Extract key concepts, action items, and important quotes automatically.',
   keywords: ['YouTube to notes', 'video note taker', 'study notes generator', 'lecture notes AI'],
+  alternates: { canonical: 'https://www.vidtextai.com/tools/notes' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'YouTube to Study Notes Generator',
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Web',
+  url: 'https://www.vidtextai.com/tools/notes',
+  description: 'Convert YouTube lectures and educational videos into structured study notes with AI.',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+      { '@type': 'ListItem', position: 2, name: 'Study Notes Generator', item: 'https://www.vidtextai.com/tools/notes' },
+    ],
+  },
 }
 
 export default function NotesPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mb-10 text-center">
         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50">
           <StickyNote className="h-7 w-7 text-red-600" />
