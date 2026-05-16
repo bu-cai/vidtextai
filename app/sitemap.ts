@@ -8,6 +8,9 @@ const BLOG_SLUGS = [
   'youtube-notes-generator',
   'video-to-text-converter-guide',
   'youtube-to-blog-post-ai',
+  'how-to-see-transcript-on-youtube',
+  'best-youtube-summarizer-prompts',
+  'youtube-transcript-chrome-extension',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

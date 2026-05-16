@@ -65,6 +65,30 @@ const POSTS = [
     date: 'May 16, 2026',
     readTime: '5 min read',
   },
+  {
+    slug: 'how-to-see-transcript-on-youtube',
+    title: 'How to See, Get & Download a YouTube Transcript (4 Ways)',
+    excerpt: 'Step-by-step guide to viewing, copying, and downloading a transcript from any YouTube video — with and without tools.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'best-youtube-summarizer-prompts',
+    title: 'Best YouTube Video Summarizer Prompts for ChatGPT & AI (2026)',
+    excerpt: 'Copy-paste prompts to summarize any YouTube video with ChatGPT, Claude, or Gemini. Get better summaries and key takeaways instantly.',
+    category: 'Tips',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'youtube-transcript-chrome-extension',
+    title: 'Best YouTube Transcript & Note-Taking Chrome Extensions (2026)',
+    excerpt: 'Compare the top Chrome extensions for YouTube transcripts and note-taking — plus a faster alternative that needs no installation.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '6 min read',
+  },
 ]
 
 const CATEGORY_COLORS: Record<string, string> = {

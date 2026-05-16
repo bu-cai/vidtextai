@@ -716,6 +716,448 @@ Converting YouTube videos to blog posts is one of the highest-ROI activities for
 Try [VidText AI Blog Post Generator](https://www.vidtextai.com/tools/blog) free — no sign-up, works on any public YouTube video.
     `.trim(),
   },
+
+  'how-to-see-transcript-on-youtube': {
+    title: 'How to See, Get & Download a YouTube Transcript (4 Ways)',
+    description: 'Learn how to see, get, copy, and download a transcript from any YouTube video — step-by-step with screenshots. Free, no sign-up.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+    content: `
+## Why You'd Want to See a YouTube Transcript
+
+Before diving into the how-to, here's why so many people look for YouTube transcripts:
+
+- **Find a specific quote** — search the text instead of scrubbing through the video
+- **Study faster** — read a lecture transcript in 5 minutes vs. watching 45 minutes
+- **Create content** — turn a video into a blog post, social media thread, or newsletter
+- **Accessibility** — follow along if you can't use audio
+- **Translation** — copy the text and translate it to your language
+
+Let's look at every way to see a YouTube transcript, from fastest to slowest.
+
+## Method 1: VidText AI — Instant Download (Recommended)
+
+The fastest way to get a clean, downloadable YouTube transcript:
+
+**Step 1:** Copy the YouTube video URL from your browser address bar.
+
+**Step 2:** Go to [VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript) and paste the URL.
+
+**Step 3:** Click **Get Transcript**. Your full, timestamped transcript appears in under 10 seconds.
+
+**Step 4:** Click **Copy** to copy to clipboard, or **Save** to download as a .txt file.
+
+That's it. No account, no software, no cost.
+
+## Method 2: YouTube's Built-in Transcript Panel
+
+YouTube has a hidden transcript feature that most people don't know about:
+
+**Step 1:** Open the YouTube video in your browser.
+
+**Step 2:** Click the **three-dot menu (⋯)** directly below the video player (next to the like/dislike buttons).
+
+**Step 3:** Click **"Open transcript"** from the dropdown menu.
+
+**Step 4:** A transcript panel appears on the right side of the screen with timestamped lines.
+
+**Limitations of the YouTube built-in method:**
+- Cannot be downloaded as a file
+- Cannot be copied in bulk (you'd need to select all text manually)
+- No search within the transcript panel
+- Disappears when you close the video
+
+## Method 3: How to Copy a YouTube Transcript Manually
+
+If you want to copy the transcript text from YouTube's built-in panel:
+
+1. Open the transcript panel using Method 2 above
+2. Click the **toggle timestamps** button (clock icon) to hide timestamps if you want clean text
+3. Click inside the transcript panel
+4. Press **Ctrl+A** (Windows) or **Cmd+A** (Mac) to select all text
+5. Press **Ctrl+C** to copy
+6. Paste into any text editor, Google Docs, or Notion
+
+**Drawback:** This copies the entire page, not just the transcript — you'll get navigation elements and other text mixed in. VidText AI gives you a clean copy with one click.
+
+## Method 4: How to Download a YouTube Transcript as a File
+
+YouTube doesn't offer a native download option. To download a transcript as a .txt file:
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL and click **Get Transcript**
+3. Click the **Save** button
+4. A .txt file downloads instantly to your computer
+
+The downloaded file format looks like:
+\`\`\`
+[0:00] Welcome to today's lecture on machine learning.
+[0:05] We're going to cover three main topics.
+[0:12] First, supervised learning and its applications...
+\`\`\`
+
+## Which Method Should You Use?
+
+| Method | Speed | Download | Clean Text | Free |
+|---|---|---|---|---|
+| VidText AI | ⚡ 10 sec | ✅ .txt file | ✅ Yes | ✅ Yes |
+| YouTube Built-in | Medium | ❌ No | ⚠️ Partial | ✅ Yes |
+| Manual copy | Slow | ❌ File only | ❌ Messy | ✅ Yes |
+
+**Best for download:** VidText AI — one click, clean .txt file.
+**Best for quick glance:** YouTube's built-in panel — no tool needed.
+
+## Does Every YouTube Video Have a Transcript?
+
+No. Transcripts are only available for videos with captions enabled. Here's what works:
+
+**✅ Works:**
+- Videos with auto-generated captions (most English videos)
+- Videos with manually uploaded subtitles/captions
+- Educational content: TED Talks, Coursera, university lectures
+- News channels, podcasts, tutorials, documentaries
+
+**❌ Doesn't work:**
+- Private or unlisted videos
+- Videos where the creator disabled captions
+- Music videos with no speech
+- Very short clips (under ~30 seconds)
+
+## How to See Transcripts in Other Languages
+
+If a video has captions in multiple languages, you can view the transcript in any available language:
+
+**On YouTube:** Click the gear icon (⚙️) in the transcript panel, then select a language.
+
+**On VidText AI:** Use the language dropdown before clicking Get Transcript. VidText AI can also output AI-generated content (summaries, notes) in 10 languages, regardless of the original video language.
+
+## What to Do With Your Transcript
+
+Once you have the transcript text, VidText AI can take it further:
+
+- **[AI Summary](https://www.vidtextai.com/tools/summary)** — get the key points in 30 seconds of reading
+- **[Blog Post Generator](https://www.vidtextai.com/tools/blog)** — turn the transcript into an SEO article
+- **[Study Notes](https://www.vidtextai.com/tools/notes)** — structured notes for learning
+- **[Shorts Script](https://www.vidtextai.com/tools/shorts)** — repurpose into short-form video content
+
+## Conclusion
+
+Seeing a YouTube transcript takes 10 seconds with VidText AI, or a few clicks with YouTube's built-in panel. For anything beyond viewing — downloading, copying cleanly, or processing with AI — VidText AI is the fastest option.
+
+Try it free at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) — no account required.
+    `.trim(),
+  },
+
+  'best-youtube-summarizer-prompts': {
+    title: 'Best YouTube Video Summarizer Prompts for ChatGPT & AI (2026)',
+    description: 'Copy-paste prompts to summarize any YouTube video with ChatGPT, Claude, or Gemini. Get better summaries, key points, and action items instantly.',
+    category: 'Tips',
+    date: 'May 16, 2026',
+    readTime: '5 min read',
+    content: `
+## Why Your AI Summaries Might Be Disappointing
+
+You've probably tried asking ChatGPT or Claude to summarize a YouTube video — and gotten back a generic, shallow summary that missed the actual insights. The problem isn't the AI. It's the prompt.
+
+The right video summarizer prompt makes the difference between "This video discusses machine learning" and a structured breakdown of every key concept, decision framework, and actionable takeaway from the video.
+
+This guide gives you copy-paste prompts that actually work — tested with ChatGPT, Claude, and Gemini.
+
+## Step 1: Get the Transcript First
+
+AI tools can't watch YouTube videos directly (unless you use a plugin). You need to:
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript) and paste the YouTube URL
+2. Click **Get Transcript** to get the full text in seconds
+3. Copy the transcript
+4. Paste it into ChatGPT, Claude, or Gemini along with your prompt
+
+Now let's get to the prompts.
+
+## The 6 Best YouTube Video Summarizer Prompts
+
+### Prompt 1: The Standard Summary
+
+Best for: quick overview of any video
+
+\`\`\`
+Here is the transcript of a YouTube video. Please summarize it in 3-5 bullet points, capturing the main ideas and any key conclusions or recommendations.
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+### Prompt 2: The Key Takeaways Prompt
+
+Best for: learning videos, tutorials, expert interviews
+
+\`\`\`
+Read this YouTube video transcript and extract:
+1. The 3-5 most important takeaways
+2. Any specific frameworks, models, or methods mentioned
+3. One sentence summary of the video's core argument
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+### Prompt 3: The Action Items Prompt
+
+Best for: business content, productivity videos, how-to tutorials
+
+\`\`\`
+Based on this YouTube video transcript, extract all actionable advice. Format as a checklist I can actually follow. Group by category if there are multiple topics.
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+### Prompt 4: The Study Notes Prompt
+
+Best for: lectures, educational content, documentaries
+
+\`\`\`
+Convert this YouTube lecture transcript into structured study notes. Include:
+- Main topic and subtopics (as headers)
+- Key definitions and concepts
+- Important examples or case studies
+- Questions for further study
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+### Prompt 5: The Blog Post Summary Prompt
+
+Best for: content repurposing, creators turning videos into articles
+
+\`\`\`
+Here is a YouTube video transcript. Write a 400-600 word blog post summarizing the key insights. Use a clear introduction, 3-4 subheadings, and a conclusion with a call to action. Write in a clear, informative tone for a general audience.
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+### Prompt 6: The Q&A Extraction Prompt
+
+Best for: interview videos, podcasts, panel discussions
+
+\`\`\`
+This transcript is from an interview/podcast. Extract the most interesting questions asked and the key points from each answer. Format as Q: / A: pairs.
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+## Comparison: Prompts vs. Purpose
+
+| Goal | Best Prompt | Output Format |
+|---|---|---|
+| Quick overview | Standard Summary | Bullet points |
+| Learn and apply | Key Takeaways | Numbered list |
+| Do something | Action Items | Checklist |
+| Study for exam | Study Notes | Structured outline |
+| Write an article | Blog Post Summary | Paragraphs |
+| Interview/podcast | Q&A Extraction | Q&A pairs |
+
+## Pro Tips for Better Video Summaries
+
+**Tip 1: Tell the AI your context**
+Add a sentence about who you are: *"I'm a software engineer learning about machine learning"* — this makes summaries more relevant to what you care about.
+
+**Tip 2: Ask for a specific length**
+"Summarize in 3 bullet points" gives a different result than "summarize in 500 words." Be explicit.
+
+**Tip 3: Request specific elements**
+*"Include any statistics or numbers mentioned"* or *"highlight any counterintuitive ideas"* — this guides the AI to surface details that generic prompts miss.
+
+**Tip 4: Use the language option**
+If you want the summary in a different language, add: *"Respond in Spanish"* (or your preferred language).
+
+## Skip the Copy-Paste: Use VidText AI
+
+If running prompts manually feels like too many steps, [VidText AI](https://www.vidtextai.com) does it automatically:
+
+1. Paste any YouTube URL
+2. Click **Summary** — get key points in bullet format
+3. Click **Study Notes** — get structured notes for learning
+4. Click **Blog Post** — get a full SEO article
+
+No copying transcripts, no manual prompting. The AI processes the transcript and returns the formatted output in one click — free for 3 generations per day.
+
+## Which AI Gives the Best Video Summaries?
+
+| AI Tool | Strengths | Limitations |
+|---|---|---|
+| ChatGPT (GPT-4o) | Great at structure and formatting | Needs manual transcript paste |
+| Claude (Sonnet) | Excellent comprehension of long texts | Same manual process |
+| Gemini | Good for YouTube videos (Google integration) | Variable quality |
+| VidText AI | One-click, no manual steps | YouTube only |
+
+## Conclusion
+
+The best YouTube video summarizer prompt is the one that matches your goal — whether that's a quick overview, actionable takeaways, or structured study notes. Start with the prompts above, then customize based on what you need.
+
+For the fastest workflow, try [VidText AI](https://www.vidtextai.com) — paste a URL, click once, get your summary. No prompts needed.
+    `.trim(),
+  },
+
+  'youtube-transcript-chrome-extension': {
+    title: 'Best YouTube Transcript & Note-Taking Chrome Extensions (2026)',
+    description: 'Compare the top Chrome extensions for getting YouTube transcripts and taking notes. Find the best free tool for students, researchers, and content creators.',
+    category: 'Guide',
+    date: 'May 16, 2026',
+    readTime: '6 min read',
+    content: `
+## Why People Search for YouTube Transcript Chrome Extensions
+
+Most people discover the need for a YouTube transcript tool when they're trying to study, research, or create content and realize that:
+
+1. **YouTube's built-in transcript** is hard to find, can't be downloaded, and can't be searched
+2. **Manual note-taking** while watching is slow and you miss things
+3. **There must be a better way**
+
+Chrome extensions are one popular answer. But browser extensions come with trade-offs — and for many use cases, a web-based tool works better.
+
+This guide covers the top options for 2026: which Chrome extensions are worth installing, and when a web tool is the smarter choice.
+
+## Top YouTube Transcript Chrome Extensions
+
+### 1. YouTube Summary with ChatGPT & Claude
+
+**What it does:** Adds a summary button to YouTube pages. Click it to get an AI summary powered by ChatGPT or Claude.
+
+**Pros:**
+- Integrates directly into YouTube's UI
+- Works with multiple AI models
+- Shows the transcript in a sidebar
+
+**Cons:**
+- Requires a ChatGPT/Claude account
+- Limited formatting options
+- No download feature
+
+**Best for:** Users who already have ChatGPT Plus or Claude Pro
+
+---
+
+### 2. Glasp — YouTube Highlights
+
+**What it does:** Chrome extension that lets you highlight and save quotes from YouTube transcripts. Builds a personal knowledge base.
+
+**Pros:**
+- Great for researchers and note-takers
+- Saves highlights to a personal library
+- Social sharing features
+
+**Cons:**
+- Account required
+- Focused on highlighting, not downloading
+- Less useful for content creation
+
+**Best for:** Researchers who want to build a curated knowledge library
+
+---
+
+### 3. Tactiq
+
+**What it does:** Captures meeting transcripts from Google Meet, Zoom, and Teams — also has YouTube functionality.
+
+**Pros:**
+- Excellent for meeting transcripts
+- Clean interface
+- Good export options
+
+**Cons:**
+- Primarily designed for meetings, not YouTube
+- Free tier is limited
+- Can feel heavyweight for simple YouTube use
+
+**Best for:** Users who need transcripts for both meetings AND YouTube
+
+---
+
+### 4. YouTube Transcript Exporter (Various)
+
+Several smaller extensions in the Chrome Store offer basic transcript extraction:
+
+**Pros:** Simple, lightweight
+
+**Cons:** Inconsistent quality, some are outdated or abandoned, security concerns with lesser-known extensions
+
+---
+
+## The Problem With Chrome Extensions
+
+Before installing any extension, consider:
+
+**Privacy:** Chrome extensions request broad permissions. Many transcript extensions can "read and change all your data on websites you visit." That's a significant permission.
+
+**Reliability:** Extensions break when YouTube updates its interface. A tool that worked last month may stop working today.
+
+**Maintenance:** Many transcript extensions are built by solo developers and may be abandoned without notice.
+
+**Limited features:** Most extensions only do transcripts — they can't generate summaries, blog posts, or study notes.
+
+## The Web App Alternative: VidText AI
+
+[VidText AI](https://www.vidtextai.com) is a web-based tool that does everything a Chrome extension does — plus much more — without any installation:
+
+| Feature | Chrome Extensions | VidText AI |
+|---|---|---|
+| Get YouTube transcript | ✅ Most do this | ✅ Yes |
+| Download as .txt | ❌ Rarely | ✅ Yes |
+| AI Summary | ⚠️ Some (requires account) | ✅ Free tier |
+| Blog post generation | ❌ No | ✅ Yes |
+| Study notes | ❌ No | ✅ Yes |
+| Shorts scripts | ❌ No | ✅ Yes |
+| No installation needed | ❌ No | ✅ Yes |
+| No account required | ❌ Usually required | ✅ Yes |
+| Works on mobile | ❌ No | ✅ Yes |
+| Privacy (no broad permissions) | ❌ Needs permissions | ✅ Yes |
+
+## How to Use VidText AI (No Extension Needed)
+
+**Step 1:** Copy the YouTube video URL from your browser.
+
+**Step 2:** Go to [vidtextai.com](https://www.vidtextai.com) — no installation, no account.
+
+**Step 3:** Paste the URL and click **Get Transcript**.
+
+**Step 4:** Choose your output:
+- **Transcript** — full timestamped text, downloadable as .txt
+- **Summary** — AI-generated key points
+- **Study Notes** — structured notes for learning
+- **Blog Post** — full SEO article from the video
+
+**Step 5:** Copy or download your content.
+
+The whole process takes under 30 seconds.
+
+## Which Option Is Right for You?
+
+| Use Case | Best Option |
+|---|---|
+| Need transcripts while browsing YouTube | Chrome extension (YouTube Summary with ChatGPT) |
+| Research with highlights and knowledge base | Glasp extension |
+| Meeting + YouTube transcripts | Tactiq |
+| Download transcript as a file | VidText AI |
+| Generate AI summaries or blog posts | VidText AI |
+| Use on mobile or shared computer | VidText AI |
+| Privacy-conscious | VidText AI (no extension permissions) |
+
+## For Students: Best Setup for Note-Taking
+
+If you're a student using YouTube for lectures and tutorials, the most efficient setup is:
+
+1. **VidText AI for Study Notes** — paste the video URL, click Study Notes, get structured notes in 20 seconds
+2. **Copy notes to Notion or Google Docs** — organize by subject
+3. **Use the transcript for citations** — reference exact timestamps when quoting
+
+This workflow beats manually pausing and rewinding every time you want to write something down.
+
+## Conclusion
+
+Chrome extensions are convenient but come with installation friction, privacy trade-offs, and maintenance risks. For most users — especially students, researchers, and content creators — a web-based tool like VidText AI provides more features with less hassle.
+
+Try [VidText AI](https://www.vidtextai.com) free — get transcripts, summaries, study notes, and more from any YouTube video in seconds. No Chrome extension required.
+    `.trim(),
+  },
 }
 
 // ── Markdown renderer ────────────────────────────────────────────────────────
