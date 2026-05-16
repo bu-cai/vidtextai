@@ -7,7 +7,6 @@ import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
 import { UpgradePrompt } from '@/components/UpgradePrompt'
-import { EmailCapture } from '@/components/EmailCapture'
 import { ProcessingMode, VideoInfo, TranscriptSegment } from '@/types'
 import { formatTimestamp, wordCount } from '@/lib/utils'
 
@@ -161,7 +160,6 @@ export function VideoConverter() {
   const [remaining, setRemaining] = useState<number>(FREE_LIMIT)
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
-  const [showEmailCapture, setShowEmailCapture] = useState(false)
 
   // Load usage from cookie on mount
   useEffect(() => {
@@ -248,10 +246,6 @@ export function VideoConverter() {
         [selectedMode]: { content: data.content, wordCount: data.wordCount, cached: data.cached },
       }))
 
-      // Show email capture after first AI generation (not for transcript)
-      if (selectedMode !== 'transcript' && !localStorage.getItem('vidtext_email_captured')) {
-        setShowEmailCapture(true)
-      }
     } catch {
       setError('Network error. Please try again.')
     } finally {
@@ -386,11 +380,6 @@ export function VideoConverter() {
           <Globe className="h-3 w-3 shrink-0" />
           AI content will be generated in {LANGUAGES.find(l => l.code === language)?.label.replace(/^.{2}\s/, '') || language}
         </div>
-      )}
-
-      {/* Email capture — shows after first AI generation */}
-      {showEmailCapture && (
-        <EmailCapture onDismiss={() => setShowEmailCapture(false)} />
       )}
 
       {/* Tabs */}
