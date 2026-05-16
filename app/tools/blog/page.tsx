@@ -12,20 +12,24 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'YouTube to Blog Post Generator',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/blog',
-  description: 'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Blog Post Generator', item: 'https://www.vidtextai.com/tools/blog' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'YouTube to Blog Post Generator',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/blog',
+      description: 'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Blog Post Generator', item: 'https://www.vidtextai.com/tools/blog' },
+      ],
+    },
+  ],
 }
 
 export default function BlogPage() {

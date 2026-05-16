@@ -19,56 +19,60 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'YouTube Transcript Generator & Downloader',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/transcript',
-  description: 'Download free, accurate, timestamped transcripts from any YouTube video instantly.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  featureList: [
-    'Timestamped transcript download',
-    'Copy to clipboard',
-    'Download as .txt file',
-    '100+ languages',
-    'No sign-up required',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'YouTube Transcript Generator & Downloader',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/transcript',
+      description: 'Download free, accurate, timestamped transcripts from any YouTube video instantly.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      featureList: [
+        'Timestamped transcript download',
+        'Copy to clipboard',
+        'Download as .txt file',
+        '100+ languages',
+        'No sign-up required',
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'YouTube Transcript Download', item: 'https://www.vidtextai.com/tools/transcript' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I download a YouTube transcript?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Paste the YouTube video URL into VidText AI, click Get Transcript, then click the Download button to save the transcript as a .txt file. No sign-up required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is downloading a YouTube transcript free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Transcript extraction and download is completely free with no daily limit on VidText AI.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What format is the downloaded transcript?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Transcripts download as a plain .txt file with timestamps on each line, making it easy to open in any text editor, Word, or Google Docs.',
+          },
+        },
+      ],
+    },
   ],
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'YouTube Transcript Download', item: 'https://www.vidtextai.com/tools/transcript' },
-    ],
-  },
-  faqPage: {
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How do I download a YouTube transcript?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Paste the YouTube video URL into VidText AI, click Get Transcript, then click the Download button to save the transcript as a .txt file. No sign-up required.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is downloading a YouTube transcript free?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. Transcript extraction and download is completely free with no daily limit on VidText AI.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What format is the downloaded transcript?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Transcripts download as a plain .txt file with timestamps on each line, making it easy to open in any text editor, Word, or Google Docs.',
-        },
-      },
-    ],
-  },
 }
 
 export default function TranscriptPage() {

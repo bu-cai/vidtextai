@@ -20,20 +20,24 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Video to Text Converter',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/video-to-text',
-  description: 'Convert any YouTube video to text instantly. Free, accurate, no sign-up required.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Video to Text Converter', item: 'https://www.vidtextai.com/tools/video-to-text' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Video to Text Converter',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/video-to-text',
+      description: 'Convert any YouTube video to text instantly. Free, accurate, no sign-up required.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Video to Text Converter', item: 'https://www.vidtextai.com/tools/video-to-text' },
+      ],
+    },
+  ],
 }
 
 export default function VideoToTextPage() {

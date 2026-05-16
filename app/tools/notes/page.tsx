@@ -12,20 +12,24 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'YouTube to Study Notes Generator',
-  applicationCategory: 'EducationalApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/notes',
-  description: 'Convert YouTube lectures and educational videos into structured study notes with AI.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Study Notes Generator', item: 'https://www.vidtextai.com/tools/notes' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'YouTube to Study Notes Generator',
+      applicationCategory: 'EducationalApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/notes',
+      description: 'Convert YouTube lectures and educational videos into structured study notes with AI.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Study Notes Generator', item: 'https://www.vidtextai.com/tools/notes' },
+      ],
+    },
+  ],
 }
 
 export default function NotesPage() {

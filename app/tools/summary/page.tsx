@@ -12,20 +12,24 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'YouTube Video Summarizer',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/summary',
-  description: 'Summarize any YouTube video with AI. Get key points and takeaways in seconds.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'AI Summarizer', item: 'https://www.vidtextai.com/tools/summary' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'YouTube Video Summarizer',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/summary',
+      description: 'Summarize any YouTube video with AI. Get key points and takeaways in seconds.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'AI Summarizer', item: 'https://www.vidtextai.com/tools/summary' },
+      ],
+    },
+  ],
 }
 
 export default function SummaryPage() {

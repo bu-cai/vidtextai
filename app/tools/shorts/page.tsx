@@ -12,20 +12,24 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'YouTube Shorts Script Generator',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Web',
-  url: 'https://www.vidtextai.com/tools/shorts',
-  description: 'Convert long YouTube videos into viral short-form scripts for Shorts, TikTok, and Reels.',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Shorts Script Generator', item: 'https://www.vidtextai.com/tools/shorts' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'YouTube Shorts Script Generator',
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url: 'https://www.vidtextai.com/tools/shorts',
+      description: 'Convert long YouTube videos into viral short-form scripts for Shorts, TikTok, and Reels.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Shorts Script Generator', item: 'https://www.vidtextai.com/tools/shorts' },
+      ],
+    },
+  ],
 }
 
 export default function ShortsPage() {
