@@ -291,13 +291,16 @@ export function VideoConverter() {
         return
       }
 
-      // Update remaining count & persist to cookie
-      if (typeof data.remaining === 'number') {
-        const used = data.limit - data.remaining
-        setRemaining(data.remaining)
-        setUsedCount(used)
-        saveUsedToCookie(used)
-        if (data.remaining <= 0) setShowUpgrade(true)
+      // Update remaining count locally — cookie is source of truth.
+      // Server-side in-memory counter resets on cold starts (serverless),
+      // so we always increment the client cookie count instead.
+      if (!data.cached) {
+        const newUsed = usedCount + 1
+        const newRemaining = Math.max(0, FREE_LIMIT - newUsed)
+        setUsedCount(newUsed)
+        setRemaining(newRemaining)
+        saveUsedToCookie(newUsed)
+        if (newRemaining <= 0) setShowUpgrade(true)
       }
 
       setResults((prev) => ({
