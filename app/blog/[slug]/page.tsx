@@ -1219,6 +1219,166 @@ Try [VidText AI](https://www.vidtextai.com) free — get transcripts, summaries,
     `.trim(),
   },
 
+  'chatgpt-summarize-youtube-video': {
+    title: 'Can ChatGPT Summarize a YouTube Video? (Yes — Here\'s How)',
+    description: 'Learn how to use ChatGPT, Claude, or Gemini to summarize any YouTube video. Step-by-step guide with copy-paste prompts and a faster one-click alternative.',
+    category: 'Guide',
+    date: 'May 17, 2026',
+    readTime: '5 min read',
+    content: `
+## Can ChatGPT Summarize a YouTube Video?
+
+Yes — but not directly. ChatGPT cannot watch or access YouTube videos on its own. To summarize a YouTube video with ChatGPT, you first need to get the video's transcript (the text version of what was spoken), then paste it into ChatGPT with a prompt.
+
+The same applies to Claude, Gemini, and other AI tools.
+
+Here's the exact process — and a faster one-click alternative at the end.
+
+## Method 1: ChatGPT + Transcript (Step by Step)
+
+**Step 1: Get the YouTube transcript**
+
+Go to [VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript), paste the YouTube video URL, and click Get Transcript. Your full transcript appears in under 10 seconds. Click Copy.
+
+**Step 2: Open ChatGPT**
+
+Go to [chat.openai.com](https://chat.openai.com) and start a new chat.
+
+**Step 3: Paste this prompt**
+
+\`\`\`
+Here is the transcript of a YouTube video. Please summarize it in 5 bullet points, capturing the main ideas and key takeaways:
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+**Step 4: Read your summary**
+
+ChatGPT will return a clear, structured summary in seconds.
+
+**Total time: about 2 minutes.**
+
+## Method 2: Gemini (Has YouTube Access)
+
+Google Gemini can sometimes access YouTube videos directly — but only videos that have auto-generated captions, and results vary.
+
+**How to try it:**
+
+1. Go to [gemini.google.com](https://gemini.google.com)
+2. Type: "Summarize this YouTube video: [paste the URL]"
+3. Gemini will attempt to read the captions and generate a summary
+
+**When it works:** Videos with clear auto-generated captions from major channels.
+
+**When it fails:** Videos with poor captions, non-English content, or videos where Google hasn't indexed the captions.
+
+For reliable results, the transcript method (Method 1) works every time.
+
+## Method 3: Claude
+
+Anthropic's Claude works similarly to ChatGPT — it cannot directly access YouTube, but produces excellent summaries when given a transcript.
+
+**Prompt for Claude:**
+
+\`\`\`
+Read this YouTube video transcript and extract:
+1. The main argument or topic
+2. The 3-5 most important points
+3. Any specific data, examples, or quotes worth noting
+4. One sentence conclusion
+
+[PASTE TRANSCRIPT HERE]
+\`\`\`
+
+Claude is especially good at long transcripts — it handles videos over 2 hours without losing context.
+
+## Method 4: VidText AI (One Click — No Prompting)
+
+If the 2-minute process above feels like too many steps, [VidText AI](https://www.vidtextai.com) does everything automatically:
+
+1. Paste any YouTube URL
+2. Click the **Summary** tab
+3. Get a structured AI summary in under 30 seconds
+
+No copying transcripts. No writing prompts. No switching between tabs. VidText AI fetches the transcript, sends it to AI, and returns your summary — all in one click.
+
+Free for 3 AI summaries per day. No account required.
+
+## Comparison: Which Method Is Best?
+
+| Method | Steps | Time | Reliability | Cost |
+|---|---|---|---|---|
+| VidText AI | 1 click | 30 seconds | ✅ Always works | Free (3/day) |
+| ChatGPT + transcript | 4 steps | ~2 minutes | ✅ Always works | Free tier |
+| Gemini direct | 1 step | 30 seconds | ⚠️ Sometimes fails | Free |
+| Claude + transcript | 4 steps | ~2 minutes | ✅ Always works | Free tier |
+
+## Best Prompts for Summarizing YouTube Videos
+
+Once you have the transcript, these prompts give better results than a generic "summarize this":
+
+**For a quick overview:**
+\`\`\`
+Summarize this YouTube video transcript in 3-5 bullet points.
+[TRANSCRIPT]
+\`\`\`
+
+**For study notes:**
+\`\`\`
+Convert this transcript into structured study notes with headings, key concepts, and important examples.
+[TRANSCRIPT]
+\`\`\`
+
+**For action items:**
+\`\`\`
+Extract all actionable advice from this transcript as a checklist.
+[TRANSCRIPT]
+\`\`\`
+
+**For a blog post:**
+\`\`\`
+Write a 500-word blog post based on this YouTube video transcript. Include an intro, 3 subheadings, and a conclusion.
+[TRANSCRIPT]
+\`\`\`
+
+## Does ChatGPT Plus Summarize YouTube Videos Better?
+
+ChatGPT Plus (paid) gives access to GPT-4o and browsing capabilities. With browsing enabled, ChatGPT can sometimes access YouTube video pages — but it reads the page metadata, not the actual captions. For accurate summaries, the transcript method is still more reliable even with ChatGPT Plus.
+
+## What Types of Videos Can Be Summarized?
+
+Any public YouTube video with captions can be summarized using this method:
+
+**✅ Works great:**
+- Educational videos, lectures, TED Talks
+- Podcast interviews and panel discussions
+- Tutorial and how-to videos
+- News and documentary content
+
+**⚠️ Limited:**
+- Videos with poor auto-generated captions
+- Very short clips (under 2 minutes)
+- Videos with heavy accents or background noise
+
+**❌ Won't work:**
+- Private or unlisted videos
+- Videos with captions disabled
+- Music videos with no speech
+
+## Related Guides
+
+- [Best YouTube Video Summarizer Prompts for ChatGPT & AI](/blog/best-youtube-summarizer-prompts)
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [How to Generate Study Notes from Any YouTube Video](/blog/youtube-notes-generator)
+
+## Conclusion
+
+ChatGPT, Claude, and Gemini can all summarize YouTube videos — the key is getting the transcript first. Use [VidText AI](https://www.vidtextai.com/tools/transcript) to get any transcript in 10 seconds, then paste it into your AI tool of choice.
+
+Or skip the manual process entirely: [VidText AI's AI Summary tool](https://www.vidtextai.com/tools/summary) does the whole thing in one click — free, no account needed.
+    `.trim(),
+  },
+
   'youtube-transcript-shortcut-search': {
     title: 'YouTube Transcript Shortcut & Search Guide (2026)',
     description: 'How to open YouTube transcripts with a keyboard shortcut, search within any transcript, and find specific words in a video. Free tools included.',

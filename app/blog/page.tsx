@@ -90,6 +90,14 @@ const POSTS = [
     readTime: '6 min read',
   },
   {
+    slug: 'chatgpt-summarize-youtube-video',
+    title: 'Can ChatGPT Summarize a YouTube Video? (Yes — Here\'s How)',
+    excerpt: 'ChatGPT can\'t watch YouTube directly — but with a transcript, it summarizes perfectly. Step-by-step guide + faster one-click alternative.',
+    category: 'Guide',
+    date: 'May 17, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'youtube-transcript-shortcut-search',
     title: 'YouTube Transcript Shortcut & Search Guide (2026)',
     excerpt: 'How to open YouTube transcripts with a keyboard shortcut, search within any transcript, and find specific words in a video instantly.',

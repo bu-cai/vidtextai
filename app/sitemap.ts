@@ -12,6 +12,7 @@ const BLOG_SLUGS = [
   'best-youtube-summarizer-prompts',
   'youtube-transcript-chrome-extension',
   'youtube-transcript-shortcut-search',
+  'chatgpt-summarize-youtube-video',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
