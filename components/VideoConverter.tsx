@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe, FileText } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -123,6 +123,22 @@ function inlineFormat(text: string): string {
     .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
     .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-1 rounded text-sm font-mono">$1</code>')
 }
+// ─── YouTube video ID extractor ──────────────────────────────────────────────
+function extractVideoId(url: string): string | null {
+  const patterns = [
+    /[?&]v=([^&]{11})/,
+    /youtu\.be\/([^?&]{11})/,
+    /youtube\.com\/embed\/([^?&]{11})/,
+    /youtube\.com\/shorts\/([^?&]{11})/,
+  ]
+  for (const p of patterns) {
+    const m = url.match(p)
+    if (m) return m[1]
+  }
+  return null
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 // ─── Cookie-based usage tracker (persists across page refreshes) ─────────────
 const FREE_LIMIT = 3
 
@@ -160,6 +176,48 @@ export function VideoConverter() {
   const [remaining, setRemaining] = useState<number>(FREE_LIMIT)
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
+  const [videoId, setVideoId] = useState<string | null>(null)
+  const playerRef = useRef<any>(null)
+  const playerContainerRef = useRef<HTMLDivElement>(null)
+
+  // Load YouTube IFrame API once
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if ((window as any).YT?.Player) return
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    document.head.appendChild(tag)
+  }, [])
+
+  // Create / replace player when videoId changes
+  useEffect(() => {
+    if (!videoId || !playerContainerRef.current) return
+    if (playerRef.current?.destroy) {
+      playerRef.current.destroy()
+      playerRef.current = null
+    }
+    const container = playerContainerRef.current
+    const create = () => {
+      const div = document.createElement('div')
+      container.innerHTML = ''
+      container.appendChild(div)
+      playerRef.current = new (window as any).YT.Player(div, {
+        videoId,
+        width: '100%',
+        height: '100%',
+        playerVars: { autoplay: 0, modestbranding: 1, rel: 0 },
+      })
+    }
+    if ((window as any).YT?.Player) create()
+    else (window as any).onYouTubeIframeAPIReady = create
+  }, [videoId])
+
+  function seekTo(seconds: number) {
+    if (playerRef.current?.seekTo) {
+      playerRef.current.seekTo(seconds, true)
+      playerRef.current.playVideo?.()
+    }
+  }
 
   // Load usage from cookie on mount
   useEffect(() => {
@@ -193,6 +251,7 @@ export function VideoConverter() {
         return
       }
       setTranscriptData(data)
+      setVideoId(extractVideoId(url))
     } catch {
       setError('Network error. Please try again.')
     } finally {
@@ -374,6 +433,13 @@ export function VideoConverter() {
         </div>
       )}
 
+      {/* YouTube embed — shows after transcript loads */}
+      {transcriptData && videoId && (
+        <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 bg-black">
+          <div ref={playerContainerRef} className="w-full aspect-video" />
+        </div>
+      )}
+
       {/* Language hint (shown after transcript loads for AI tabs) */}
       {transcriptData && language !== 'en' && (
         <div className="mt-2 flex items-center gap-1.5 text-xs text-blue-600 bg-blue-50 rounded-lg px-3 py-1.5 border border-blue-100">
@@ -478,9 +544,19 @@ export function VideoConverter() {
                       {m.id === 'transcript' ? (
                         /* Transcript: timestamped lines */
                         <div className="divide-y divide-gray-50">
+                          {videoId && (
+                            <div className="px-3 py-2 bg-red-50 border-b border-red-100 flex items-center gap-1.5 text-xs text-red-600">
+                              <span>▶</span>
+                              <span>Click any timestamp to jump to that moment in the video</span>
+                            </div>
+                          )}
                           {transcriptData.transcript.map((seg, i) => (
-                            <div key={i} className="flex gap-2 px-3 py-1.5 hover:bg-gray-50 text-sm group sm:gap-3 sm:px-4">
-                              <span className="shrink-0 font-mono text-[10px] text-gray-400 w-9 pt-0.5 group-hover:text-red-500 transition-colors sm:text-[11px] sm:w-10">
+                            <div
+                              key={i}
+                              className={`flex gap-2 px-3 py-1.5 text-sm group sm:gap-3 sm:px-4 transition-colors ${videoId ? 'cursor-pointer hover:bg-red-50' : 'hover:bg-gray-50'}`}
+                              onClick={() => seekTo(seg.start)}
+                            >
+                              <span className={`shrink-0 font-mono text-[10px] w-9 pt-0.5 transition-colors sm:text-[11px] sm:w-10 ${videoId ? 'text-red-500 group-hover:text-red-700 font-semibold' : 'text-gray-400 group-hover:text-red-500'}`}>
                                 {formatTimestamp(seg.start)}
                               </span>
                               <span className="text-gray-700 leading-relaxed text-xs sm:text-sm">{seg.text}</span>
