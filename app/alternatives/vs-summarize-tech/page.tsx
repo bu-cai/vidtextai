@@ -126,6 +126,36 @@ export default function VsSummarizeTechPage() {
         </div>
       </div>
 
+      {/* FAQ */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'Is VidText AI better than Summarize.tech?',
+              a: 'For most users, yes. VidText AI provides five content formats from any YouTube video — transcript, summary, blog post, study notes, and Shorts scripts — while Summarize.tech only provides a basic summary. VidText AI also supports 10+ languages, allows downloading transcripts, and uses a more capable AI model. Summarize.tech is simpler and faster if you only ever need a quick one-paragraph summary.',
+            },
+            {
+              q: 'Does Summarize.tech give you the full transcript?',
+              a: 'No. Summarize.tech only produces a summary of the video — it does not provide access to the full, timestamped transcript. VidText AI gives you the complete transcript with timestamps, which you can copy, download, or use as a basis for AI content generation.',
+            },
+            {
+              q: 'Which tool supports multiple languages?',
+              a: 'VidText AI supports 10+ output languages including English, Chinese (Simplified and Traditional), Japanese, Korean, Spanish, French, German, Portuguese, and Arabic. Summarize.tech outputs in English only, making VidText AI the better choice for non-English speakers or multilingual content creators.',
+            },
+            {
+              q: 'Can Summarize.tech generate blog posts or study notes from YouTube videos?',
+              a: 'No. Summarize.tech is a single-purpose tool focused on one-click summaries. It cannot generate blog posts, study notes, or Shorts scripts. VidText AI is a full content repurposing platform — from one YouTube video, you can generate all five content formats in seconds.',
+            },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="rounded-2xl bg-red-600 p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Try VidText AI Free</h2>
         <p className="text-red-100 mb-5">5 content formats. 10 languages. No sign-up required.</p>

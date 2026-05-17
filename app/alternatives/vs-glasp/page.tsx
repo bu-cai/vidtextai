@@ -131,6 +131,36 @@ export default function VsGlaspPage() {
         </div>
       </div>
 
+      {/* FAQ */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'Is VidText AI better than Glasp for content creators?',
+              a: 'For content creation, yes. VidText AI generates blog posts, study notes, and Shorts scripts directly from any YouTube video — no browser extension needed. Glasp is better suited for readers who want to highlight and socially share quotes from web pages and YouTube videos, but it does not produce full content formats for publishing.',
+            },
+            {
+              q: 'Does Glasp work without a browser extension?',
+              a: 'No. Glasp requires installing a Chrome extension and creating an account before you can use it. This adds setup friction compared to VidText AI, which works instantly in any browser with no installation and no account required.',
+            },
+            {
+              q: 'Can Glasp generate blog posts or study notes from YouTube videos?',
+              a: 'No. Glasp focuses on highlighting and annotating transcript text, and sharing those highlights with a social community. It does not generate full blog posts, structured study notes, or Shorts scripts. VidText AI provides all five content formats: transcript, summary, blog post, study notes, and Shorts script.',
+            },
+            {
+              q: 'Which tool is better for students who study YouTube lectures?',
+              a: 'VidText AI is the better choice for students. Its Study Notes feature automatically extracts key concepts, important quotes, and action items from any YouTube lecture or educational video — formatted for review and retention. Glasp allows highlighting but requires manual selection of what to save, making it more time-consuming for comprehensive note-taking.',
+            },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="rounded-2xl bg-red-600 p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Try VidText AI Free</h2>
         <p className="text-red-100 mb-5">No extension. No account. 5 AI content formats from any YouTube video.</p>

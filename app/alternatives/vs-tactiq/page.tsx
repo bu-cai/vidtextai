@@ -132,6 +132,36 @@ export default function VsTactiqPage() {
         </div>
       </div>
 
+      {/* FAQ */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            {
+              q: 'Is VidText AI better than Tactiq for YouTube transcripts?',
+              a: 'Yes — for YouTube-specific use cases, VidText AI is the stronger choice. It extracts full timestamped transcripts from any public YouTube video and then lets you convert them into summaries, blog posts, study notes, or Shorts scripts. Tactiq is designed for live meeting transcription (Google Meet, Zoom, Teams) and is not optimized for YouTube video processing.',
+            },
+            {
+              q: 'Does Tactiq work without installing a Chrome extension?',
+              a: 'No. Tactiq requires installing a Chrome browser extension to function. It needs to listen to your audio during live meetings. VidText AI works entirely in the browser with no installation required — just paste a YouTube URL and get results instantly.',
+            },
+            {
+              q: 'Can VidText AI transcribe live meetings like Tactiq does?',
+              a: 'No. VidText AI is specifically built for YouTube videos, not live meetings. If you need to transcribe Google Meet, Zoom, or Teams calls in real time, Tactiq is the right tool. If you need YouTube transcripts and AI-powered content generation from videos, VidText AI is the better fit.',
+            },
+            {
+              q: 'Which tool is completely free without signing up?',
+              a: 'VidText AI offers a fully free tier with no account required — just visit vidtextai.com, paste a YouTube URL, and get your transcript instantly. You also get 3 free AI content generations per day with no sign-up. Tactiq requires creating an account to access its free plan, which is limited to 10 meeting transcripts per month.',
+            },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="rounded-2xl bg-red-600 p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Try VidText AI Free</h2>
         <p className="text-red-100 mb-5">No extension. No sign-up. Works on any YouTube video.</p>
