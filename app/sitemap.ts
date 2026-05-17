@@ -11,6 +11,7 @@ const BLOG_SLUGS = [
   'how-to-see-transcript-on-youtube',
   'best-youtube-summarizer-prompts',
   'youtube-transcript-chrome-extension',
+  'youtube-transcript-shortcut-search',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
