@@ -1599,13 +1599,13 @@ YouTube Shorts don't have a transcript panel in the standard interface.
 If you want to search what a creator has said across multiple videos (not just one), YouTube doesn't support this natively. Options:
 
 **Option 1: Search YouTube with quotes**
-Type `"exact phrase" site:youtube.com` in Google — this sometimes surfaces videos where the phrase appears in titles or descriptions, but not in the spoken content.
+Type \`"exact phrase" site:youtube.com\` in Google — this sometimes surfaces videos where the phrase appears in titles or descriptions, but not in the spoken content.
 
 **Option 2: Transcript multiple videos manually**
 Use VidText AI to generate transcripts for each video, download them as .txt files, then use a local search tool (like Windows Search or macOS Spotlight) to search across all the files.
 
 **Option 3: Use YouTube's own search**
-YouTube's search indexes auto-captions for most videos, so searching `topic + channel name` often surfaces relevant timestamps in the search results.
+YouTube's search indexes auto-captions for most videos, so searching \`topic + channel name\` often surfaces relevant timestamps in the search results.
 
 ## Tips for Getting the Most Out of YouTube Transcripts
 
