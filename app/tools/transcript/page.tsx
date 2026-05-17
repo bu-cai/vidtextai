@@ -3,7 +3,7 @@ import { VideoConverter } from '@/components/VideoConverter'
 import { FileText, Clock, Globe, Download, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YouTube Transcript Generator — Download Free Transcript | VidText AI',
+  title: 'YouTube Transcript Generator — Free Download | VidText AI',
   description:
     'Download a free, accurate, timestamped transcript from any YouTube video instantly. Copy or save as .txt file. No sign-up required.',
   keywords: [

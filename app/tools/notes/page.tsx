@@ -3,7 +3,7 @@ import { VideoConverter } from '@/components/VideoConverter'
 import { StickyNote, GraduationCap, CheckSquare, Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YouTube to Study Notes Generator — AI Note Taker | VidText AI',
+  title: 'YouTube Study Notes Generator — AI Note Taker | VidText AI',
   description:
     'Convert YouTube lectures and educational videos into structured study notes with AI. Extract key concepts, action items, and important quotes automatically.',
   keywords: ['YouTube to notes', 'video note taker', 'study notes generator', 'lecture notes AI'],

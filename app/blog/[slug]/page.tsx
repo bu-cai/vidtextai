@@ -1894,8 +1894,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = POSTS[slug]
   if (!post) return { title: 'Not Found' }
+  // Keep title ≤ 60 chars: use post title alone if it fits, else trim suffix
+  const titleSuffix = ' | VidText AI'
+  const fullTitle = post.title.length + titleSuffix.length <= 60
+    ? post.title + titleSuffix
+    : post.title.slice(0, 57 - titleSuffix.length) + '...' + titleSuffix
+
   return {
-    title: `${post.title} | VidText AI Blog`,
+    title: fullTitle,
     description: post.description,
     alternates: { canonical: `https://www.vidtextai.com/blog/${slug}` },
     openGraph: {
@@ -1904,6 +1910,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://www.vidtextai.com/blog/${slug}`,
       publishedTime: post.date,
+      images: [{ url: 'https://www.vidtextai.com/og-image.png', width: 1200, height: 630 }],
     },
   }
 }
@@ -1914,24 +1921,57 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = POSTS[slug]
   if (!post) notFound()
 
+  // Parse date string to ISO format
+  const dateMap: Record<string, string> = {
+    'May 15, 2026': '2026-05-15', 'May 16, 2026': '2026-05-16', 'May 17, 2026': '2026-05-17',
+  }
+  const isoDate = dateMap[post.date] || '2026-05-15'
+
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    datePublished: '2026-05-15',
-    dateModified: '2026-05-15',
-    author: { '@type': 'Organization', name: 'VidText AI', url: 'https://www.vidtextai.com' },
-    publisher: { '@type': 'Organization', name: 'VidText AI', url: 'https://www.vidtextai.com' },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.vidtextai.com/blog/${slug}` },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.vidtextai.com/blog' },
-        { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.vidtextai.com/blog/${slug}` },
-      ],
-    },
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `https://www.vidtextai.com/blog/${slug}#article`,
+        headline: post.title,
+        description: post.description,
+        datePublished: isoDate,
+        dateModified: isoDate,
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://www.vidtextai.com/og-image.png',
+          width: 1200,
+          height: 630,
+        },
+        author: {
+          '@type': 'Organization',
+          name: 'VidText AI',
+          url: 'https://www.vidtextai.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vidtextai.com/og-image.png',
+          },
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'VidText AI',
+          url: 'https://www.vidtextai.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.vidtextai.com/og-image.png',
+          },
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.vidtextai.com/blog/${slug}` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.vidtextai.com/blog' },
+          { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.vidtextai.com/blog/${slug}` },
+        ],
+      },
+    ],
   }
 
   const CATEGORY_COLORS: Record<string, string> = {

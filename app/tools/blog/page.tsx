@@ -3,7 +3,7 @@ import { VideoConverter } from '@/components/VideoConverter'
 import { BookOpen, Search, PenTool, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YouTube to Blog Post Generator — AI SEO Article Writer | VidText AI',
+  title: 'YouTube to Blog Post Generator — AI Writer | VidText AI',
   description:
     'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI. Get headers, subheadings, and keyword-rich content automatically.',
   keywords: ['YouTube to blog post', 'video to article', 'AI blog writer', 'SEO content generator'],

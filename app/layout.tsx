@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'VidText AI — Free YouTube Transcript Tool, No Installation Required',
+  title: 'VidText AI — Free YouTube Transcript, No Install Required',
   description:
     'The best free YouTube transcript tool with no installation required. Paste any YouTube URL and get a full transcript in seconds — plus AI summaries, blog posts, and study notes. No sign-up needed.',
   keywords: [

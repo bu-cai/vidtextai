@@ -4,7 +4,7 @@ import { FileText, Zap, Globe, Download, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Video to Text Converter — YouTube Video to Text Free | VidText AI',
+  title: 'Video to Text Converter — Free YouTube to Text | VidText AI',
   description:
     'Convert any YouTube video to text instantly with AI. Get a full, accurate text transcript from any video in seconds. Free, no sign-up required.',
   keywords: [
