@@ -56,7 +56,12 @@ const organizationJsonLd = {
       '@id': 'https://www.vidtextai.com/#organization',
       name: 'VidText AI',
       url: 'https://www.vidtextai.com',
-      logo: 'https://www.vidtextai.com/icon.png',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.vidtextai.com/og-image.png',
+        width: 1200,
+        height: 630,
+      },
       sameAs: [],
     },
     {
@@ -65,11 +70,6 @@ const organizationJsonLd = {
       url: 'https://www.vidtextai.com',
       name: 'VidText AI',
       publisher: { '@id': 'https://www.vidtextai.com/#organization' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://www.vidtextai.com/?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
     },
   ],
 }
