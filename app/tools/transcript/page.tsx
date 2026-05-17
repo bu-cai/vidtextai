@@ -44,6 +44,18 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Get a YouTube Transcript',
+      description: 'Extract a full, timestamped transcript from any YouTube video in seconds.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Copy the YouTube URL', text: 'Open the YouTube video and copy the URL from your browser address bar.' },
+        { '@type': 'HowToStep', position: 2, name: 'Paste into VidText AI', text: 'Go to vidtextai.com/tools/transcript and paste the YouTube URL into the input box.' },
+        { '@type': 'HowToStep', position: 3, name: 'Click Get Transcript', text: 'Click the Get Transcript button. The full timestamped transcript appears in under 10 seconds.' },
+        { '@type': 'HowToStep', position: 4, name: 'Copy or Download', text: 'Click Copy to copy the transcript to your clipboard, or Download to save it as a .txt file.' },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

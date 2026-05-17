@@ -29,6 +29,26 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'AI Summarizer', item: 'https://www.vidtextai.com/tools/summary' },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Summarize a YouTube Video with AI',
+      description: 'Get AI-powered key points and takeaways from any YouTube video in seconds.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Copy the YouTube URL', text: 'Find the YouTube video you want to summarize and copy its URL.' },
+        { '@type': 'HowToStep', position: 2, name: 'Paste into VidText AI', text: 'Go to vidtextai.com/tools/summary and paste the YouTube URL.' },
+        { '@type': 'HowToStep', position: 3, name: 'Select Summary format', text: 'Choose Summary from the format selector and click Generate.' },
+        { '@type': 'HowToStep', position: 4, name: 'Read your AI summary', text: 'Get a structured summary with key points and takeaways in under 30 seconds.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can AI summarize any YouTube video?', acceptedAnswer: { '@type': 'Answer', text: 'VidText AI can summarize any public YouTube video that has captions enabled. Most videos from educational channels, podcasts, news, and tutorials work perfectly.' } },
+        { '@type': 'Question', name: 'Is the YouTube video summarizer free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI offers 3 free AI summaries per day with no account required. Transcript extraction is unlimited and always free.' } },
+        { '@type': 'Question', name: 'How long does it take to summarize a YouTube video?', acceptedAnswer: { '@type': 'Answer', text: 'Most videos are summarized in under 30 seconds, regardless of the video length.' } },
+      ],
+    },
   ],
 }
 

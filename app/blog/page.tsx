@@ -106,6 +106,14 @@ const POSTS = [
     readTime: '5 min read',
   },
   {
+    slug: 'best-youtube-transcript-tools',
+    title: 'Best YouTube Transcript Tools in 2026 (Free, No Install, AI-Powered)',
+    excerpt: 'Compare VidText AI, Tactiq, NoteGPT, Glasp, and YouTube\'s built-in transcript. Find the best free tool — no install required.',
+    category: 'Guide',
+    date: 'May 17, 2026',
+    readTime: '6 min read',
+  },
+  {
     slug: 'youtube-transcript-shortcut-search',
     title: 'YouTube Transcript Shortcut & Search Guide (2026)',
     excerpt: 'How to open YouTube transcripts with a keyboard shortcut, search within any transcript, and find specific words in a video instantly.',

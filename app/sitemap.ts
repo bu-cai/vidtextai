@@ -11,6 +11,7 @@ const BLOG_SLUGS = [
   'how-to-see-transcript-on-youtube',
   'best-youtube-summarizer-prompts',
   'youtube-transcript-chrome-extension',
+  'best-youtube-transcript-tools',
   'youtube-transcript-shortcut-search',
   'chatgpt-summarize-youtube-video',
   'youtube-caption-downloader',
