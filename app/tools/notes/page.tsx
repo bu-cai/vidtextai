@@ -77,6 +77,38 @@ export default function NotesPage() {
           Works great for online course lectures, conference talks, university video content,
           documentary insights, and how-to tutorials.
         </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">How to Generate Study Notes From a YouTube Video</h2>
+        <ol className="mt-3 space-y-2 text-gray-600">
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">1.</span>Copy the YouTube video URL (lecture, tutorial, or talk).</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">2.</span>Paste it into the tool above and click <strong>Get Transcript</strong>.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">3.</span>Select the <strong>Study Notes</strong> tab and click Generate.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">4.</span>Get structured notes with key concepts, quotes, and action items in seconds.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">What Types of Videos Work Best?</h2>
+        <ul className="mt-3 space-y-2 text-gray-600 list-disc pl-5">
+          <li>University and online course lectures (Coursera, Khan Academy, MIT)</li>
+          <li>TED Talks and conference presentations</li>
+          <li>Technical tutorials and how-to videos</li>
+          <li>Business and finance educational content</li>
+          <li>Documentary narration and explainer videos</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">Frequently Asked Questions</h2>
+        <div className="mt-4 space-y-4">
+          {[
+            { q: 'How are the study notes structured?', a: 'Notes are organized with a summary, key concepts, important quotes, and action items or takeaways — formatted for quick review and revision.' },
+            { q: 'Can I use this for university lecture videos?', a: 'Yes. Any public YouTube video with captions works, including recorded university lectures, online courses, and educational channels.' },
+            { q: 'Is there a word limit on the generated notes?', a: 'No. VidText AI processes the full transcript regardless of video length and generates comprehensive notes covering the entire content.' },
+            { q: 'Can I export the study notes?', a: 'Yes. Click Download to save the notes as a .txt file, or use the Copy button to paste into Notion, Google Docs, or any note-taking app.' },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </article>
     </div>
   )

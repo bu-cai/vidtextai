@@ -93,12 +93,35 @@ export default function SummaryPage() {
           you&apos;ll get the key information in a fraction of the time.
         </p>
         <h3 className="text-xl font-semibold text-gray-900 mt-6">Perfect For:</h3>
-        <ul className="mt-3 space-y-2 text-gray-600">
-          <li>Quickly checking if a video is worth watching</li>
+        <ul className="mt-3 space-y-2 text-gray-600 list-disc pl-5">
+          <li>Quickly checking if a video is worth watching in full</li>
           <li>Research and fact-checking from video sources</li>
           <li>Staying updated with news and analysis channels</li>
-          <li>Summarizing meetings, webinars, and conference talks</li>
+          <li>Summarizing webinars, conference talks, and recorded meetings</li>
         </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">How to Summarize a YouTube Video With AI</h2>
+        <ol className="mt-3 space-y-2 text-gray-600">
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">1.</span>Copy the URL of any YouTube video you want to summarize.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">2.</span>Paste it into the box above and click <strong>Get Transcript</strong>.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">3.</span>Select the <strong>Summary</strong> tab — the AI generates a structured summary in under 30 seconds.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">4.</span>Copy or download the summary. No account required.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">Frequently Asked Questions</h2>
+        <div className="mt-4 space-y-4">
+          {[
+            { q: 'Can AI summarize any YouTube video?', a: 'VidText AI can summarize any public YouTube video with captions. Most educational channels, podcasts, news, TED Talks, and tutorials work perfectly.' },
+            { q: 'How accurate is the AI summary?', a: 'Very accurate. The AI reads the full transcript and identifies the main points, key arguments, and conclusions — not just the first few minutes.' },
+            { q: 'What does the AI summary include?', a: 'Each summary includes a brief overview, the main points in bullet form, and key takeaways. The format makes it easy to scan and reference later.' },
+            { q: 'Is the YouTube video summarizer free?', a: 'Yes. You get 3 free AI summaries per day with no account required. The plain transcript is always free and unlimited.' },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </article>
     </div>
   )

@@ -77,6 +77,37 @@ export default function ShortsPage() {
           Ideal for content creators looking to expand their reach on YouTube Shorts, TikTok,
           and Instagram Reels without spending hours on scripting.
         </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">How to Generate Shorts Scripts From a Long Video</h2>
+        <ol className="mt-3 space-y-2 text-gray-600">
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">1.</span>Find a long YouTube video (10+ minutes works best).</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">2.</span>Paste the URL into the tool above and click <strong>Get Transcript</strong>.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">3.</span>Select the <strong>Shorts Script</strong> tab and click Generate.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">4.</span>Get 3–5 complete short-form scripts ready to film immediately.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">What Makes a Good Shorts Script?</h2>
+        <p className="mt-3 text-gray-600">Every VidText AI Shorts script is structured with three essential parts:</p>
+        <ul className="mt-3 space-y-2 text-gray-600 list-disc pl-5">
+          <li><strong>Hook (0–3 seconds):</strong> A bold statement or question that stops the scroll</li>
+          <li><strong>Value (3–50 seconds):</strong> The core insight, tip, or story from the original video</li>
+          <li><strong>CTA (final 5 seconds):</strong> A clear call to action — subscribe, comment, or click the link</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">Frequently Asked Questions</h2>
+        <div className="mt-4 space-y-4">
+          {[
+            { q: 'How many Shorts scripts does one video generate?', a: 'VidText AI generates 3–5 complete short-form scripts per video, each focusing on a different highlight or angle from the original content.' },
+            { q: 'Do the scripts work for TikTok and Instagram Reels?', a: 'Yes. The scripts are optimized for any 60-second vertical video format — YouTube Shorts, TikTok, and Instagram Reels all work.' },
+            { q: 'What length are the generated scripts?', a: 'Scripts are written for 30–60 second videos, which is the optimal length for engagement across all short-form platforms.' },
+            { q: 'Can I customize the generated scripts?', a: 'Absolutely. The scripts are plain text you can edit freely before filming. Add your own examples, adjust the tone, or combine ideas from multiple scripts.' },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </article>
     </div>
   )

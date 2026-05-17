@@ -130,6 +130,29 @@ export default function PricingPage() {
         </div>
       </div>
 
+      {/* What's included */}
+      <div className="mt-16 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">What You Get With VidText AI Free</h2>
+        <p className="text-gray-600 text-center mb-8">
+          The free plan gives you full access to every tool — no credit card, no sign-up, no hidden limits on transcripts.
+          YouTube transcript extraction is always free and unlimited. The 3-per-day limit only applies to AI-powered features
+          like summaries, blog posts, study notes, and Shorts scripts.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            { emoji: '📝', title: 'Full Transcripts', desc: 'Extract complete, timestamped transcripts from any public YouTube video. Always free, always unlimited.' },
+            { emoji: '✨', title: 'AI Summaries', desc: 'Get concise key-point summaries from any video. 3 free generations per day — resets at midnight UTC.' },
+            { emoji: '📖', title: 'Blog & Notes', desc: 'Generate SEO blog posts and structured study notes. Same daily free tier as summaries.' },
+          ].map(item => (
+            <div key={item.title} className="rounded-xl border border-gray-200 p-5 text-center">
+              <div className="text-3xl mb-3">{item.emoji}</div>
+              <h3 className="font-semibold text-gray-900 text-sm">{item.title}</h3>
+              <p className="mt-2 text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </div>
   )
 }

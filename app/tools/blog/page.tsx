@@ -77,6 +77,37 @@ export default function BlogPage() {
           Each generated article includes an SEO-friendly title, well-structured introduction,
           organized body sections with H2 and H3 headers, and a conclusion with clear takeaways.
         </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">How to Turn a YouTube Video Into a Blog Post</h2>
+        <ol className="mt-3 space-y-2 text-gray-600">
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">1.</span>Paste any YouTube video URL into the tool above.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">2.</span>Click <strong>Get Transcript</strong> to extract the full video text.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">3.</span>Select the <strong>Blog Post</strong> tab and click Generate.</li>
+          <li className="flex gap-2"><span className="font-bold text-red-600 shrink-0">4.</span>Copy the article or download it as a .txt file to paste into your CMS.</li>
+        </ol>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">Who Should Use This Tool?</h2>
+        <ul className="mt-3 space-y-2 text-gray-600 list-disc pl-5">
+          <li><strong>YouTubers</strong> who want written content without hiring writers</li>
+          <li><strong>Content marketers</strong> repurposing video into SEO articles</li>
+          <li><strong>Bloggers</strong> covering topics discussed in industry YouTube videos</li>
+          <li><strong>Agencies</strong> scaling content production across multiple channels</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8">Frequently Asked Questions</h2>
+        <div className="mt-4 space-y-4">
+          {[
+            { q: 'How long does it take to generate a blog post from a YouTube video?', a: 'Most blog posts are generated in 15–30 seconds, regardless of the video length. VidText AI processes the transcript and generates a complete article in one step.' },
+            { q: 'Is the generated blog post SEO-optimized?', a: 'Yes. The AI structures the article with H2 and H3 headings, uses natural keyword placement, and writes in a format that Google can index effectively.' },
+            { q: 'Can I edit the generated blog post?', a: 'Absolutely. The blog post is plain text that you can copy and paste into any editor — WordPress, Ghost, Notion, Google Docs — and edit freely.' },
+            { q: 'Does this work for any YouTube video?', a: 'It works on any public YouTube video with captions enabled. Educational channels, podcasts, tutorials, and news videos work best.' },
+          ].map(item => (
+            <div key={item.q} className="rounded-xl border border-gray-200 p-5">
+              <h3 className="font-semibold text-gray-900 text-sm">{item.q}</h3>
+              <p className="mt-2 text-sm text-gray-600">{item.a}</p>
+            </div>
+          ))}
+        </div>
       </article>
     </div>
   )
