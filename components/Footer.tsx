@@ -37,6 +37,9 @@ export function Footer() {
               <li><Link href="/pricing" className="hover:text-gray-900">Pricing</Link></li>
               <li><Link href="/blog" className="hover:text-gray-900">Blog</Link></li>
               <li><Link href="/alternatives" className="hover:text-gray-900">Alternatives</Link></li>
+              <li><Link href="/alternatives/vs-tactiq" className="hover:text-gray-900">vs Tactiq</Link></li>
+              <li><Link href="/alternatives/vs-glasp" className="hover:text-gray-900">vs Glasp</Link></li>
+              <li><Link href="/alternatives/vs-summarize-tech" className="hover:text-gray-900">vs Summarize.tech</Link></li>
             </ul>
           </div>
 

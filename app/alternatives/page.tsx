@@ -45,6 +45,7 @@ const ALTERNATIVES = [
   {
     name: 'Tactiq',
     slug: 'tactiq',
+    href: '/alternatives/vs-tactiq',
     verdict: 'Great for real-time meeting transcripts, but lacks AI content generation.',
     best: 'Meeting transcription',
     missing: 'Blog, Notes, Shorts script generation',
@@ -52,6 +53,7 @@ const ALTERNATIVES = [
   {
     name: 'Glasp',
     slug: 'glasp',
+    href: '/alternatives/vs-glasp',
     verdict: 'Excellent for highlighting & social learning, but requires a browser extension.',
     best: 'Social highlights & notes',
     missing: 'AI content generation, no sign-up required',
@@ -59,6 +61,7 @@ const ALTERNATIVES = [
   {
     name: 'Summarize.tech',
     slug: 'summarize-tech',
+    href: '/alternatives/vs-summarize-tech',
     verdict: 'Simple summarizer, but limited to summaries only — no other content formats.',
     best: 'Quick one-click summaries',
     missing: 'Transcripts, blog posts, study notes, Shorts scripts',
@@ -66,6 +69,7 @@ const ALTERNATIVES = [
   {
     name: 'YouTube (built-in)',
     slug: 'youtube-built-in',
+    href: null,
     verdict: 'Free and always available, but no download, no AI, and hard to copy.',
     best: 'Quick reference while watching',
     missing: 'AI processing, downloadable output, all content formats',
@@ -123,7 +127,7 @@ export default function AlternativesPage() {
         {ALTERNATIVES.map((alt) => (
           <div key={alt.slug} className="rounded-xl border border-gray-200 p-6">
             <div className="flex items-start justify-between gap-4">
-              <div>
+              <div className="flex-1">
                 <h3 className="font-bold text-gray-900 text-lg">VidText AI vs. {alt.name}</h3>
                 <p className="mt-1 text-gray-600 text-sm">{alt.verdict}</p>
                 <div className="mt-3 flex flex-wrap gap-4 text-sm">
@@ -131,6 +135,14 @@ export default function AlternativesPage() {
                   <span><span className="font-medium text-red-600">✗ Missing:</span> {alt.missing}</span>
                 </div>
               </div>
+              {alt.href && (
+                <Link
+                  href={alt.href}
+                  className="shrink-0 flex items-center gap-1 text-sm font-medium text-red-600 hover:text-red-700 whitespace-nowrap"
+                >
+                  Full comparison <ArrowRight className="h-4 w-4" />
+                </Link>
+              )}
             </div>
           </div>
         ))}
