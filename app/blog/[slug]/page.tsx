@@ -1379,6 +1379,129 @@ Or skip the manual process entirely: [VidText AI's AI Summary tool](https://www.
     `.trim(),
   },
 
+  'youtube-caption-downloader': {
+    title: 'YouTube Caption Downloader: How to Download Captions Free (2026)',
+    description: 'Download captions and subtitles from any YouTube video instantly. Free YouTube caption downloader — no software, no sign-up, works on any public video.',
+    category: 'Guide',
+    date: 'May 17, 2026',
+    readTime: '4 min read',
+    content: `
+## What Are YouTube Captions and Why Download Them?
+
+YouTube captions (also called subtitles or closed captions) are the text version of everything spoken in a video. YouTube generates them automatically for most videos, and many creators also upload manual captions for higher accuracy.
+
+Downloading captions gives you the full text of any YouTube video — useful for:
+- **Research** — search for specific quotes or data points without watching
+- **Study** — read lecture content instead of rewatching
+- **Content creation** — repurpose video content into articles or posts
+- **Translation** — translate the text into another language
+- **Accessibility** — share the text with people who can't access audio
+
+## How to Download YouTube Captions (Fastest Method)
+
+[VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript) downloads YouTube captions in under 10 seconds:
+
+**Step 1:** Copy the YouTube video URL from your browser.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) and paste the URL.
+
+**Step 3:** Click **Get Transcript**. The full captioned text appears with timestamps.
+
+**Step 4:** Click **Save** to download as a .txt file, or **Copy** to copy to clipboard.
+
+That's it. No account, no software, no cost.
+
+## How to Download Captions from YouTube (Built-in Method)
+
+YouTube doesn't have a native caption download button, but you can access captions through the transcript panel:
+
+**Step 1:** Open the YouTube video.
+
+**Step 2:** Click the **three-dot menu (⋯)** below the video.
+
+**Step 3:** Click **"Open transcript"**.
+
+**Step 4:** To copy: click inside the panel, press Ctrl+A then Ctrl+C.
+
+**Limitation:** You can't download them as a file directly. The copied text includes timestamps mixed in, and you'll need to clean it up manually.
+
+## YouTube Caption Downloader: Comparison
+
+| Method | Download as File | Timestamps | Clean Text | Free |
+|---|---|---|---|---|
+| VidText AI | ✅ .txt file | ✅ Yes | ✅ Yes | ✅ Yes |
+| YouTube built-in | ❌ Copy only | ✅ Yes | ⚠️ Messy | ✅ Yes |
+| Browser extensions | ⚠️ Some do | ✅ Yes | ⚠️ Varies | ⚠️ Some |
+
+## What Format Do Downloaded Captions Come In?
+
+When you download captions using VidText AI, you get a clean .txt file formatted like this:
+
+\`\`\`
+[0:00] Welcome to today's video on productivity.
+[0:05] We're going to cover three main strategies.
+[0:12] The first one is time-blocking...
+\`\`\`
+
+Each line starts with a timestamp in [M:SS] format, followed by the spoken text. You can open this in any text editor, Word, Google Docs, or Notion.
+
+## Can You Download Closed Captions from YouTube?
+
+Yes. VidText AI downloads both types of YouTube captions:
+
+**Auto-generated captions** — YouTube creates these automatically using speech recognition. Available on most English-language videos. Accuracy is typically 85–95%.
+
+**Manual/closed captions (CC)** — Human-created captions uploaded by the video creator. Usually near 100% accurate. Look for the **CC badge** on the video thumbnail.
+
+VidText AI automatically uses the highest-quality caption track available for that video.
+
+## How to Download Captions in a Different Language
+
+Many YouTube videos have captions in multiple languages. To download captions in a specific language:
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Use the **language selector** before clicking Get Transcript
+4. The transcript will output in your selected language
+
+Note: Language availability depends on what caption tracks the video creator has provided or what YouTube has auto-generated.
+
+## What Videos Support Caption Download?
+
+**✅ Works:**
+- Public YouTube videos with auto-generated captions
+- Videos with manually uploaded CC subtitles
+- Educational content, TED Talks, podcasts, tutorials, news
+
+**❌ Doesn't work:**
+- Private or unlisted videos
+- Videos where captions are disabled by the creator
+- Music-only videos with no speech
+- YouTube Shorts (limited caption support)
+
+## From Captions to AI Content
+
+Once you have the caption text, VidText AI can transform it further:
+
+- **[AI Summary](https://www.vidtextai.com/tools/summary)** — get the key points in bullet format
+- **[Blog Post](https://www.vidtextai.com/tools/blog)** — turn the captions into a full SEO article
+- **[Study Notes](https://www.vidtextai.com/tools/notes)** — structured notes for learning
+- **[Shorts Script](https://www.vidtextai.com/tools/shorts)** — repurpose into short-form video scripts
+
+## Related Guides
+
+- [How to See & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+- [YouTube Transcript Shortcut & Search Guide](/blog/youtube-transcript-shortcut-search)
+- [Best YouTube Transcript Chrome Extensions (2026)](/blog/youtube-transcript-chrome-extension)
+
+## Conclusion
+
+Downloading YouTube captions is free and takes under 10 seconds with VidText AI. No software to install, no account to create — just paste a URL and download the caption file instantly.
+
+Try [VidText AI Caption Downloader](https://www.vidtextai.com/tools/transcript) — works on any public YouTube video.
+    `.trim(),
+  },
+
   'youtube-transcript-shortcut-search': {
     title: 'YouTube Transcript Shortcut & Search Guide (2026)',
     description: 'How to open YouTube transcripts with a keyboard shortcut, search within any transcript, and find specific words in a video. Free tools included.',

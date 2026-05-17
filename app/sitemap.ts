@@ -13,6 +13,7 @@ const BLOG_SLUGS = [
   'youtube-transcript-chrome-extension',
   'youtube-transcript-shortcut-search',
   'chatgpt-summarize-youtube-video',
+  'youtube-caption-downloader',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

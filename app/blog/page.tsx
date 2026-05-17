@@ -90,6 +90,14 @@ const POSTS = [
     readTime: '6 min read',
   },
   {
+    slug: 'youtube-caption-downloader',
+    title: 'YouTube Caption Downloader: How to Download Captions Free (2026)',
+    excerpt: 'Download captions and subtitles from any YouTube video instantly — as a .txt file, no software needed, no sign-up required.',
+    category: 'Guide',
+    date: 'May 17, 2026',
+    readTime: '4 min read',
+  },
+  {
     slug: 'chatgpt-summarize-youtube-video',
     title: 'Can ChatGPT Summarize a YouTube Video? (Yes — Here\'s How)',
     excerpt: 'ChatGPT can\'t watch YouTube directly — but with a transcript, it summarizes perfectly. Step-by-step guide + faster one-click alternative.',
