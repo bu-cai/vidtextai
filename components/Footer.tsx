@@ -26,6 +26,7 @@ export function Footer() {
               <li><Link href="/tools/blog" className="hover:text-gray-900">Blog Post</Link></li>
               <li><Link href="/tools/notes" className="hover:text-gray-900">Study Notes</Link></li>
               <li><Link href="/tools/shorts" className="hover:text-gray-900">Shorts Script</Link></li>
+              <li><Link href="/tools/video-to-text" className="hover:text-gray-900">Video to Text</Link></li>
             </ul>
           </div>
 
@@ -35,6 +36,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-gray-900">About</Link></li>
               <li><Link href="/pricing" className="hover:text-gray-900">Pricing</Link></li>
               <li><Link href="/blog" className="hover:text-gray-900">Blog</Link></li>
+              <li><Link href="/alternatives" className="hover:text-gray-900">Alternatives</Link></li>
             </ul>
           </div>
 

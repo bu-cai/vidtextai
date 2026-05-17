@@ -11,17 +11,21 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'VidText AI vs Alternatives',
-  description: 'Comparison of VidText AI with other YouTube transcript and AI content tools.',
-  url: 'https://www.vidtextai.com/alternatives',
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'VidText AI vs Alternatives',
+      description: 'Comparison of VidText AI with other YouTube transcript and AI content tools.',
+      url: 'https://www.vidtextai.com/alternatives',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
+      ],
+    },
+  ],
 }
 
 const COMPARISON = [

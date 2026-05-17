@@ -11,18 +11,22 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'VidText AI vs Tactiq',
-  description: 'Comparison of VidText AI and Tactiq for YouTube transcript generation.',
-  url: 'https://www.vidtextai.com/alternatives/vs-tactiq',
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
-      { '@type': 'ListItem', position: 3, name: 'vs Tactiq', item: 'https://www.vidtextai.com/alternatives/vs-tactiq' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'VidText AI vs Tactiq',
+      description: 'Comparison of VidText AI and Tactiq for YouTube transcript generation.',
+      url: 'https://www.vidtextai.com/alternatives/vs-tactiq',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
+        { '@type': 'ListItem', position: 3, name: 'vs Tactiq', item: 'https://www.vidtextai.com/alternatives/vs-tactiq' },
+      ],
+    },
+  ],
 }
 
 const ROWS = [

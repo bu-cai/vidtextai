@@ -11,18 +11,22 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'VidText AI vs Summarize.tech',
-  description: 'Comparison of VidText AI and Summarize.tech for YouTube video summarization.',
-  url: 'https://www.vidtextai.com/alternatives/vs-summarize-tech',
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
-      { '@type': 'ListItem', position: 3, name: 'vs Summarize.tech', item: 'https://www.vidtextai.com/alternatives/vs-summarize-tech' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'VidText AI vs Summarize.tech',
+      description: 'Comparison of VidText AI and Summarize.tech for YouTube video summarization.',
+      url: 'https://www.vidtextai.com/alternatives/vs-summarize-tech',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
+        { '@type': 'ListItem', position: 3, name: 'vs Summarize.tech', item: 'https://www.vidtextai.com/alternatives/vs-summarize-tech' },
+      ],
+    },
+  ],
 }
 
 const ROWS = [

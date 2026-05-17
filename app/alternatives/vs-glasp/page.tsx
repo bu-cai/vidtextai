@@ -11,18 +11,22 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'VidText AI vs Glasp',
-  description: 'Comparison of VidText AI and Glasp for YouTube transcript and content creation.',
-  url: 'https://www.vidtextai.com/alternatives/vs-glasp',
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
-      { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
-      { '@type': 'ListItem', position: 3, name: 'vs Glasp', item: 'https://www.vidtextai.com/alternatives/vs-glasp' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'VidText AI vs Glasp',
+      description: 'Comparison of VidText AI and Glasp for YouTube transcript and content creation.',
+      url: 'https://www.vidtextai.com/alternatives/vs-glasp',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.vidtextai.com' },
+        { '@type': 'ListItem', position: 2, name: 'Alternatives', item: 'https://www.vidtextai.com/alternatives' },
+        { '@type': 'ListItem', position: 3, name: 'vs Glasp', item: 'https://www.vidtextai.com/alternatives/vs-glasp' },
+      ],
+    },
+  ],
 }
 
 const ROWS = [
