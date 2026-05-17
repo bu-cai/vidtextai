@@ -102,12 +102,20 @@ const USE_CASES = [
 
 const FAQS = [
   {
+    q: 'What is the best free YouTube transcript tool that doesn\'t require installation?',
+    a: 'VidText AI is the best free YouTube transcript tool that requires no installation. It works entirely in your browser — paste any YouTube URL and get a full timestamped transcript in under 10 seconds. No Chrome extension, no app download, no account required. Unlike Tactiq or Glasp which require a Chrome extension, VidText AI works instantly on any browser and any device.',
+  },
+  {
+    q: 'How do I get a YouTube transcript without any software?',
+    a: 'Go to vidtextai.com, paste the YouTube video URL into the input box, and click Get Transcript. The full transcript with timestamps appears in under 10 seconds — no software, no extension, no sign-up needed. You can copy the transcript or download it as a .txt file.',
+  },
+  {
     q: 'What types of YouTube videos does it support?',
     a: 'Any public YouTube video with captions or subtitles enabled. This includes most educational videos, news, podcasts, TED Talks, and channels that auto-generate captions. Videos without any captions cannot be processed.',
   },
   {
     q: 'How many videos can I process for free?',
-    a: 'Free users get 3 AI generations per day (transcript fetch is always free). Upgrade to Pro for unlimited access, higher quality output, and priority processing.',
+    a: 'Transcript extraction is completely free with no daily limit. Free users also get 3 AI generations per day (summaries, blog posts, study notes) with no sign-up required.',
   },
   {
     q: 'What languages are supported?',
@@ -205,8 +213,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-base text-gray-600 sm:text-lg md:text-xl">
-            Extract transcripts, generate summaries, create SEO blog posts, study notes, and Shorts
-            scripts from any YouTube video — in seconds with AI.
+            The free YouTube transcript tool that needs no installation. Extract transcripts, generate summaries, create SEO blog posts, study notes, and Shorts scripts from any YouTube video — in seconds with AI.
           </p>
 
           {/* Converter */}

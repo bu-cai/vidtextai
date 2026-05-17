@@ -12,11 +12,13 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'VidText AI — YouTube Transcript, Summary & Blog Generator',
+  title: 'VidText AI — Free YouTube Transcript Tool, No Installation Required',
   description:
-    'Convert any YouTube video into transcript, summary, blog post, study notes, or Shorts script using AI. Free, fast, and accurate.',
+    'The best free YouTube transcript tool with no installation required. Paste any YouTube URL and get a full transcript in seconds — plus AI summaries, blog posts, and study notes. No sign-up needed.',
   keywords: [
     'YouTube transcript',
+    'free YouTube transcript tool no installation',
+    'YouTube transcript no extension',
     'YouTube summary',
     'YouTube to blog post',
     'AI transcript generator',
