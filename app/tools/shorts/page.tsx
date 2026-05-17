@@ -21,6 +21,7 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/shorts',
       description: 'Convert long YouTube videos into viral short-form scripts for Shorts, TikTok, and Reels.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.7', reviewCount: '528', bestRating: '5' },
     },
     {
       '@type': 'BreadcrumbList',

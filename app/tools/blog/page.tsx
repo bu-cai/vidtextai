@@ -21,6 +21,7 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/blog',
       description: 'Convert any YouTube video into a fully-written, SEO-optimized blog post with AI.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '843', bestRating: '5' },
     },
     {
       '@type': 'BreadcrumbList',

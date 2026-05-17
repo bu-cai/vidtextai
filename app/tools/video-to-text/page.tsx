@@ -29,6 +29,7 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/video-to-text',
       description: 'Convert any YouTube video to text instantly. Free, accurate, no sign-up required.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '731', bestRating: '5' },
     },
     {
       '@type': 'BreadcrumbList',

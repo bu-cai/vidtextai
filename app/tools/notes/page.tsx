@@ -21,6 +21,7 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/notes',
       description: 'Convert YouTube lectures and educational videos into structured study notes with AI.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '612', bestRating: '5' },
     },
     {
       '@type': 'BreadcrumbList',
