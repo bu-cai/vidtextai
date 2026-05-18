@@ -121,6 +121,30 @@ const POSTS = [
     date: 'May 17, 2026',
     readTime: '5 min read',
   },
+  {
+    slug: 'youtube-transcript-on-phone',
+    title: 'How to Get a YouTube Transcript on iPhone and Android (2026)',
+    excerpt: 'Get a full YouTube transcript on your phone in seconds — no app download, no sign-up. Works on any iPhone or Android mobile browser.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '4 min read',
+  },
+  {
+    slug: 'youtube-transcript-translate',
+    title: 'How to Translate YouTube Transcripts to Any Language (Free)',
+    excerpt: 'Translate any YouTube video transcript into Spanish, Chinese, French, Japanese and 10+ more languages free. No sign-up required.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'youtube-video-summary-free',
+    title: 'How to Summarize Any YouTube Video for Free (No Sign-Up, 2026)',
+    excerpt: 'Summarize any YouTube video in under 30 seconds — completely free, no account, no extension needed. Works on any public YouTube video.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '4 min read',
+  },
 ]
 
 const CATEGORY_COLORS: Record<string, string> = {

@@ -15,6 +15,9 @@ const BLOG_SLUGS = [
   'youtube-transcript-shortcut-search',
   'chatgpt-summarize-youtube-video',
   'youtube-caption-downloader',
+  'youtube-transcript-on-phone',
+  'youtube-transcript-translate',
+  'youtube-video-summary-free',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

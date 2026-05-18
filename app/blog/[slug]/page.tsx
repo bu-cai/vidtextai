@@ -1826,7 +1826,354 @@ YouTube has no true keyboard shortcut for opening transcripts, and its built-in 
 Try it free at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) — no account, no sign-up.
     `.trim(),
   },
+
+  'youtube-transcript-on-phone': {
+    title: 'How to Get a YouTube Transcript on iPhone and Android (2026)',
+    description: 'Get a full YouTube transcript on your phone in seconds — no app, no extension, no sign-up. Works on iPhone, Android, and any mobile browser.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest way to get a YouTube transcript on your phone:** Open [vidtextai.com](https://www.vidtextai.com) in your mobile browser, paste the YouTube URL, tap Convert, and get the full timestamped transcript instantly — no app download, no account, works on any iPhone or Android.
+
+## Can You Get YouTube Transcripts on Mobile?
+
+Yes. While YouTube's app makes it harder to access transcripts than the desktop site, there are reliable ways to get a full transcript on any mobile device in 2026.
+
+The two main options are:
+1. **VidText AI** (fastest, works on all phones)
+2. **YouTube's built-in transcript** (hidden, limited)
+
+## Method 1: VidText AI (Works on All Phones)
+
+VidText AI is a mobile-friendly web tool — no app needed.
+
+**Step 1:** Open YouTube, find the video you want, and copy the URL.
+- On iPhone: tap the **Share** button → **Copy Link**
+- On Android: tap the **Share** button → **Copy Link**
+
+**Step 2:** Open a new browser tab and go to [vidtextai.com](https://www.vidtextai.com).
+
+**Step 3:** Paste the URL into the input box and tap **Convert**.
+
+**Step 4:** The full, timestamped transcript appears. Tap **Copy** to copy it, or **Download** to save it as a .txt file.
+
+The entire process takes under 30 seconds on any mobile browser — Safari, Chrome, Firefox, or Samsung Internet all work.
+
+## Method 2: YouTube's Built-in Transcript (Mobile)
+
+YouTube's app has a transcript feature, but it's buried:
+
+**On iPhone/Android:**
+1. Open the YouTube app and find your video
+2. Tap the **three-dot menu (⋯)** next to the video title (below the player)
+3. Look for **"Open transcript"** — this option is available on most videos
+
+**Limitations of YouTube's built-in transcript:**
+- You can't download it as a file
+- You can't copy the full transcript easily (only individual lines)
+- No AI processing or summarization
+- The feature disappears if you scroll away
+
+## Method 3: Use the YouTube Website on Mobile Browser
+
+If you open **youtube.com** in your phone's browser (not the app):
+
+1. Go to the video page
+2. Tap the **Share** icon below the video
+3. Look for **"More"** → sometimes reveals transcript option
+
+This approach is inconsistent and may not work on all devices.
+
+## Comparing Mobile Transcript Options
+
+| Method | Works on Phone | Downloadable | AI Features | Sign-Up Needed |
+|---|---|---|---|---|
+| VidText AI | ✅ All browsers | ✅ Yes | ✅ Summary, Blog, Notes | ❌ No |
+| YouTube App Transcript | ✅ iOS & Android | ❌ No | ❌ No | ✅ Google account |
+| YouTube Mobile Web | ⚠️ Inconsistent | ❌ No | ❌ No | ✅ Google account |
+
+**Verdict:** VidText AI is the best mobile option because it's downloadable, works consistently, and includes AI features that YouTube's built-in tool doesn't.
+
+## Why Get a YouTube Transcript on Your Phone?
+
+Common use cases for mobile users:
+
+- **Commuting** — save a lecture or podcast transcript to read offline
+- **Research on the go** — quickly check what was said in a video without watching it
+- **Students** — copy study notes from educational YouTube content
+- **Content creators** — grab a transcript to repurpose into social posts or captions
+- **Accessibility** — read along with any video instead of listening
+
+## How to Save a YouTube Transcript Offline on Mobile
+
+Using VidText AI, you can save transcripts to read offline:
+
+1. Get the transcript using the steps above
+2. Tap **Download** to save as a .txt file
+3. The file saves to your phone's Downloads folder (Android) or Files app (iPhone)
+4. Open it anytime in any text app — no internet needed
+
+## Tips for Getting Better Transcripts on Mobile
+
+**Choose well-captioned videos:** Videos from major educational channels (TED, Coursera, Khan Academy) have high-quality auto-generated captions that produce clean transcripts.
+
+**Use WiFi for long videos:** Processing a 60-minute lecture transcript uses minimal data, but WiFi gives faster results.
+
+**Bookmark VidText AI:** Add [vidtextai.com](https://www.vidtextai.com) to your phone's home screen so it's always one tap away — faster than searching for it.
+
+## Related Guides
+
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [YouTube Caption Downloader: Free Download Guide](/blog/youtube-caption-downloader)
+- [How to See & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+
+## Conclusion
+
+Getting a YouTube transcript on your phone is simple with VidText AI — it works on any iPhone or Android in your existing browser, no app download required. Paste a YouTube URL, get your transcript, and download or copy it in under 30 seconds. Try it now at [vidtextai.com](https://www.vidtextai.com).
+    `.trim(),
+  },
+
+  'youtube-transcript-translate': {
+    title: 'How to Translate YouTube Transcripts to Any Language (Free)',
+    description: 'Translate any YouTube video transcript into Spanish, Chinese, French, Japanese, and 10+ more languages for free. No sign-up required.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '5 min read',
+    content: `
+**The fastest way to get a translated YouTube transcript:** Go to [VidText AI](https://www.vidtextai.com), paste the YouTube URL, select your target language from the dropdown, and click Generate — you get the full AI content in your language in under 30 seconds. Free, no sign-up.
+
+## Why Translate YouTube Transcripts?
+
+YouTube hosts content in every language, but transcripts are almost always in the video's original language. Translating them lets you:
+
+- **Understand foreign-language videos** — read the content without needing to be fluent
+- **Create multilingual content** — repurpose English videos into Spanish, Chinese, or French blog posts
+- **Study language** — compare the original transcript with a translation to learn new vocabulary
+- **Reach global audiences** — if you're a creator, publish translated summaries or articles for non-English readers
+- **Research across languages** — access insights from non-English YouTube channels without watching
+
+## Method 1: VidText AI Language Selection (Recommended)
+
+VidText AI supports 10+ output languages. When you generate a summary, blog post, or study notes, you can choose the output language — the AI reads the transcript and writes the content directly in your target language.
+
+**Supported languages:**
+- English
+- Chinese (Simplified)
+- Chinese (Traditional)
+- Japanese
+- Korean
+- Spanish
+- French
+- German
+- Portuguese
+- Arabic
+- Hindi
+
+**Step 1:** Go to [vidtextai.com](https://www.vidtextai.com) and paste a YouTube URL.
+
+**Step 2:** Click **Get Transcript** to extract the video text.
+
+**Step 3:** Select your target language from the language dropdown.
+
+**Step 4:** Choose your content format (Summary, Blog Post, Study Notes, or Shorts Script) and click **Generate**.
+
+The AI generates the content directly in your chosen language — not a word-for-word translation, but a naturally written version of the content.
+
+## Method 2: YouTube's Built-in Subtitle Options
+
+Some YouTube videos offer subtitles in multiple languages:
+
+1. Click the **CC (Subtitles)** button on the video player
+2. Click the **Settings (⚙️)** icon
+3. Select **Subtitles/CC** → **Auto-translate**
+4. Choose your language
+
+**Limitations:**
+- Auto-translate quality is inconsistent
+- You can only view subtitles while watching, not download them
+- Not all videos support auto-translate
+
+## Method 3: Manual Translation with ChatGPT or Google Translate
+
+If you have a transcript already:
+
+1. Get the transcript using [VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript)
+2. Copy it to ChatGPT: *"Translate this YouTube transcript to Spanish: [paste transcript]"*
+3. Or paste into Google Translate
+
+**Limitations:**
+- Requires extra steps
+- Google Translate can be stiff and literal for long content
+- ChatGPT does better but requires an account
+
+## Comparing Translation Methods
+
+| Method | Quality | Speed | Download | Free |
+|---|---|---|---|---|
+| VidText AI (AI generation in target language) | ✅ High — natural writing | ✅ Fast | ✅ Yes | ✅ Free tier |
+| YouTube Auto-translate subtitles | ⚠️ Medium — often awkward | ✅ Instant | ❌ No | ✅ Yes |
+| ChatGPT translation | ✅ High | ⚠️ Medium | ❌ No | ⚠️ Limited free |
+| Google Translate | ⚠️ Medium | ✅ Fast | ❌ No | ✅ Yes |
+
+## Best Use Cases for Each Language
+
+**Chinese (Simplified/Traditional):** Ideal for students and professionals following English tech, science, or business content who want summaries in Chinese without reading long English articles.
+
+**Spanish:** Great for Latin American or Spanish content creators who want to repurpose English YouTube content for their audience.
+
+**Japanese / Korean:** Educational channels and tech tutorials are popular in East Asian markets. Translating summaries makes them accessible without subtitles.
+
+**German / French / Portuguese:** European content creators can repurpose English-language marketing or educational videos into local-language blog posts.
+
+## How to Create a Multilingual Blog Post from a YouTube Video
+
+VidText AI makes this a two-step process:
+
+**Step 1:** Paste the YouTube URL → click **Get Transcript**.
+
+**Step 2:** Select language (e.g., Spanish) → click **Blog Post** → click **Generate**.
+
+In 30 seconds, you have a full Spanish blog post based on an English YouTube video. Copy it into your CMS and publish.
+
+This workflow is particularly useful for:
+- Language learners who blog in their native language
+- Creators with multilingual audiences
+- Agencies managing content across multiple markets
+
+## Frequently Asked Questions
+
+**Can VidText AI translate the transcript itself?**
+VidText AI generates AI content (summaries, blog posts, study notes) in your chosen language. For a direct word-for-word transcript translation, use Google Translate with the exported .txt file.
+
+**Does translation affect accuracy?**
+VidText AI uses the source language transcript as input and generates content that captures the meaning, not a literal word-for-word translation. This produces more natural, readable output in the target language.
+
+**What if the video is already in my language?**
+You can still use the language selector to generate content in a different language — for example, a Spanish video → English blog post, or an English video → Chinese study notes.
+
+## Related Guides
+
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [YouTube to Blog Post Generator: How It Works](/blog/youtube-to-blog-post-ai)
+- [Best YouTube Video Summarizer Prompts](/blog/best-youtube-summarizer-prompts)
+
+## Conclusion
+
+Translating YouTube transcripts is now a one-click process with VidText AI. Select your language, choose your output format, and get naturally written content in Spanish, Chinese, Japanese, French, or 10 other languages — free, no sign-up needed. Try it now at [vidtextai.com](https://www.vidtextai.com).
+    `.trim(),
+  },
+
+  'youtube-video-summary-free': {
+    title: 'How to Summarize Any YouTube Video for Free (No Sign-Up, 2026)',
+    description: 'Summarize any YouTube video for free in under 30 seconds — no sign-up, no credit card, no extension. Works on any public YouTube video with captions.',
+    category: 'Guide',
+    date: 'May 18, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest free YouTube video summarizer:** Go to [VidText AI Summary Tool](https://www.vidtextai.com/tools/summary), paste any YouTube URL, click Generate — get a full AI summary with key points in under 30 seconds. Completely free, no account required.
+
+## Why Summarize YouTube Videos?
+
+The average YouTube video is 7–15 minutes long. Watching every video you come across — for research, learning, or content creation — adds up fast. An AI summary lets you:
+
+- **Decide if a video is worth watching** — get the key points in 30 seconds
+- **Save time on research** — extract facts and insights without watching
+- **Study faster** — get structured key takeaways from educational content
+- **Stay informed** — process news and analysis videos quickly
+- **Repurpose content** — turn video insights into written articles or social posts
+
+## The Best Free YouTube Summarizer in 2026
+
+**VidText AI** offers 3 free AI summaries per day with no account required. It uses Google Gemini 2.5 Flash to read the full transcript and generate a structured summary that includes:
+
+- A concise overview of the main topic
+- Key points in bullet format
+- Main takeaways and conclusions
+- Organized sections for long videos
+
+### How to Summarize a YouTube Video for Free
+
+**Step 1:** Find the YouTube video you want to summarize. Copy the URL from your browser or share the video link.
+
+**Step 2:** Go to [vidtextai.com/tools/summary](https://www.vidtextai.com/tools/summary). No account needed.
+
+**Step 3:** Paste the URL into the box and click **Get Transcript**.
+
+**Step 4:** Click the **Summary** tab, then click **Generate**.
+
+**Step 5:** Your AI summary appears in under 30 seconds. Click **Copy** or **Download** to save it.
+
+That's it. The whole process takes less time than watching the video's intro.
+
+## What Makes a Good YouTube Summary?
+
+Not all summarizers are equal. A quality AI summary should:
+
+- **Cover the full video** — not just the first few minutes
+- **Identify the main argument** — not just list random facts
+- **Include specific details** — statistics, examples, and named concepts
+- **Be structured** — headers and bullets make it scannable
+- **Be concise** — ideally 200–500 words for most videos
+
+VidText AI reads the entire transcript before generating, which means it captures conclusions and key insights from throughout the video — not just the introduction.
+
+## Free vs. Paid YouTube Summarizers
+
+| Tool | Free Tier | Sign-Up Required | Summary Quality | Other Formats |
+|---|---|---|---|---|
+| VidText AI | 3 summaries/day | ❌ No | ✅ High (Gemini 2.5) | ✅ Blog, Notes, Scripts |
+| Summarize.tech | Unlimited | ❌ No | ⚠️ Basic | ❌ No |
+| YouTube Built-in | N/A | ✅ Yes | ❌ No AI | ❌ No |
+| NoteGPT | Limited | ✅ Yes | ✅ Good | ⚠️ Some |
+| Glasp | Limited | ✅ Yes | ⚠️ Basic | ❌ No |
+
+**Best free option with no sign-up:** VidText AI gives you the most powerful free tier — Gemini-powered summaries, plus access to blog post generation, study notes, and Shorts scripts with the same free daily allowance.
+
+## Tips to Get Better YouTube Summaries
+
+**Choose videos with good captions:** Auto-generated captions from major channels are usually accurate. Manual captions (from educational channels like TED, Coursera, or Khan Academy) produce the best results.
+
+**Use the output language feature:** VidText AI lets you get the summary in 10+ languages. If you want a Chinese summary of an English video, just select Chinese before generating.
+
+**Combine with other formats:** After getting a summary, use the same transcript to generate study notes or a blog post — the daily limit counts per generation, not per video.
+
+**Long videos work great:** VidText AI processes the full transcript regardless of video length — a 3-hour documentary and a 5-minute video take the same time to summarize.
+
+## What Video Types Work Best?
+
+YouTube video summaries work best on:
+- Educational lectures and online courses
+- News and analysis commentary
+- Technology and product reviews
+- TED Talks and conference presentations
+- Podcast-style interview videos
+- Business and marketing tutorials
+- Documentary narrations
+
+Videos without spoken content (music, ambient sounds) or with no captions enabled cannot be summarized.
+
+## How the Daily Free Limit Works
+
+VidText AI tracks usage with a browser cookie — no account needed. You get 3 free AI generations per day. The count resets at midnight UTC.
+
+- Fetching the raw transcript is **always free and unlimited**
+- Generating a Summary, Blog Post, Study Notes, or Shorts Script each use **1 generation**
+- The limit applies per browser — different devices each get their own 3 free uses
+
+## Related Guides
+
+- [Best YouTube Video Summarizer Prompts for ChatGPT & AI](/blog/best-youtube-summarizer-prompts)
+- [Can ChatGPT Summarize a YouTube Video?](/blog/chatgpt-summarize-youtube-video)
+- [How to Generate Study Notes from Any YouTube Video](/blog/youtube-notes-generator)
+
+## Conclusion
+
+Summarizing YouTube videos for free has never been easier. VidText AI gives you 3 AI summaries per day — no account, no credit card, no browser extension. Paste a YouTube URL and get structured key points in under 30 seconds. Start now at [vidtextai.com/tools/summary](https://www.vidtextai.com/tools/summary).
+    `.trim(),
+  },
 }
+
 
 // ── Markdown renderer ────────────────────────────────────────────────────────
 function renderContent(md: string): string {
