@@ -122,6 +122,22 @@ const POSTS = [
     readTime: '5 min read',
   },
   {
+    slug: 'youtube-video-converter',
+    title: 'YouTube Video Converter: Convert Any YouTube Video to Text, Blog Post, or Notes',
+    excerpt: 'Convert any YouTube video to transcript, blog post, study notes, or Shorts script free. No software download, no sign-up — works in your browser in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'search-youtube-transcripts',
+    title: 'How to Search Within YouTube Transcripts (Find Any Word in Any Video)',
+    excerpt: 'Find any word, quote, or topic inside any YouTube video by searching its transcript. Works with Ctrl+F — free, no sign-up, results in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+  },
+  {
     slug: 'youtube-transcript-on-phone',
     title: 'How to Get a YouTube Transcript on iPhone and Android (2026)',
     excerpt: 'Get a full YouTube transcript on your phone in seconds — no app download, no sign-up. Works on any iPhone or Android mobile browser.',

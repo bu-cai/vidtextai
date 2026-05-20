@@ -15,6 +15,8 @@ const BLOG_SLUGS = [
   'youtube-transcript-shortcut-search',
   'chatgpt-summarize-youtube-video',
   'youtube-caption-downloader',
+  'youtube-video-converter',
+  'search-youtube-transcripts',
   'youtube-transcript-on-phone',
   'youtube-transcript-translate',
   'youtube-video-summary-free',

@@ -1827,6 +1827,281 @@ Try it free at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/
     `.trim(),
   },
 
+  'youtube-video-converter': {
+    title: 'YouTube Video Converter: Convert Any YouTube Video to Text, Blog Post, or Notes',
+    description: 'Convert any YouTube video to text, blog post, study notes, or Shorts script instantly. Free YouTube video converter — no download, no sign-up, works on any video.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '5 min read',
+    content: `
+**The fastest free YouTube video converter:** Go to [VidText AI](https://www.vidtextai.com), paste any YouTube URL, and convert the video to a full text transcript, AI summary, blog post, study notes, or Shorts script — in under 30 seconds. No software download, no sign-up required.
+
+## What Is a YouTube Video Converter?
+
+A YouTube video converter is a tool that takes a YouTube video and transforms it into a different format. Most people think of "converter" as downloading the video as an MP4 or MP3 — but in 2026, the most useful type of converter goes further: it converts the video's content into text formats you can actually use.
+
+VidText AI is a content converter for YouTube videos. It takes the spoken content of any YouTube video and converts it into:
+
+- **Full transcript** — every word, with timestamps
+- **AI summary** — key points and takeaways in bullet format
+- **Blog post** — a complete, SEO-ready article
+- **Study notes** — structured notes with key concepts and quotes
+- **Shorts script** — 3–5 viral short-form video scripts
+
+## How to Convert a YouTube Video to Text (Step by Step)
+
+**Step 1: Copy the YouTube video URL**
+Open the video on YouTube and copy the URL from your browser address bar. You can also tap Share → Copy Link on mobile.
+
+**Step 2: Paste into VidText AI**
+Go to [vidtextai.com](https://www.vidtextai.com) and paste the URL into the input box.
+
+**Step 3: Choose your output format**
+Click the tab for the format you want — Transcript, Summary, Blog Post, Study Notes, or Shorts Script.
+
+**Step 4: Download or copy your content**
+Click Copy to clipboard or Download to save as a .txt file.
+
+The entire process takes under 30 seconds for most videos.
+
+## YouTube Video Converter: Format Comparison
+
+| Format | Best For | Output Length | Free Limit |
+|---|---|---|---|
+| Transcript | Research, studying, citation | Full video text | Unlimited |
+| AI Summary | Quick overview, research | 200–400 words | 3/day |
+| Blog Post | SEO content, repurposing | 600–1200 words | 3/day |
+| Study Notes | Students, learning | Structured outline | 3/day |
+| Shorts Script | Content creators | 3–5 scripts | 3/day |
+
+## Convert YouTube Videos to Text: 5 Common Use Cases
+
+### 1. Content Creators: Repurpose One Video into Multiple Formats
+Upload a YouTube video, then convert it into a blog post for your website, a summary for your email newsletter, and 3 Shorts scripts for YouTube Shorts, TikTok, and Instagram Reels — all from one tool in under 2 minutes.
+
+### 2. Students: Convert Lectures into Study Notes
+Paste the URL of any recorded university lecture or online course video. Convert it into structured study notes with key concepts, definitions, and important quotes — without rewinding the video over and over.
+
+### 3. Researchers: Extract Quotes and References
+Convert a long YouTube interview or documentary into a searchable text transcript. Use Ctrl+F to find specific quotes, statistics, or statements for academic papers, articles, or fact-checking.
+
+### 4. Marketers: Turn Competitor Videos into Blog Intelligence
+Analyze what topics and keywords competitors discuss in their YouTube content. Convert their videos to text and identify talking points, common questions, and content gaps you can address on your own site.
+
+### 5. Non-Native Speakers: Convert Videos to Readable Text
+Reading is often easier than listening when English isn't your first language. Convert any YouTube video to text and read it at your own pace, or use the language selector to get the summary in your native language.
+
+## What Makes VidText AI Different from Other YouTube Converters
+
+Most YouTube "converters" only convert the video file format (MP4, MP3, WebM). VidText AI converts the **content** — turning spoken words into structured, usable text formats.
+
+| Feature | VidText AI | MP4/MP3 Converters | YouTube Built-in |
+|---|---|---|---|
+| Convert to text | ✅ Full transcript | ❌ No | ⚠️ Basic only |
+| AI summary | ✅ Yes | ❌ No | ❌ No |
+| Blog post | ✅ Yes | ❌ No | ❌ No |
+| Study notes | ✅ Yes | ❌ No | ❌ No |
+| No download needed | ✅ Yes | ❌ Downloads file | ✅ Yes |
+| No sign-up | ✅ Yes | ⚠️ Usually required | ✅ Yes |
+| Free to use | ✅ Yes | ⚠️ Often paid | ✅ Yes |
+
+## Does YouTube Video Conversion Work on All Videos?
+
+VidText AI works on any public YouTube video with captions enabled. This includes:
+- Videos with auto-generated captions (the majority of English-language videos)
+- Videos with manually uploaded subtitles
+- Educational content, tutorials, news, podcasts, TED Talks, documentaries
+
+It does **not** work on: private or unlisted videos, videos with captions disabled by the creator, or music-only content without speech.
+
+## How to Convert YouTube Videos on Mobile
+
+VidText AI works in any mobile browser — no app required:
+
+1. Open YouTube on your phone → tap **Share** → **Copy Link**
+2. Open a browser tab and go to [vidtextai.com](https://www.vidtextai.com)
+3. Paste the link → choose your format → tap Generate
+4. Tap Copy or Download
+
+Works on iPhone (Safari, Chrome) and Android (Chrome, Samsung Internet).
+
+## Frequently Asked Questions
+
+**Is the YouTube video converter free?**
+Yes. Transcript extraction is completely free with no daily limit. AI-powered formats (Summary, Blog Post, Study Notes, Shorts Script) are free for 3 generations per day with no account required.
+
+**Can I convert a YouTube video to MP3 or MP4?**
+VidText AI converts video content to text formats — it does not download or convert video/audio files. For content-based conversion (transcripts, summaries, articles), VidText AI is the best tool available.
+
+**How long does it take to convert a YouTube video?**
+Most videos are converted in under 30 seconds, regardless of video length. A 3-hour lecture converts just as fast as a 5-minute tutorial.
+
+**Can I convert YouTube videos in other languages?**
+Yes. The transcript is extracted in the video's original language, and you can generate AI content (summaries, blog posts) in 10+ output languages including Chinese, Spanish, French, Japanese, and more.
+
+## Related Guides
+
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [How to Turn a YouTube Video into a Blog Post with AI](/blog/youtube-to-blog-post-ai)
+- [Video to Text Converter: The Complete Guide (2026)](/blog/video-to-text-converter-guide)
+- [How to Generate Study Notes from Any YouTube Video](/blog/youtube-notes-generator)
+
+## Conclusion
+
+VidText AI is the most complete YouTube video converter available in 2026 — not for downloading files, but for converting video content into text, blog posts, study notes, and scripts. Paste any YouTube URL and convert it to whatever format you need in under 30 seconds. Free, no sign-up, works on any device. Start at [vidtextai.com](https://www.vidtextai.com).
+    `.trim(),
+  },
+
+  'search-youtube-transcripts': {
+    title: 'How to Search Within YouTube Transcripts (Find Any Word in Any Video)',
+    description: 'Learn how to search YouTube transcripts to find any word, quote, or topic in any video instantly. Works with VidText AI, YouTube built-in, and browser search.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest way to search YouTube transcripts:** Go to [VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, get the full transcript, then use Ctrl+F (or Cmd+F on Mac) to find any word or phrase instantly. Free, no sign-up, takes under 30 seconds.
+
+## Why Search YouTube Transcripts?
+
+YouTube videos contain enormous amounts of information — but finding a specific quote, fact, or moment inside a video is frustratingly slow. Scrubbing through a 2-hour documentary to find one statistic wastes time.
+
+Searching a text transcript solves this completely:
+
+- **Find any quote instantly** — press Ctrl+F, type the word, jump to the exact timestamp
+- **Research faster** — scan a 60-minute lecture in seconds instead of watching it fully
+- **Verify facts** — quickly confirm whether someone actually said something in a video
+- **Take better notes** — locate specific sections to quote or reference
+- **Accessibility** — users who can't easily watch video can read and search the content
+
+## Method 1: Search YouTube Transcripts with VidText AI (Best)
+
+VidText AI gives you a searchable, full transcript that you can browse, copy, and download.
+
+**Step 1:** Copy the YouTube video URL.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) and paste the URL.
+
+**Step 3:** Click **Get Transcript**. The full, timestamped transcript appears in seconds.
+
+**Step 4:** Press **Ctrl+F** (Windows/Linux) or **Cmd+F** (Mac) to open your browser's Find function.
+
+**Step 5:** Type the word or phrase you're looking for. Your browser highlights every match in the transcript instantly.
+
+Each line shows a timestamp — so when you find the passage you want, you know exactly where in the video it appears.
+
+**Bonus:** Click **Download** to save the transcript as a .txt file and search it in any text editor or word processor.
+
+## Method 2: YouTube's Built-in Transcript Search
+
+YouTube has a built-in transcript panel with a basic search feature:
+
+**Step 1:** Open the video on YouTube (desktop browser).
+
+**Step 2:** Click the **three-dot menu (⋯)** below the video player.
+
+**Step 3:** Select **"Open transcript"**.
+
+**Step 4:** In the transcript panel that opens, use **Ctrl+F** to search within the panel.
+
+**Limitations of YouTube's built-in search:**
+- The transcript panel only shows a limited number of lines at once
+- Ctrl+F searches the entire page, not just the transcript panel — you'll get matches from everywhere on the page, not just the transcript
+- You can't download or copy the full transcript easily
+- Not available on the YouTube mobile app
+
+## Method 3: Download and Search Locally
+
+For very long videos (2+ hours) or when you need to search repeatedly:
+
+1. Get the transcript using [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Click **Download** to save as a .txt file
+3. Open in any text editor, Notepad, or word processor
+4. Use Ctrl+F to search — this works even offline
+
+This approach is ideal for researchers, journalists, and students who need to revisit the same transcript many times.
+
+## Comparing Transcript Search Methods
+
+| Method | Search Quality | Downloadable | Mobile | Free |
+|---|---|---|---|---|
+| VidText AI | ✅ Full-page Ctrl+F | ✅ Yes | ✅ Yes | ✅ Yes |
+| YouTube Built-in | ⚠️ Limited (whole page) | ❌ No | ❌ No | ✅ Yes |
+| Downloaded .txt | ✅ Full text search | ✅ Yes | ✅ Files app | ✅ Yes |
+| Chrome Extensions | ⚠️ Varies | ⚠️ Some | ❌ No | ⚠️ Some |
+
+## How to Search YouTube Transcripts on Mobile
+
+On mobile, browser find-in-page works differently than on desktop:
+
+**iPhone (Safari):**
+1. Get the transcript on [vidtextai.com](https://www.vidtextai.com)
+2. Tap the **Share icon** → scroll down → tap **Find on Page**
+3. Type your search term
+
+**iPhone (Chrome) / Android (Chrome):**
+1. Get the transcript on [vidtextai.com](https://www.vidtextai.com)
+2. Tap the **three-dot menu** → tap **Find in page**
+3. Type your search term
+
+## Tips for Better Transcript Searches
+
+**Search for unique phrases, not common words.** Instead of searching "the", search for "the key insight" or a specific name or statistic — this gives fewer, more relevant matches.
+
+**Use partial words for fuzzy matching.** If you're not sure of the exact phrasing, search for a distinctive part of the sentence. For example, search "carbon emiss" to find "carbon emissions" or "carbon emitted".
+
+**Search for numbers.** Statistics and dates are easy to find — searching "2023" or "87 percent" quickly surfaces those specific moments in the transcript.
+
+**Combine with timestamps.** Once you find the text, note the timestamp shown next to it and jump to that moment in the YouTube video directly.
+
+## How to Find a Specific Quote in a YouTube Video
+
+If you need to find where someone said something specific in a YouTube video:
+
+1. Get the transcript with [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Search for a distinctive 3–4 word phrase from the quote
+3. Find the matching line — the timestamp next to it tells you the exact video position
+4. Go back to YouTube and click on the transcript line (or scrub to that time)
+
+This workflow is used by journalists verifying claims, academics citing video sources, and content moderators checking what was actually said.
+
+## Search Across Multiple YouTube Videos
+
+Need to find which of several videos covers a specific topic?
+
+1. Get transcripts from each video using VidText AI
+2. Download each as a .txt file with a recognizable filename
+3. Use your text editor's "Find in Files" feature (available in VS Code, Notepad++, and others)
+4. Search across all downloaded transcripts simultaneously
+
+This is particularly useful for podcast archives, YouTube channel research, or comparing how different creators discuss the same topic.
+
+## Frequently Asked Questions
+
+**Can I search YouTube transcripts without any tool?**
+Yes — YouTube has a built-in transcript panel (desktop only) where you can use Ctrl+F. However, it searches the whole page rather than just the transcript, making it less precise. VidText AI gives a cleaner, dedicated transcript view for more accurate searching.
+
+**Does searching transcripts work on all YouTube videos?**
+It works on any public YouTube video with captions enabled. Auto-generated captions are available on most videos. Videos where the creator disabled captions cannot be transcribed or searched.
+
+**Can I search a YouTube transcript in a specific language?**
+The transcript is extracted in the video's original caption language. If you want to search content in a different language, you can use VidText AI's language selector to generate an AI summary in your preferred language, then search that.
+
+**Is there a way to search all transcripts on YouTube at once?**
+YouTube does not offer a global transcript search feature. The best approach is to download individual transcripts as .txt files and use a local search tool to search across multiple files.
+
+## Related Guides
+
+- [YouTube Transcript Shortcut & Search Guide (2026)](/blog/youtube-transcript-shortcut-search)
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [YouTube Caption Downloader: Save Subtitles Free](/blog/youtube-caption-downloader)
+
+## Conclusion
+
+Searching within YouTube transcripts is one of the most powerful ways to save time when researching video content. VidText AI makes it simple: paste any YouTube URL, get the full searchable transcript in seconds, then use Ctrl+F to find any word or phrase instantly. Free, no sign-up, works on desktop and mobile. Try it now at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript).
+    `.trim(),
+  },
+
   'youtube-transcript-on-phone': {
     title: 'How to Get a YouTube Transcript on iPhone and Android (2026)',
     description: 'Get a full YouTube transcript on your phone in seconds — no app, no extension, no sign-up. Works on iPhone, Android, and any mobile browser.',
