@@ -1827,6 +1827,415 @@ Try it free at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/
     `.trim(),
   },
 
+  'youtube-timestamp-generator': {
+    title: 'YouTube Timestamp Generator & Finder: Create Clickable Timestamps Free (2026)',
+    description: 'Generate clickable YouTube timestamps instantly. Find the exact time any word is said in any video. Free YouTube timestamp tool — no sign-up required.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest YouTube timestamp finder:** Go to [VidText AI Transcript Tool](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and get a full timestamped transcript in seconds — every line shows the exact time it was spoken. Free, no sign-up required.
+
+## What Is a YouTube Timestamp Generator?
+
+A YouTube timestamp generator is a tool that identifies exactly when specific content appears in a video and creates a clickable link to that moment. Timestamps are written in the format \`0:00\`, \`1:45\`, or \`1:23:45\` for longer videos.
+
+Timestamps are useful for:
+- **Video descriptions** — help viewers jump to specific sections
+- **Sharing a moment** — link someone directly to the exact part of a video
+- **Finding a quote** — locate when something was said without watching the full video
+- **Content research** — quickly navigate through long recordings
+
+## How to Find Timestamps in Any YouTube Video
+
+### Method 1: VidText AI Transcript (Best for Finding Any Word)
+
+VidText AI generates a complete timestamped transcript where every line of spoken content has its exact time code.
+
+**Step 1:** Copy the YouTube video URL.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) and paste the URL.
+
+**Step 3:** Click **Get Transcript**. Every line of the transcript appears with its timestamp.
+
+**Step 4:** Press **Ctrl+F** (or Cmd+F on Mac) and search for any word or phrase. The matching line shows you exactly what time it was said.
+
+This is the fastest way to find any specific moment in any YouTube video — whether you're looking for a quote, a statistic, or a topic.
+
+### Method 2: YouTube Chapter Timestamps (Creator-Added)
+
+Many YouTube creators add chapter timestamps to their video descriptions. These look like:
+
+\`\`\`
+0:00 Introduction
+2:34 Main topic
+8:12 Key insight
+15:47 Conclusion
+\`\`\`
+
+Clicking any of these timestamps in the description jumps you to that point in the video. You can also click on the progress bar — chapters appear as separate segments.
+
+### Method 3: YouTube's Built-in Transcript Timestamps
+
+YouTube's built-in transcript panel shows every line with a timestamp:
+
+1. Click the **three-dot menu (⋯)** below the video
+2. Select **"Open transcript"**
+3. Click any line in the transcript to jump to that moment in the video
+
+**Limitation:** This only works on desktop. The timestamps in YouTube's transcript are not clickable links you can share.
+
+## How to Create YouTube Timestamps for Your Own Videos
+
+If you're a creator adding timestamps to your video description:
+
+**Step 1:** Watch your video and note the time code when each section starts. Use the YouTube player's time display.
+
+**Step 2:** Add the timestamps to your video description in this format:
+\`\`\`
+0:00 Introduction
+1:45 Topic overview
+5:20 Step-by-step tutorial
+12:30 Common mistakes
+18:00 Summary
+\`\`\`
+
+**Step 3:** YouTube automatically converts these into clickable chapter markers in the video player when there are at least 3 timestamps and the first one is \`0:00\`.
+
+**Pro tip:** Use VidText AI to generate a transcript of your own video first — then use the timestamps from the transcript as a starting point for your chapter markers.
+
+## How to Generate a Shareable Timestamp Link
+
+To share a YouTube video starting from a specific time:
+
+**Method A — YouTube Share button:**
+1. Pause the video at the moment you want to share
+2. Click **Share** below the video
+3. Check the **"Start at [time]"** checkbox
+4. Copy the link — it will contain \`?t=XXX\` where XXX is the time in seconds
+
+**Method B — Manual URL editing:**
+Add \`?t=90\` to the end of any YouTube URL to start at 90 seconds. For example:
+\`https://youtube.com/watch?v=VIDEOID?t=90\`
+
+**Method C — From the transcript:**
+Find the timestamp in your VidText AI transcript, note the time code, then manually construct the link.
+
+## YouTube Timestamp Finder: Comparing Your Options
+
+| Tool | Find Word Timestamps | Create Share Links | Works on Mobile | Free |
+|---|---|---|---|---|
+| VidText AI | ✅ Full transcript search | ✅ Via time codes | ✅ Yes | ✅ Yes |
+| YouTube Built-in | ✅ Click to jump | ❌ Not shareable | ❌ Desktop only | ✅ Yes |
+| YouTube Share button | ❌ Manual only | ✅ Yes | ✅ Yes | ✅ Yes |
+| Chrome Extensions | ⚠️ Some | ⚠️ Some | ❌ No | ⚠️ Varies |
+
+## Using Timestamps for Content Research
+
+Timestamps are especially powerful for:
+
+**Academic research:** Find and cite the exact moment a statement was made. Your citation can reference the video title, channel, and timestamp (e.g., "3:42").
+
+**Fact-checking:** Quickly verify whether someone said something and at what point in a video. Search the transcript for the alleged quote and confirm with the timestamp.
+
+**Creating summaries:** Use the timestamps from a VidText AI transcript to structure a time-coded summary — useful for meeting notes, podcast show notes, or video reviews.
+
+**Course notes:** Students can use timestamped transcripts to note which part of a lecture covers each topic, making it easy to revisit specific sections later.
+
+## Frequently Asked Questions
+
+**How do I find the timestamp of a specific word in a YouTube video?**
+Get the transcript using VidText AI, then use Ctrl+F to search for the word. Each matching line shows the exact timestamp where that word was spoken.
+
+**Can I create YouTube chapters automatically?**
+VidText AI generates timestamped transcripts that you can use as the basis for YouTube chapters. Copy the timestamps and section headings into your video description, following YouTube's chapter format (minimum 3 chapters, starting at 0:00).
+
+**What format do YouTube timestamps use?**
+Short videos use M:SS format (e.g., 3:42). Videos over an hour use H:MM:SS format (e.g., 1:23:45). YouTube automatically detects and links these in descriptions.
+
+**Do timestamps work in YouTube Shorts?**
+No — YouTube Shorts do not support chapters or timestamp links because they are under 60 seconds. Timestamps are only for regular YouTube videos.
+
+## Related Guides
+
+- [YouTube Transcript Shortcut & Search Guide (2026)](/blog/youtube-transcript-shortcut-search)
+- [How to Search Within YouTube Transcripts](/blog/search-youtube-transcripts)
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+
+## Conclusion
+
+Finding or generating YouTube timestamps is easiest with a full transcript. VidText AI gives you a complete, timestamped transcript for any YouTube video in seconds — search for any word to find its exact timestamp, or use the timestamps to build chapter markers for your own videos. Free, no sign-up required. Try it at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript).
+    `.trim(),
+  },
+
+  'extract-subtitles-from-youtube': {
+    title: 'How to Extract Subtitles from YouTube Videos Free (2026)',
+    description: 'Extract and download subtitles from any YouTube video as a .txt file. Free YouTube subtitle extractor — no software, no sign-up, works in your browser instantly.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest way to extract YouTube subtitles:** Go to [VidText AI](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and download the full subtitle text as a .txt file in under 10 seconds. Free, no sign-up, no software required.
+
+## What Does "Extract Subtitles from YouTube" Mean?
+
+Extracting subtitles from a YouTube video means taking the caption text that YouTube displays on-screen and saving it as a standalone text file you can use outside of YouTube.
+
+There are two types of YouTube subtitles you can extract:
+- **Auto-generated captions** — created automatically by YouTube's speech recognition for most videos
+- **Manual captions** — uploaded by the video creator, usually more accurate
+
+Once extracted, subtitle text can be used for research, content repurposing, translation, accessibility, or studying.
+
+## Method 1: Extract YouTube Subtitles with VidText AI (Easiest)
+
+VidText AI extracts the full subtitle text from any YouTube video in seconds — no browser extension, no software download.
+
+**Step 1:** Find the YouTube video you want. Copy the URL from your browser.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript).
+
+**Step 3:** Paste the URL and click **Get Transcript**.
+
+**Step 4:** The full subtitle text appears with timestamps. Click **Download** to save as a .txt file, or **Copy** to copy to clipboard.
+
+The extracted text includes every line of spoken content with its timestamp — clean, readable, and ready to use.
+
+## Method 2: YouTube's Built-in Transcript Panel
+
+YouTube has a hidden transcript feature that shows the subtitle text:
+
+1. Open the video on YouTube (desktop browser only)
+2. Click the **three-dot menu (⋯)** below the video
+3. Select **"Open transcript"**
+4. The transcript panel opens on the right side of the screen
+
+**To copy the text:**
+- Click the three-dot icon in the transcript panel
+- Select **"Toggle timestamps"** to hide timestamps if needed
+- Manually select all text (Ctrl+A won't work — you'll need to scroll and select manually)
+- Copy with Ctrl+C
+
+**Limitations:** This process is slow, there's no download button, and the mobile YouTube app does not support this feature.
+
+## Method 3: Browser Extensions for Subtitle Extraction
+
+Several Chrome extensions can extract YouTube subtitles:
+
+- **YouTube Summary with ChatGPT & Claude** — shows transcript in a sidebar
+- **Glasp** — lets you highlight and save transcript sections
+- **Various transcript exporter extensions** — found in Chrome Web Store
+
+**Limitations of extensions:**
+- Require installation and account setup
+- Many request broad browser permissions
+- Quality and maintenance varies — extensions can stop working when YouTube updates
+- Don't work on mobile browsers
+
+## Comparing YouTube Subtitle Extraction Methods
+
+| Method | Speed | Download | Timestamps | Mobile | No Install |
+|---|---|---|---|---|---|
+| VidText AI | ✅ Instant | ✅ .txt file | ✅ Yes | ✅ Yes | ✅ Yes |
+| YouTube Built-in | ⚠️ Manual copy | ❌ No | ✅ Yes | ❌ No | ✅ Yes |
+| Chrome Extensions | ✅ Fast | ⚠️ Some | ✅ Yes | ❌ No | ❌ Requires install |
+
+## What Can You Do With Extracted YouTube Subtitles?
+
+Once you have the subtitle text, the possibilities are wide:
+
+**Content repurposing:** Use the subtitle text as the basis for a blog post, newsletter, or social media thread. The spoken content is already structured — you just need to reformat it.
+
+**Translation:** Paste the extracted subtitle text into Google Translate or DeepL, or use VidText AI's language selector to generate a summary in a different language directly.
+
+**Accessibility:** Create readable versions of video content for viewers who are deaf, hard of hearing, or who prefer reading over watching.
+
+**Studying:** Download lecture subtitles to read, annotate, and review without having to rewatch the video. Search for specific terms with Ctrl+F.
+
+**SEO content:** Video transcripts are excellent source material for SEO articles. The natural, conversational language in subtitles contains valuable long-tail keywords.
+
+**Quote verification:** Find the exact wording of something said in a video for accurate quoting in articles, reports, or academic work.
+
+## How to Extract Subtitles in a Specific Language
+
+Many YouTube videos have subtitles in multiple languages — either manually uploaded by the creator or auto-translated by YouTube.
+
+With VidText AI, the transcript is extracted in the video's primary caption language. If you want the content in a different language, use the language selector to generate an AI summary or blog post in your preferred language.
+
+If you need a direct word-for-word subtitle extraction in another language:
+1. Get the transcript with VidText AI
+2. Copy the text
+3. Paste into DeepL or Google Translate for translation
+
+## Extract Subtitles from YouTube on Mobile
+
+VidText AI works on any mobile browser:
+
+1. Open YouTube → tap **Share** → **Copy Link**
+2. Open [vidtextai.com](https://www.vidtextai.com) in your mobile browser
+3. Paste the URL → tap **Get Transcript**
+4. Tap **Download** to save the subtitle file to your phone
+
+The downloaded .txt file saves to your Downloads folder (Android) or Files app (iPhone).
+
+## Frequently Asked Questions
+
+**Can I extract subtitles from any YouTube video?**
+You can extract subtitles from any public YouTube video that has captions enabled — including auto-generated captions. Private videos, unlisted videos, and videos with captions disabled cannot be extracted.
+
+**Can I extract subtitles as an SRT file?**
+VidText AI extracts subtitles as a .txt file with timestamps. If you need an SRT file specifically (for importing into video editing software), you would need to reformat the .txt output into SRT format manually or use a dedicated subtitle tool.
+
+**Are auto-generated YouTube subtitles accurate enough to use?**
+For most popular YouTube channels, auto-generated captions are 90–95% accurate. Manual captions (from educational channels like TED, Coursera, and major news outlets) are essentially perfect. For niche content or heavy accents, auto-generated accuracy may be lower.
+
+**Is extracting YouTube subtitles legal?**
+Extracting YouTube subtitles for personal use (research, studying, note-taking) is generally acceptable. Using extracted subtitles to republish someone else's content without permission may infringe copyright. Always credit the original source when quoting or referencing video content.
+
+## Related Guides
+
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+- [How to Search Within YouTube Transcripts](/blog/search-youtube-transcripts)
+- [How to Get a YouTube Transcript on iPhone and Android](/blog/youtube-transcript-on-phone)
+
+## Conclusion
+
+Extracting subtitles from YouTube videos is fast and free with VidText AI — paste any YouTube URL and download the full subtitle text in under 10 seconds, with no software, no browser extension, and no sign-up required. Try it now at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript).
+    `.trim(),
+  },
+
+  'youtube-video-to-notes-ai': {
+    title: 'YouTube Video to Notes AI: Convert Any Video into Structured Notes Free',
+    description: 'Convert any YouTube video into AI-generated study notes instantly. Free YouTube to notes AI tool — extracts key concepts, quotes, and action items automatically.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+    content: `
+**The fastest YouTube video to notes converter:** Go to [VidText AI Study Notes Tool](https://www.vidtextai.com/tools/notes), paste any YouTube URL, click Generate — get structured AI study notes with key concepts, quotes, and action items in under 30 seconds. Free, no sign-up required.
+
+## What Is YouTube Video to Notes AI?
+
+YouTube video to notes AI is a technology that reads the transcript of a YouTube video and automatically generates structured study notes. Instead of manually pausing, rewinding, and typing while watching a video, the AI does the note-taking for you.
+
+VidText AI's Study Notes feature extracts:
+- **Key concepts** — the main ideas, definitions, and frameworks discussed
+- **Notable quotes** — memorable or important statements from the speaker
+- **Action items** — specific steps, recommendations, or tasks mentioned
+- **Summary** — a brief overview of the video's main argument
+
+The result is a clean, organized set of notes you can review, search, and reference — without watching the video at all.
+
+## How to Convert a YouTube Video to Notes with AI
+
+**Step 1:** Find the YouTube video you want to take notes on. Copy the URL.
+
+**Step 2:** Go to [vidtextai.com/tools/notes](https://www.vidtextai.com/tools/notes).
+
+**Step 3:** Paste the URL into the input box and click **Get Transcript**.
+
+**Step 4:** Click the **Study Notes** tab, then click **Generate**.
+
+**Step 5:** Your structured notes appear in under 30 seconds. Click **Copy** or **Download** to save them.
+
+That's it. The AI reads the full transcript and generates comprehensive notes covering the entire video — whether it's 10 minutes or 3 hours long.
+
+## What Types of YouTube Videos Work Best for AI Notes?
+
+AI note generation works on any public YouTube video with captions. The best results come from:
+
+**Educational lectures:** Online courses (Coursera, Udemy), university lectures, and Khan Academy videos produce excellent structured notes. The content is already organized for learning.
+
+**Conference and TED talks:** Presentations have a natural structure — introduction, main argument, evidence, conclusion — that AI captures well.
+
+**Tutorial and how-to videos:** Step-by-step instructional content converts into clean action item lists that are easy to follow.
+
+**Podcast-style interviews:** Long-form conversations about business, technology, or personal development yield rich notes with key insights and quotes.
+
+**Business and finance content:** Earnings calls, market analysis, and strategy discussions produce notes that are easier to review than rewatching.
+
+**Documentary narration:** Educational documentaries with clear narration work well for extracting facts and key points.
+
+## YouTube Video Notes AI vs. Manual Note-Taking
+
+| Aspect | AI Notes (VidText AI) | Manual Note-Taking |
+|---|---|---|
+| Time required | Under 30 seconds | 30–60% of video length |
+| Coverage | Full video, nothing missed | Depends on attention and typing speed |
+| Structure | Automatically organized | Requires deliberate organization |
+| Searchability | Full text search | Only if typed into a digital tool |
+| Works during commute | ✅ Yes (async) | ❌ Requires active watching |
+| Captures exact quotes | ✅ Automatically | ⚠️ Easy to misquote |
+
+The main advantage of manual notes is personal comprehension — writing helps you retain information. For passive research and reference, AI notes are significantly faster.
+
+## How to Study Better Using YouTube Video Notes AI
+
+**Workflow 1: Pre-read before watching**
+Generate AI notes before watching the video. This gives you a mental map of the content, making the video easier to follow and understand.
+
+**Workflow 2: Review after watching**
+After watching a lecture, generate AI notes to confirm what you retained and fill in gaps. Compare the AI notes to your own notes to check accuracy.
+
+**Workflow 3: Build a study guide**
+For a topic covered across multiple videos (a YouTube playlist or course), generate notes from each video and combine them into a comprehensive study guide.
+
+**Workflow 4: Spaced repetition**
+Download the AI notes as a .txt file. Import key points into a flashcard app (Anki, Quizlet) for spaced repetition review — much faster than creating cards manually from scratch.
+
+## Exporting and Using Your YouTube Notes
+
+VidText AI gives you two export options:
+
+**Copy to clipboard:** One click copies the full notes text. Paste directly into:
+- Notion — paste and it auto-formats with headers and bullets
+- Google Docs — preserves the structure
+- Obsidian — works with markdown-style formatting
+- Apple Notes / OneNote — paste as plain text
+
+**Download as .txt:** Saves the notes as a plain text file you can open anywhere, including offline.
+
+## YouTube Video to Notes AI: Free Tier Details
+
+VidText AI offers free AI note generation with no account required:
+
+- **3 free AI generations per day** — resets at midnight UTC
+- **No sign-up, no credit card** — just paste and generate
+- **Unlimited transcript extraction** — getting the raw transcript is always free
+- **Works on any device** — desktop and mobile browsers
+
+The 3 daily generations are shared across all AI formats (Summary, Blog Post, Study Notes, Shorts Script). Transcript-only extraction never counts against the limit.
+
+## Frequently Asked Questions
+
+**How accurate are the AI-generated study notes?**
+VidText AI reads the full transcript and uses Google Gemini 2.5 Flash to extract key information. For well-captioned videos (educational channels, TED Talks, major courses), the notes are highly accurate and comprehensive. For videos with poor auto-generated captions, accuracy may be lower.
+
+**Can I generate notes from a full YouTube course playlist?**
+Currently, VidText AI processes one video at a time. For a playlist, you would generate notes for each video separately and then combine them. Processing multiple videos at once is a feature planned for the Pro plan.
+
+**Do the AI notes include timestamps?**
+The notes focus on content rather than timestamps. If you need timestamped content, use the Transcript format instead — every line includes a precise timestamp.
+
+**What languages are supported for AI study notes?**
+VidText AI can generate study notes in 10+ languages including English, Chinese (Simplified/Traditional), Japanese, Korean, Spanish, French, German, Portuguese, and Arabic. Select your language before clicking Generate.
+
+**Is there a word limit on the generated notes?**
+No. VidText AI processes the complete transcript regardless of video length and generates notes covering the entire content — a 3-hour documentary produces just as complete a set of notes as a 15-minute tutorial.
+
+## Related Guides
+
+- [How to Generate Study Notes from Any YouTube Video](/blog/youtube-notes-generator)
+- [How Students Can Use YouTube Transcripts for Studying](/blog/study-notes-from-youtube)
+- [YouTube Video Summarizer — AI Summary Guide](/blog/best-youtube-summarizer-prompts)
+- [YouTube to Blog Post: AI Content Repurposing Guide](/blog/youtube-to-blog-post-ai)
+
+## Conclusion
+
+Converting YouTube videos to structured notes with AI saves hours compared to manual note-taking. VidText AI's Study Notes feature reads the full transcript and generates organized notes with key concepts, quotes, and action items in under 30 seconds — free, no sign-up required. Start taking better notes now at [vidtextai.com/tools/notes](https://www.vidtextai.com/tools/notes).
+    `.trim(),
+  },
+
   'youtube-video-converter': {
     title: 'YouTube Video Converter: Convert Any YouTube Video to Text, Blog Post, or Notes',
     description: 'Convert any YouTube video to text, blog post, study notes, or Shorts script instantly. Free YouTube video converter — no download, no sign-up, works on any video.',
