@@ -38,6 +38,27 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Video to Text Converter', item: 'https://www.vidtextai.com/tools/video-to-text' },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Convert a YouTube Video to Text',
+      description: 'Convert any YouTube video to a full text transcript in seconds using VidText AI.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Copy the YouTube video URL', text: 'Open the YouTube video and copy its URL from your browser address bar.' },
+        { '@type': 'HowToStep', position: 2, name: 'Go to VidText AI Video to Text Converter', text: 'Navigate to vidtextai.com/tools/video-to-text and paste the URL into the input field.' },
+        { '@type': 'HowToStep', position: 3, name: 'Click Convert', text: 'Click the Convert button. The full text transcript appears in under 30 seconds.' },
+        { '@type': 'HowToStep', position: 4, name: 'Copy or download the text', text: 'Click Copy to clipboard, or Download to save the text file to your device.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I convert a YouTube video to text for free?', acceptedAnswer: { '@type': 'Answer', text: 'Paste any YouTube URL into VidText AI at vidtextai.com/tools/video-to-text and click Convert. The full text transcript appears in under 30 seconds — completely free, no sign-up required.' } },
+        { '@type': 'Question', name: 'How accurate is the video to text conversion?', acceptedAnswer: { '@type': 'Answer', text: 'Accuracy depends on the video\'s caption quality. For major YouTube channels and educational content, accuracy is typically 95–99%. Auto-generated captions on speech-heavy videos are usually 90–95% accurate.' } },
+        { '@type': 'Question', name: 'Can I convert any YouTube video to text?', acceptedAnswer: { '@type': 'Answer', text: 'You can convert any public YouTube video that has captions enabled, including auto-generated captions. Private videos, unlisted videos, or videos with captions disabled cannot be converted.' } },
+        { '@type': 'Question', name: 'What format is the converted text in?', acceptedAnswer: { '@type': 'Answer', text: 'The text is formatted as a timestamped transcript — each line shows the spoken text with its corresponding time code. You can download it as a .txt file or copy it directly to your clipboard.' } },
+      ],
+    },
   ],
 }
 

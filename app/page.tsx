@@ -170,6 +170,17 @@ const HOME_JSON_LD = {
       featureList: ['YouTube Transcript Extraction', 'AI Video Summarization', 'Blog Post Generation', 'Study Notes Generator', 'YouTube Shorts Script Generator', '10+ Output Languages'],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert a YouTube Video to Text, Summary, or Blog Post',
+      description: 'Use VidText AI to turn any YouTube video into a transcript, AI summary, blog post, study notes, or Shorts script in under 30 seconds.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Paste the YouTube URL', text: 'Copy any YouTube video URL and paste it into the VidText AI converter on the homepage.' },
+        { '@type': 'HowToStep', position: 2, name: 'Choose your output format', text: 'Select from Transcript, AI Summary, Blog Post, Study Notes, or Shorts Script.' },
+        { '@type': 'HowToStep', position: 3, name: 'Get your content instantly', text: 'Click Convert. AI generates your chosen content format in under 30 seconds. Copy or download.' },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: FAQS.map(({ q, a }) => ({
         '@type': 'Question',

@@ -30,6 +30,27 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Study Notes Generator', item: 'https://www.vidtextai.com/tools/notes' },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Generate Study Notes from a YouTube Video',
+      description: 'Convert any YouTube lecture or educational video into structured AI study notes in under 30 seconds.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Find your YouTube video', text: 'Find the YouTube lecture, tutorial, or educational video you want notes from.' },
+        { '@type': 'HowToStep', position: 2, name: 'Paste the URL into VidText AI', text: 'Go to vidtextai.com/tools/notes and paste the YouTube video URL.' },
+        { '@type': 'HowToStep', position: 3, name: 'Select Study Notes format', text: 'Choose Study Notes as your output format and select your preferred language.' },
+        { '@type': 'HowToStep', position: 4, name: 'Generate and save your notes', text: 'Click Generate. Structured study notes with key concepts, quotes, and action items appear in under 30 seconds.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can AI take notes from a YouTube video?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI reads the full transcript of any YouTube video and generates structured study notes automatically, including key concepts, important quotes, and action items — in under 30 seconds.' } },
+        { '@type': 'Question', name: 'Is the YouTube notes generator free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI offers 3 free note generations per day with no account required. Unlimited transcript extraction is always free.' } },
+        { '@type': 'Question', name: 'What type of YouTube videos work best for AI notes?', acceptedAnswer: { '@type': 'Answer', text: 'Educational lectures, TED talks, online courses, tutorial videos, and conference presentations all produce excellent structured notes. Any video with clear speech and captions enabled will work.' } },
+        { '@type': 'Question', name: 'Can I generate notes from very long YouTube videos?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI handles videos of any length — from 5-minute tutorials to 3-hour lectures. The AI processes the full transcript and produces comprehensive notes covering the entire video.' } },
+      ],
+    },
   ],
 }
 

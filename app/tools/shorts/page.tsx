@@ -30,6 +30,27 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Shorts Script Generator', item: 'https://www.vidtextai.com/tools/shorts' },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Generate YouTube Shorts Scripts from a Long Video',
+      description: 'Repurpose any long YouTube video into 3–5 viral Shorts scripts using AI in under 30 seconds.',
+      totalTime: 'PT30S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Copy the YouTube video URL', text: 'Find the long-form YouTube video you want to repurpose and copy its URL.' },
+        { '@type': 'HowToStep', position: 2, name: 'Paste into VidText AI Shorts Generator', text: 'Go to vidtextai.com/tools/shorts and paste the YouTube URL into the input box.' },
+        { '@type': 'HowToStep', position: 3, name: 'Generate your Shorts scripts', text: 'Click Generate. AI creates 3–5 complete short-form scripts with hooks, body, and CTA — each 30–60 seconds long.' },
+        { '@type': 'HowToStep', position: 4, name: 'Copy and film', text: 'Copy your chosen script and use it for your next YouTube Shorts, TikTok, or Instagram Reel.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can AI generate YouTube Shorts scripts from long videos?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI analyzes the transcript of any long YouTube video and extracts the most engaging segments, then formats them into complete 30–60 second Shorts scripts with hooks and CTAs.' } },
+        { '@type': 'Question', name: 'How many Shorts scripts does VidText AI generate?', acceptedAnswer: { '@type': 'Answer', text: 'VidText AI generates 3–5 individual Shorts scripts from a single long video, each focused on a different highlight or key moment from the original content.' } },
+        { '@type': 'Question', name: 'Do the generated scripts work for TikTok and Instagram Reels too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The scripts are formatted for any short-form platform — YouTube Shorts, TikTok, and Instagram Reels all use similar 30–60 second vertical video formats.' } },
+        { '@type': 'Question', name: 'Is the Shorts script generator free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI offers 3 free script generations per day with no account required. Each generation produces 3–5 complete scripts.' } },
+      ],
+    },
   ],
 }
 

@@ -30,6 +30,27 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Blog Post Generator', item: 'https://www.vidtextai.com/tools/blog' },
       ],
     },
+    {
+      '@type': 'HowTo',
+      name: 'How to Turn a YouTube Video into a Blog Post with AI',
+      description: 'Convert any YouTube video into a fully-written, SEO-optimized blog article in under 60 seconds.',
+      totalTime: 'PT60S',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Copy the YouTube URL', text: 'Find the YouTube video you want to convert and copy its URL from the browser address bar.' },
+        { '@type': 'HowToStep', position: 2, name: 'Paste into VidText AI', text: 'Go to vidtextai.com/tools/blog and paste the YouTube URL into the input box.' },
+        { '@type': 'HowToStep', position: 3, name: 'Select Blog Post format', text: 'Make sure Blog Post is selected as the output format.' },
+        { '@type': 'HowToStep', position: 4, name: 'Generate and copy', text: 'Click Generate. A complete SEO-optimized blog post appears in under 60 seconds. Copy or download it.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can AI convert a YouTube video into a blog post?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI extracts the video transcript and uses Gemini AI to generate a complete, SEO-optimized blog post with headers, subheadings, and keyword-rich content — in under 60 seconds.' } },
+        { '@type': 'Question', name: 'Is the YouTube to blog post generator free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. VidText AI offers 3 free blog post generations per day with no account required. Unlimited transcript extraction is always free.' } },
+        { '@type': 'Question', name: 'Is the AI-generated blog post SEO-optimized?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The generated blog post includes a structured H1 title, H2/H3 subheadings, an introduction, body sections, and a conclusion — all formatted for both readers and search engines.' } },
+        { '@type': 'Question', name: 'Can I publish the generated blog post on my website?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The output is ready to paste into WordPress, Ghost, Webflow, or any CMS. Pro users can use the generated content for commercial publishing.' } },
+      ],
+    },
   ],
 }
 

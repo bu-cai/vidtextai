@@ -3425,6 +3425,32 @@ function renderContent(md: string): string {
   return out.join('\n')
 }
 
+// ── FAQ extractor for Schema ──────────────────────────────────────────────────
+function extractFaqsFromContent(content: string): Array<{ q: string; a: string }> {
+  const faqIndex = content.indexOf('## Frequently Asked Questions')
+  if (faqIndex === -1) return []
+  const faqSection = content.slice(faqIndex + '## Frequently Asked Questions'.length)
+  // Split on next H2 so we don't bleed into Related Guides etc.
+  const endIndex = faqSection.indexOf('\n## ')
+  const section = endIndex !== -1 ? faqSection.slice(0, endIndex) : faqSection
+  const faqs: Array<{ q: string; a: string }> = []
+  const lines = section.split('\n')
+  let currentQ = ''
+  let currentA: string[] = []
+  for (const line of lines) {
+    const boldMatch = line.trim().match(/^\*\*(.+\?)\*\*$/)
+    if (boldMatch) {
+      if (currentQ && currentA.length) faqs.push({ q: currentQ, a: currentA.join(' ').trim() })
+      currentQ = boldMatch[1]
+      currentA = []
+    } else if (currentQ && line.trim() && !line.trim().startsWith('**')) {
+      currentA.push(line.trim())
+    }
+  }
+  if (currentQ && currentA.length) faqs.push({ q: currentQ, a: currentA.join(' ').trim() })
+  return faqs.slice(0, 5)
+}
+
 // ── Static params ─────────────────────────────────────────────────────────────
 export function generateStaticParams() {
   return Object.keys(POSTS).map(slug => ({ slug }))
@@ -3464,9 +3490,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   // Parse date string to ISO format
   const dateMap: Record<string, string> = {
-    'May 15, 2026': '2026-05-15', 'May 16, 2026': '2026-05-16', 'May 17, 2026': '2026-05-17',
+    'May 15, 2026': '2026-05-15',
+    'May 16, 2026': '2026-05-16',
+    'May 17, 2026': '2026-05-17',
+    'May 18, 2026': '2026-05-18',
+    'May 20, 2026': '2026-05-20',
   }
   const isoDate = dateMap[post.date] || '2026-05-15'
+
+  const faqs = extractFaqsFromContent(post.content)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -3512,6 +3544,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.vidtextai.com/blog/${slug}` },
         ],
       },
+      ...(faqs.length > 0 ? [{
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      }] : []),
     ],
   }
 
@@ -3556,8 +3596,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
       />
 
+      {/* Try the Tool CTA */}
+      <div className="mt-10 rounded-2xl bg-red-600 p-6 text-center text-white">
+        <p className="text-xs font-semibold uppercase tracking-wide text-red-200 mb-1">Try it yourself — free</p>
+        <h2 className="text-xl font-bold mb-2">Get Any YouTube Transcript in Seconds</h2>
+        <p className="text-red-100 text-sm mb-4">Paste a YouTube URL. Get transcript, summary, blog post, or notes instantly. No sign-up required.</p>
+        <Link href="/" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-50 transition-colors">
+          Try VidText AI Free <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+
       {/* Back link */}
-      <div className="mt-12 pt-8 border-t border-gray-200">
+      <div className="mt-8 pt-8 border-t border-gray-200">
         <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
           <ArrowLeft className="h-4 w-4" /> Back to Blog
         </Link>
