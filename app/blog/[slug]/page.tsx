@@ -1827,6 +1827,516 @@ Try it free at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/
     `.trim(),
   },
 
+  'youtube-transcript-api-guide': {
+    title: 'YouTube Transcript API: How to Use It + Free No-Code Alternative (2026)',
+    description: 'Complete guide to the YouTube Transcript API (youtube-transcript-api Python library). Includes code examples, limits, and a free no-code alternative for non-developers.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '6 min read',
+    content: `
+**Quick answer:** The \`youtube-transcript-api\` is a Python library that lets developers extract transcripts from YouTube videos programmatically. If you don't code, [VidText AI](https://www.vidtextai.com/tools/transcript) does the same thing in your browser — no setup, no API keys, completely free.
+
+## What Is the YouTube Transcript API?
+
+The \`youtube-transcript-api\` is an open-source Python package that fetches transcript data directly from YouTube's internal caption system. It's not an official Google API — it's a community-built library that reverse-engineers how YouTube delivers captions to the browser.
+
+**GitHub:** github.com/jdepoix/youtube-transcript-api
+**PyPI:** pypi.org/project/youtube-transcript-api
+
+It's widely used for:
+- Building AI summarization pipelines
+- Training language models on video content
+- Automating transcript extraction at scale
+- Research and data collection projects
+
+## Installation
+
+\`\`\`bash
+pip install youtube-transcript-api
+\`\`\`
+
+Requires Python 3.7+. No API key needed.
+
+## Basic Usage: Get a Transcript
+
+\`\`\`python
+from youtube_transcript_api import YouTubeTranscriptApi
+
+# Get transcript by video ID (the part after ?v= in the URL)
+video_id = "dQw4w9WgXcQ"
+transcript = YouTubeTranscriptApi.get_transcript(video_id)
+
+# Each entry has text, start time, and duration
+for entry in transcript:
+    print(f"[{entry['start']:.1f}s] {entry['text']}")
+\`\`\`
+
+Output:
+\`\`\`
+[0.0s] Never gonna give you up
+[2.5s] Never gonna let you down
+[5.1s] Never gonna run around and desert you
+\`\`\`
+
+## Get Transcript in a Specific Language
+
+\`\`\`python
+# Get transcript in Spanish
+transcript = YouTubeTranscriptApi.get_transcript(
+    video_id,
+    languages=['es', 'en']  # Try Spanish first, fall back to English
+)
+\`\`\`
+
+## List All Available Transcripts
+
+\`\`\`python
+from youtube_transcript_api import YouTubeTranscriptApi
+
+transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+
+for transcript in transcript_list:
+    print(f"{transcript.language} ({transcript.language_code})")
+    print(f"  Auto-generated: {transcript.is_generated}")
+    print(f"  Translatable: {transcript.is_translatable}")
+\`\`\`
+
+## Format Output as Plain Text
+
+\`\`\`python
+from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api.formatters import TextFormatter
+
+transcript = YouTubeTranscriptApi.get_transcript(video_id)
+formatter = TextFormatter()
+text_transcript = formatter.format_transcript(transcript)
+
+# Save to file
+with open("transcript.txt", "w") as f:
+    f.write(text_transcript)
+\`\`\`
+
+## Format Output as JSON or SRT
+
+\`\`\`python
+from youtube_transcript_api.formatters import JSONFormatter, SRTFormatter
+
+# JSON format
+json_formatter = JSONFormatter()
+json_output = json_formatter.format_transcript(transcript)
+
+# SRT subtitle format
+srt_formatter = SRTFormatter()
+srt_output = srt_formatter.format_transcript(transcript)
+\`\`\`
+
+## Process Multiple Videos
+
+\`\`\`python
+from youtube_transcript_api import YouTubeTranscriptApi
+
+video_ids = ["VIDEO_ID_1", "VIDEO_ID_2", "VIDEO_ID_3"]
+
+for video_id in video_ids:
+    try:
+        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        full_text = " ".join([entry['text'] for entry in transcript])
+        print(f"{video_id}: {len(full_text)} characters")
+    except Exception as e:
+        print(f"{video_id}: Failed — {e}")
+\`\`\`
+
+## Common Errors and Fixes
+
+| Error | Cause | Fix |
+|---|---|---|
+| \`TranscriptsDisabled\` | Creator disabled captions | Skip this video — no workaround |
+| \`NoTranscriptFound\` | No captions in requested language | Try \`languages=['en']\` or check available languages |
+| \`VideoUnavailable\` | Private, deleted, or age-restricted video | Cannot access — requires authentication |
+| \`TooManyRequests\` | Rate limiting by YouTube | Add \`time.sleep(1)\` between requests |
+| \`JSONDecodeError\` | YouTube returned unexpected response | Retry — often a temporary issue |
+
+## Rate Limits and Restrictions
+
+The \`youtube-transcript-api\` does not use an official Google API, so:
+
+- **No official rate limit** is published, but YouTube may throttle heavy usage
+- For large-scale scraping (1000+ videos/day), add delays between requests
+- YouTube may block requests from cloud server IP ranges (AWS, GCP, etc.) — run from a residential IP or use proxies
+- The library may break when YouTube updates its internal API structure
+
+## youtube-transcript-api vs YouTube Data API v3
+
+| | youtube-transcript-api | YouTube Data API v3 |
+|---|---|---|
+| Official | ❌ Community library | ✅ Official Google API |
+| API key required | ❌ No | ✅ Yes (free) |
+| Transcript access | ✅ Yes | ❌ No (transcripts not available) |
+| Video metadata | ❌ No | ✅ Yes |
+| Rate limits | Unofficial/unclear | 10,000 units/day free |
+| Stability | May break on YouTube updates | Stable, versioned |
+
+**Key insight:** Despite being official, the YouTube Data API v3 does **not** provide transcript data. The community \`youtube-transcript-api\` library is the only practical way to get transcripts programmatically.
+
+## Not a Developer? Use VidText AI Instead
+
+If you don't write Python code, you don't need the API at all. [VidText AI](https://www.vidtextai.com/tools/transcript) gives you the same transcript data through a simple web interface:
+
+- Paste any YouTube URL
+- Get the full timestamped transcript in seconds
+- Download as .txt or copy to clipboard
+- No setup, no API keys, no Python required
+- Free, no sign-up needed
+
+For one-off transcripts, occasional research, or non-technical users, VidText AI is significantly faster than setting up a Python environment.
+
+## Combining youtube-transcript-api with AI
+
+A common developer workflow:
+
+\`\`\`python
+from youtube_transcript_api import YouTubeTranscriptApi
+import anthropic  # or openai
+
+# Get transcript
+transcript = YouTubeTranscriptApi.get_transcript("VIDEO_ID")
+full_text = " ".join([t['text'] for t in transcript])
+
+# Summarize with AI
+client = anthropic.Anthropic()
+response = client.messages.create(
+    model="claude-opus-4-5",
+    max_tokens=1024,
+    messages=[{
+        "role": "user",
+        "content": f"Summarize this YouTube transcript in bullet points:\\n\\n{full_text}"
+    }]
+)
+
+print(response.content[0].text)
+\`\`\`
+
+VidText AI does this entire pipeline in one click — no code required.
+
+## Frequently Asked Questions
+
+**Is youtube-transcript-api free to use?**
+Yes. It's open-source (MIT license) and requires no API key or payment. You only pay for the AI models you call separately.
+
+**Does it work with auto-generated captions?**
+Yes. It fetches both manually uploaded transcripts and YouTube's auto-generated captions.
+
+**Can I use it in production?**
+Yes, but be aware it's not an official Google API. YouTube could change its internal structure at any time, which would break the library until the maintainer pushes an update.
+
+**What's the difference between youtube-transcript-api and youtube_transcript_api?**
+Same thing — \`youtube-transcript-api\` is the package name on PyPI, while \`youtube_transcript_api\` is the Python import name (hyphens become underscores in Python imports).
+
+## Related Guides
+
+- [How to Get a YouTube Transcript (Free & Fast)](/blog/how-to-get-youtube-transcript)
+- [YouTube Video Converter: Convert Any Video to Text](/blog/youtube-video-converter)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [YouTube Caption Downloader: Save Subtitles Free](/blog/youtube-caption-downloader)
+
+## Conclusion
+
+The \`youtube-transcript-api\` Python library is the go-to solution for developers who need to extract YouTube transcripts programmatically. Install with \`pip install youtube-transcript-api\`, call \`YouTubeTranscriptApi.get_transcript(video_id)\`, and you have the full transcript in seconds. For non-developers, [VidText AI](https://www.vidtextai.com/tools/transcript) provides the same result through a free, no-code web interface.
+    `.trim(),
+  },
+
+  'shortcut-to-show-transcript-on-youtube': {
+    title: 'Shortcut to Show Transcript on YouTube (Fastest Way in 2026)',
+    description: 'The fastest shortcut to show a YouTube transcript — no extensions, no sign-up. Plus keyboard shortcuts, mobile methods, and how to download the transcript instantly.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '4 min read',
+    content: `
+**Fastest shortcut to show a YouTube transcript:** There is no single keyboard shortcut that opens a transcript directly in YouTube — but the quickest method is: click **⋯ (three dots)** below the video → **"Open transcript"**. Takes 2 clicks, 3 seconds. For a downloadable transcript, [VidText AI](https://www.vidtextai.com/tools/transcript) is faster — paste URL, get transcript in one click.
+
+## Is There a Keyboard Shortcut for YouTube Transcripts?
+
+YouTube does not have a dedicated keyboard shortcut to open the transcript panel. There is no built-in hotkey like Ctrl+T or Alt+T that shows the transcript directly.
+
+However, there are several fast methods to show a transcript with minimal clicks:
+
+## Method 1: The Fastest Built-in Shortcut (2 Clicks)
+
+**On Desktop (Chrome, Firefox, Edge, Safari):**
+
+1. Open the YouTube video
+2. Click the **⋯ three-dot menu** directly below the video player (next to Save and Share)
+3. Click **"Open transcript"**
+
+The transcript panel slides open on the right side of the screen, showing every spoken line with timestamps.
+
+**Click on any line** in the transcript to jump to that moment in the video.
+
+## Method 2: Use the URL Directly
+
+You can jump to the transcript panel faster by adding a parameter to the YouTube URL. While YouTube doesn't officially support this, a faster workflow is bookmarking the transcript tool:
+
+**Bookmark this URL:**
+\`\`\`
+https://www.vidtextai.com/tools/transcript
+\`\`\`
+
+Then whenever you want a transcript: copy the YouTube URL → open your bookmark → paste → done. This is consistently faster than navigating YouTube's menus.
+
+## Method 3: Browser Shortcut via Keyboard Navigation
+
+On desktop, you can use keyboard navigation to reach the three-dot menu faster:
+
+1. Press **Tab** repeatedly to move focus through the page controls below the video
+2. When the **⋯ menu** is highlighted, press **Enter**
+3. Press **Tab** again to reach "Open transcript", then **Enter**
+
+This avoids using the mouse entirely if you prefer keyboard navigation.
+
+## Method 4: Chrome Extension Shortcut
+
+The **"YouTube Summary with ChatGPT & Claude"** extension adds a transcript button directly to the YouTube interface, reducing it to one click. After installing:
+
+1. Open any YouTube video
+2. Click the transcript icon that appears in the video sidebar
+3. The transcript opens immediately
+
+**Trade-off:** Requires extension installation and account sign-up.
+
+## Shortcut to Show Transcript on YouTube Mobile
+
+The YouTube mobile app (iOS and Android) does **not** have a transcript feature in the standard interface. To get a transcript on mobile:
+
+**Method A — Mobile browser workaround:**
+1. In the YouTube app, tap **Share** → **Copy Link**
+2. Open Chrome or Safari on your phone
+3. Go to [vidtextai.com](https://www.vidtextai.com)
+4. Paste the link → tap Get Transcript
+5. Full transcript appears — tap Download to save
+
+**Method B — YouTube mobile browser:**
+1. Open youtube.com in your mobile browser (not the app)
+2. Play the video
+3. Tap the **⋯ three-dot menu** in the description area
+4. Tap **"Open transcript"** (available on some videos)
+
+## Shortcut to Download a YouTube Transcript (Not Just View It)
+
+YouTube's built-in transcript panel only lets you view the transcript — there's no download button. To save a transcript as a file:
+
+**Fastest method:**
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Click **Get Transcript**
+4. Click **Download** → saves as .txt instantly
+
+This is significantly faster than manually copying text from YouTube's transcript panel.
+
+## All YouTube Transcript Shortcuts Compared
+
+| Method | Clicks Required | Downloadable | Works on Mobile | No Install |
+|---|---|---|---|---|
+| YouTube ⋯ menu | 2 clicks | ❌ No | ❌ No | ✅ Yes |
+| VidText AI | 2 clicks + paste | ✅ Yes | ✅ Yes | ✅ Yes |
+| Chrome Extension | 1 click | ⚠️ Some | ❌ No | ❌ Requires install |
+| Keyboard nav | ~6 keypresses | ❌ No | ❌ No | ✅ Yes |
+
+## YouTube Transcript Keyboard Shortcuts (While Transcript Is Open)
+
+Once the transcript panel is open on YouTube, you can use these:
+
+| Action | Shortcut |
+|---|---|
+| Close transcript panel | Click **X** in transcript header |
+| Jump to video position | Click any transcript line |
+| Toggle timestamps | Click **⋯** in transcript → "Toggle timestamps" |
+| Search within transcript | Press **Ctrl+F** (searches whole page, not just transcript) |
+
+## Pro Tip: Search Any Word in a YouTube Transcript
+
+After opening the transcript (either in YouTube or VidText AI):
+
+Press **Ctrl+F** (Windows) or **Cmd+F** (Mac) and type the word you're looking for.
+
+In VidText AI, this works perfectly because the transcript fills the whole content area — every match is highlighted instantly with its timestamp.
+
+## Frequently Asked Questions
+
+**Is there a keyboard shortcut to open YouTube transcript?**
+No — YouTube doesn't have a single hotkey for transcripts. The fastest built-in method is clicking ⋯ below the video → "Open transcript" (2 clicks). For a downloadable transcript, VidText AI (vidtextai.com) is the fastest option.
+
+**Why can't I see the transcript option on YouTube?**
+The "Open transcript" option only appears for videos that have captions enabled. If the creator disabled captions, or the video has no speech, the option won't show. Try a different video or check if captions are enabled in the video settings (CC button).
+
+**Does the YouTube transcript shortcut work on all videos?**
+It works on any public YouTube video with captions — including auto-generated captions, which cover the majority of videos in popular languages. It does not work on private videos or videos with captions disabled.
+
+**Can I show the transcript and the video at the same time?**
+Yes. On desktop, YouTube shows the transcript panel on the right side while the video plays on the left. You can click transcript lines to jump to that moment in the video while watching.
+
+## Related Guides
+
+- [YouTube Transcript Shortcut & Search Guide (2026)](/blog/youtube-transcript-shortcut-search)
+- [How to Search Within YouTube Transcripts](/blog/search-youtube-transcripts)
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+- [YouTube Transcript API Guide for Developers](/blog/youtube-transcript-api-guide)
+
+## Conclusion
+
+There's no single keyboard shortcut to show a YouTube transcript, but the fastest built-in method is 2 clicks: ⋯ menu → "Open transcript". For downloading, searching, or accessing transcripts on mobile, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest free option — paste any YouTube URL and get a full, downloadable transcript in seconds with no sign-up required.
+    `.trim(),
+  },
+
+  'how-to-open-transcript-on-youtube': {
+    title: 'How to Open, View & Save a YouTube Transcript (Every Method, 2026)',
+    description: 'How to open a transcript on YouTube — step-by-step for desktop, mobile, and all browsers. Plus how to view, copy, search, and download any YouTube transcript free.',
+    category: 'Guide',
+    date: 'May 20, 2026',
+    readTime: '5 min read',
+    content: `
+**How to open a transcript on YouTube:** Click the **⋯ three-dot menu** below any video → select **"Open transcript"**. The panel appears on the right showing every spoken word with timestamps. To download or search the transcript, use [VidText AI](https://www.vidtextai.com/tools/transcript) — free, no sign-up, works in 10 seconds.
+
+## How to Open a Transcript on YouTube (Desktop)
+
+Opening a transcript directly on YouTube takes just 2 clicks on desktop:
+
+**Step 1:** Open the YouTube video in your browser.
+
+**Step 2:** Look below the video player for the action buttons (Like, Share, Save). Click the **⋯ three-dot "More" button** at the end of this row.
+
+**Step 3:** In the dropdown menu, click **"Open transcript"**.
+
+The transcript panel slides open on the right side of the screen. Each line shows the spoken text with a clickable timestamp — click any line to jump to that moment in the video.
+
+**Works on:** Chrome, Firefox, Edge, Safari (desktop only).
+
+## How to View a YouTube Transcript
+
+Once the transcript panel is open, you can:
+
+- **Read** the full spoken content without watching
+- **Click any line** to jump to that timestamp in the video
+- **Toggle timestamps off** — click the ⋯ icon inside the transcript panel → "Toggle timestamps"
+- **Scroll** through the entire transcript (it loads all at once)
+
+**Searching within the transcript:** Press **Ctrl+F** (Windows) or **Cmd+F** (Mac) to open browser search. Type any word — your browser highlights all matches on the page, including in the transcript panel.
+
+## How to View YouTube Transcript on Mobile
+
+The YouTube app does **not** have a transcript button. Here are the two options for mobile:
+
+**Option A: YouTube mobile browser (not the app)**
+1. Open youtube.com in Chrome or Safari on your phone
+2. Play the video
+3. Scroll down to the description
+4. Tap ⋯ → "Open transcript" (works on most videos)
+
+**Option B: VidText AI (faster, works everywhere)**
+1. In the YouTube app, tap Share → Copy Link
+2. Open [vidtextai.com](https://www.vidtextai.com) in your browser
+3. Paste the URL → tap Get Transcript
+4. Full transcript appears — readable, searchable, downloadable
+
+## How to Open YouTube Transcript in Different Browsers
+
+| Browser | Method | Works? |
+|---|---|---|
+| Chrome (desktop) | ⋯ menu → Open transcript | ✅ Yes |
+| Firefox (desktop) | ⋯ menu → Open transcript | ✅ Yes |
+| Safari (desktop) | ⋯ menu → Open transcript | ✅ Yes |
+| Edge (desktop) | ⋯ menu → Open transcript | ✅ Yes |
+| Chrome (mobile) | youtube.com (not app) → ⋯ | ⚠️ Some videos |
+| Safari (mobile) | youtube.com → ⋯ | ⚠️ Some videos |
+| YouTube App (iOS/Android) | Not available | ❌ No |
+
+## How to Save a YouTube Transcript
+
+YouTube's built-in transcript panel has no download or save button. To save a transcript:
+
+**Method 1: Copy manually**
+1. Open the transcript panel
+2. Click inside the panel
+3. Press **Ctrl+A** (this selects the whole page — you'll need to paste and trim)
+4. Or manually select the text and copy
+
+This is tedious for long videos.
+
+**Method 2: Download with VidText AI (recommended)**
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube video URL
+3. Click **Get Transcript**
+4. Click **Download** → saves as a clean .txt file
+
+The downloaded file contains the timestamped transcript, ready to open in any text editor, Word, Google Docs, or Notion.
+
+## How to Open YouTube Transcript Without the Three-Dot Menu
+
+If you don't see the ⋯ menu option (it may be missing on some regional YouTube interfaces), these alternatives work:
+
+**Alternative 1: VidText AI**
+Always works regardless of YouTube's interface. Paste URL → get transcript.
+
+**Alternative 2: YouTube keyboard shortcut**
+Some YouTube interfaces let you open the transcript by navigating with Tab key to the ⋯ button and pressing Enter, then selecting "Open transcript."
+
+**Alternative 3: Chrome extensions**
+Extensions like "YouTube Summary with ChatGPT & Claude" add a direct transcript button to the YouTube interface.
+
+## How to Open Transcript for Any YouTube Video
+
+The ⋯ menu transcript feature only works when:
+- The video is **public** (not private or unlisted)
+- The video has **captions enabled** (auto-generated or manual)
+- You're on **desktop browser** YouTube
+
+Videos without captions (some music videos, some foreign-language content, some older videos) will not show the transcript option.
+
+**To check if a video has captions:** Look for the **CC button** in the video player controls. If it's there, the video has captions and you can open the transcript.
+
+## View YouTube Transcript Without Opening YouTube
+
+You can view any YouTube video's transcript without visiting YouTube at all:
+
+1. Copy the YouTube video URL from anywhere (email, message, link)
+2. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL → click Get Transcript
+4. View, search, copy, or download the full transcript
+
+This is useful when you want to quickly check video content without sitting through ads or buffering.
+
+## Frequently Asked Questions
+
+**Why can't I open the transcript on YouTube?**
+The most common reasons: (1) The video doesn't have captions enabled — check for the CC button in the player. (2) You're on the YouTube mobile app — transcripts aren't available there. (3) The video is private or age-restricted.
+
+**How do I view the full transcript of a YouTube video?**
+Open the transcript panel (⋯ → Open transcript on desktop), or use VidText AI to get the complete, downloadable transcript. YouTube's panel shows the full transcript when you scroll through it.
+
+**Can I open a YouTube transcript without an account?**
+Yes. YouTube's built-in transcript panel works without signing in. VidText AI also works with no account or sign-up.
+
+**How do I open transcript on YouTube on iPhone?**
+The YouTube app for iPhone doesn't support transcripts. Use VidText AI in your mobile browser: copy the video link from the YouTube app → open vidtextai.com → paste URL → get transcript.
+
+**How do I see the transcript of a YouTube video in another language?**
+YouTube's transcript shows the video's original language. For translated content, VidText AI lets you generate an AI summary in 10+ languages including Chinese, Spanish, French, and Japanese.
+
+**How to open transcript on YouTube without clicking the menu?**
+There's no direct keyboard shortcut for this. The fastest method without the menu is using VidText AI — paste the URL and the transcript appears automatically.
+
+## Related Guides
+
+- [Shortcut to Show Transcript on YouTube (Fastest Method)](/blog/shortcut-to-show-transcript-on-youtube)
+- [How to Search Within YouTube Transcripts](/blog/search-youtube-transcripts)
+- [How to Download a YouTube Transcript Free](/blog/youtube-caption-downloader)
+- [YouTube Transcript Generator — Free Tool](/tools/transcript)
+
+## Conclusion
+
+To open a transcript on YouTube on desktop: click ⋯ below the video → "Open transcript." On mobile or for downloading, [VidText AI](https://www.vidtextai.com/tools/transcript) is the best free alternative — paste any YouTube URL and get a full, searchable, downloadable transcript in seconds with no account required.
+    `.trim(),
+  },
+
   'youtube-timestamp-generator': {
     title: 'YouTube Timestamp Generator & Finder: Create Clickable Timestamps Free (2026)',
     description: 'Generate clickable YouTube timestamps instantly. Find the exact time any word is said in any video. Free YouTube timestamp tool — no sign-up required.',
