@@ -177,6 +177,8 @@ export function VideoConverter() {
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
   const [videoId, setVideoId] = useState<string | null>(null)
+  const [isPro, setIsPro] = useState(false)
+  const [proToken, setProToken] = useState<string | null>(null)
   const playerRef = useRef<any>(null)
   const playerContainerRef = useRef<HTMLDivElement>(null)
 
@@ -219,8 +221,17 @@ export function VideoConverter() {
     }
   }
 
-  // Load usage from cookie on mount
+  // Load usage from cookie on mount + check pro token
   useEffect(() => {
+    // Check Pro status from localStorage
+    const token = localStorage.getItem('vidtext_pro_token')
+    if (token) {
+      setProToken(token)
+      setIsPro(true)
+      setRemaining(999) // Pro = effectively unlimited
+      return
+    }
+    // Free tier: load usage from cookie
     const used = getUsedFromCookie()
     setUsedCount(used)
     setRemaining(Math.max(0, FREE_LIMIT - used))
@@ -274,7 +285,10 @@ export function VideoConverter() {
       const res = await fetch('/api/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url, mode: selectedMode, language }),
+        body: JSON.stringify({
+          url, mode: selectedMode, language,
+          ...(proToken ? { pro_token: proToken } : {}),
+        }),
       })
       const data = await res.json()
 
@@ -291,10 +305,8 @@ export function VideoConverter() {
         return
       }
 
-      // Update remaining count locally — cookie is source of truth.
-      // Server-side in-memory counter resets on cold starts (serverless),
-      // so we always increment the client cookie count instead.
-      if (!data.cached) {
+      // Update remaining count — Pro users skip this
+      if (!data.cached && !isPro) {
         const newUsed = usedCount + 1
         const newRemaining = Math.max(0, FREE_LIMIT - newUsed)
         setUsedCount(newUsed)
@@ -387,28 +399,37 @@ export function VideoConverter() {
         />
       )}
 
-      {/* Free usage indicator */}
+      {/* Usage indicator */}
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400">
-        <div className="flex items-center gap-1.5">
-          <div className="flex gap-0.5">
-            {Array.from({ length: FREE_LIMIT }).map((_, i) => (
-              <div
-                key={i}
-                className={`h-1.5 w-5 rounded-full transition-colors ${
-                  i < usedCount ? 'bg-red-400' : 'bg-gray-200'
-                }`}
-              />
-            ))}
+        {isPro ? (
+          <div className="flex items-center gap-1.5 text-amber-600 font-medium">
+            <Zap className="h-3 w-3 fill-current" />
+            <span>Pro — unlimited AI generations</span>
           </div>
-          <span>{remaining} free AI generations left today</span>
-        </div>
-        <button
-          onClick={() => setShowUpgrade(true)}
-          className="flex items-center gap-1 text-red-500 hover:text-red-600 font-medium transition-colors"
-        >
-          <Zap className="h-3 w-3" />
-          Upgrade for unlimited
-        </button>
+        ) : (
+          <>
+            <div className="flex items-center gap-1.5">
+              <div className="flex gap-0.5">
+                {Array.from({ length: FREE_LIMIT }).map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-1.5 w-5 rounded-full transition-colors ${
+                      i < usedCount ? 'bg-red-400' : 'bg-gray-200'
+                    }`}
+                  />
+                ))}
+              </div>
+              <span>{remaining} free AI generations left today</span>
+            </div>
+            <button
+              onClick={() => setShowUpgrade(true)}
+              className="flex items-center gap-1 text-red-500 hover:text-red-600 font-medium transition-colors"
+            >
+              <Zap className="h-3 w-3" />
+              Upgrade for unlimited
+            </button>
+          </>
+        )}
       </div>
 
       {/* Error */}
