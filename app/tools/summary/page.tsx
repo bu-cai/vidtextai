@@ -67,7 +67,7 @@ export default function SummaryPage() {
       </div>
 
       <div className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
-        <VideoConverter />
+        <VideoConverter initialMode="summary" />
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">

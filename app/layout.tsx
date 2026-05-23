@@ -58,7 +58,7 @@ const organizationJsonLd = {
       url: 'https://www.vidtextai.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.vidtextai.com/og-image.png',
+        url: 'https://www.vidtextai.com/opengraph-image',
         width: 1200,
         height: 630,
       },

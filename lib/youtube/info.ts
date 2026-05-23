@@ -34,7 +34,10 @@ export async function getVideoInfo(videoId: string): Promise<VideoInfo> {
   // Fallback: minimal info from oEmbed
   try {
     const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`
-    const res = await fetch(oembedUrl, { next: { revalidate: 3600 } })
+    const res = await fetch(oembedUrl, {
+      signal: AbortSignal.timeout(8_000),
+      next: { revalidate: 3600 },
+    })
     const data = await res.json()
     return {
       videoId,

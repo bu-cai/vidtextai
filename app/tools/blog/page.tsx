@@ -68,7 +68,7 @@ export default function BlogPage() {
       </div>
 
       <div className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
-        <VideoConverter />
+        <VideoConverter initialMode="blog" />
       </div>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

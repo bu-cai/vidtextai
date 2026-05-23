@@ -148,7 +148,11 @@ function saveUsedToCookie(used: number): void {
 }
 // ─────────────────────────────────────────────────────────────────────────────
 
-export function VideoConverter() {
+interface VideoConverterProps {
+  initialMode?: ProcessingMode
+}
+
+export function VideoConverter({ initialMode = 'transcript' }: VideoConverterProps) {
   const [url, setUrl] = useState('')
   const [language, setLanguage] = useState('en')
   const [loading, setLoading] = useState(false)
@@ -156,7 +160,7 @@ export function VideoConverter() {
   const [results, setResults] = useState<Partial<Record<ProcessingMode, ProcessResult>>>({})
   const [error, setError] = useState('')
   const [copied, setCopied] = useState<ProcessingMode | null>(null)
-  const [activeMode, setActiveMode] = useState<ProcessingMode>('transcript')
+  const [activeMode, setActiveMode] = useState<ProcessingMode>(initialMode)
   const [remaining, setRemaining] = useState<number>(FREE_LIMIT)
   const [showUpgrade, setShowUpgrade] = useState(false)
   const [usedCount, setUsedCount] = useState(0)
@@ -205,6 +209,14 @@ export function VideoConverter() {
     }
   }
 
+  // Auto-trigger AI when transcript loads on a tool-specific page
+  useEffect(() => {
+    if (transcriptData && initialMode !== 'transcript' && !results[initialMode]) {
+      handleProcess(initialMode)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [transcriptData])
+
   // Load usage from cookie on mount + check pro token
   useEffect(() => {
     // Check Pro status from localStorage
@@ -230,7 +242,7 @@ export function VideoConverter() {
     setError('')
     setTranscriptData(null)
     setResults({})
-    setActiveMode('transcript')
+    setActiveMode(initialMode)
 
     try {
       const res = await fetch(`/api/transcript?url=${encodeURIComponent(url)}`)
