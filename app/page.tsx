@@ -141,16 +141,20 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     <div className="border border-gray-200 rounded-xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
       >
         <span className="font-semibold text-gray-900 text-sm pr-4">{q}</span>
         <ChevronDown className={`h-4 w-4 text-gray-400 shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && (
+      <div
+        className={`overflow-hidden transition-all duration-200 ${open ? 'max-h-96' : 'max-h-0'}`}
+        aria-hidden={!open}
+      >
         <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
           {a}
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -166,7 +170,6 @@ const HOME_JSON_LD = {
       url: 'https://www.vidtextai.com',
       description: 'Convert any YouTube video into transcript, summary, blog post, study notes, or Shorts script using AI. Free, fast, and accurate.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '1200', bestRating: '5' },
       featureList: ['YouTube Transcript Extraction', 'AI Video Summarization', 'Blog Post Generation', 'Study Notes Generator', 'YouTube Shorts Script Generator', '10+ Output Languages'],
     },
     {

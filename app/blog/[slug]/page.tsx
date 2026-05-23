@@ -3504,7 +3504,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Article',
+        '@type': 'BlogPosting',
         '@id': `https://www.vidtextai.com/blog/${slug}#article`,
         headline: post.title,
         description: post.description,

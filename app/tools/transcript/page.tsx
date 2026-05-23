@@ -31,7 +31,6 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/transcript',
       description: 'Download free, accurate, timestamped transcripts from any YouTube video instantly.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '1284', bestRating: '5' },
       featureList: [
         'Timestamped transcript download',
         'Copy to clipboard',

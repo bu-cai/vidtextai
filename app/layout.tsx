@@ -62,7 +62,10 @@ const organizationJsonLd = {
         width: 1200,
         height: 630,
       },
-      sameAs: [],
+      sameAs: [
+        'https://twitter.com/vidtextai',
+        'https://www.producthunt.com/products/vidtext-ai',
+      ],
     },
     {
       '@type': 'WebSite',

@@ -21,7 +21,6 @@ const jsonLd = {
       url: 'https://www.vidtextai.com/tools/summary',
       description: 'Summarize any YouTube video with AI. Get key points and takeaways in seconds.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '976', bestRating: '5' },
     },
     {
       '@type': 'BreadcrumbList',

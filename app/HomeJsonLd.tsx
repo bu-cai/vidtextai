@@ -16,12 +16,6 @@ export function HomeJsonLd() {
           price: '0',
           priceCurrency: 'USD',
         },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '1200',
-          bestRating: '5',
-        },
         featureList: [
           'YouTube Transcript Extraction',
           'AI Video Summarization',
