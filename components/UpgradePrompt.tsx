@@ -1,7 +1,8 @@
 'use client'
 
-import { X, Zap, CheckCircle2 } from 'lucide-react'
+import { X, Zap, CheckCircle2, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useState } from 'react'
 
 interface UpgradePromptProps {
   used: number
@@ -19,6 +20,19 @@ const PRO_FEATURES = [
 ]
 
 export function UpgradePrompt({ used, limit, onClose }: UpgradePromptProps) {
+  const [loading, setLoading] = useState(false)
+
+  async function handleUpgrade() {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/checkout', { method: 'POST' })
+      const data = await res.json()
+      if (data.url) window.location.href = data.url
+    } catch {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
       <div className="relative w-full max-w-md rounded-2xl bg-white shadow-2xl">
@@ -73,9 +87,9 @@ export function UpgradePrompt({ used, limit, onClose }: UpgradePromptProps) {
               Save 40% yearly
             </span>
           </div>
-          <Button className="w-full h-11 text-base font-semibold gap-2" onClick={() => alert('Stripe integration coming soon!')}>
-            <Zap className="h-4 w-4 fill-current" />
-            Upgrade to Pro
+          <Button className="w-full h-11 text-base font-semibold gap-2" onClick={handleUpgrade} disabled={loading}>
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Zap className="h-4 w-4 fill-current" />}
+            {loading ? 'Redirecting...' : 'Upgrade to Pro'}
           </Button>
           <p className="mt-2 text-center text-xs text-gray-400">
             Cancel anytime · 7-day free trial

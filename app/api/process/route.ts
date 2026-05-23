@@ -39,9 +39,19 @@ export async function POST(req: NextRequest) {
     const validModes: ProcessingMode[] = ['transcript', 'summary', 'blog', 'notes', 'shorts']
     if (!validModes.includes(mode)) return NextResponse.json({ error: 'Invalid mode' }, { status: 400 })
 
-    // ── Check subscription (future: read from Supabase/auth) ──────────────
-    // For now: everyone is free. Add `isPro = true` for paying users.
-    const isPro = false   // TODO: check JWT / Supabase user subscription
+    // ── Check subscription via pro_token ─────────────────────────────────
+    const proToken = body.pro_token || req.headers.get('x-pro-token')
+    let isPro = false
+    if (proToken && isSupabaseConfigured()) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const supabaseCheck = createServerClient() as any
+      const { data: subData } = await supabaseCheck
+        .from('subscriptions')
+        .select('status')
+        .eq('pro_token', proToken)
+        .single()
+      isPro = subData?.status === 'active'
+    }
     const ip = getClientIp(req)
 
     // ── Rate limiting ─────────────────────────────────────────────────────

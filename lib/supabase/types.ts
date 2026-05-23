@@ -1,6 +1,21 @@
 export type Database = {
   public: {
     Tables: {
+      subscriptions: {
+        Row: {
+          id: string
+          stripe_customer_id: string
+          stripe_subscription_id: string | null
+          email: string | null
+          status: string
+          pro_token: string | null
+          current_period_end: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: Omit<Database['public']['Tables']['subscriptions']['Row'], 'id' | 'created_at'>
+        Update: Partial<Database['public']['Tables']['subscriptions']['Insert']>
+      }
       transcripts: {
         Row: {
           id: string

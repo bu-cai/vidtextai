@@ -1,12 +1,9 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { Check, Zap } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Pricing — Free & Pro Plans | VidText AI',
-  description: 'VidText AI is free to start with 3 AI generations per day. Upgrade to Pro for unlimited access to all tools.',
-  alternates: { canonical: 'https://www.vidtextai.com/pricing' },
-}
+import Link from 'next/link'
+import { Check, Zap, Loader2 } from 'lucide-react'
+import { useState } from 'react'
+
 
 const FREE_FEATURES = [
   '3 AI content generations per day',
@@ -29,6 +26,19 @@ const PRO_FEATURES = [
 ]
 
 export default function PricingPage() {
+  const [loading, setLoading] = useState(false)
+
+  async function handleUpgrade() {
+    setLoading(true)
+    try {
+      const res = await fetch('/api/checkout', { method: 'POST' })
+      const data = await res.json()
+      if (data.url) window.location.href = data.url
+    } catch {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-16">
 
@@ -83,10 +93,12 @@ export default function PricingPage() {
           </div>
 
           <button
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
+            onClick={handleUpgrade}
+            disabled={loading}
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 py-3 font-semibold text-white hover:bg-red-700 transition-colors disabled:opacity-70"
           >
-            <Zap className="h-4 w-4" />
-            Coming Soon
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Zap className="h-4 w-4" />}
+            {loading ? 'Redirecting...' : 'Start 7-Day Free Trial'}
           </button>
 
           <ul className="mt-8 space-y-3">
