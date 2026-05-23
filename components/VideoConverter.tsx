@@ -167,6 +167,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
   const [videoId, setVideoId] = useState<string | null>(null)
   const [isPro, setIsPro] = useState(false)
   const [proToken, setProToken] = useState<string | null>(null)
+  const [proChecked, setProChecked] = useState(false)
   const playerRef = useRef<any>(null)
   const playerContainerRef = useRef<HTMLDivElement>(null)
 
@@ -225,13 +226,14 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
       setProToken(token)
       setIsPro(true)
       setRemaining(999) // Pro = effectively unlimited
-      return
+    } else {
+      // Free tier: load usage from cookie
+      const used = getUsedFromCookie()
+      setUsedCount(used)
+      setRemaining(Math.max(0, FREE_LIMIT - used))
+      if (used >= FREE_LIMIT) setShowUpgrade(true)
     }
-    // Free tier: load usage from cookie
-    const used = getUsedFromCookie()
-    setUsedCount(used)
-    setRemaining(Math.max(0, FREE_LIMIT - used))
-    if (used >= FREE_LIMIT) setShowUpgrade(true)
+    setProChecked(true)
   }, [])
 
   async function handleSubmit(e: React.FormEvent) {
@@ -395,8 +397,8 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         />
       )}
 
-      {/* Usage indicator */}
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400">
+      {/* Usage indicator — only render after pro check to avoid flash */}
+      <div className={`mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400 transition-opacity ${proChecked ? 'opacity-100' : 'opacity-0'}`}>
         {isPro ? (
           <div className="flex items-center gap-1.5 text-amber-600 font-medium">
             <Zap className="h-3 w-3 fill-current" />

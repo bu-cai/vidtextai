@@ -37,8 +37,8 @@ export async function POST(req: NextRequest) {
     const videoId = extractVideoId(input)
     if (!videoId) return NextResponse.json({ error: 'Invalid YouTube URL or video ID' }, { status: 400 })
 
-    const validModes: ProcessingMode[] = ['transcript', 'summary', 'blog', 'notes', 'shorts']
-    if (!validModes.includes(mode)) return NextResponse.json({ error: 'Invalid mode' }, { status: 400 })
+    const validModes: ProcessingMode[] = ['summary', 'blog', 'notes', 'shorts']
+    if (!validModes.includes(mode)) return NextResponse.json({ error: 'Invalid mode. Use /api/transcript for transcripts.' }, { status: 400 })
 
     // ── Check subscription via pro_token ─────────────────────────────────
     const proToken = body.pro_token || req.headers.get('x-pro-token')
@@ -90,6 +90,7 @@ export async function POST(req: NextRequest) {
             .select('*')
             .eq('video_id', videoId)
             .eq('mode', mode)
+            .eq('language', language || 'en')   // language-aware cache
             .order('created_at', { ascending: false })
             .limit(1)
             .single()

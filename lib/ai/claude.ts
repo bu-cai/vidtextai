@@ -9,8 +9,9 @@ export class ClaudeAdapter implements AIProviderAdapter {
   }
 
   async process(req: AIProcessRequest): Promise<string> {
+    const modelName = req.model || 'claude-opus-4-5'
     const response = await this.client.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: modelName,
       max_tokens: 4096,
       system: buildSystemPrompt(req.mode),
       messages: [{ role: 'user', content: buildUserPrompt(req) }],
