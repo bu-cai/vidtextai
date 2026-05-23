@@ -3366,6 +3366,379 @@ VidText AI tracks usage with a browser cookie — no account needed. You get 3 f
 Summarizing YouTube videos for free has never been easier. VidText AI gives you 3 AI summaries per day — no account, no credit card, no browser extension. Paste a YouTube URL and get structured key points in under 30 seconds. Start now at [vidtextai.com/tools/summary](https://www.vidtextai.com/tools/summary).
     `.trim(),
   },
+
+  'can-chatgpt-transcribe-audio': {
+    title: 'Can ChatGPT Transcribe Audio? (Free Alternatives That Actually Work)',
+    description: 'ChatGPT can transcribe audio files — but not YouTube videos directly. Learn what ChatGPT can and can\'t transcribe, and the fastest free alternatives for YouTube.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Short answer:** ChatGPT (with GPT-4o) can transcribe audio files you upload, but it cannot access YouTube videos directly. For transcribing YouTube content, [VidText AI](https://www.vidtextai.com/tools/transcript) is faster and completely free — paste a YouTube URL and get the full transcript in under 10 seconds.
+
+## Can ChatGPT Transcribe Audio Files?
+
+Yes — ChatGPT Plus and ChatGPT-4o can transcribe audio files you upload directly to the chat. Supported formats include MP3, MP4, WAV, M4A, and WebM.
+
+**How to transcribe audio with ChatGPT:**
+
+1. Open ChatGPT (Plus/4o required for file uploads)
+2. Click the paperclip icon to attach your audio file
+3. Type: *"Please transcribe this audio file"*
+4. ChatGPT returns the full text transcription
+
+**Limitations:**
+- Requires ChatGPT Plus ($20/month) for file uploads
+- Maximum file size: 25MB
+- Cannot access YouTube URLs or external links
+- Slower than dedicated tools for long recordings
+
+## Can ChatGPT Transcribe YouTube Videos?
+
+**No — ChatGPT cannot directly transcribe YouTube videos.** It cannot open YouTube URLs, watch videos, or access external websites. If you paste a YouTube link into ChatGPT and ask it to transcribe, it will tell you it can't access the video.
+
+**The workaround most people use:**
+1. Get the transcript first (using VidText AI or YouTube's built-in feature)
+2. Paste the transcript text into ChatGPT
+3. Ask ChatGPT to summarize, rewrite, or analyze it
+
+This two-step process works, but VidText AI makes it one step — it fetches the transcript AND generates the AI summary in a single click.
+
+## Best Free Tools to Transcribe Audio in 2026
+
+| Tool | YouTube? | Audio Files? | Free? | Sign-up? |
+|------|----------|--------------|-------|----------|
+| **VidText AI** | ✅ Yes | ❌ No | ✅ Yes | ✅ Not required |
+| ChatGPT (4o) | ❌ No | ✅ Yes | ⚠️ Plus only | ✅ Required |
+| Whisper (OpenAI) | ❌ No | ✅ Yes | ✅ Open source | ❌ Dev setup |
+| Otter.ai | ❌ No | ✅ Yes | ⚠️ Limited | ✅ Required |
+| YouTube Auto-captions | ✅ Yes | ❌ No | ✅ Yes | ✅ Not required |
+
+## How to Transcribe a YouTube Video for Free (No ChatGPT Needed)
+
+[VidText AI](https://www.vidtextai.com/tools/transcript) transcribes YouTube videos instantly — no file upload, no paid account:
+
+**Step 1:** Copy any YouTube video URL.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) and paste the URL.
+
+**Step 3:** Click **Get Transcript**. The full timestamped transcript appears in seconds.
+
+**Step 4:** Copy or download the transcript as a .txt file.
+
+Then paste it into ChatGPT for analysis, summarization, or rewriting — or use VidText AI's built-in AI tools to generate a summary, blog post, or study notes in one click.
+
+## Using ChatGPT + VidText AI Together
+
+The best workflow for deep AI analysis of YouTube content:
+
+1. **Get the transcript:** Use [VidText AI](https://www.vidtextai.com/tools/transcript) (free, instant, no account)
+2. **Copy the transcript text**
+3. **Paste into ChatGPT** with your prompt:
+   - *"Summarize this in 5 bullet points"*
+   - *"Extract all statistics and data points"*
+   - *"Rewrite this as a LinkedIn post"*
+   - *"What are the 3 most controversial claims made?"*
+
+This combination gives you ChatGPT's reasoning power applied to any YouTube video — for free.
+
+## Can ChatGPT Transcribe Whisper-Style?
+
+OpenAI's Whisper model (which powers ChatGPT's audio transcription) is available free as an open-source tool. Developers can run it locally:
+
+\`\`\`bash
+pip install openai-whisper
+whisper audio_file.mp3 --model base
+\`\`\`
+
+For non-developers or YouTube-specific use, VidText AI is significantly easier.
+
+## Frequently Asked Questions
+
+**Can ChatGPT Free transcribe audio?**
+ChatGPT Free does not support audio file uploads. You need ChatGPT Plus ($20/month) or use the free ChatGPT-4o access (limited). For YouTube transcripts specifically, VidText AI is free with no account required.
+
+**Can ChatGPT transcribe a Zoom recording?**
+If you export the Zoom recording as an MP4 or MP3 file, you can upload it to ChatGPT Plus for transcription. Alternatively, Zoom has a built-in transcription feature for cloud recordings.
+
+**Is there a free alternative to ChatGPT for transcription?**
+Yes. For YouTube videos, VidText AI is completely free — no sign-up, no credit card. For general audio files, OpenAI's Whisper is free and open-source (requires Python setup).
+
+**Can ChatGPT summarize a YouTube video?**
+Not directly — it can't watch YouTube. The workaround: get the transcript with VidText AI, paste it into ChatGPT, then ask for a summary. Or use VidText AI's one-click AI Summary feature to skip ChatGPT entirely.
+
+## Related Guides
+
+- [Can ChatGPT Summarize a YouTube Video?](/blog/chatgpt-summarize-youtube-video)
+- [How to Get a YouTube Transcript Free & Fast](/blog/how-to-get-youtube-transcript)
+- [Best YouTube Summarizer Prompts for ChatGPT (2026)](/blog/best-youtube-summarizer-prompts)
+- [Video to Text Converter: The Complete Guide](/blog/video-to-text-converter-guide)
+
+## Conclusion
+
+ChatGPT can transcribe audio files you upload (with a Plus subscription), but it cannot transcribe YouTube videos directly. For YouTube transcription, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest free option — no account, no cost, results in under 10 seconds. Use both together for the best AI-powered content analysis workflow.
+    `.trim(),
+  },
+
+  'best-live-captioning-tool-mac': {
+    title: 'Best Live Captioning Tool for Mac in 2026 (Free & Paid)',
+    description: 'The best free live captioning tools for Mac in 2026 — for meetings, lectures, YouTube, and accessibility. Compare Live Captions, Whisper, and web-based alternatives.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Best free live captioning tool for Mac:** macOS 14+ has a built-in **Live Captions** feature (free, works offline, no sign-up) that shows real-time captions for anything playing on your Mac — meetings, YouTube, videos, and microphone audio. For YouTube-specific transcripts and AI summaries, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest free alternative.
+
+## What Is Live Captioning?
+
+Live captioning (also called real-time transcription or CART) converts spoken audio into text as it happens — with no delay. It's used for:
+
+- **Accessibility** — for deaf or hard-of-hearing users
+- **Meetings** — follow along with Zoom, Teams, or Google Meet calls
+- **Lectures** — transcribe university classes or online courses in real time
+- **YouTube** — read along with videos as they play
+- **Focus** — understand fast speakers, heavy accents, or low-quality audio
+
+## Best Live Captioning Tools for Mac (2026)
+
+### 1. macOS Live Captions (Free — Best Overall)
+
+**Available on: macOS Ventura 14+ (free, built-in)**
+
+Apple added native Live Captions to macOS 14. It works for all audio on your Mac — YouTube, Zoom, FaceTime, microphone input, and any video file.
+
+**How to enable:**
+1. Go to **System Settings** → **Accessibility**
+2. Scroll to **Live Captions (Beta)**
+3. Toggle it on
+4. A floating caption window appears on screen
+
+**Pros:**
+- Completely free, no account needed
+- Works offline (on-device AI)
+- Supports system audio + microphone simultaneously
+- Works with any app — YouTube, Zoom, Netflix, etc.
+- Available in English, Spanish, French, German, Mandarin
+
+**Cons:**
+- Requires macOS Ventura or later
+- Captions are not saved or exportable
+- Accuracy lower than cloud-based tools for heavy accents
+- English only on older macOS versions
+
+### 2. VidText AI (Best for YouTube Transcripts)
+
+**Available on: Any browser — free, no install**
+
+For YouTube-specific transcription (not live, but instant), [VidText AI](https://www.vidtextai.com/tools/transcript) is faster than any live captioning tool. Instead of reading captions as a video plays, you get the full transcript immediately.
+
+**How it works:**
+1. Copy any YouTube URL
+2. Paste it at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Get the complete transcript with timestamps in seconds
+
+**Best for:** Research, studying, note-taking, content repurposing — when you want the full transcript rather than live captions.
+
+### 3. Whisper Desktop (Free — Best Accuracy)
+
+**Available on: macOS (free, open source)**
+
+OpenAI's Whisper is the most accurate speech recognition model available. Whisper Desktop is a Mac app that brings Whisper to a simple GUI.
+
+**Download:** Search "Whisper Desktop Mac" or use Homebrew:
+\`\`\`bash
+brew install whisper-cpp
+\`\`\`
+
+**Pros:** Highest accuracy of any free tool, works offline, no data sent to cloud
+
+**Cons:** Requires setup, not real-time (transcribes audio files, not live streams)
+
+### 4. Otter.ai (Freemium — Best for Meetings)
+
+**Available on: macOS app + web, free tier available**
+
+Otter.ai specializes in meeting transcription — it joins Zoom and Google Meet automatically and produces a searchable transcript.
+
+**Free tier:** 300 minutes/month transcription, limited exports
+
+**Best for:** Professionals who need searchable meeting notes with speaker identification.
+
+### 5. Rev Live Captions (Paid — Best Professional Quality)
+
+**Available on: Browser-based, from $1.50/min**
+
+Human-powered captions with 99%+ accuracy. Best for legal proceedings, medical consultations, or events where accuracy is critical.
+
+## Comparison: Live Captioning Tools for Mac
+
+| Tool | Live? | YouTube? | Free? | Offline? | Export? |
+|------|-------|----------|-------|----------|---------|
+| macOS Live Captions | ✅ Real-time | ✅ Yes | ✅ Free | ✅ Yes | ❌ No |
+| VidText AI | ❌ On-demand | ✅ Yes | ✅ Free | ❌ No | ✅ Yes |
+| Whisper Desktop | ❌ File-based | ❌ No | ✅ Free | ✅ Yes | ✅ Yes |
+| Otter.ai | ✅ Real-time | ⚠️ Limited | ⚠️ 300 min | ❌ No | ✅ Yes |
+| Rev Live Captions | ✅ Real-time | ❌ No | ❌ Paid | ❌ No | ✅ Yes |
+
+## Which Tool Should You Use?
+
+**For everyday YouTube watching on Mac:** Turn on **macOS Live Captions** in Accessibility settings. It works instantly and costs nothing.
+
+**For YouTube research and note-taking:** Use [VidText AI](https://www.vidtextai.com/tools/transcript) — get the full transcript immediately, then search, copy, or generate AI summaries from it.
+
+**For Zoom and Google Meet:** Use **Otter.ai** (free tier) or Zoom's built-in transcription (available on paid Zoom plans).
+
+**For maximum accuracy on audio files:** Use **Whisper Desktop** (free, requires setup).
+
+## Frequently Asked Questions
+
+**Does Mac have a built-in live captioning feature?**
+Yes. macOS Ventura 14 and later include Live Captions in Accessibility settings. It works for system audio and microphone in real time, completely offline and free.
+
+**What is the best free captioning software for Mac?**
+macOS Live Captions is the best free option for live/real-time captions. For YouTube transcripts specifically, VidText AI is faster — it fetches the complete transcript in under 10 seconds with no installation.
+
+**Can I export live captions from Mac?**
+macOS Live Captions does not support exporting captions as a file. For exportable transcripts, use VidText AI (YouTube) or Otter.ai (meetings).
+
+**Does macOS Live Captions work in all languages?**
+macOS Live Captions supports English, Spanish, French, German, Japanese, Mandarin Chinese, and a few others, depending on your macOS version. More languages are added with each macOS update.
+
+## Related Guides
+
+- [How to Get a YouTube Transcript Free & Fast](/blog/how-to-get-youtube-transcript)
+- [YouTube Caption Downloader: Save Subtitles Free](/blog/youtube-caption-downloader)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [Video to Text Converter: The Complete Guide](/blog/video-to-text-converter-guide)
+
+## Conclusion
+
+The best free live captioning tool for Mac in 2026 is the **built-in macOS Live Captions** (Accessibility → Live Captions) — free, offline, works with any audio source. For YouTube-specific transcription you can save and search, [VidText AI](https://www.vidtextai.com/tools/transcript) is faster and requires no installation.
+    `.trim(),
+  },
+
+  'mp4-to-transcript': {
+    title: 'MP4 to Transcript: How to Convert Any Video to Text Free (2026)',
+    description: 'Convert MP4 video files to text transcripts free — using AI tools, browser-based converters, and open-source options. No software download required.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Fastest way to get a transcript from an MP4 on YouTube:** If your MP4 is a YouTube video, [VidText AI](https://www.vidtextai.com/tools/transcript) extracts the full transcript in under 10 seconds — paste the URL, get the text, done. For local MP4 files (not on YouTube), use Whisper (free, open-source) or a cloud transcription service.
+
+## Methods to Convert MP4 to Transcript
+
+There are three main approaches depending on where your MP4 is:
+
+1. **YouTube MP4 (video on YouTube)** → Use VidText AI (fastest, free)
+2. **Local MP4 file** → Use Whisper, Descript, or upload to a cloud service
+3. **MP4 from Zoom/screen recording** → Use Otter.ai or auto-upload to transcription API
+
+## Method 1: Convert YouTube MP4 to Transcript (Free, Instant)
+
+If the MP4 is a YouTube video, there's no need to download the file at all.
+
+**Step 1:** Copy the YouTube video URL.
+
+**Step 2:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript).
+
+**Step 3:** Paste the URL → click **Get Transcript**.
+
+**Step 4:** Your full timestamped transcript appears. Click **Download** to save as .txt.
+
+This works for any public YouTube video with captions — lectures, interviews, tutorials, podcasts, documentaries.
+
+## Method 2: Convert a Local MP4 File to Transcript (Free with Whisper)
+
+For MP4 files on your computer, OpenAI's Whisper is the best free option.
+
+### Using Whisper (Free, High Accuracy)
+
+**Requirements:** Python 3.8+ installed on your computer.
+
+**Install:**
+\`\`\`bash
+pip install openai-whisper
+\`\`\`
+
+**Run:**
+\`\`\`bash
+whisper your_video.mp4 --model base --output_format txt
+\`\`\`
+
+**Output:** A .txt file with the full transcript. For better accuracy on clear audio, use \`--model medium\` or \`--model large\`.
+
+**Accuracy:** 90–98% for clear English speech. Best free MP4-to-text tool available.
+
+### Using FFmpeg + Whisper (For Large Files)
+
+Extract audio first to speed up transcription:
+
+\`\`\`bash
+ffmpeg -i your_video.mp4 -q:a 0 -map a audio.mp3
+whisper audio.mp3 --model base
+\`\`\`
+
+## Method 3: Online MP4 to Transcript Tools
+
+If you don't want to install Python, browser-based tools accept MP4 uploads:
+
+| Tool | Free? | Accuracy | File Limit | Sign-up? |
+|------|-------|----------|-----------|---------|
+| Whisper (local) | ✅ Free | ★★★★★ | Unlimited | ❌ No |
+| Descript | ⚠️ 1hr free | ★★★★☆ | 5GB | ✅ Yes |
+| Otter.ai | ⚠️ 300min/mo | ★★★★☆ | 1GB | ✅ Yes |
+| AssemblyAI | ⚠️ $0.37/hr | ★★★★★ | Unlimited | ✅ Yes |
+| Rev | ❌ $1.50/min | ★★★★★ | Unlimited | ✅ Yes |
+
+## Convert MP4 to Transcript Without Installing Anything
+
+If you want to avoid both software installation and sign-up forms:
+
+**For YouTube MP4s:** [VidText AI](https://www.vidtextai.com/tools/transcript) — completely free, no sign-up, results in 10 seconds.
+
+**For non-YouTube MP4s:** Upload to Google Drive → right-click → Open with Google Docs → Google Docs attempts to transcribe the audio (accuracy varies, but requires no installation).
+
+## Improve MP4 Transcript Accuracy
+
+Transcript accuracy depends heavily on audio quality. To get the best results:
+
+- **Reduce background noise** before transcribing (use Audacity or similar)
+- **Use speaker microphones** — direct audio is always cleaner than room audio
+- **Choose a larger Whisper model** (\`--model large\`) for difficult accents
+- **Split long files** into 30-minute chunks for cloud services with upload limits
+
+## Frequently Asked Questions
+
+**Can I convert an MP4 to text for free?**
+Yes. If the MP4 is on YouTube, VidText AI converts it to text free in seconds. For local MP4 files, OpenAI Whisper is free and open-source — install via pip and run from the command line.
+
+**How do I convert an MP4 video to text online without software?**
+For YouTube videos, use VidText AI — paste the URL and get the full transcript instantly. For local files, Descript offers a free tier with file upload transcription (no software required).
+
+**What is the most accurate MP4 to transcript tool?**
+OpenAI Whisper (large model) is the most accurate free option at ~98% accuracy on clear English. For professional use requiring 99%+ accuracy, human-transcription services like Rev are available.
+
+**Can I convert an MP4 to text on iPhone or Android?**
+VidText AI works in any mobile browser for YouTube videos. For local MP4 files on mobile, Otter.ai has iOS and Android apps that accept video uploads for transcription (300 minutes/month free).
+
+**How long does MP4 to transcript conversion take?**
+- YouTube (VidText AI): Under 10 seconds regardless of video length
+- Local file (Whisper base model): Roughly 1x real-time (a 10-minute video takes ~10 minutes)
+- Cloud services (Otter.ai, AssemblyAI): Usually 1–3 minutes for a 30-minute video
+
+## Related Guides
+
+- [Video to Text Converter: The Complete Guide (2026)](/blog/video-to-text-converter-guide)
+- [Can ChatGPT Transcribe Audio?](/blog/can-chatgpt-transcribe-audio)
+- [How to Get a YouTube Transcript Free & Fast](/blog/how-to-get-youtube-transcript)
+- [YouTube Transcript API Guide for Developers](/blog/youtube-transcript-api-guide)
+
+## Conclusion
+
+Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest option — paste the URL and get the full text in seconds. For local MP4 files, Whisper is the best free tool with near-professional accuracy. No paid subscription required for either.
+    `.trim(),
+  },
 }
 
 

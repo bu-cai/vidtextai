@@ -10,6 +10,30 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'can-chatgpt-transcribe-audio',
+    title: 'Can ChatGPT Transcribe Audio? (Free Alternatives That Actually Work)',
+    excerpt: 'ChatGPT can transcribe audio files — but not YouTube videos directly. Learn what ChatGPT can and can\'t do, and the fastest free alternatives for YouTube transcription.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'best-live-captioning-tool-mac',
+    title: 'Best Live Captioning Tool for Mac in 2026 (Free & Paid)',
+    excerpt: 'Compare the best free and paid live captioning tools for Mac — macOS Live Captions, Whisper, Otter.ai, and web-based alternatives for YouTube and meetings.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
+    slug: 'mp4-to-transcript',
+    title: 'MP4 to Transcript: How to Convert Any Video to Text Free (2026)',
+    excerpt: 'Convert MP4 video files to text transcripts free — for YouTube videos, local files, and Zoom recordings. Includes Whisper setup, browser tools, and no-install options.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'how-to-get-youtube-transcript',
     title: 'How to Get a YouTube Video Transcript (Free & Fast)',
     excerpt: 'Learn the easiest way to extract a full, timestamped transcript from any YouTube video — no software needed.',
