@@ -12,11 +12,11 @@ function isSupabaseConfigured() {
 }
 
 // ── Model selection ──────────────────────────────────────────────────────────
-// gemini-2.5-flash is the only model with active quota on this API key.
-// When billing is set up, can split: free→gemini-2.0-flash, pro→gemini-2.5-flash
+// free → gemini-2.0-flash  ($0.10/M tokens, 50% cheaper)
+// pro  → gemini-2.5-flash  (better quality, thinking model)
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function getModelForMode(_mode: ProcessingMode, _isPro: boolean): string {
-  return 'gemini-2.5-flash'
+function getModelForMode(_mode: ProcessingMode, isPro: boolean): string {
+  return isPro ? 'gemini-2.5-flash' : 'gemini-2.0-flash'
 }
 
 // ── Token limits by tier ───────────────────────────────────────────────────
