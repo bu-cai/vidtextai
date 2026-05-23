@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'closed-captions-vs-subtitles',
+    title: 'Closed Captions vs Subtitles: What\'s the Difference? (Plain English)',
+    excerpt: 'Closed captions include sound effects and speaker cues for deaf viewers. Subtitles translate dialogue for foreign-language viewers. Here\'s the practical difference every creator needs to know.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'can-chatgpt-transcribe-audio',
     title: 'Can ChatGPT Transcribe Audio? (Free Alternatives That Actually Work)',
     excerpt: 'ChatGPT can transcribe audio files — but not YouTube videos directly. Learn what ChatGPT can and can\'t do, and the fastest free alternatives for YouTube transcription.',
