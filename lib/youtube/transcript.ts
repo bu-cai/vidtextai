@@ -53,6 +53,7 @@ async function fetchViaTimedTextApi(videoId: string): Promise<TranscriptSegment[
     try {
       const url = `https://www.youtube.com/api/timedtext?v=${videoId}&lang=${lang}&fmt=json3`
       const res = await fetch(url, {
+        signal: AbortSignal.timeout(10_000),
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         },
@@ -85,6 +86,7 @@ async function fetchViaTimedTextApi(videoId: string): Promise<TranscriptSegment[
 // ── Method 3: Parse YouTube page ─────────────────────────────────────────────
 async function fetchViaPageParse(videoId: string): Promise<TranscriptSegment[]> {
   const res = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
+    signal: AbortSignal.timeout(15_000),
     headers: {
       'Accept-Language': 'en-US,en;q=0.9',
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',

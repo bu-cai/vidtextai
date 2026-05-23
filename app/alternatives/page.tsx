@@ -155,7 +155,7 @@ export default function AlternativesPage() {
           {[
             { title: '5 tools in one', desc: 'Transcript, Summary, Blog Post, Study Notes, and Shorts Script — no other free tool offers all five.' },
             { title: 'No sign-up required', desc: 'Most competitors require an account. VidText AI works instantly with just a YouTube URL.' },
-            { title: 'AI-powered generation', desc: 'Built on Google Gemini 2.5 Flash — one of the most capable AI models available in 2026.' },
+            { title: 'AI-powered generation', desc: 'Built on Google Gemini AI — Pro users get Gemini 2.5 Flash, one of the most capable models in 2026.' },
             { title: '10 output languages', desc: 'Generate content in English, Chinese, Japanese, Spanish, French, German, and more.' },
           ].map(item => (
             <div key={item.title} className="flex gap-3">

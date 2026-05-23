@@ -5,6 +5,7 @@ import { extractVideoId, wordCount } from '@/lib/utils'
 import { createServerClient } from '@/lib/supabase/client'
 import { ProcessingMode, AIProvider } from '@/types'
 import { checkRateLimit, incrementUsage, getClientIp, checkBurstLimit } from '@/lib/rate-limit'
+import { getVideoInfo } from '@/lib/youtube/info'
 
 function isSupabaseConfigured() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -118,10 +119,20 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // ── Fetch transcript ──────────────────────────────────────────────────
+    // ── Fetch transcript (and title if not cached) ────────────────────────
     if (!transcriptText) {
-      const result = await getTranscript(videoId)
+      const [transcriptResult, infoResult] = await Promise.allSettled([
+        getTranscript(videoId),
+        !videoTitle ? getVideoInfo(videoId) : Promise.reject('skip'),
+      ])
+      if (transcriptResult.status === 'rejected') {
+        return NextResponse.json({ error: 'Failed to fetch transcript' }, { status: 404 })
+      }
+      const result = transcriptResult.value
       transcriptText = result.fullText
+      if (!videoTitle && infoResult.status === 'fulfilled') {
+        videoTitle = infoResult.value?.title
+      }
       if (useCache) {
         const supabase = createServerClient()
         void supabase.from('transcripts').upsert({
@@ -130,6 +141,14 @@ export async function POST(req: NextRequest) {
           language: result.language, source: result.source,
         } as never)
       }
+    }
+
+    // Fallback: try fetching title if still missing
+    if (!videoTitle) {
+      try {
+        const info = await getVideoInfo(videoId)
+        videoTitle = info?.title
+      } catch { /* non-fatal */ }
     }
 
     if (!transcriptText) return NextResponse.json({ error: 'No transcript available' }, { status: 404 })

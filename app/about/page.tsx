@@ -43,7 +43,7 @@ export default function AboutPage() {
           {
             icon: Globe,
             title: 'Global Access',
-            desc: 'Support for 50+ output languages means content creators and students worldwide can benefit.',
+            desc: 'Support for 10+ output languages means content creators and students worldwide can benefit.',
           },
           {
             icon: Shield,

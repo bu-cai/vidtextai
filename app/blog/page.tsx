@@ -19,8 +19,8 @@ const POSTS = [
   },
   {
     slug: 'youtube-to-blog-post',
-    title: 'How to Turn a YouTube Video into a Blog Post with AI',
-    excerpt: 'Repurpose your video content into SEO-optimized blog posts in seconds using AI. Step-by-step guide for content creators.',
+    title: 'How to Turn a YouTube Video into a Blog Post with AI (Step-by-Step)',
+    excerpt: 'Repurpose your video content into SEO-optimized blog posts in seconds using AI. Full step-by-step guide with examples for content creators.',
     category: 'Tutorial',
     date: 'May 15, 2026',
     readTime: '5 min read',
@@ -59,8 +59,8 @@ const POSTS = [
   },
   {
     slug: 'youtube-to-blog-post-ai',
-    title: 'How to Turn Any YouTube Video into a Blog Post with AI',
-    excerpt: 'Repurpose your video content into SEO-ready blog articles in minutes. The fastest workflow for video-first creators.',
+    title: 'YouTube to Blog Post AI: Fastest Workflow for Video-First Creators',
+    excerpt: 'The fastest way to repurpose YouTube videos into SEO-ready blog articles. Includes a template, tips for better output, and tool comparison.',
     category: 'Tutorial',
     date: 'May 16, 2026',
     readTime: '5 min read',
