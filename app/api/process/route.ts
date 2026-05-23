@@ -4,7 +4,7 @@ import { getProvider, getDefaultProvider } from '@/lib/ai/provider'
 import { extractVideoId, wordCount } from '@/lib/utils'
 import { createServerClient } from '@/lib/supabase/client'
 import { ProcessingMode, AIProvider } from '@/types'
-import { checkRateLimit, incrementUsage, getClientIp } from '@/lib/rate-limit'
+import { checkRateLimit, incrementUsage, getClientIp, checkBurstLimit } from '@/lib/rate-limit'
 
 function isSupabaseConfigured() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -53,6 +53,14 @@ export async function POST(req: NextRequest) {
       isPro = subData?.status === 'active'
     }
     const ip = getClientIp(req)
+
+    // ── Burst protection (anti-abuse) ─────────────────────────────────────
+    if (!checkBurstLimit(ip)) {
+      return NextResponse.json({
+        error: 'too_many_requests',
+        message: 'Too many requests. Please slow down.',
+      }, { status: 429 })
+    }
 
     // ── Rate limiting ─────────────────────────────────────────────────────
     const rateCheck = checkRateLimit(ip, isPro)
