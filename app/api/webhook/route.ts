@@ -34,7 +34,16 @@ export async function POST(req: NextRequest) {
     }
 
     const email = session.customer_email || session.customer_details?.email || ''
-    const proToken = generateProToken()
+
+    // Preserve existing pro_token if already created by success page polling
+    // to avoid invalidating the token already stored in user's localStorage
+    const { data: existing } = await supabase
+      .from('subscriptions')
+      .select('pro_token')
+      .eq('stripe_customer_id', session.customer as string)
+      .single()
+
+    const proToken = existing?.pro_token || generateProToken()
 
     const { error } = await supabase.from('subscriptions').upsert({
       stripe_customer_id: session.customer as string,

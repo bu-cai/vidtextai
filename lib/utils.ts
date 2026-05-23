@@ -6,12 +6,18 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function extractVideoId(input: string): string | null {
+  const trimmed = input.trim()
   const patterns = [
-    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/)([a-zA-Z0-9_-]{11})/,
-    /^([a-zA-Z0-9_-]{11})$/,
+    /[?&]v=([a-zA-Z0-9_-]{11})/,                          // watch?v=
+    /youtu\.be\/([a-zA-Z0-9_-]{11})/,                      // youtu.be/
+    /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/,            // /embed/
+    /youtube\.com\/v\/([a-zA-Z0-9_-]{11})/,                // /v/
+    /youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/,           // /shorts/
+    /youtube\.com\/live\/([a-zA-Z0-9_-]{11})/,             // /live/
+    /^([a-zA-Z0-9_-]{11})$/,                               // bare 11-char ID
   ]
   for (const pattern of patterns) {
-    const match = input.match(pattern)
+    const match = trimmed.match(pattern)
     if (match) return match[1]
   }
   return null

@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Check, Zap, Loader2 } from 'lucide-react'
-import { useState } from 'react'
+import { Check, Zap, Loader2, CheckCircle2 } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 
 const FREE_FEATURES = [
@@ -27,6 +27,12 @@ const PRO_FEATURES = [
 
 export default function PricingPage() {
   const [loading, setLoading] = useState(false)
+  const [isAlreadyPro, setIsAlreadyPro] = useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem('vidtext_pro_token')
+    if (token) setIsAlreadyPro(true)
+  }, [])
 
   async function handleUpgrade() {
     setLoading(true)
@@ -45,6 +51,12 @@ export default function PricingPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h1>
         <p className="mt-4 text-lg text-gray-500">Start free. Upgrade when you need more.</p>
+        {isAlreadyPro && (
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-50 border border-green-200 px-4 py-2 text-sm font-medium text-green-700">
+            <CheckCircle2 className="h-4 w-4" />
+            You&apos;re already on Pro — enjoy unlimited access!
+          </div>
+        )}
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
@@ -86,7 +98,7 @@ export default function PricingPage() {
           <div className="mb-6">
             <h2 className="text-xl font-bold text-gray-900">Pro</h2>
             <div className="mt-3 flex items-end gap-1">
-              <span className="text-5xl font-bold text-gray-900">$9</span>
+              <span className="text-5xl font-bold text-gray-900">$9.90</span>
               <span className="text-gray-500 mb-1">/month</span>
             </div>
             <p className="mt-2 text-sm text-gray-500">For creators & power users</p>
@@ -130,8 +142,8 @@ export default function PricingPage() {
               a: 'Each time you generate a Summary, Blog Post, Study Notes, or Shorts Script uses one generation. Fetching a plain transcript does not count.',
             },
             {
-              q: 'When will Pro be available?',
-              a: "We're working on the Pro plan. Join our waitlist by contacting support@vidtextai.com and we'll notify you when it launches.",
+              q: 'How does the 7-day free trial work?',
+              a: "Start your Pro trial with no charge for 7 days. You'll only be billed $9.90/month after the trial ends. Cancel anytime before — no questions asked.",
             },
           ].map((item) => (
             <div key={item.q} className="rounded-xl border border-gray-200 p-5">

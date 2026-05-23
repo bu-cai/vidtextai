@@ -81,7 +81,7 @@ export function UpgradePrompt({ used, limit, onClose }: UpgradePromptProps) {
         {/* Pricing + CTA */}
         <div className="px-6 pb-6">
           <div className="flex items-baseline gap-1 mb-3">
-            <span className="text-3xl font-extrabold text-gray-900">$9.9</span>
+            <span className="text-3xl font-extrabold text-gray-900">$9.90</span>
             <span className="text-gray-400 text-sm">/month</span>
             <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
               Save 40% yearly

@@ -137,13 +137,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'No AI provider configured.' }, { status: 503 })
     }
 
-    // ── Consume rate limit token ──────────────────────────────────────────
-    incrementUsage(ip)
-    const remaining = rateCheck.remaining - 1
-
     // ── Set model + token limit by tier ──────────────────────────────────
     const modelName = getModelForMode(mode, isPro)
-    process.env.GEMINI_MODEL = modelName  // Dynamic model selection
     const charLimit = isPro ? TOKEN_LIMITS.pro : TOKEN_LIMITS.free
 
     // ── AI generation ─────────────────────────────────────────────────────
@@ -151,7 +146,12 @@ export async function POST(req: NextRequest) {
     const content = await aiProvider.process({
       transcript: transcriptText.slice(0, charLimit),
       mode, videoTitle, customPrompt, language,
+      model: modelName,
     })
+
+    // ── Consume rate limit token (only on success) ────────────────────────
+    incrementUsage(ip)
+    const remaining = rateCheck.remaining - 1
 
     // ── Cache result ──────────────────────────────────────────────────────
     if (useCache && !customPrompt) {

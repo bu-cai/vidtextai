@@ -6,6 +6,7 @@ export interface AIProcessRequest {
   videoTitle?: string
   customPrompt?: string
   language?: string
+  model?: string  // explicit model override (avoids process.env mutation)
 }
 
 export interface AIProviderAdapter {

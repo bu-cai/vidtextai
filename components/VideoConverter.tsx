@@ -8,7 +8,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import { Badge } from '@/components/ui/badge'
 import { UpgradePrompt } from '@/components/UpgradePrompt'
 import { ProcessingMode, VideoInfo, TranscriptSegment } from '@/types'
-import { formatTimestamp, wordCount } from '@/lib/utils'
+import { formatTimestamp, wordCount, extractVideoId } from '@/lib/utils'
 
 const MODES: { id: ProcessingMode; label: string; desc: string; emoji: string }[] = [
   { id: 'transcript', label: 'Transcript', desc: 'Full timestamped text', emoji: '📝' },
@@ -123,22 +123,6 @@ function inlineFormat(text: string): string {
     .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
     .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-1 rounded text-sm font-mono">$1</code>')
 }
-// ─── YouTube video ID extractor ──────────────────────────────────────────────
-function extractVideoId(url: string): string | null {
-  const patterns = [
-    /[?&]v=([^&]{11})/,
-    /youtu\.be\/([^?&]{11})/,
-    /youtube\.com\/embed\/([^?&]{11})/,
-    /youtube\.com\/shorts\/([^?&]{11})/,
-  ]
-  for (const p of patterns) {
-    const m = url.match(p)
-    if (m) return m[1]
-  }
-  return null
-}
-// ─────────────────────────────────────────────────────────────────────────────
-
 // ─── Cookie-based usage tracker (persists across page refreshes) ─────────────
 const FREE_LIMIT = 3
 

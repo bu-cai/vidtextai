@@ -3,6 +3,7 @@ import { getTranscript } from '@/lib/youtube/transcript'
 import { getVideoInfo } from '@/lib/youtube/info'
 import { extractVideoId } from '@/lib/utils'
 import { createServerClient } from '@/lib/supabase/client'
+import { checkBurstLimit, getClientIp } from '@/lib/rate-limit'
 
 type TranscriptRow = {
   video_id: string; full_text: string; segments: unknown; language: string; source: string
@@ -28,6 +29,12 @@ export async function GET(req: NextRequest) {
   const videoId = extractVideoId(input)
   if (!videoId) {
     return NextResponse.json({ error: 'Invalid YouTube URL or video ID' }, { status: 400 })
+  }
+
+  // Burst protection (transcript fetching is free but still costs server resources)
+  const ip = getClientIp(req)
+  if (!checkBurstLimit(ip)) {
+    return NextResponse.json({ error: 'Too many requests. Please slow down.' }, { status: 429 })
   }
 
   try {
