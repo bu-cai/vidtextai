@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'podcast-and-transcript',
+    title: 'Podcast Transcripts: How to Transcribe Any Podcast Free (2026)',
+    excerpt: 'Get a full text transcript of any podcast episode free — from YouTube, Spotify, Apple Podcasts, or an audio file. 6 methods compared, no software download needed.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'video-summarizer-prompt',
     title: 'The Best Video Summarizer Prompts for ChatGPT, Claude & Gemini (2026)',
     excerpt: '10 copy-paste prompts that turn any video transcript into a perfect summary — executive briefs, study notes, Twitter threads, show notes, and more.',
