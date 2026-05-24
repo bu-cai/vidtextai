@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'youtube-video-to-audio',
+    title: 'YouTube Video to Audio: How to Extract & Transcribe the Audio Free (2026)',
+    excerpt: 'Extract and transcribe the audio from any YouTube video free — get a full text transcript in under 10 seconds. No software download, no sign-up required.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'podcast-and-transcript',
     title: 'Podcast Transcripts: How to Transcribe Any Podcast Free (2026)',
     excerpt: 'Get a full text transcript of any podcast episode free — from YouTube, Spotify, Apple Podcasts, or an audio file. 6 methods compared, no software download needed.',

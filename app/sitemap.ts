@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 
 const BLOG_SLUGS = [
+  'youtube-video-to-audio',
   'podcast-and-transcript',
   'video-summarizer-prompt',
   'video-to-srt',

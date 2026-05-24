@@ -3740,6 +3740,162 @@ Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText 
     `.trim(),
   },
 
+  'youtube-video-to-audio': {
+    title: 'YouTube Video to Audio: How to Extract & Transcribe the Audio Free (2026)',
+    description: 'Extract the audio from any YouTube video for transcription, podcast creation, or content repurposing — free methods that work without downloading anything.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Want the text, not the audio?** [VidText AI](https://www.vidtextai.com/tools/transcript) extracts and transcribes the audio from any YouTube video automatically — paste a URL, get the full transcript in under 10 seconds. Free, no sign-up, no downloads.
+
+## Why Extract Audio from a YouTube Video?
+
+There are several legitimate reasons to separate the audio from a YouTube video:
+
+- **Transcription** — convert speech to text for notes, captions, or blog posts
+- **Accessibility** — create a text version for deaf or hard-of-hearing viewers
+- **Content research** — analyze what's said in a video without watching it
+- **Podcast production** — repurpose a video interview as a podcast episode (with permission)
+- **Language learning** — listen to content without visual distractions
+- **Meeting notes** — transcribe recorded video calls or webinars
+
+**Important note:** Downloading audio from YouTube videos violates YouTube's Terms of Service unless you own the content or have explicit permission from the creator. The methods below focus on legitimate transcription and accessibility use cases.
+
+## Method 1: Transcribe the Audio Directly (No Download Needed)
+
+If your goal is to get the *text* of what's said in a YouTube video — the most common use case — you don't need to extract the audio at all.
+
+**[VidText AI](https://www.vidtextai.com/tools/transcript)** reads YouTube's caption data directly:
+
+1. Copy the YouTube video URL
+2. Paste it into VidText AI
+3. Get the full timestamped transcript in under 10 seconds
+
+This works for any YouTube video with captions (auto-generated or manual). You get the complete spoken text without downloading any audio file.
+
+**What you can do with the transcript:**
+- Copy and save as a text file
+- Use as source material for AI summaries, blog posts, or study notes
+- Search for specific words or quotes (Ctrl+F)
+- Translate to another language
+
+## Method 2: YouTube's Built-In Transcript (Free, Official)
+
+YouTube provides an official transcript for most videos with captions:
+
+1. Open the YouTube video
+2. Click the **three-dot menu (⋮)** below the video player
+3. Select **Open transcript**
+4. The transcript panel opens on the right with timestamps
+5. Click inside the transcript, press **Ctrl+A** to select all, then **Ctrl+C** to copy
+
+This gives you the text of everything spoken in the video — officially, without any third-party tools.
+
+## Method 3: Whisper for Your Own Video Files
+
+If you have a video file saved on your computer (MP4, MOV, MKV) — for example, a Zoom recording, a screen capture, or a video you created yourself — you can extract and transcribe the audio using OpenAI Whisper:
+
+**Install Whisper:**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Transcribe the video directly (Whisper handles audio extraction automatically):**
+\`\`\`
+whisper your-video.mp4 --output_format txt
+\`\`\`
+
+Whisper extracts the audio internally and returns a text transcript. You don't need a separate audio extraction step — Whisper accepts video files directly.
+
+**For an SRT subtitle file:**
+\`\`\`
+whisper your-video.mp4 --output_format srt
+\`\`\`
+
+This works for Zoom recordings, Loom exports, screen recordings, and any locally saved video file.
+
+## Method 4: CapCut Auto Captions (No Code, Free)
+
+For mobile creators or anyone without coding experience:
+
+1. Import your video into CapCut (desktop or mobile — free)
+2. Tap **Captions** → **Auto Captions**
+3. CapCut transcribes the speech automatically
+4. Export the caption text or the .SRT file
+
+CapCut works with video files you upload — it cannot access YouTube URLs directly. Use this for your own recorded content.
+
+## Method 5: VLC Media Player (Audio Extraction from Local Files)
+
+If you legitimately own a video file and need the audio track as a separate file for accessibility or archiving purposes:
+
+1. Open VLC Media Player (free at [videolan.org](https://www.videolan.org))
+2. Go to **Media** → **Convert/Save**
+3. Add your video file
+4. Click **Convert/Save**
+5. In the Profile dropdown, select **Audio - MP3**
+6. Set output file path and click **Start**
+
+VLC extracts the audio track as an MP3 file. Use this only on content you own or have permission to process.
+
+## Transcribing YouTube Audio: Which Method Is Right for You?
+
+| Goal | Best Method | Time |
+|------|-------------|------|
+| Get text from a YouTube video | VidText AI | <10 seconds |
+| View official YouTube captions | YouTube built-in transcript | <1 minute |
+| Transcribe your own video file | OpenAI Whisper | 3–8 min/hr |
+| Add captions to short-form video | CapCut Auto Captions | 2–3 minutes |
+| Extract audio from your own file | VLC Media Player | 1–2 minutes |
+
+## Turn a YouTube Video into a Podcast Episode
+
+If you're a creator who uploads to YouTube and also wants to distribute as a podcast, the workflow is:
+
+1. **Get the transcript** — use [VidText AI](https://www.vidtextai.com/tools/transcript) or YouTube Studio
+2. **Edit your video in a tool like Descript** — which gives you an audio export alongside the transcript
+3. **Upload the audio** to a podcast host (Buzzsprout, Podbean, Anchor/Spotify for Podcasters)
+4. **Add the transcript as show notes** on your podcast page (major SEO benefit)
+
+This workflow is fully legitimate since you're publishing your own content across platforms.
+
+## Frequently Asked Questions
+
+### Can I use VidText AI to transcribe a YouTube video in another language?
+
+Yes — VidText AI pulls whatever captions YouTube provides. If the video has auto-generated captions in Spanish, French, Japanese, or another language, you'll get the transcript in that language. You can then use the translate function to convert it to English.
+
+### Does VidText AI work on private or unlisted YouTube videos?
+
+No — VidText AI can only access publicly available YouTube videos. Private videos require authentication that isn't accessible through the transcript tool.
+
+### How accurate is YouTube's auto-generated transcription?
+
+YouTube's speech recognition is highly accurate for clear, native-language speech — typically 90–95% accuracy. Accuracy drops with strong accents, technical jargon, multiple speakers talking simultaneously, or noisy audio. For high-accuracy transcription of difficult audio, OpenAI Whisper with the \`large\` model is more reliable.
+
+### Can I transcribe a YouTube Live stream?
+
+Live streams don't have transcripts available during the stream. After a live stream ends and is saved as a YouTube video, auto-captions are generated within a few hours — at which point VidText AI can transcribe it normally.
+
+## Summary
+
+To extract and transcribe audio from YouTube videos:
+- **Fastest (text only):** VidText AI — paste YouTube URL, get transcript in 10 seconds
+- **Official method:** YouTube's built-in transcript panel
+- **For your own video files:** OpenAI Whisper — free, local, highly accurate
+- **No-code option:** CapCut Auto Captions for short-form content
+
+The goal in most cases is the *text*, not the audio file itself. VidText AI gets you there fastest without any downloads.
+
+## Related Guides
+
+- [MP4 to Transcript: How to Convert Any Video to Text Free](/blog/mp4-to-transcript)
+- [Podcast Transcripts: How to Transcribe Any Podcast Free](/blog/podcast-and-transcript)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
   'podcast-and-transcript': {
     title: 'Podcast Transcripts: How to Transcribe Any Podcast Free (2026)',
     description: 'Get a full text transcript of any podcast episode free — from YouTube, Spotify, Apple Podcasts, or an audio file. No software download, no sign-up required.',
