@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'video-to-srt',
+    title: 'Video to SRT: How to Convert Any Video to an SRT Subtitle File (Free)',
+    excerpt: 'Convert any YouTube video, MP4, or recorded meeting into a downloadable .SRT subtitle file — free, no software install, works in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'closed-captions-vs-subtitles',
     title: 'Closed Captions vs Subtitles: What\'s the Difference? (Plain English)',
     excerpt: 'Closed captions include sound effects and speaker cues for deaf viewers. Subtitles translate dialogue for foreign-language viewers. Here\'s the practical difference every creator needs to know.',

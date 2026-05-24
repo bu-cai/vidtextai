@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 
 const BLOG_SLUGS = [
+  'video-to-srt',
   'closed-captions-vs-subtitles',
   'can-chatgpt-transcribe-audio',
   'best-live-captioning-tool-mac',

@@ -3740,6 +3740,226 @@ Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText 
     `.trim(),
   },
 
+  'video-to-srt': {
+    title: 'Video to SRT: How to Convert Any Video to an SRT Subtitle File (Free)',
+    description: 'Convert any YouTube video, MP4, or recorded meeting into a downloadable .SRT subtitle file — free, no software install, works in your browser in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Fastest method:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript), paste your YouTube URL, and download the transcript as a .txt file in under 10 seconds — free, no sign-up. For a properly formatted .SRT file with timestamps, read the full guide below.
+
+## What Is an SRT File?
+
+An SRT (SubRip Subtitle) file is the most universal subtitle format. It's a plain text file with the **.srt** extension that contains:
+
+1. A sequential number for each subtitle block
+2. A start → end timestamp in the format \`HH:MM:SS,mmm --> HH:MM:SS,mmm\`
+3. The subtitle text
+4. A blank line separating each block
+
+**Example SRT file content:**
+
+\`\`\`
+1
+00:00:02,500 --> 00:00:05,000
+Welcome to this tutorial on
+YouTube transcription.
+
+2
+00:00:05,200 --> 00:00:08,400
+Today we'll cover the fastest
+free methods available in 2026.
+\`\`\`
+
+SRT files are supported by virtually every video player (VLC, QuickTime, Windows Media Player), video editor (Premiere Pro, DaVinci Resolve, CapCut), and streaming platform (YouTube, Vimeo, Facebook Video).
+
+## Why Convert a Video to SRT?
+
+| Use Case | Why You Need SRT |
+|----------|-----------------|
+| **Accessibility** | Add captions so deaf/hard-of-hearing viewers can follow along |
+| **SEO** | Upload SRT to YouTube so Google can index every word you say |
+| **Video editing** | Burn subtitles into your video or add styled captions in your editor |
+| **Translation** | Feed SRT into DeepL or Google Translate to create multilingual subtitles |
+| **Repurposing** | Extract the text for blog posts, show notes, or social media clips |
+| **Compliance** | Many platforms and institutions require captioned video |
+
+## Method 1: YouTube Videos → SRT (Free, No Install)
+
+For YouTube videos, the fastest path to an SRT-format transcript:
+
+**Step 1:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+
+**Step 2:** Paste the YouTube video URL into the input box
+
+**Step 3:** Click **Get Transcript** — the full timestamped transcript appears in seconds
+
+**Step 4:** Copy the transcript text and paste it into a free SRT formatter (see below), or download as .txt and convert with the Python script in Method 4
+
+The transcript includes timestamps for every line, which you can reformat into proper SRT blocks manually or automatically.
+
+**Alternatively — YouTube's built-in subtitle download:**
+1. Open the video on YouTube
+2. Click the three-dot menu (**⋮**) below the video
+3. Select **Open transcript**
+4. Copy the text (includes timestamps)
+
+Note: YouTube's built-in transcript download is plain text, not SRT format. You'll need to reformat it for use in video editors.
+
+## Method 2: YouTube Studio (For Your Own Videos)
+
+If you're the video owner, YouTube Studio lets you download properly formatted caption files:
+
+1. Go to [studio.youtube.com](https://studio.youtube.com)
+2. Click **Subtitles** in the left sidebar
+3. Select your video
+4. Click the three-dot menu next to the subtitle track
+5. Select **Download** → choose **.srt** format
+
+This gives you a properly formatted .SRT file with all timestamp blocks ready for use in any video editor or player.
+
+## Method 3: MP4 / Local Video Files → SRT
+
+For videos stored on your computer (MP4, MOV, MKV, AVI), you have several options:
+
+### Option A: OpenAI Whisper (Free, Local, Best Accuracy)
+
+[Whisper](https://github.com/openai/whisper) is OpenAI's open-source speech recognition model. It runs locally on your machine and produces highly accurate transcripts with SRT output.
+
+**Installation:**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Convert video to SRT:**
+\`\`\`
+whisper your-video.mp4 --output_format srt
+\`\`\`
+
+This creates \`your-video.srt\` in the same folder. Works on any language.
+
+**Whisper model sizes (accuracy vs. speed):**
+- \`tiny\` / \`base\` — fast, lower accuracy
+- \`small\` / \`medium\` — good balance
+- \`large\` — best accuracy, requires more RAM
+
+### Option B: CapCut (Free, No Code)
+
+1. Import your video into CapCut
+2. Click **Captions** → **Auto Captions**
+3. CapCut generates captions automatically
+4. Export → **Export SRT**
+
+Works on desktop and mobile. Free tier available.
+
+### Option C: Descript (Free tier)
+
+1. Upload your video to [descript.com](https://www.descript.com)
+2. Descript auto-transcribes on upload
+3. Export → **Captions** → **.SRT**
+
+Free plan includes 1 hour of transcription per month.
+
+## Method 4: Convert a Transcript to SRT with Python
+
+If you have plain text with timestamps (like a VidText AI transcript export), this Python script converts it to proper SRT format:
+
+\`\`\`python
+import re
+
+def txt_to_srt(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    srt_blocks = []
+    index = 1
+
+    for line in lines:
+        # Match timestamp format like [0:02] or [1:23:45]
+        match = re.match(r'\\[(\\d+):(\\d+)(?::(\\d+))?\\]\\s*(.*)', line.strip())
+        if match:
+            g = match.groups()
+            if g[2]:  # HH:MM:SS
+                h, m, s = int(g[0]), int(g[1]), int(g[2])
+            else:      # MM:SS
+                h, m, s = 0, int(g[0]), int(g[1])
+            text = g[3]
+            start_ms = (h * 3600 + m * 60 + s) * 1000
+            end_ms = start_ms + 3000  # 3-second default duration
+
+            def ms_to_srt(ms):
+                h2 = ms // 3600000
+                m2 = (ms % 3600000) // 60000
+                s2 = (ms % 60000) // 1000
+                ms2 = ms % 1000
+                return f"{h2:02}:{m2:02}:{s2:02},{ms2:03}"
+
+            srt_blocks.append(
+                f"{index}\\n{ms_to_srt(start_ms)} --> {ms_to_srt(end_ms)}\\n{text}\\n"
+            )
+            index += 1
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write('\\n'.join(srt_blocks))
+    print(f"Saved: {output_file}")
+
+txt_to_srt('transcript.txt', 'output.srt')
+\`\`\`
+
+## SRT vs Other Subtitle Formats
+
+| Format | Extension | Best For |
+|--------|-----------|----------|
+| **SubRip** | .srt | Universal — works everywhere |
+| **WebVTT** | .vtt | Web browsers, YouTube, HTML5 video |
+| **ASS/SSA** | .ass | Styled subtitles (anime, color, positioning) |
+| **TTML** | .ttml / .xml | Netflix, Amazon Prime, broadcast |
+| **SCC** | .scc | Broadcast TV, legacy closed captions |
+
+**For most creators, SRT is the right choice** — it works with every major platform and video editor without compatibility issues.
+
+## How to Add an SRT File to YouTube
+
+Once you have your .SRT file:
+
+1. Go to [YouTube Studio](https://studio.youtube.com) → **Subtitles**
+2. Select your video
+3. Click **Add Language** → choose your language
+4. Select **Upload file** → **With timing**
+5. Upload your .SRT file
+6. Click **Publish**
+
+Your captions will be live within minutes. YouTube uses the caption text for search indexing — videos with uploaded captions typically rank better than those relying on auto-captions alone.
+
+## Quick Comparison: Video to SRT Methods
+
+| Method | Cost | Accuracy | Speed | Best For |
+|--------|------|----------|-------|----------|
+| VidText AI | Free | High (YouTube CC) | <10 sec | YouTube videos |
+| YouTube Studio download | Free | High | <1 min | Your own YT videos |
+| OpenAI Whisper | Free | Very high | 1–5 min | Local video files |
+| CapCut Auto Captions | Free | Good | 2–3 min | Short-form videos |
+| Descript | Free (1hr/mo) | Very high | 2–3 min | Podcasts, interviews |
+
+## Summary
+
+Converting a video to SRT is straightforward once you know the right tool for your source:
+- **YouTube videos** → VidText AI transcript + reformat, or YouTube Studio download
+- **Your own YouTube videos** → YouTube Studio direct .SRT download
+- **Local MP4 files** → OpenAI Whisper (best free option)
+- **Quick no-code option** → CapCut or Descript
+
+The SRT format is the safest choice for maximum compatibility across editors, players, and platforms.
+
+## Related Guides
+
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+    `.trim(),
+  },
+
   'closed-captions-vs-subtitles': {
     title: 'Closed Captions vs Subtitles: What\'s the Difference? (Plain English)',
     description: 'Closed captions and subtitles look identical on screen — but they serve completely different purposes. Here\'s the clear, practical difference every creator needs to know.',
