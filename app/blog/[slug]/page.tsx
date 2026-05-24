@@ -3740,6 +3740,1243 @@ Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText 
     `.trim(),
   },
 
+  'audio-to-transcript': {
+    title: 'Audio to Transcript: How to Convert Any Audio File to Text Free (2026)',
+    description: 'Convert MP3, WAV, M4A, or any audio file to a text transcript free — using Whisper, browser tools, or AI. No software download required for most methods.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '5 min read',
+    content: `
+**Fastest method for YouTube audio:** Paste any YouTube URL into [VidText AI](https://www.vidtextai.com/tools/transcript) and get the full transcript in under 10 seconds — free, no sign-up. For MP3, WAV, M4A, and other audio files, see the methods below.
+
+## What "Audio to Transcript" Means
+
+Converting audio to transcript (also called speech-to-text or audio transcription) means producing a written text version of everything spoken in an audio recording. The result is a text file you can search, edit, translate, and repurpose.
+
+Common audio sources people transcribe:
+- **Podcast episodes** (MP3, M4A)
+- **Recorded meetings** (Zoom, Teams, Google Meet)
+- **Voice memos** (iPhone Voice Memos, Android recorder)
+- **Interviews** (WAV, FLAC)
+- **Lectures** (MP3, MP4 with audio track)
+- **YouTube videos** (accessed via URL — no download needed)
+
+## Method 1: YouTube Audio → VidText AI (Free, 10 Seconds)
+
+For any YouTube video, VidText AI reads the audio captions directly — no download required:
+
+1. Copy the YouTube video URL
+2. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL and click **Get Transcript**
+4. Download or copy the full text transcript
+
+Works with any public YouTube video that has captions (auto-generated or manual). Supports 100+ languages.
+
+## Method 2: OpenAI Whisper (Any Audio File, Free & Most Accurate)
+
+Whisper is OpenAI's open-source speech recognition model — it runs locally on your machine, is completely free, and produces highly accurate transcripts even with background noise, accents, or technical vocabulary.
+
+**Install:**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Transcribe an MP3:**
+\`\`\`
+whisper recording.mp3 --output_format txt
+\`\`\`
+
+**Supported input formats:** MP3, MP4, WAV, M4A, FLAC, OGG, WEBM
+
+**Model options (accuracy vs. speed):**
+
+| Model | Accuracy | Speed | RAM Required |
+|-------|----------|-------|-------------|
+| tiny | Basic | Very fast | ~1GB |
+| base | Good | Fast | ~1GB |
+| small | Better | Moderate | ~2GB |
+| medium | High | Slower | ~5GB |
+| large | Best | Slowest | ~10GB |
+
+For most audio: \`--model small\` or \`--model medium\` gives the best balance.
+
+**Get timestamps too:**
+\`\`\`
+whisper recording.mp3 --model medium --output_format srt
+\`\`\`
+
+This creates an SRT file with timestamped segments — ideal for adding captions to videos.
+
+## Method 3: AssemblyAI API (Best for Long Files & Speaker Labels)
+
+For audio over 1 hour, or when you need speaker diarization (who said what), AssemblyAI's API is the top choice:
+
+\`\`\`python
+import assemblyai as aai
+
+aai.settings.api_key = "YOUR_API_KEY"
+transcriber = aai.Transcriber()
+
+# Transcribe a local file
+transcript = transcriber.transcribe("interview.mp3")
+print(transcript.text)
+
+# With speaker labels
+config = aai.TranscriptionConfig(speaker_labels=True)
+transcript = transcriber.transcribe("interview.mp3", config=config)
+for utterance in transcript.utterances:
+    print(f"Speaker {utterance.speaker}: {utterance.text}")
+\`\`\`
+
+**Free tier:** 100 hours of transcription at signup. After that: ~$0.37/hour.
+
+## Method 4: Descript (No-Code, Best for Podcast Editors)
+
+1. Sign up at [descript.com](https://www.descript.com) (free tier: 1 hour/month)
+2. Click **New Project** → **Import File**
+3. Upload your audio file
+4. Descript auto-transcribes on upload
+5. Export: **File** → **Export** → **Transcript** → **.txt** or **.docx**
+
+Descript also lets you edit audio by editing text — delete a sentence in the transcript and the audio is removed. Ideal for podcast producers.
+
+## Method 5: Google Docs Voice Typing (Free, No Install)
+
+For short audio clips where you can play audio through your computer speakers:
+
+1. Open Google Docs
+2. Go to **Tools** → **Voice typing** (Ctrl+Shift+S)
+3. Play your audio file through your computer speakers
+4. Google Docs transcribes in real-time
+
+**Limitation:** Quality depends on your speaker volume and room acoustics. Not great for long recordings, but works well for short clips.
+
+## Audio to Transcript: Method Comparison
+
+| Method | Best For | Cost | Accuracy | Speed |
+|--------|----------|------|----------|-------|
+| VidText AI | YouTube videos | Free | High | <10 sec |
+| Whisper (local) | Any audio file | Free | Very high | 3–8 min/hr |
+| AssemblyAI | Long files, speaker ID | Free 100hr | Very high | <1 min/hr |
+| Descript | Podcast editing | Free 1hr/mo | Very high | 2–3 min |
+| Google Docs Voice | Short clips | Free | Medium | Real-time |
+
+## What to Do With Your Transcript
+
+Once you have the text:
+
+- **Blog post:** Feed the transcript into [VidText AI's blog generator](https://www.vidtextai.com/tools/blog) or use a ChatGPT prompt to create an article
+- **Show notes:** Extract key points and timestamps for your podcast page
+- **Subtitles:** Convert to SRT format and upload to YouTube or your video editor
+- **Search:** Use Ctrl+F to find any word or quote in a long recording
+- **Translation:** Paste into DeepL or use AI to translate to another language
+- **Summary:** Use [VidText AI's summary tool](https://www.vidtextai.com/tools/summary) (YouTube) or a ChatGPT prompt for any transcript
+
+## Related Guides
+
+- [MP4 to Transcript: Convert Any Video to Text Free](/blog/mp4-to-transcript)
+- [Podcast Transcripts: How to Transcribe Any Podcast Free](/blog/podcast-and-transcript)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'zoom-transcription': {
+    title: 'Zoom Transcription: How to Get a Full Transcript of Any Zoom Meeting (2026)',
+    description: 'Get an accurate transcript of any Zoom meeting — using Zoom\'s built-in feature, AI tools, or Whisper for recorded calls. Free and paid options compared.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '5 min read',
+    content: `
+**Quick answer:** Zoom has built-in transcription for paid plans. For free accounts, record the meeting locally and transcribe it with OpenAI Whisper (free) or upload the recording to an AI transcription service. Full guide below.
+
+## Why Transcribe Zoom Meetings?
+
+A Zoom transcript gives your team:
+- **Searchable meeting records** — find any decision or action item with Ctrl+F
+- **Automatic meeting notes** — paste the transcript into AI to generate a summary
+- **Accessibility** — team members who missed the call can read the full discussion
+- **Legal/compliance records** — some industries require written records of calls
+- **Onboarding** — new team members can read past meeting transcripts to get up to speed
+
+## Method 1: Zoom's Built-In Transcription (Paid Plans)
+
+Zoom offers automated cloud transcription for **Pro, Business, and Enterprise** accounts.
+
+**To enable:**
+1. Sign in to [zoom.us](https://zoom.us) → **Settings**
+2. Go to **Recording** → enable **Cloud Recording**
+3. Under Cloud Recording options, enable **Audio Transcript**
+4. Start your meeting → click **Record** → **Record to the Cloud**
+
+**After the meeting:**
+1. Go to [zoom.us/recording](https://zoom.us/recording)
+2. Find your recording
+3. Click the recording → download the **Audio Transcript** (.vtt file)
+4. Open in any text editor — it's a plain text transcript with timestamps
+
+**Zoom's transcription accuracy:** Good for clear audio with one speaker at a time. Drops significantly with heavy accents, crosstalk, or poor microphone quality.
+
+**Cost:** Requires Zoom Pro ($15.99/month) or higher.
+
+## Method 2: Zoom Free Account — Local Recording + Whisper
+
+Free Zoom accounts can record locally (to your computer) but don't get cloud transcription. Here's how to transcribe those recordings for free:
+
+**Step 1:** In Zoom, click **Record** → **Record on this Computer**. The file saves as an MP4 after the meeting ends.
+
+**Step 2:** Install OpenAI Whisper:
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Step 3:** Transcribe the recording:
+\`\`\`
+whisper zoom_meeting.mp4 --model medium --output_format txt
+\`\`\`
+
+Whisper extracts the audio and generates a transcript. For a 1-hour meeting, this takes 3–8 minutes on a standard laptop.
+
+**Get an SRT file with timestamps:**
+\`\`\`
+whisper zoom_meeting.mp4 --model medium --output_format srt
+\`\`\`
+
+## Method 3: Otter.ai (Real-Time Zoom Transcription)
+
+[Otter.ai](https://otter.ai) connects directly to Zoom and transcribes in real-time during the meeting:
+
+1. Connect Otter.ai to your Zoom account (Settings → Integrations)
+2. When you start a Zoom meeting, Otter.ai joins automatically as a participant
+3. Transcription appears live in the Otter.ai app
+4. After the meeting: download as .txt, .pdf, or .docx
+
+**Free plan:** 300 minutes/month, up to 30 minutes per conversation.
+**Paid plans:** From $16.99/month for unlimited minutes.
+
+**Pros:** Real-time transcription, speaker identification, highlights feature.
+**Cons:** Bot joins as a visible participant (some meeting hosts don't allow bots).
+
+## Method 4: Fireflies.ai (AI Meeting Assistant)
+
+[Fireflies.ai](https://fireflies.ai) is similar to Otter.ai but focused on sales and team meetings:
+
+- Joins Zoom meetings as a bot ("Fireflies Notetaker")
+- Transcribes with speaker identification
+- Auto-generates action items, decisions, and key moments
+- Integrates with CRM tools (Salesforce, HubSpot)
+
+**Free plan:** Unlimited transcription (limited storage).
+**Paid plans:** From $10/month for full features.
+
+## Method 5: Whisper API (Automated, High Volume)
+
+For teams that record many meetings and need automated transcription:
+
+\`\`\`python
+from openai import OpenAI
+
+client = OpenAI(api_key="YOUR_OPENAI_API_KEY")
+
+with open("zoom_meeting.mp4", "rb") as audio_file:
+    transcript = client.audio.transcriptions.create(
+        model="whisper-1",
+        file=audio_file,
+        response_format="text"
+    )
+
+print(transcript)
+\`\`\`
+
+**Cost:** $0.006 per minute (~$0.36/hour). A 1-hour meeting costs about $0.36.
+
+## Turning a Zoom Transcript into Meeting Notes
+
+Once you have the raw transcript, use this prompt with ChatGPT or Claude:
+
+\`\`\`
+Convert this Zoom meeting transcript into structured meeting notes:
+
+**Date & Attendees:** [extract from transcript if mentioned]
+**Meeting Purpose:** [1 sentence]
+**Key Discussion Points:** [bullet points, 5–7 items]
+**Decisions Made:** [list each decision]
+**Action Items:** [Who → What → By When, table format]
+**Follow-up Required:** [any open questions or next steps]
+
+Keep it concise — the notes should fit on one page.
+
+[paste transcript here]
+\`\`\`
+
+## Zoom Transcription Method Comparison
+
+| Method | Cost | Real-Time | Accuracy | Speaker ID |
+|--------|------|-----------|----------|------------|
+| Zoom built-in | Requires Pro ($16/mo) | ✅ | Good | ✅ |
+| Whisper (local) | Free | ❌ | Very high | ❌ |
+| Otter.ai | Free 300min/mo | ✅ | Very high | ✅ |
+| Fireflies.ai | Free (limited) | ✅ | Very high | ✅ |
+| Whisper API | $0.006/min | ❌ | Very high | ❌ |
+
+## Tips for Better Zoom Transcription Accuracy
+
+Regardless of which method you use, these practices improve transcript quality:
+
+- **Use a headset or external microphone** — laptop microphones pick up room noise
+- **Mute when not speaking** — background noise degrades accuracy significantly
+- **Speak clearly at a natural pace** — don't rush through important points
+- **State your name before speaking** — helps speaker identification tools work correctly
+- **Enable "Original Sound"** in Zoom for music or high-quality audio needs
+
+## Related Guides
+
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [MP4 to Transcript: Convert Any Video to Text Free](/blog/mp4-to-transcript)
+- [Podcast Transcripts: How to Transcribe Any Podcast Free](/blog/podcast-and-transcript)
+    `.trim(),
+  },
+
+  'what-are-captions': {
+    title: 'What Are Captions? (Video Captions Explained Simply)',
+    description: 'Captions are the text displayed on screen showing what\'s spoken in a video. Learn how they work, the difference between open and closed captions, and why they matter for creators.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '4 min read',
+    content: `
+**Captions** are on-screen text that display what's being spoken (and sometimes other audio cues) in a video. They appear at the bottom of the video frame and sync with the audio in real time. You see them every time you turn on the "CC" button on YouTube, Netflix, or any streaming platform.
+
+## Captions vs Subtitles: What's the Difference?
+
+The two terms are often used interchangeably, but they have distinct technical meanings:
+
+| | Captions | Subtitles |
+|--|----------|-----------|
+| **Primary audience** | Deaf / hard of hearing | Foreign-language viewers |
+| **Includes dialogue** | ✅ Yes | ✅ Yes |
+| **Includes sound effects** | ✅ Yes ([music], [door slams]) | ❌ No |
+| **Speaker identification** | ✅ Often | ❌ Rarely |
+| **Same language as video** | ✅ Usually | ❌ Usually different |
+
+In everyday use, most platforms (YouTube, Netflix, social media) label everything as "CC" regardless of whether it strictly meets the technical definition of closed captions.
+
+For a deeper comparison, see [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+
+## Open Captions vs Closed Captions
+
+**Closed captions (CC)** can be turned on or off by the viewer. They're stored as a separate file or data track and overlaid on the video by the player.
+
+**Open captions** are permanently burned into the video frame — they're always visible and cannot be disabled. Common in social media videos designed to be watched without sound (TikTok, Instagram Reels, LinkedIn).
+
+**Auto captions** are generated automatically by speech recognition software (like YouTube's AI). They're a type of closed caption, but often less accurate than human-edited captions.
+
+## How YouTube Captions Work
+
+YouTube generates automatic captions for most English-language videos using its speech recognition AI. Here's what happens:
+
+1. You upload a video to YouTube
+2. YouTube's AI processes the audio track
+3. Within a few hours, auto-captions appear under the CC button
+4. Viewers can toggle them on/off; creators can edit them for accuracy
+
+**To turn on captions on YouTube:**
+- Click the **CC** button in the video player
+- Or press **C** on your keyboard
+
+**To get the full caption text** of any YouTube video (for notes, blog posts, or research):
+Go to [VidText AI](https://www.vidtextai.com/tools/transcript), paste the YouTube URL, and get the complete transcript in under 10 seconds — free, no sign-up.
+
+## Why Captions Matter for Video Creators
+
+### 1. Accessibility
+An estimated 430 million people worldwide have disabling hearing loss (WHO). Captions make your content accessible to this audience.
+
+### 2. Watch Without Sound
+85% of Facebook videos are watched without sound (Digiday). Captions keep viewers engaged when they're in public, at work, or in a quiet setting.
+
+### 3. SEO
+Search engines index caption text. A YouTube video with accurate captions ranks better because Google can understand every word spoken. YouTube's algorithm also uses captions for topic categorization.
+
+### 4. Legal Requirements
+In many countries and contexts, captions are legally required:
+- **United States:** ADA and Section 508 require captions for broadcast, federally funded, and many online videos
+- **European Union:** EN 301 549 requires captions for public sector digital content
+- **Education:** Most universities require captions for all course video content
+
+### 5. Engagement
+Studies consistently show captioned videos have higher completion rates — viewers who would otherwise drop off (due to poor audio, accents, or noisy environments) stay engaged with captions on.
+
+## Caption File Formats
+
+Captions are stored in text files with specific formats:
+
+| Format | Extension | Used By |
+|--------|-----------|---------|
+| SubRip | .srt | Universal — YouTube, VLC, most editors |
+| WebVTT | .vtt | Web browsers, YouTube, HTML5 |
+| TTML | .ttml / .xml | Netflix, Amazon, broadcast |
+| SCC | .scc | Broadcast TV, legacy systems |
+| ASS/SSA | .ass | Styled captions, anime |
+
+For most YouTube creators, uploading an **.srt** file is the simplest and most compatible choice.
+
+## How to Add Captions to a YouTube Video
+
+1. Go to [YouTube Studio](https://studio.youtube.com)
+2. Click **Subtitles** in the left sidebar
+3. Select your video
+4. Click **Add Language** → choose your language
+5. Select **Upload file** → **With timing**
+6. Upload your .SRT caption file
+7. Click **Publish**
+
+To create an SRT file from scratch, see [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt).
+
+## Get the Caption Text from Any YouTube Video
+
+To access and copy the complete caption text from any YouTube video:
+
+**Option 1 — VidText AI (fastest):**
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Get the full transcript with timestamps in under 10 seconds
+
+**Option 2 — YouTube's built-in transcript:**
+1. Click the **⋮** menu below the video
+2. Select **Open transcript**
+3. The transcript panel opens on the right
+
+## Related Guides
+
+- [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+    `.trim(),
+  },
+
+  'subtitle-translator': {
+    title: 'Subtitle Translator: How to Translate Video Subtitles Free (2026)',
+    description: 'Translate any SRT subtitle file or YouTube transcript into Spanish, French, Chinese, Japanese, and 100+ languages — free tools and step-by-step guide.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '5 min read',
+    content: `
+**Fastest method for YouTube:** Go to [VidText AI](https://www.vidtextai.com/tools/transcript), get the transcript, then paste it into DeepL or Google Translate. For SRT file translation, see the tools below.
+
+## Why Translate Subtitles?
+
+Translating your video subtitles unlocks a global audience:
+
+- A Spanish-language subtitle track makes your content accessible to 500M+ Spanish speakers
+- Multi-language subtitles can 2–5× your international watch time
+- YouTube supports up to 40 subtitle languages per video
+- Translated subtitle tracks also improve your video's SEO in other-language searches
+
+## Method 1: Translate a YouTube Transcript (Free, Any Language)
+
+For YouTube videos, get the English transcript first and then translate:
+
+**Step 1:** Get the transcript
+Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) → paste YouTube URL → copy transcript text.
+
+**Step 2:** Translate the text
+Paste into [DeepL](https://www.deepl.com) (best quality) or [Google Translate](https://translate.google.com) → select target language → copy the translated text.
+
+**Step 3:** Upload as a subtitle track to YouTube
+1. Go to YouTube Studio → Subtitles → your video
+2. Click **Add Language** → select the target language
+3. Click **Upload file** → **Without timing** (paste the translated text)
+4. YouTube auto-syncs the timing from your existing English track
+5. Review and publish
+
+## Method 2: Translate an SRT File Directly
+
+If you have an .SRT file and want to translate it while preserving timestamps:
+
+### Option A: Subtitle Edit (Free Desktop App)
+
+[Subtitle Edit](https://www.nikse.dk/subtitleedit) is the best free desktop tool for subtitle translation:
+
+1. Download and open Subtitle Edit (Windows, free)
+2. **File** → **Open** → load your .SRT file
+3. Go to **Auto-translate** → select Google Translate or DeepL
+4. Choose target language → click **Translate**
+5. **File** → **Save as** → save as new .SRT file
+
+Subtitle Edit preserves all timestamps and formatting during translation.
+
+### Option B: Python + DeepL API (Automated, High Volume)
+
+For translating many SRT files programmatically:
+
+\`\`\`python
+import deepl
+import re
+
+def translate_srt(input_file, output_file, target_lang):
+    translator = deepl.Translator("YOUR_DEEPL_API_KEY")
+
+    with open(input_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # Split into subtitle blocks
+    blocks = content.strip().split('\\n\\n')
+    translated_blocks = []
+
+    for block in blocks:
+        lines = block.split('\\n')
+        if len(lines) >= 3:
+            index = lines[0]
+            timestamp = lines[1]
+            text = '\\n'.join(lines[2:])
+            # Translate only the text, preserve index and timestamp
+            result = translator.translate_text(text, target_lang=target_lang)
+            translated_blocks.append(f"{index}\\n{timestamp}\\n{result.text}")
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write('\\n\\n'.join(translated_blocks))
+
+translate_srt('english.srt', 'spanish.srt', 'ES')
+\`\`\`
+
+**DeepL API free tier:** 500,000 characters/month (enough for ~200 hours of subtitles).
+
+### Option C: Translate.subtitles.net (Online, No Install)
+
+1. Go to [translate.subtitles.net](https://translate.subtitles.net)
+2. Upload your .SRT file
+3. Select source and target languages
+4. Click **Translate** — download the translated .SRT
+
+Free for small files. No account required.
+
+## Best Free Subtitle Translation Tools Compared
+
+| Tool | Cost | Quality | Supports SRT | Languages |
+|------|------|---------|-------------|-----------|
+| **DeepL** (paste text) | Free (limited) | Best | Via copy-paste | 31 |
+| **Google Translate** (paste text) | Free | Good | Via copy-paste | 133 |
+| **Subtitle Edit** | Free | DeepL/Google | ✅ Native SRT | 31 / 133 |
+| **translate.subtitles.net** | Free (small files) | Google | ✅ Native SRT | 100+ |
+| **DeepL API** (Python) | Free 500K chars | Best | ✅ Automated | 31 |
+
+## How to Add Translated Subtitles to YouTube
+
+1. Go to [YouTube Studio](https://studio.youtube.com)
+2. Select your video → **Subtitles**
+3. Click **Add Language** → choose the target language
+4. Select **Upload file** → **With timing** (if uploading a translated .SRT)
+5. Review the auto-synced timing and publish
+
+You can add up to 40 subtitle tracks per YouTube video.
+
+## YouTube's Auto-Translation Feature
+
+YouTube has a built-in auto-translation for subtitles — but it only applies to the viewer's side, not to subtitle tracks you upload. Here's how viewers can use it:
+
+1. Click **CC** to turn on captions
+2. Click the **Settings (⚙)** icon → **Subtitles/CC** → **Auto-Translate**
+3. Select any available language
+
+This is different from uploading a translated subtitle track — auto-translate is machine translation applied in real-time and isn't stored as a separate track on your video.
+
+## Which Languages Should You Prioritize?
+
+For most English-language content creators, the highest-ROI subtitle translations are:
+
+| Language | Native Speakers | YouTube Market Size |
+|----------|----------------|---------------------|
+| Spanish | 500M+ | Huge (Latin America + Spain) |
+| Portuguese | 260M+ | Large (Brazil) |
+| French | 280M+ | Growing |
+| Hindi | 600M+ | Fastest-growing YouTube market |
+| Indonesian | 270M+ | Very large YouTube audience |
+| Japanese | 125M | High engagement, monetization |
+
+## Related Guides
+
+- [How to Translate YouTube Transcripts to Any Language (Free)](/blog/youtube-transcript-translate)
+- [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+    `.trim(),
+  },
+
+  'download-subtitles-from-youtube': {
+    title: 'How to Download Subtitles from YouTube (Free, Any Format)',
+    description: 'Download subtitle files from any YouTube video as .SRT, .VTT, or plain text — free, no software installation, works in your browser in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '4 min read',
+    content: `
+**Fastest method:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and download the subtitle text instantly — free, no sign-up, no extension required.
+
+## 4 Ways to Download Subtitles from YouTube
+
+### Method 1: VidText AI (Fastest — No Install)
+
+1. Copy the YouTube video URL from your browser
+2. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL and click **Get Transcript**
+4. The full subtitle text appears with timestamps
+5. Click **Copy** or **Download** to save
+
+Works with auto-generated captions and manually uploaded subtitle tracks. Free, no sign-up required.
+
+### Method 2: YouTube's Built-In Transcript
+
+YouTube has a built-in transcript viewer — no tools needed:
+
+1. Open the video on YouTube (desktop browser)
+2. Click the **⋮** (three-dot) menu below the video
+3. Select **Open transcript**
+4. The transcript panel opens on the right side
+5. Click inside the transcript, press **Ctrl+A** → **Ctrl+C** to copy all text
+
+**Limitation:** You get plain text with rough timestamps, not a downloadable .SRT file. The text includes all subtitle segments but isn't formatted for direct import into video editors.
+
+### Method 3: YouTube Studio (For Your Own Videos)
+
+If you're the video owner, YouTube Studio lets you download properly formatted subtitle files:
+
+1. Go to [studio.youtube.com](https://studio.youtube.com)
+2. Click **Subtitles** in the left sidebar
+3. Find your video and click the three-dot menu next to the subtitle track
+4. Click **Download** → choose **.srt**, **.vtt**, or **.sbv**
+
+This gives you a properly formatted subtitle file ready for use in any video editor (Premiere Pro, DaVinci Resolve, CapCut).
+
+### Method 4: yt-dlp (Command Line, Any Language Track)
+
+For developers or power users who want to download specific subtitle tracks (e.g., a manually added Spanish subtitle, not just the auto-generated one):
+
+**Install yt-dlp:**
+\`\`\`
+pip install yt-dlp
+\`\`\`
+
+**Download auto-generated subtitles:**
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --sub-lang en "youtube.com/watch?v=VIDEO_ID"
+\`\`\`
+
+**Download all available subtitle languages:**
+\`\`\`
+yt-dlp --write-subs --all-subs --skip-download "youtube.com/watch?v=VIDEO_ID"
+\`\`\`
+
+**Download as SRT format:**
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --convert-subs srt --sub-lang en "youtube.com/watch?v=VIDEO_ID"
+\`\`\`
+
+Note: yt-dlp downloads subtitle data only (\`--skip-download\` skips the video file). This is used for accessibility and research purposes.
+
+## What Subtitle Format Do You Need?
+
+| Format | Use Case |
+|--------|----------|
+| **.srt** | Most video editors, VLC, universal |
+| **.vtt** | Web players, YouTube upload, HTML5 |
+| **.txt** | Plain text, blog posts, notes, AI |
+| **.sbv** | YouTube Studio native format |
+
+For most uses, **.srt** is the safest choice — it works everywhere.
+
+## What to Do With Downloaded Subtitles
+
+- **Add to a video editor:** Import the .SRT file into Premiere Pro, DaVinci Resolve, or CapCut to add subtitles to your own video
+- **Translate:** Paste the text into DeepL to create a subtitle file in another language
+- **Create study notes:** Feed the subtitle text into ChatGPT to generate structured notes
+- **SEO content:** Use the subtitle text as the base for a blog post or show notes
+- **Accessibility:** Upload the subtitle file to your own video platform to enable captions
+
+## Related Guides
+
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'download-youtube-subtitle': {
+    title: 'Download YouTube Subtitle: Get Any Video\'s Subtitle File Free',
+    description: 'Download the subtitle file from any YouTube video in seconds — as plain text or SRT format. Free, no account, no browser extension needed.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '3 min read',
+    content: `
+**Step 1:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+**Step 2:** Paste the YouTube video URL
+**Step 3:** Click **Get Transcript** → download or copy the subtitle text
+
+That's it. Free, no sign-up, works in under 10 seconds on any public YouTube video.
+
+## What You Get
+
+VidText AI extracts YouTube's subtitle data and gives you:
+
+- **Full subtitle text** with timestamps for every line
+- Works with auto-generated captions (available on most videos)
+- Works with manually uploaded subtitle tracks
+- Supports videos in English and 100+ other languages
+
+## Why Download a YouTube Subtitle?
+
+Common reasons people download YouTube subtitles:
+
+- **Create study notes** from lecture or tutorial videos
+- **Write a blog post** based on a YouTube video's content
+- **Translate** the subtitle to another language
+- **Search** for a specific quote or timestamp
+- **Accessibility** — read the content instead of watching
+- **Import into a video editor** to add captions to your own video
+
+## Using YouTube's Built-In Method
+
+If you prefer not to use a third-party tool:
+
+1. Open the YouTube video in a desktop browser
+2. Click **⋮** (three-dot menu) below the video
+3. Select **Open transcript**
+4. The transcript panel appears on the right with timestamps
+5. Highlight all text → **Ctrl+C** to copy
+
+The built-in method gives you the same subtitle text but requires manual copying. VidText AI gives you a cleaner output with a single click.
+
+## For Your Own YouTube Videos
+
+If you're the video creator and need the subtitle file in .SRT or .VTT format:
+
+1. Go to [YouTube Studio](https://studio.youtube.com)
+2. Navigate to **Subtitles**
+3. Find your video → click the three-dot menu next to the subtitle track
+4. Click **Download** → select your preferred format (.srt, .vtt, .sbv)
+
+YouTube Studio exports properly formatted subtitle files ready for use in video editors.
+
+## Related Guides
+
+- [How to Download Subtitles from YouTube (Free, Any Format)](/blog/download-subtitles-from-youtube)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'download-youtube-subtitles': {
+    title: 'Download YouTube Subtitles: All Methods (SRT, VTT, Multi-Language)',
+    description: 'Download subtitles from YouTube videos in SRT or VTT format — including auto-generated captions and manually uploaded tracks in any language. Free tools compared.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '4 min read',
+    content: `
+**Need just the text?** [VidText AI](https://www.vidtextai.com/tools/transcript) gives you the full subtitle transcript from any YouTube video in under 10 seconds — free, no sign-up. For .SRT or .VTT files and multi-language tracks, read on.
+
+## Method 1: VidText AI — Subtitle Text in 10 Seconds
+
+For getting the text content of YouTube subtitles (most common use case):
+
+1. Copy the YouTube video URL
+2. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste and click **Get Transcript**
+4. Copy the timestamped subtitle text or download as .txt
+
+**Best for:** Study notes, blog posts, translations, AI summaries.
+
+## Method 2: YouTube Studio — .SRT/.VTT for Your Own Videos
+
+If you're the video owner:
+
+1. Open [YouTube Studio](https://studio.youtube.com)
+2. Go to **Subtitles** → select your video
+3. Click **⋮** next to the subtitle track → **Download**
+4. Choose format: **.srt**, **.vtt**, or **.sbv**
+
+**Best for:** Importing into video editors, archiving your own subtitle files.
+
+## Method 3: yt-dlp — Any Language Track, Any Video
+
+For downloading subtitle files from any YouTube video (including non-English tracks):
+
+**Install:**
+\`\`\`
+pip install yt-dlp
+\`\`\`
+
+**Download English auto-subtitles:**
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --sub-lang en --convert-subs srt "VIDEO_URL"
+\`\`\`
+
+**Download all available subtitle languages:**
+\`\`\`
+yt-dlp --write-subs --all-subs --skip-download "VIDEO_URL"
+\`\`\`
+
+**List available subtitle languages without downloading:**
+\`\`\`
+yt-dlp --list-subs "VIDEO_URL"
+\`\`\`
+
+**Best for:** Developers, power users, downloading specific language tracks, batch processing.
+
+## Method 4: YouTube's Built-In Transcript Panel
+
+No tools needed — just the YouTube website:
+
+1. Open the video on YouTube (desktop browser)
+2. Click **⋮** below the video → **Open transcript**
+3. Select language from the dropdown if multiple tracks exist
+4. Copy all text with **Ctrl+A** → **Ctrl+C**
+
+**Best for:** Quick one-off lookups when you just need to copy a few lines.
+
+## Subtitle Format Guide
+
+| Format | Extension | Compatible With |
+|--------|-----------|----------------|
+| SubRip | .srt | Universal — Premiere, DaVinci, VLC, CapCut |
+| WebVTT | .vtt | YouTube upload, web browsers, HTML5 |
+| SubViewer | .sbv | YouTube Studio native |
+| Plain text | .txt | AI tools, blog posts, translation |
+
+For video editing: use **.srt**. For uploading back to YouTube: **.srt** or **.vtt** both work.
+
+## Downloading Subtitles in Other Languages
+
+YouTube videos often have subtitles in multiple languages — either uploaded by the creator or auto-translated by YouTube:
+
+**Via YouTube's built-in transcript:**
+1. Open the transcript panel (⋮ → Open transcript)
+2. Click the **language dropdown** at the top of the transcript panel
+3. Select any available language
+4. Copy the translated text
+
+**Via yt-dlp (for specific language .SRT file):**
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --sub-lang es --convert-subs srt "VIDEO_URL"
+\`\`\`
+Replace \`es\` with the language code (fr = French, zh-Hans = Simplified Chinese, ja = Japanese, etc.)
+
+## What to Do With the Subtitle File
+
+- **Import into Premiere Pro / DaVinci Resolve:** File → Import → select the .SRT
+- **Add to CapCut:** Captions → Import → upload .SRT
+- **Upload another language to YouTube:** Studio → Subtitles → Add Language → Upload file
+- **Translate:** Open in Subtitle Edit → Auto-translate → choose target language
+- **Feed into AI:** Paste text into ChatGPT for summaries, blog posts, or study notes
+
+## Related Guides
+
+- [How to Download Subtitles from YouTube (Free, Any Format)](/blog/download-subtitles-from-youtube)
+- [Subtitle Translator: How to Translate Video Subtitles Free](/blog/subtitle-translator)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'youtube-subtitle-downloader': {
+    title: 'YouTube Subtitle Downloader: Best Free Tools in 2026',
+    description: 'Compare the best free YouTube subtitle downloader tools — get any video\'s subtitles as .SRT, .VTT, or plain text. No software install needed.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '4 min read',
+    content: `
+The fastest free YouTube subtitle downloader in 2026 is [VidText AI](https://www.vidtextai.com/tools/transcript) — paste any YouTube URL and get the full subtitle text in under 10 seconds, no sign-up required. Below is a full comparison of all the top free options.
+
+## Top Free YouTube Subtitle Downloaders Compared
+
+| Tool | Speed | Format | No Sign-Up | Languages |
+|------|-------|--------|------------|-----------|
+| **VidText AI** | <10 sec | Text + timestamps | ✅ | 100+ |
+| **YouTube built-in** | <1 min | Text (copy-paste) | ✅ | Multiple |
+| **YouTube Studio** | <1 min | .srt / .vtt / .sbv | Requires YT account | Creator's tracks |
+| **yt-dlp** | <30 sec | .srt / .vtt | ✅ (CLI) | All available |
+| **Downsub.com** | <30 sec | .srt / .txt | ✅ | Multiple |
+
+## VidText AI (Recommended for Most Users)
+
+**Best for:** Getting subtitle text instantly for notes, summaries, blog posts, or translation.
+
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Click **Get Transcript**
+4. Copy or download the subtitle content
+
+No sign-up. No extension. Works on any public YouTube video with captions.
+
+**Bonus:** From the same transcript, you can generate an AI summary, blog post, or study notes in one more click.
+
+## YouTube's Built-In Transcript (No Tools At All)
+
+YouTube has a built-in subtitle viewer — available on every YouTube video:
+
+1. Open the video in a desktop browser
+2. Click the **⋮** (three-dot) menu below the video player
+3. Select **Open transcript**
+4. Read, search, or copy the full subtitle text
+
+**Pros:** No tools, no installs, completely official.
+**Cons:** Copy-paste only — no .SRT download, no clean formatting.
+
+## YouTube Studio (For Your Own Videos)
+
+The only tool that gives you a properly formatted .SRT or .VTT subtitle file for download — but only for videos you own:
+
+1. Open [studio.youtube.com](https://studio.youtube.com)
+2. Click **Subtitles** → select your video
+3. Click **⋮** next to any subtitle track → **Download**
+4. Choose .srt, .vtt, or .sbv
+
+If you're downloading subtitles from someone else's video (for accessibility, research, or translation), you can't use YouTube Studio.
+
+## yt-dlp (Command Line, Most Powerful)
+
+yt-dlp is the most powerful option for subtitle downloads — it can fetch any language track, in any format, from any public YouTube video:
+
+\`\`\`bash
+# Download English auto-subtitles as .SRT
+yt-dlp --write-auto-subs --skip-download --sub-lang en --convert-subs srt "VIDEO_URL"
+
+# List all available subtitle languages
+yt-dlp --list-subs "VIDEO_URL"
+
+# Download ALL subtitle languages
+yt-dlp --write-subs --all-subs --skip-download "VIDEO_URL"
+\`\`\`
+
+**Pros:** Most flexible, works for all public videos, multiple formats and languages.
+**Cons:** Requires Python and command-line comfort.
+
+## Downsub.com (Browser-Based, SRT Output)
+
+[Downsub.com](https://downsub.com) is a free browser tool that downloads YouTube subtitle files:
+
+1. Go to downsub.com
+2. Paste the YouTube video URL
+3. Select language and format (.srt or .txt)
+4. Click download
+
+**Pros:** No account, no install, gives .SRT output.
+**Cons:** Limited to one video at a time; occasional ads.
+
+## Which YouTube Subtitle Downloader Should You Use?
+
+**If you want the subtitle text for notes, AI, or translation:** → Use [VidText AI](https://www.vidtextai.com/tools/transcript) (fastest, cleanest output)
+
+**If you want a .SRT file for your own video:** → Use YouTube Studio
+
+**If you want a .SRT file from any public video:** → Use yt-dlp (command line) or Downsub.com
+
+**If you just want to read it quickly:** → Use YouTube's built-in transcript (⋮ → Open transcript)
+
+## Related Guides
+
+- [How to Download Subtitles from YouTube (Free, Any Format)](/blog/download-subtitles-from-youtube)
+- [How to Extract Subtitles from YouTube Videos Free](/blog/extract-subtitles-from-youtube)
+- [Subtitle Translator: How to Translate Video Subtitles Free](/blog/subtitle-translator)
+    `.trim(),
+  },
+
+  'download-subtitles': {
+    title: 'Download Subtitles: How to Get Subtitle Files from Any Video (2026)',
+    description: 'Download subtitle files from YouTube, Netflix, Vimeo, and local video files — free tools, SRT format, no software install required for most methods.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '4 min read',
+    content: `
+Need to download subtitles from a video? The right tool depends on where the video is. Here's the complete guide organized by platform.
+
+## Download YouTube Subtitles (Free, 10 Seconds)
+
+**Fastest method:**
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Get the full subtitle text with timestamps instantly
+
+For a proper .SRT file from a video you own, use YouTube Studio → Subtitles → Download.
+
+For any public YouTube video's .SRT file via command line:
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --sub-lang en --convert-subs srt "VIDEO_URL"
+\`\`\`
+
+See the full guide: [How to Download Subtitles from YouTube](/blog/download-subtitles-from-youtube)
+
+## Download Subtitles from a Local Video File
+
+If you have a video file (MP4, MKV, AVI) with embedded subtitles:
+
+**Using FFmpeg (free, command line):**
+\`\`\`bash
+# List subtitle tracks in the file
+ffprobe -v quiet -print_format json -show_streams video.mkv | grep codec_name
+
+# Extract subtitle track 0 as .SRT
+ffmpeg -i video.mkv -map 0:s:0 subtitles.srt
+\`\`\`
+
+**Using MKVToolNix (free GUI, for .MKV files):**
+1. Download [MKVToolNix](https://mkvtoolnix.download/)
+2. Open the MKV file → go to **Header Editor**
+3. Select the subtitle track → **Extract**
+
+Many downloaded MKV files include multiple subtitle tracks (English, Spanish, French) embedded in the container — FFmpeg and MKVToolNix can extract them without re-encoding.
+
+## Download Subtitles from Vimeo
+
+For Vimeo videos with captions:
+
+**Using yt-dlp:**
+\`\`\`
+yt-dlp --write-subs --skip-download "https://vimeo.com/VIDEO_ID"
+\`\`\`
+
+If the video owner has enabled captions, yt-dlp downloads the available subtitle files.
+
+## Download Subtitles from Netflix (For Personal Accessibility Use)
+
+Netflix subtitle files cannot be downloaded through standard means — Netflix uses DRM-protected content and does not offer subtitle file exports.
+
+For personal accessibility use, you can use browser extensions that display Netflix subtitles in a separate panel, but these don't produce downloadable files.
+
+**Note:** Distributing Netflix subtitle files is a copyright violation regardless of method.
+
+## Find Subtitles for a Video That Has None
+
+If your video has no subtitles and you need to find or create them:
+
+**Option 1 — Generate with Whisper (local video files):**
+\`\`\`
+whisper video.mp4 --model medium --output_format srt
+\`\`\`
+
+**Option 2 — Search subtitle databases:**
+- [OpenSubtitles.org](https://www.opensubtitles.org) — largest subtitle database, 5M+ files
+- [Subscene.com](https://subscene.com) — community-uploaded subtitles
+- [Podnapisi.net](https://www.podnapisi.net) — European language focus
+
+Search by movie/show name. Download the .SRT file and place it in the same folder as your video file with the same filename (e.g., \`movie.mp4\` + \`movie.srt\`) — most players (VLC, Plex) will auto-load it.
+
+## Subtitle Format Quick Reference
+
+| Format | Works With |
+|--------|-----------|
+| .srt | VLC, Premiere Pro, DaVinci Resolve, CapCut, YouTube |
+| .vtt | Web browsers, YouTube, HTML5 video |
+| .ass / .ssa | Styled subtitles (common for anime), VLC |
+| .sub | Older format, VLC, some players |
+
+## Related Guides
+
+- [How to Download Subtitles from YouTube](/blog/download-subtitles-from-youtube)
+- [YouTube Subtitle Downloader: Best Free Tools](/blog/youtube-subtitle-downloader)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'download-captions-from-youtube': {
+    title: 'How to Download Captions from YouTube (Free & Official Methods)',
+    description: 'Download closed captions from any YouTube video as a text file or SRT — using YouTube\'s official tools or free browser-based alternatives. No software needed.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '3 min read',
+    content: `
+**Fastest method:** Go to [VidText AI](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and get the full caption text with timestamps in under 10 seconds — free, no sign-up.
+
+## 3 Ways to Download YouTube Captions
+
+### Method 1: VidText AI (Any Video, Instant)
+
+Works on any public YouTube video with captions (auto-generated or manually uploaded):
+
+1. Copy the YouTube video URL
+2. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL → click **Get Transcript**
+4. The full caption text appears with timestamps
+5. Copy or download the text
+
+**Best for:** Getting caption text quickly for notes, blog posts, translation, or AI summaries.
+
+### Method 2: YouTube's Built-In Transcript Panel (Official)
+
+YouTube provides caption access directly in the video player:
+
+1. Open the video on YouTube (desktop browser)
+2. Click the **⋮** (three dots) menu below the video
+3. Select **Open transcript**
+4. The caption panel appears on the right side with timestamps
+5. Press **Ctrl+A** to select all → **Ctrl+C** to copy
+
+This is YouTube's official method. No third-party tools needed. Works on any video that has captions or auto-generated speech recognition.
+
+**Tip:** In the transcript panel, you can toggle timestamps on/off with the three-dot menu inside the panel.
+
+### Method 3: YouTube Studio — .SRT Download (Your Own Videos)
+
+For videos you own, YouTube Studio lets you download the caption file in standard formats:
+
+1. Go to [studio.youtube.com](https://studio.youtube.com)
+2. Click **Subtitles** in the left sidebar
+3. Find your video → click **⋮** next to the caption track
+4. Select **Download** → choose your format:
+   - **.srt** — works with all video editors and players
+   - **.vtt** — web-standard format, works with YouTube upload
+   - **.sbv** — YouTube's native format
+
+**Best for:** Archiving your own captions, importing into video editors, or translating to other languages.
+
+## What's the Difference Between Captions and Transcripts?
+
+| | Captions | Transcript |
+|--|----------|-----------|
+| **Format** | Timed text blocks (.srt/.vtt) | Continuous text |
+| **Timestamps** | Precise (start + end time) | Rough or none |
+| **Use in video editors** | ✅ Yes (as subtitle track) | ❌ Not directly |
+| **Use for reading/notes** | ✅ Yes | ✅ Yes |
+
+VidText AI gives you the **transcript** format (readable text with timestamps) — ideal for reading, research, and content repurposing. YouTube Studio gives you the **caption file** format (.srt/.vtt) — ideal for video production workflows.
+
+## Auto-Generated vs Manually Uploaded Captions
+
+**Auto-generated captions** are created by YouTube's speech recognition AI. They:
+- Are available for most English videos within a few hours of upload
+- Have ~90–95% accuracy for clear, native-speaker audio
+- Are accessible via VidText AI, the transcript panel, and yt-dlp
+
+**Manually uploaded captions** are uploaded by the video creator. They:
+- Are typically more accurate (especially for technical content, heavy accents, or multiple speakers)
+- May include sound effect descriptions (making them true closed captions)
+- Are downloaded via YouTube Studio if you're the video owner
+
+## Related Guides
+
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+- [How to Download Subtitles from YouTube](/blog/download-subtitles-from-youtube)
+- [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+    `.trim(),
+  },
+
+  'youtube-note-taking-extension': {
+    title: 'Best YouTube Note-Taking Extensions & Tools (2026)',
+    description: 'Compare the best Chrome extensions and tools for taking notes from YouTube videos — with timestamps, AI summaries, and export options. Includes a no-install alternative.',
+    category: 'Guide',
+    date: 'May 24, 2026',
+    readTime: '5 min read',
+    content: `
+**No-install option:** [VidText AI](https://www.vidtextai.com/tools/notes) converts any YouTube video into structured AI notes in under 30 seconds — no Chrome extension, no sign-up, free. Or compare the best browser extensions below.
+
+## Why Take Notes from YouTube Videos?
+
+YouTube is one of the largest sources of educational content — tutorials, lectures, interviews, conference talks. But watching a 1-hour video and retaining the key points is hard without a structured note-taking system.
+
+Good YouTube note-taking tools let you:
+- **Timestamp your notes** — click a note to jump to that exact moment in the video
+- **Auto-generate structure** — AI extracts key points so you don't have to
+- **Export** — save notes as Markdown, Notion pages, or Google Docs
+- **Search** — find any concept across all your saved video notes
+
+## Best YouTube Note-Taking Extensions for Chrome
+
+### 1. Glasp (Free, Best for Highlighting)
+
+[Glasp](https://glasp.co) is a social highlighting tool that works on YouTube and web articles.
+
+**Features:**
+- Highlight any line in the YouTube transcript and add a personal note
+- Click any highlight to jump to that timestamp in the video
+- Export to Notion, Roam, Obsidian, or as plain text
+- Discover what others have highlighted in the same video (social layer)
+
+**Best for:** Researchers and students who like annotation-style notes.
+**Free plan:** Unlimited highlights. **Paid:** From $9.99/month for team features.
+
+### 2. Tactiq (Free, Best for Real-Time Transcription)
+
+[Tactiq](https://tactiq.io) overlays a live transcript on YouTube videos and lets you highlight in real time.
+
+**Features:**
+- Live transcript displayed alongside the video
+- Click any line to highlight and save to notes
+- AI summary of the full video available after watching
+- Export to Google Docs, Notion, Slack
+
+**Best for:** Active viewers who want to capture insights while watching.
+**Free plan:** 10 AI summaries/month. **Paid:** From $12/month.
+
+### 3. Notta (Free, Best for Transcription + Notes)
+
+[Notta](https://www.notta.ai) provides AI transcription with notes for YouTube, Zoom, and uploaded audio.
+
+**Features:**
+- Full transcript with speaker identification
+- Highlight → comment directly in the transcript
+- AI chapter summaries
+- Export as .docx, .pdf, or .srt
+
+**Best for:** Professionals who need polished transcripts for meetings and videos.
+**Free plan:** 120 minutes/month. **Paid:** From $9/month.
+
+### 4. Transvribe (Free, Best for Search)
+
+[Transvribe](https://www.transvribe.com) lets you search inside any YouTube video by meaning, not just keywords.
+
+**Features:**
+- Semantic search — find concepts even if different words were used
+- Timestamp links for each result
+- Works without a Chrome extension (web-based)
+
+**Best for:** Researchers who watch many videos and need to find specific information fast.
+
+## VidText AI: AI Notes Without an Extension
+
+If you don't want to install a Chrome extension, [VidText AI's notes tool](https://www.vidtextai.com/tools/notes) generates structured study notes from any YouTube video automatically:
+
+1. Go to [vidtextai.com/tools/notes](https://www.vidtextai.com/tools/notes)
+2. Paste the YouTube video URL
+3. Click **Generate Notes**
+4. Get AI-structured notes with key concepts, quotes, and action items in under 30 seconds
+
+**Free, no sign-up, no extension.**
+
+Unlike manual note-taking tools, VidText AI reads the entire video and generates structured output — ideal when you want a complete summary rather than annotations made while watching.
+
+## Feature Comparison Table
+
+| Tool | Real-Time Notes | AI Summary | Export | No Install | Cost |
+|------|----------------|------------|--------|------------|------|
+| **VidText AI** | ❌ | ✅ Auto | ✅ | ✅ | Free |
+| **Glasp** | ✅ | ✅ | ✅ Notion/Roam | ❌ Extension | Free |
+| **Tactiq** | ✅ | ✅ | ✅ Google Docs | ❌ Extension | Free (10/mo) |
+| **Notta** | ✅ | ✅ | ✅ .docx/.pdf | ❌ Extension | Free 120min |
+| **Transvribe** | ❌ | ❌ | ❌ | ✅ | Free |
+
+## Which Tool Should You Use?
+
+**I want AI notes without installing anything** → [VidText AI Notes](https://www.vidtextai.com/tools/notes)
+
+**I want to highlight while watching** → Glasp or Tactiq
+
+**I need notes + transcription for meetings too** → Notta
+
+**I want to search across many videos** → Transvribe
+
+**I need notes exported to Notion** → Glasp or Tactiq
+
+## Tips for Better YouTube Notes
+
+Regardless of which tool you use:
+
+- **Watch at 1.25–1.5× speed** and let the tool capture timestamps — you cover more content in less time
+- **Add your own commentary** alongside AI-generated summaries — your synthesis is more valuable than the raw notes
+- **Review within 24 hours** — research shows spaced repetition after initial note-taking dramatically improves retention
+- **Export to your PKM system** (Notion, Obsidian, Roam) so notes are searchable alongside your other knowledge
+
+## Related Guides
+
+- [How to Generate Study Notes from Any YouTube Video](/blog/youtube-notes-generator)
+- [YouTube Video to Notes AI: Convert Any Video into Structured Notes Free](/blog/youtube-video-to-notes-ai)
+- [Best YouTube Transcript & Note-Taking Chrome Extensions](/blog/youtube-transcript-chrome-extension)
+    `.trim(),
+  },
+
   'youtube-video-to-audio': {
     title: 'YouTube Video to Audio: How to Extract & Transcribe the Audio Free (2026)',
     description: 'Extract the audio from any YouTube video for transcription, podcast creation, or content repurposing — free methods that work without downloading anything.',

@@ -1,6 +1,17 @@
 import { MetadataRoute } from 'next'
 
 const BLOG_SLUGS = [
+  'audio-to-transcript',
+  'zoom-transcription',
+  'what-are-captions',
+  'subtitle-translator',
+  'download-subtitles-from-youtube',
+  'download-youtube-subtitle',
+  'download-youtube-subtitles',
+  'youtube-subtitle-downloader',
+  'download-subtitles',
+  'download-captions-from-youtube',
+  'youtube-note-taking-extension',
   'youtube-video-to-audio',
   'podcast-and-transcript',
   'video-summarizer-prompt',
