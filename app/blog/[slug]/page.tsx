@@ -3740,6 +3740,234 @@ Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText 
     `.trim(),
   },
 
+  'video-summarizer-prompt': {
+    title: 'The Best Video Summarizer Prompts for ChatGPT, Claude & Gemini (2026)',
+    description: 'Copy-paste prompts that turn any video transcript into a perfect summary. Works with ChatGPT, Claude, and Gemini — plus a one-click alternative that needs no prompting.',
+    category: 'Tips',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+    content: `
+**Skip the prompting entirely:** [VidText AI](https://www.vidtextai.com/tools/summary) summarizes any YouTube video in one click — paste a URL, get a structured AI summary in under 30 seconds. Free, no sign-up. Or read on for the best prompts to use with ChatGPT, Claude, and Gemini.
+
+## Why Your Video Summary Prompt Matters
+
+Most people paste a transcript into ChatGPT and type "summarize this." The result is usually a vague paragraph that misses the key points.
+
+A well-structured prompt tells the AI:
+- **What format** you want (bullets, sections, table)
+- **What to extract** (key arguments, action items, quotes)
+- **Who it's for** (student notes, executive brief, social post)
+- **How long** the output should be
+
+The prompts below are tested and ready to copy-paste. All work with ChatGPT (GPT-4o), Claude 3.5/3.7, and Gemini 1.5 Pro.
+
+## How to Use These Prompts
+
+**Step 1:** Get the video transcript
+Go to [VidText AI](https://www.vidtextai.com/tools/transcript) → paste the YouTube URL → copy the full transcript text.
+
+**Step 2:** Open your AI tool of choice (ChatGPT, Claude, Gemini)
+
+**Step 3:** Paste this template:
+
+\`\`\`
+[Your prompt from below]
+
+---TRANSCRIPT START---
+[Paste transcript here]
+---TRANSCRIPT END---
+\`\`\`
+
+---
+
+## The 10 Best Video Summarizer Prompts
+
+### 1. The Universal Summary (Best All-Purpose)
+
+\`\`\`
+Summarize this video transcript. Structure your response as:
+
+**Main Topic:** (1 sentence)
+**Key Points:** (5–7 bullet points, each starting with an action verb)
+**Notable Quotes:** (2–3 direct quotes worth saving)
+**Conclusion:** (1–2 sentences on the core takeaway)
+
+Be concise. Avoid filler. Each bullet should stand alone as a useful insight.
+\`\`\`
+
+---
+
+### 2. The Executive Brief (For Business Videos)
+
+\`\`\`
+You are an executive assistant. Summarize this transcript into a C-suite executive brief:
+
+- **Bottom Line Up Front:** What is the single most important takeaway? (2 sentences max)
+- **Key Points:** 3–5 bullet points, each under 20 words
+- **Decisions/Actions Required:** What does this video ask the viewer to do or decide?
+- **Watch Time Saved:** Estimate how many minutes this brief saves versus watching the full video
+
+Keep the entire brief under 150 words.
+\`\`\`
+
+---
+
+### 3. The Student Study Notes (For Lectures & Educational Videos)
+
+\`\`\`
+Convert this lecture transcript into structured study notes:
+
+**Subject:** [auto-detect from content]
+**Core Concepts:** List each major concept with a one-sentence definition
+**Key Facts & Figures:** Any statistics, dates, names, or numbers mentioned
+**Examples Given:** Summarize each example used to explain a concept
+**Potential Exam Questions:** Write 3 questions a professor might ask based on this content
+**Summary:** 3-sentence overview of what was taught
+
+Format clearly for a student who missed the lecture.
+\`\`\`
+
+---
+
+### 4. The Action Items Extractor (For How-To & Tutorial Videos)
+
+\`\`\`
+Extract all actionable steps from this transcript. Format as a numbered checklist:
+
+- Number each step in the order it appears
+- Start each step with an action verb (Install, Open, Click, Set, Add...)
+- Include any tools, URLs, or resources mentioned alongside the relevant step
+- Mark any steps that have prerequisites with ⚠️
+- Add estimated time for each step if mentioned
+
+Goal: Someone should be able to follow this checklist without watching the video.
+\`\`\`
+
+---
+
+### 5. The Twitter/X Thread Generator
+
+\`\`\`
+Turn this video transcript into a Twitter/X thread. Rules:
+
+- Tweet 1: Hook — the most surprising or counterintuitive insight from the video (max 280 chars)
+- Tweets 2–7: One key point per tweet, starting with a number (2/, 3/, etc.)
+- Each tweet must be under 280 characters
+- Use plain language — no jargon
+- Final tweet: The main takeaway + "Full video: [leave blank]"
+
+Make it punchy. People should want to retweet tweet 1.
+\`\`\`
+
+---
+
+### 6. The Blog Post Outline (For Content Creators)
+
+\`\`\`
+Create a detailed blog post outline based on this video transcript:
+
+**Suggested Title:** (SEO-friendly, includes the main keyword)
+**Meta Description:** (155 characters, includes keyword, has a call to action)
+**H1:** (matches title intent)
+**Introduction paragraph:** (hook + preview of what the reader will learn)
+**H2 sections:** List each section with 2–3 bullet points of what to cover
+**Internal link suggestions:** Topics this post could link to
+**CTA:** What should readers do after reading?
+
+The outline should be detailed enough that a writer can draft the full post without watching the video.
+\`\`\`
+
+---
+
+### 7. The Podcast Show Notes Generator
+
+\`\`\`
+Write show notes for this podcast transcript. Include:
+
+**Episode Summary:** 3–4 sentences describing what the episode is about
+**Guest/Speaker:** Name and one-line bio (if mentioned)
+**Timestamps:** List major topic shifts with approximate timestamps if available
+**Key Takeaways:** 5 bullet points (what listeners will learn)
+**Resources Mentioned:** Any books, tools, websites, or names referenced
+**Quote of the Episode:** The single most shareable line from the transcript
+
+Format for a podcast website show notes page.
+\`\`\`
+
+---
+
+### 8. The Comparison Extractor (For Review & Versus Videos)
+
+\`\`\`
+This transcript contains a comparison or review. Extract a structured comparison:
+
+**Items Compared:** List what is being compared
+**Criteria Used:** What factors does the speaker evaluate?
+**Comparison Table:** Create a table with items as columns and criteria as rows. Fill in the speaker's assessment for each cell (use ✅ / ❌ / ⚠️ where appropriate)
+**Winner/Recommendation:** What does the speaker ultimately recommend and why?
+**Who Should Choose What:** If the speaker gives different recommendations for different use cases, list them
+\`\`\`
+
+---
+
+### 9. The Skeptic's Summary (Critical Analysis)
+
+\`\`\`
+Summarize this transcript, but also critically evaluate the claims made:
+
+**What is argued:** The main thesis in 2 sentences
+**Evidence provided:** What proof or data does the speaker offer?
+**Assumptions made:** What does the speaker assume to be true without proving?
+**Counterarguments not addressed:** What obvious objections does the speaker ignore?
+**Verdict:** How convincing is the argument overall? (Scale: Weak / Partial / Strong)
+
+Be balanced but honest. Don't soften valid criticism.
+\`\`\`
+
+---
+
+### 10. The 3-Sentence Summary (Ultra-Compact)
+
+\`\`\`
+Summarize this entire transcript in exactly 3 sentences:
+1. What topic is covered and why it matters
+2. The most important insight or finding
+3. What the viewer should do or think differently as a result
+
+No more, no less. Make every word count.
+\`\`\`
+
+---
+
+## Which AI Gives the Best Video Summaries?
+
+| AI Tool | Best For | Free Tier | Context Window |
+|---------|----------|-----------|----------------|
+| **ChatGPT (GPT-4o)** | General summaries, action items | 40 msg/3h | 128K tokens |
+| **Claude 3.7 Sonnet** | Long transcripts, nuanced analysis | Yes (Claude.ai) | 200K tokens |
+| **Gemini 1.5 Pro** | Very long videos, Google Workspace | Yes | 1M tokens |
+| **VidText AI** | One-click YouTube summaries | Unlimited free | Auto-handled |
+
+For most YouTube videos under 2 hours, any of the three AI tools works well. For very long recordings (full conferences, multi-hour courses), Claude or Gemini handles the context better.
+
+## Skip the Prompting: One-Click Video Summaries
+
+If you just want a fast summary without copying transcripts and crafting prompts, [VidText AI's summary tool](https://www.vidtextai.com/tools/summary) handles everything automatically:
+
+1. Paste any YouTube URL
+2. Click **Summarize**
+3. Get a structured summary with key points and takeaways in under 30 seconds
+
+Free, no account, no extension needed. The AI formats the output with headers, bullets, and a conclusion automatically — no prompt engineering required.
+
+## Related Guides
+
+- [Best YouTube Video Summarizer Prompts for ChatGPT & AI](/blog/best-youtube-summarizer-prompts)
+- [Can ChatGPT Summarize a YouTube Video?](/blog/chatgpt-summarize-youtube-video)
+- [How to Summarize Any YouTube Video for Free (No Sign-Up)](/blog/youtube-video-summary-free)
+    `.trim(),
+  },
+
   'video-to-srt': {
     title: 'Video to SRT: How to Convert Any Video to an SRT Subtitle File (Free)',
     description: 'Convert any YouTube video, MP4, or recorded meeting into a downloadable .SRT subtitle file — free, no software install, works in your browser in under 30 seconds.',

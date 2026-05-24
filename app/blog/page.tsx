@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: 'video-summarizer-prompt',
+    title: 'The Best Video Summarizer Prompts for ChatGPT, Claude & Gemini (2026)',
+    excerpt: '10 copy-paste prompts that turn any video transcript into a perfect summary — executive briefs, study notes, Twitter threads, show notes, and more.',
+    category: 'Tips',
+    date: 'May 23, 2026',
+    readTime: '5 min read',
+  },
+  {
     slug: 'video-to-srt',
     title: 'Video to SRT: How to Convert Any Video to an SRT Subtitle File (Free)',
     excerpt: 'Convert any YouTube video, MP4, or recorded meeting into a downloadable .SRT subtitle file — free, no software install, works in under 30 seconds.',
