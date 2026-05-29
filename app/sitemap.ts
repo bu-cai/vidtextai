@@ -2,6 +2,14 @@ import { MetadataRoute } from 'next'
 
 const BLOG_SLUGS = [
   'tactiq-alternative',
+  'youtube-transcript-extension-alternative',
+  'facebook-video-transcript',
+  'vimeo-transcript',
+  'how-to-turn-off-captions-youtube',
+  'davinci-resolve-transcript',
+  'how-to-write-video-transcript',
+  'extract-zoom-recording-transcript',
+  'interview-transcript-template',
   'instagram-transcript',
   'tiktok-transcript',
   'spotify-podcast-transcript',

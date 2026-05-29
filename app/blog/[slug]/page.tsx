@@ -5879,6 +5879,930 @@ No sign-up required. Works on any public YouTube video with captions or auto-gen
     `.trim(),
   },
 
+  'youtube-transcript-extension-alternative': {
+    title: 'Looking for Another YouTube Transcript Extension? Try This Instead (2026)',
+    description: 'Tired of Tactiq or want a YouTube transcript tool without a Chrome extension? VidText AI works in any browser — no install, no sign-up, free unlimited transcripts.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '4 min read',
+    content: `
+**Short answer:** If you're looking for another YouTube transcript extension — or want to avoid installing one altogether — [VidText AI](https://www.vidtextai.com/tools/transcript) works directly in your browser with no extension required. Paste any YouTube URL and get the full transcript in under 10 seconds.
+
+## Why People Look for a New Transcript Extension
+
+The most common reasons someone searches for a different YouTube transcript extension:
+
+- **Tactiq stopped working** after a Chrome update
+- **Reached the free plan limit** on their current tool
+- **Privacy concerns** — extensions can read all website data
+- **Using Safari or Firefox** — most transcript extensions only work on Chrome
+- **The extension slows down YouTube** or causes interface issues
+- **New computer** — don't want to reinstall all extensions
+
+Whatever the reason, there's a better approach than hunting for yet another extension.
+
+## The No-Extension Alternative: VidText AI
+
+[VidText AI](https://www.vidtextai.com/tools/transcript) is a web-based YouTube transcript tool that requires zero installation:
+
+1. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube video URL
+3. Get the full timestamped transcript in under 10 seconds
+
+**Works on:** Chrome, Safari, Firefox, Edge — any browser, any OS, including mobile.
+
+**No Chrome extension.** No sign-up. No monthly limit on transcripts.
+
+Beyond transcripts, VidText AI also generates AI summaries, blog posts, study notes, and Shorts scripts from the same YouTube URL — features most transcript extensions don't offer.
+
+## How VidText AI Compares to Chrome Extensions
+
+| Feature | VidText AI | Tactiq | Glasp | NoteGPT |
+|---------|-----------|--------|-------|---------|
+| Chrome extension required | ❌ No | ✅ Yes | ✅ Yes | ✅ Yes |
+| Works in Safari/Firefox | ✅ Yes | ❌ No | ❌ No | ❌ No |
+| Sign-up required | ❌ No | ✅ Yes | ✅ Yes | ✅ Yes |
+| Free transcript limit | Unlimited | Limited | Limited | Limited |
+| AI summary | ✅ Free | ✅ Paid+ | ✅ Limited | ✅ Limited |
+| Blog post generation | ✅ Yes | ❌ No | ❌ No | ❌ No |
+| Works on mobile | ✅ Yes | ❌ No | ❌ No | ❌ No |
+
+## If You Still Want an Extension
+
+If you specifically want a Chrome extension for real-time overlay while watching, here are the main options:
+
+**Tactiq** — Best for live transcription during meetings and YouTube. Free: limited exports. Paid: $12/month.
+
+**Glasp** — Best for highlighting and saving specific lines. Free tier is generous. Requires Chrome.
+
+**NoteGPT** — Good for AI-powered YouTube notes. Free tier available. Chrome-only.
+
+**YouTube's built-in transcript** (no extension needed) — Click **⋮** below any video → **Open transcript**. Shows the raw caption text with timestamps, no AI features.
+
+## How to Remove a Transcript Extension You No Longer Want
+
+If a previous extension is causing issues:
+
+1. In Chrome, go to **Settings** → **Extensions** (or type \`chrome://extensions\`)
+2. Find the extension → click **Remove**
+3. Restart Chrome
+
+Your browser will be faster and your privacy better protected without unused extensions running on every page you visit.
+
+## Related Guides
+
+- [Tactiq Alternative: Best Free YouTube Transcript Tools Without the Extension](/blog/tactiq-alternative)
+- [Best YouTube Transcript & Note-Taking Chrome Extensions](/blog/youtube-transcript-chrome-extension)
+- [Best YouTube Transcript Tools in 2026](/blog/best-youtube-transcript-tools)
+    `.trim(),
+  },
+
+  'facebook-video-transcript': {
+    title: 'Facebook Video Transcript: How to Get a Transcript of Any Facebook Video (2026)',
+    description: 'Get a transcript of any Facebook video free — using Facebook\'s auto-captions, Whisper, or by finding the video on YouTube. Step-by-step guide.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** Facebook doesn't offer a transcript download feature. To transcribe a Facebook video, either use Facebook's built-in auto-captions (for videos you own), download the video and run it through Whisper (free), or find the video on YouTube and use [VidText AI](https://www.vidtextai.com/tools/transcript).
+
+## Method 1: Find the Video on YouTube First (Easiest)
+
+Many creators post the same content on both Facebook and YouTube. If the video is also on YouTube:
+
+1. Search for the video title on YouTube
+2. Copy the YouTube URL
+3. Go to [VidText AI](https://www.vidtextai.com/tools/transcript) and paste it
+4. Get the full transcript in under 10 seconds — free, no sign-up
+
+This is by far the fastest method when available.
+
+## Method 2: Facebook's Auto-Captions (For Your Own Videos)
+
+Facebook generates automatic captions for videos you upload. Here's how to access and view them:
+
+**For Facebook Pages:**
+1. Go to your Page → find the video post
+2. Click **Edit video** (three-dot menu on the post)
+3. Select **Edit** → **Captions**
+4. Facebook shows the auto-generated caption text
+5. You can edit individual lines and manually copy the caption text
+
+**For Facebook Reels:**
+1. Open your Reel → tap **Edit**
+2. Tap **Captions** to view and edit auto-generated text
+
+**Limitation:** Facebook doesn't offer a "download transcript" button — you'd need to copy-paste the caption text manually from the editor.
+
+## Method 3: Download + Whisper (Any Public Video)
+
+For any public Facebook video you want to transcribe:
+
+**Step 1 — Download the Facebook video**
+Use [SnapSave](https://snapsave.app) or [fbdown.net](https://fbdown.net):
+1. Copy the Facebook video URL
+2. Paste into the downloader
+3. Download as MP4
+
+**Step 2 — Transcribe with Whisper (free, offline)**
+\`\`\`
+pip install openai-whisper
+whisper facebook_video.mp4 --model small --output_format txt
+\`\`\`
+
+For a 5-minute Facebook video, Whisper transcribes in about 30-45 seconds.
+
+**Get SRT captions:**
+\`\`\`
+whisper facebook_video.mp4 --model small --output_format srt
+\`\`\`
+
+## Method 4: AssemblyAI (High Accuracy, API)
+
+For important content where you need high accuracy or speaker identification:
+
+\`\`\`python
+import assemblyai as aai
+aai.settings.api_key = "YOUR_KEY"
+transcriber = aai.Transcriber()
+transcript = transcriber.transcribe("facebook_video.mp4")
+print(transcript.text)
+\`\`\`
+
+**Free tier:** 100 hours at signup. ~$0.37/hour after that.
+
+## Facebook Live Transcription
+
+For live streams, Facebook provides live captioning via:
+
+- **Facebook Live** → enable **Auto-generated captions** in Live settings before going live
+- Captions appear on screen during the broadcast
+- After the stream ends and is saved as a video, you can access the caption text via Edit Video → Captions
+
+## Platform Comparison: Getting Video Transcripts
+
+| Platform | Built-In Transcript | Easiest Free Method |
+|----------|--------------------|--------------------|
+| YouTube | ✅ Yes | VidText AI — paste URL, instant |
+| Facebook | ❌ No (captions only for creators) | Download + Whisper |
+| Instagram | ❌ No | Download + Whisper |
+| TikTok | ❌ No | Download + Whisper |
+| Spotify | ✅ Partial | Spotify app transcript view |
+
+YouTube is significantly easier to transcribe than other platforms because of its open caption API. For everything else, the download + Whisper workflow is the most reliable free option.
+
+## What to Do With a Facebook Video Transcript
+
+- **Repurpose as a blog post** — paste transcript into ChatGPT: *"Turn this into a 600-word blog post"*
+- **Create subtitles** — use the .SRT output from Whisper to add captions when re-posting on other platforms
+- **Extract quotes** — find the best shareable lines for social media
+- **Show notes** — if it's a live session or interview, publish the transcript as article content
+
+## Related Guides
+
+- [Instagram Transcript: How to Get a Transcript of Any Instagram Reel](/blog/instagram-transcript)
+- [TikTok Transcript: How to Transcribe Any TikTok Video Free](/blog/tiktok-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+    `.trim(),
+  },
+
+  'vimeo-transcript': {
+    title: 'Vimeo Transcript: How to Get a Transcript of Any Vimeo Video (2026)',
+    description: 'Download the transcript from any Vimeo video free — using Vimeo\'s built-in captions, yt-dlp, or Whisper. Works on public and unlisted Vimeo videos.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** Vimeo Pro and Business accounts have built-in transcript and caption features. For any public Vimeo video, use yt-dlp to download the subtitle file, or download the video and run it through Whisper. Full guide below.
+
+## Method 1: Vimeo's Built-In Transcript (Pro/Business Accounts)
+
+Vimeo offers caption and transcript features for paid accounts:
+
+**For video owners (Vimeo Pro/Business):**
+1. Log in to Vimeo → go to your video
+2. Click **Settings** on the video
+3. Select **Captions** tab
+4. Enable **Auto-generate captions** or upload a caption file
+5. Once captions are live, viewers can toggle them on and turn on "Transcript" view if enabled
+
+**To download the caption file (video owner):**
+1. Video Settings → Captions → **Download** (SRT or VTT)
+
+**Limitation:** The built-in transcript feature requires a Vimeo paid plan ($20+/month). Free Vimeo accounts can upload videos but don't get auto-captions.
+
+## Method 2: yt-dlp (Any Public Vimeo Video)
+
+yt-dlp works on Vimeo just like YouTube — if the video has a caption track, yt-dlp can download it:
+
+**Install:**
+\`\`\`
+pip install yt-dlp
+\`\`\`
+
+**List available subtitle tracks:**
+\`\`\`
+yt-dlp --list-subs "https://vimeo.com/VIDEO_ID"
+\`\`\`
+
+**Download subtitle file:**
+\`\`\`
+yt-dlp --write-subs --skip-download "https://vimeo.com/VIDEO_ID"
+\`\`\`
+
+**Download as SRT format:**
+\`\`\`
+yt-dlp --write-subs --skip-download --convert-subs srt "https://vimeo.com/VIDEO_ID"
+\`\`\`
+
+**Note:** This only works if the video has a caption track. Many Vimeo videos don't have captions — in that case, use Method 3.
+
+## Method 3: Download Video + Whisper (Any Vimeo Video)
+
+For Vimeo videos without captions, download the video and transcribe with Whisper:
+
+**Download the Vimeo video:**
+\`\`\`
+yt-dlp "https://vimeo.com/VIDEO_ID" -o vimeo_video.mp4
+\`\`\`
+
+Or use a browser-based downloader like [9xbuddy.app](https://9xbuddy.app) for a no-install option.
+
+**Transcribe with Whisper:**
+\`\`\`
+whisper vimeo_video.mp4 --model medium --output_format txt
+\`\`\`
+
+**Get SRT file:**
+\`\`\`
+whisper vimeo_video.mp4 --model medium --output_format srt
+\`\`\`
+
+Works on any Vimeo video you can access, regardless of whether it has captions.
+
+## Method 4: Descript (For Vimeo Content Creators)
+
+If you regularly work with Vimeo content and need transcripts for editing:
+
+1. Download your Vimeo video (via yt-dlp or Vimeo's download option)
+2. Import into [Descript](https://www.descript.com) (free: 1 hour/month)
+3. Descript auto-transcribes on import
+4. Export transcript as .txt or .docx
+
+Descript lets you edit video by editing text — ideal for repurposing Vimeo recordings.
+
+## Vimeo vs YouTube: Transcript Access
+
+| | YouTube | Vimeo (Free) | Vimeo (Pro) |
+|--|---------|-------------|-------------|
+| Auto-captions | ✅ Free | ❌ | ✅ |
+| Transcript download | Via VidText AI | Via Whisper | ✅ Built-in |
+| No-code transcript | ✅ Very easy | ❌ | ✅ |
+| API access | ✅ Open | Limited | Limited |
+
+For YouTube videos, [VidText AI](https://www.vidtextai.com/tools/transcript) gives you transcripts instantly — no download needed. For Vimeo, the yt-dlp + Whisper workflow is the best free option for videos without existing captions.
+
+## Use Cases for Vimeo Transcripts
+
+- **Corporate training videos** — transcribe internal Vimeo training content for documentation
+- **Client video reviews** — extract feedback from client video messages
+- **Conference recordings** — transcribe Vimeo-hosted event recordings
+- **Portfolio videos** — generate text descriptions from showreel narrations
+- **Accessibility** — add captions to make Vimeo content WCAG compliant
+
+## Related Guides
+
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+- [MP4 to Transcript: How to Convert Any Video to Text Free](/blog/mp4-to-transcript)
+    `.trim(),
+  },
+
+  'how-to-turn-off-captions-youtube': {
+    title: 'How to Turn Off Captions on YouTube (All Devices, 2026)',
+    description: 'Turn off YouTube captions instantly — keyboard shortcut, CC button, or settings. Works on desktop, iPhone, Android, TV, and Chrome\'s Live Caption feature.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '3 min read',
+    content: `
+**Fastest way:** Press **C** on your keyboard while watching a YouTube video to toggle captions off. On mobile, tap the video and tap the **CC** button. Done.
+
+## Turn Off Captions on YouTube Desktop
+
+**Method 1 — Keyboard shortcut (instant):**
+Press **C** while the video is playing. This toggles captions on/off instantly.
+
+**Method 2 — CC button in the player:**
+1. Move your mouse over the video to show the controls
+2. Click the **CC** button in the bottom-right of the player
+3. Captions disappear immediately
+
+**Method 3 — Via Settings menu:**
+1. Click the **⚙️ gear icon** in the video controls
+2. Select **Subtitles/CC**
+3. Click **Off**
+
+## Turn Off Captions on YouTube iPhone/iPad
+
+1. Tap the video once to show controls
+2. Look for the **CC** button in the top-right corner of the video
+3. Tap it to turn off captions
+
+If captions keep reappearing on every video, see "Stop Captions From Turning On Automatically" below.
+
+## Turn Off Captions on YouTube Android
+
+1. Tap the video to show controls
+2. Tap the **CC icon** in the top right
+3. Tap to disable captions
+
+## Turn Off Captions on YouTube TV / Smart TV
+
+1. While the video is playing, press the **Select / OK** button on your remote
+2. Navigate to the **CC icon** using your directional pad
+3. Press **OK** to toggle captions off
+
+## Stop Captions From Turning On Automatically
+
+If YouTube keeps turning on captions on every video, you have the "Always show captions" setting enabled:
+
+**On desktop:**
+1. Click your **profile picture** (top right) → **Settings**
+2. Go to **Playback and performance**
+3. Turn off **Always show captions**
+
+**On iPhone/Android:**
+1. Tap your **profile picture** → **Settings**
+2. Go to **Captions**
+3. Disable **Always show captions**
+
+## Turn Off Chrome's Live Caption Feature (Different From YouTube CC)
+
+Chrome has a separate "Live Caption" feature that transcribes audio from all browser tabs — this is different from YouTube's built-in CC. If you see live captions appearing at the bottom of your Chrome browser window:
+
+**To disable Chrome Live Caption:**
+1. Open Chrome → click the **three-dot menu (⋮)** → **Settings**
+2. Go to **Accessibility**
+3. Toggle off **Live Caption**
+
+Or right-click the Live Caption bar at the bottom of the screen and select **Turn off Live Caption**.
+
+## Turn Off Captions on YouTube Mobile App (Permanently)
+
+If you want captions off by default on mobile:
+
+1. Open YouTube app → tap your **profile picture**
+2. Go to **Settings** → **Captions**
+3. Turn off **Show captions** or **Always show captions**
+
+Now captions won't auto-enable on any video you watch.
+
+## Related Guides
+
+- [How to Turn On Captions on YouTube (Every Device)](/blog/how-to-turn-on-captions-youtube)
+- [What Are Captions? (Video Captions Explained Simply)](/blog/what-are-captions)
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+    `.trim(),
+  },
+
+  'davinci-resolve-transcript': {
+    title: 'DaVinci Resolve Transcript: How to Use the Built-In Transcription Feature (2026)',
+    description: 'DaVinci Resolve 18+ has a free built-in AI transcription tool. Learn how to transcribe your timeline, generate subtitles, and export SRT files — no third-party tools needed.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '5 min read',
+    content: `
+DaVinci Resolve 18 introduced a free, built-in AI transcription tool that can automatically transcribe your video timeline, generate subtitles, and export SRT files — all without leaving the editor. Here's how to use it.
+
+## Does DaVinci Resolve Have a Transcript Feature?
+
+**Yes.** DaVinci Resolve 18.0 (released 2022) added an **Automatic Transcription** tool powered by an on-device AI model. It's available in the **free version** of DaVinci Resolve — no Studio license required.
+
+The feature:
+- Transcribes speech in your video timeline automatically
+- Lets you search, edit, and navigate by transcript text
+- Generates subtitles (SRT/VTT) from the transcript in one click
+- Runs entirely on your machine — no internet, no API key
+
+## How to Use DaVinci Resolve's Transcript Feature
+
+### Step 1: Open the Transcription Window
+
+1. Open your project in DaVinci Resolve 18+
+2. Go to the **Edit** page (bottom toolbar)
+3. Click **Workspace** in the top menu → **Show Transcription** (or press **Shift+T**)
+4. The Transcription panel appears on the left side of the timeline
+
+### Step 2: Transcribe Your Timeline or Clip
+
+1. In the Transcription panel, click **Transcribe**
+2. Select: **Transcribe current timeline** or **Transcribe selected clips**
+3. Choose your language (50+ languages supported)
+4. Click **Transcribe** — DaVinci processes the audio
+
+Transcription speed depends on your hardware. A 10-minute video takes approximately 1-3 minutes on a modern computer.
+
+### Step 3: Edit the Transcript
+
+Once transcribed, the text appears in the Transcription panel with each spoken word highlighted as the video plays:
+
+- **Click any word** to jump to that point in the timeline
+- **Double-click any word** to edit it (correct errors)
+- **Select text** to cut or mute that section of the audio
+- **Use Ctrl+F / Cmd+F** to search for any word across the entire timeline
+
+### Step 4: Generate Subtitles from the Transcript
+
+1. In the Transcription panel, click the **⋮** menu → **Create Subtitles from Transcript**
+2. Configure subtitle options:
+   - Characters per line (recommended: 42)
+   - Subtitle duration
+   - Language
+3. Click **Create** — subtitles appear as a new subtitle track in your timeline
+
+### Step 5: Export as SRT File
+
+1. In the timeline, right-click the subtitle track
+2. Select **Export Subtitle** → choose **.srt** or **.vtt**
+3. Save the file
+
+The SRT file can be uploaded to YouTube, Vimeo, or used in any video player.
+
+## Transcribing YouTube Videos for DaVinci Resolve
+
+If you're editing content from YouTube and need the transcript before editing:
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube video URL
+3. Get the full transcript in under 10 seconds
+4. Download as .txt — use as reference while editing
+
+For a properly formatted SRT file to import into DaVinci Resolve, see [Video to SRT](/blog/video-to-srt).
+
+## DaVinci Resolve Transcription vs Third-Party Tools
+
+| Tool | Cost | In-Editor | SRT Export | Accuracy |
+|------|------|-----------|-----------|----------|
+| **DaVinci Resolve built-in** | Free | ✅ Yes | ✅ Yes | Good |
+| OpenAI Whisper (CLI) | Free | ❌ No | ✅ Yes | Very high |
+| Descript | Free 1hr/mo | ✅ Yes | ✅ Yes | Very high |
+| CapCut Auto Captions | Free | ✅ Yes | ✅ Yes | Good |
+
+**DaVinci Resolve wins** if you're already editing in Resolve — it keeps your workflow in one app. **Whisper wins** for raw accuracy, especially with accents or technical content.
+
+## Common Issues & Fixes
+
+**"Transcribe" button is grayed out:**
+Make sure you're on DaVinci Resolve 18.0 or later. Update via [blackmagicdesign.com](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion).
+
+**Transcription is slow:**
+Resolve uses on-device AI. Performance scales with your CPU/GPU. Closing other apps helps.
+
+**Wrong language being transcribed:**
+In the Transcribe dialog, manually select the correct language from the dropdown rather than using "Detect automatically."
+
+## Related Guides
+
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+- [MP4 to Transcript: How to Convert Any Video to Text Free](/blog/mp4-to-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+    `.trim(),
+  },
+
+  'how-to-write-video-transcript': {
+    title: 'How to Write a Transcript for a Video (Template + AI Method, 2026)',
+    description: 'Learn how to write a professional video transcript — manually, with AI tools, or using auto-captions. Includes a free transcript template and formatting guide.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '5 min read',
+    content: `
+A video transcript is the written text of everything spoken in a video, optionally with timestamps and speaker labels. You can write one manually, generate it automatically with AI, or use a combination of both. Here's the complete guide.
+
+## What Makes a Good Video Transcript?
+
+A well-formatted transcript includes:
+
+- **All spoken words** — verbatim or lightly cleaned up (removing filler words)
+- **Timestamps** — either inline \`[0:00]\` or in SRT format for timed captions
+- **Speaker labels** — when multiple people are talking
+- **Paragraph breaks** — every 3-5 sentences for readability
+- **Light punctuation** — adds commas and periods where the speaker pauses
+
+## Method 1: Auto-Generate with AI (Fastest)
+
+**For YouTube videos:**
+Go to [VidText AI](https://www.vidtextai.com/tools/transcript) → paste any YouTube URL → get the full timestamped transcript in under 10 seconds. Copy, download, and edit as needed.
+
+**For any video or audio file:**
+Use OpenAI Whisper:
+\`\`\`
+pip install openai-whisper
+whisper your-video.mp4 --model medium --output_format txt
+\`\`\`
+
+AI-generated transcripts are 90-95% accurate for clear English speech. You'll need to review and correct:
+- Proper nouns (names, brand names, technical terms)
+- Homophones ("their" vs "there")
+- Punctuation and sentence breaks
+
+## Method 2: Write Manually (Most Accurate)
+
+For interviews, complex technical content, or legal/medical material where 100% accuracy matters:
+
+**Tools you'll need:**
+- A media player with variable speed and keyboard shortcuts (VLC or Express Scribe)
+- A text editor (Google Docs, Notepad, Word)
+
+**Process:**
+1. Play the video at 50-75% speed
+2. Pause every 10-15 seconds and type what you hear
+3. Use \`[inaudible]\` for parts you can't hear clearly
+4. Add timestamps at each paragraph break: \`[0:45]\`
+5. Mark speaker changes: **[Speaker Name]:** at the start of each turn
+
+**Professional transcriptionists average 1 hour of work per 15 minutes of audio.** For most people, AI + light editing is far more efficient.
+
+## Free Video Transcript Template
+
+\`\`\`
+TRANSCRIPT
+Video Title: [Title Here]
+Date: [Date]
+Duration: [Length]
+
+---
+
+[0:00]
+[Speaker 1 Name]: [Start of transcript here. Each paragraph should be
+3-5 sentences or about 50-75 words.]
+
+[0:45]
+[Speaker 2 Name]: [Next speaker's turn. Use a new paragraph for each
+speaker change or topic shift.]
+
+[1:30]
+[Speaker 1 Name]: [Continue transcript...]
+
+[INAUDIBLE - 2:15]
+
+[2:20]
+[Speaker 1 Name]: [Resume after inaudible section...]
+
+---
+END OF TRANSCRIPT
+\`\`\`
+
+## Transcript Formats: Which to Use
+
+| Format | When to Use |
+|--------|-------------|
+| **Plain text (.txt)** | Blog posts, show notes, AI input, general reading |
+| **Word/Google Doc (.docx)** | Sharing with team, legal records, editing |
+| **SRT (.srt)** | Adding captions to videos in YouTube, Premiere Pro, DaVinci |
+| **WebVTT (.vtt)** | Web video players, YouTube caption upload |
+| **PDF** | Final archival, distribution to clients |
+
+## Clean vs Verbatim Transcription
+
+**Verbatim transcript:** Captures every word exactly as spoken, including filler words ("um," "uh," "like"), false starts, and repeated words. Required for legal depositions, court proceedings, and some research.
+
+**Clean transcript:** Removes filler words, corrects grammar, and improves readability. Better for blog posts, show notes, accessibility, and general content repurposing.
+
+For most YouTube and podcast content, **clean transcription** is appropriate and much more readable.
+
+## Transcript Accuracy: Common Errors to Fix
+
+When reviewing AI-generated transcripts, watch for:
+
+- **Proper nouns** — AI often misspells names: "Mark Zuckerberg" → "Mark Zuckerburg"
+- **Technical terms** — industry jargon gets mangled: "API" → "a pie"
+- **Homophones** — "their/there/they're," "to/two/too"
+- **Numbers** — "SEO" might become "S.E.O." or "seo"
+- **Sentence boundaries** — AI sometimes runs sentences together or breaks them incorrectly
+
+Use Find & Replace in your text editor to fix recurring errors quickly.
+
+## Add Your Transcript to YouTube for SEO
+
+Publishing a transcript improves your YouTube SEO because Google indexes the text:
+
+1. Go to [YouTube Studio](https://studio.youtube.com) → **Subtitles**
+2. Select your video → **Add Language** → choose your language
+3. Click **Upload file** → upload your SRT file
+4. Review and publish
+
+Videos with uploaded captions typically rank higher in both YouTube and Google search.
+
+## Related Guides
+
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [YouTube Video to Notes AI: Convert Any Video into Structured Notes Free](/blog/youtube-video-to-notes-ai)
+    `.trim(),
+  },
+
+  'extract-zoom-recording-transcript': {
+    title: 'How to Extract a Transcript from Zoom Recordings (Free, 2026)',
+    description: 'Get a full text transcript from any Zoom recording — local MP4 files, cloud recordings, or shared links. Free methods using Whisper, Otter.ai, and Zoom\'s built-in tools.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** For Zoom cloud recordings, download the audio file and run it through Whisper (free). For Zoom Pro accounts, use Zoom's built-in cloud transcription. For local MP4 recordings, use \`whisper meeting.mp4 --output_format txt\`. Full guide below.
+
+## Where Your Zoom Recording Lives
+
+The right transcription method depends on where your recording is saved:
+
+- **Cloud recording** (Zoom Pro/Business): Saved to zoom.us — accessible from the Recordings tab
+- **Local recording** (all plans): Saved as MP4 + M4A on your computer in your Zoom folder
+- **Shared link**: Someone sent you a cloud recording link
+
+## Method 1: Zoom's Built-In Transcription (Pro/Business Plans)
+
+If you have a Zoom paid plan and recorded to the cloud:
+
+**Enable before the meeting:**
+1. Log in to [zoom.us](https://zoom.us) → **Settings** → **Recording**
+2. Under Cloud Recording, enable **Audio transcript**
+3. Start any meeting → click **Record to Cloud**
+
+**Access the transcript after:**
+1. Go to [zoom.us/recording](https://zoom.us/recording)
+2. Find your recording → click the title
+3. Download the **Audio Transcript** (.vtt file)
+4. Open in any text editor — it contains the full transcript with timestamps
+
+**Cost:** Requires Zoom Pro ($15.99/month) or higher.
+
+## Method 2: Local MP4 Recording + Whisper (Free, Any Plan)
+
+For recordings saved locally on your computer (the default for Zoom Free accounts):
+
+Your Zoom recordings are typically saved in:
+- **Windows:** \`C:\\Users\\[Username]\\Documents\\Zoom\`
+- **Mac:** \`~/Documents/Zoom\`
+
+**Transcribe with Whisper:**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+\`\`\`
+whisper "Zoom Meeting 2026-05-29.mp4" --model medium --output_format txt
+\`\`\`
+
+For a 1-hour meeting, this takes 4-8 minutes. The output is a .txt file in the same folder with the full meeting transcript.
+
+**For timestamped SRT output:**
+\`\`\`
+whisper "Zoom Meeting 2026-05-29.mp4" --model medium --output_format srt
+\`\`\`
+
+## Method 3: Zoom Cloud Recording Link → Whisper
+
+If someone shared a Zoom cloud recording link with you:
+
+**Step 1:** Open the Zoom recording link → click **Download** to save the MP4
+
+**Step 2:** Transcribe with Whisper:
+\`\`\`
+whisper downloaded_zoom.mp4 --model medium --output_format txt
+\`\`\`
+
+## Method 4: Otter.ai (Real-Time + Post-Meeting)
+
+[Otter.ai](https://otter.ai) is the leading Zoom transcription tool with speaker identification:
+
+**For future meetings:**
+1. Connect Otter.ai to your Zoom account (Settings → Integrations)
+2. Otter.ai joins your next meeting automatically and transcribes in real-time
+3. After the meeting, download the transcript from otter.ai
+
+**For existing recordings:**
+1. Go to [otter.ai](https://otter.ai) → **Import Audio/Video**
+2. Upload your Zoom MP4 recording
+3. Otter.ai transcribes and identifies speakers
+4. Export as .txt, .pdf, or .docx
+
+**Free plan:** 300 minutes/month of transcription.
+
+## Turn a Zoom Transcript into Meeting Notes
+
+Once you have the raw transcript, use this prompt with ChatGPT or Claude:
+
+\`\`\`
+Convert this Zoom meeting transcript into professional meeting notes:
+
+**Meeting Date & Participants:** [extract from transcript]
+**Agenda / Purpose:** [1 sentence]
+**Key Discussion Points:** [5-7 bullet points]
+**Decisions Made:** [list each decision with context]
+**Action Items:** [table with: Who | What | Due Date]
+**Next Meeting / Follow-up:** [if mentioned]
+
+Keep it concise — one page maximum.
+
+[paste full transcript here]
+\`\`\`
+
+## Zoom vs Other Meeting Transcription
+
+| Tool | Cost | Accuracy | Speaker ID | Works on Recordings |
+|------|------|----------|-----------|-------------------|
+| Zoom built-in | Pro plan only | Good | ✅ | ✅ |
+| Whisper (local) | Free | Very high | ❌ | ✅ |
+| Otter.ai | Free 300min/mo | Very high | ✅ | ✅ |
+| Fireflies.ai | Free (limited) | Very high | ✅ | ✅ |
+
+For most users on free Zoom plans, **Whisper** is the best option — free, accurate, and works on any saved MP4 recording.
+
+## Related Guides
+
+- [Zoom Transcription: How to Get a Full Transcript of Any Zoom Meeting](/blog/zoom-transcription)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [M4A to Transcript: Convert M4A Audio Files to Text Free](/blog/m4a-to-transcript)
+    `.trim(),
+  },
+
+  'interview-transcript-template': {
+    title: 'Interview Transcript Template: Free Formats for Any Interview (2026)',
+    description: 'Free interview transcript templates for research, journalism, podcasts, and job interviews. Includes AI transcription shortcuts and formatting best practices.',
+    category: 'Guide',
+    date: 'May 29, 2026',
+    readTime: '4 min read',
+    content: `
+A clean, well-formatted interview transcript makes your content searchable, quotable, and reusable. Here are free templates for every type of interview, plus the fastest ways to generate a transcript automatically.
+
+## Template 1: Standard Interview Transcript (Research/Journalism)
+
+\`\`\`
+INTERVIEW TRANSCRIPT
+=====================
+Interviewee: [Full Name, Title, Organization]
+Interviewer: [Your Name]
+Date: [Date]
+Location/Platform: [In-person / Zoom / Phone]
+Duration: [00:00]
+Transcribed by: [Name or "AI-generated, reviewed by X"]
+
+NOTE: This transcript has been lightly edited for clarity.
+[OR: This is a verbatim transcript.]
+
+---
+
+INTERVIEWER: [Question or statement here]
+
+INTERVIEWEE: [Response here. Each speaker turn gets its own paragraph.
+Break long responses into separate paragraphs for readability.]
+
+[00:05:30]
+
+INTERVIEWER: [Next question]
+
+INTERVIEWEE: [Response...]
+
+---
+[END OF TRANSCRIPT]
+Total word count: [X words]
+\`\`\`
+
+## Template 2: Podcast Interview Transcript
+
+\`\`\`
+[PODCAST NAME] — Episode [Number]
+"[Episode Title]"
+
+GUEST: [Guest Name, Title]
+HOST: [Host Name]
+PUBLISHED: [Date]
+DURATION: [00:00:00]
+
+---
+
+[INTRO MUSIC / SOUND CUE]
+
+HOST: Welcome to [Podcast Name]. I'm [Host], and today I'm joined by
+[Guest Name], who is [brief description]. [Guest], thanks for being here.
+
+GUEST: Thanks for having me, [Host name].
+
+[00:01:15]
+
+HOST: Let's start with...
+
+---
+[END OF EPISODE TRANSCRIPT]
+\`\`\`
+
+## Template 3: Job Interview Transcript (HR/Hiring)
+
+\`\`\`
+INTERVIEW RECORD
+================
+Candidate: [Full Name]
+Position: [Job Title]
+Interviewers: [Names and titles]
+Date: [Date]
+Interview Type: [Phone / Video / In-person]
+Interview Round: [First / Second / Final]
+
+CONFIDENTIAL — For internal HR use only
+
+---
+
+QUESTION 1: [Interview question]
+RESPONSE: [Candidate's answer verbatim or paraphrased]
+NOTES: [Interviewer observations]
+
+QUESTION 2: [Question]
+RESPONSE: [Answer]
+NOTES:
+
+---
+OVERALL IMPRESSIONS:
+
+RECOMMENDATION: [ ] Move forward  [ ] Hold  [ ] Decline
+NEXT STEPS:
+\`\`\`
+
+## Template 4: Research Interview (Academic)
+
+\`\`\`
+RESEARCH INTERVIEW TRANSCRIPT
+==============================
+Study/Project: [Title]
+Participant ID: [P001] (anonymized)
+Interviewer: [Name]
+Date: [Date]
+Consent obtained: [ ] Yes
+Recording: [ ] Audio only  [ ] Video
+
+[Identifying details have been changed to protect participant anonymity]
+
+---
+
+I: [Interviewer question]
+
+P: [Participant response — verbatim, including filler words for qualitative
+analysis: "um," "uh," repetitions, self-corrections]
+
+I: Can you tell me more about that?
+
+P: [...]
+
+---
+[END OF TRANSCRIPT — [X] pages, [X] words]
+Transcribed: [Date]
+Member-checked: [ ] Yes  [ ] No
+\`\`\`
+
+## How to Auto-Generate an Interview Transcript
+
+For video or audio interviews, AI transcription is dramatically faster than typing:
+
+**For YouTube interviews:**
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube URL
+3. Get the full transcript in under 10 seconds — free, no sign-up
+
+**For recorded files (MP3, MP4, M4A, WAV):**
+\`\`\`
+pip install openai-whisper
+whisper interview.mp4 --model medium --output_format txt
+\`\`\`
+
+Whisper produces a timestamped transcript. Then apply your preferred template format above.
+
+**For better speaker identification (multiple interviewers/guests):**
+Use [AssemblyAI](https://www.assemblyai.com) with speaker diarization enabled — it labels each speaker automatically (Speaker A, Speaker B, etc.).
+
+## Transcript Accuracy Tips
+
+- **Record in a quiet environment** — reduces transcription errors significantly
+- **Ask speakers to state their name** at the start — helps speaker identification tools
+- **Avoid crosstalk** — when multiple people speak simultaneously, AI accuracy drops
+- **Use a directional microphone** — reduces background noise pickup
+- **Review and correct proper nouns** — names, brands, and technical terms are most often wrong
+
+## Verbatim vs Clean Transcription: Which to Use?
+
+| Type | Use Case |
+|------|----------|
+| **Verbatim** | Legal, court reporting, academic qualitative research |
+| **Clean/Intelligent** | Journalism, blog posts, podcasts, business content |
+| **Edited** | Published articles, show notes, marketing content |
+
+For most content creation and business purposes, **clean transcription** (filler words removed, punctuation corrected) is more appropriate and readable.
+
+## Related Guides
+
+- [How to Write a Transcript for a Video (Template + AI Method)](/blog/how-to-write-video-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [Zoom Transcription: How to Get a Full Transcript of Any Zoom Meeting](/blog/zoom-transcription)
+    `.trim(),
+  },
+
   'tactiq-alternative': {
     title: 'Tactiq Alternative: Best Free YouTube Transcript Tools Without the Extension (2026)',
     description: 'Looking for a Tactiq alternative? Compare VidText AI vs Tactiq for YouTube transcripts — no Chrome extension required, no sign-up, completely free.',
