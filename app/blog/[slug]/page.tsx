@@ -5878,6 +5878,1080 @@ No sign-up required. Works on any public YouTube video with captions or auto-gen
 - [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
     `.trim(),
   },
+
+  'tactiq-alternative': {
+    title: 'Tactiq Alternative: Best Free YouTube Transcript Tools Without the Extension (2026)',
+    description: 'Looking for a Tactiq alternative? Compare VidText AI vs Tactiq for YouTube transcripts — no Chrome extension required, no sign-up, completely free.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '5 min read',
+    content: `
+**Bottom line:** If you want a Tactiq alternative that requires no Chrome extension and no sign-up, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest free option — paste any YouTube URL and get the full transcript in under 10 seconds.
+
+## What Is Tactiq?
+
+[Tactiq](https://tactiq.io) is a Chrome extension that provides real-time transcription for YouTube videos and virtual meetings (Google Meet, Zoom, Teams). It overlays a live transcript on the video and lets you highlight and save key moments.
+
+Tactiq is a well-built tool — but it comes with significant constraints for many users:
+
+- **Requires a Chrome extension** — you must install it in your browser
+- **Requires a Tactiq account** — sign-up is mandatory to use most features
+- **Free plan is limited** — 10 AI summaries per month, limited transcript exports
+- **Only works in Chrome/Edge** — Safari and Firefox users are excluded
+- **Meeting-focused** — designed primarily for Google Meet, Teams, Zoom
+
+If you just want to get a YouTube video transcript quickly without installing anything, Tactiq is overkill.
+
+## VidText AI vs Tactiq: Full Comparison
+
+| Feature | VidText AI | Tactiq |
+|---------|-----------|--------|
+| **Chrome extension required** | ❌ No | ✅ Yes |
+| **Sign-up required** | ❌ No | ✅ Yes |
+| **Free transcript** | ✅ Unlimited | ✅ Limited |
+| **AI summary** | ✅ Free (3/day) | ✅ 10/month free |
+| **Blog post generation** | ✅ Yes | ❌ No |
+| **Study notes** | ✅ Yes | ❌ No |
+| **Shorts scripts** | ✅ Yes | ❌ No |
+| **Works in Safari/Firefox** | ✅ Yes | ❌ No |
+| **YouTube focus** | ✅ Primary | ⚠️ Secondary |
+| **Meeting transcription** | ❌ No | ✅ Yes |
+| **Paid plan** | $9/mo (coming) | $12/mo |
+
+**VidText AI wins for:** YouTube-only users, anyone who doesn't want to install extensions, Safari/Firefox users, content creators who need blog posts and notes.
+
+**Tactiq wins for:** Real-time meeting transcription (Google Meet, Zoom, Teams), users who want to highlight while watching.
+
+## How to Use VidText AI Instead of Tactiq
+
+Getting a YouTube transcript with VidText AI takes 3 steps:
+
+1. Copy the YouTube video URL from your browser
+2. Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL → get the full transcript in under 10 seconds
+
+No installation. No account. Works on any browser, any device.
+
+From the same transcript, you can also:
+- Generate an AI **summary** with key points
+- Create a **blog post** from the video content
+- Make structured **study notes**
+- Write **YouTube Shorts scripts**
+
+## Other Tactiq Alternatives Worth Considering
+
+### Glasp
+[Glasp](https://glasp.co) is a social highlighting tool for YouTube and web content. Like Tactiq, it requires a Chrome extension, but the free plan is more generous. Best for users who want to annotate and highlight specific moments.
+
+### NoteGPT
+[NoteGPT](https://notegpt.io) provides YouTube AI summaries and notes. Requires an account but has a generous free tier. Works as a Chrome extension and web app.
+
+### YouTube's Built-In Transcript
+YouTube has a built-in transcript viewer — no tools needed:
+1. Click **⋮** below any video
+2. Select **Open transcript**
+
+This gives you the raw caption text but no AI features. Good for a quick look without any tools.
+
+### Otter.ai (For Meetings)
+If your primary need is **meeting transcription** rather than YouTube, [Otter.ai](https://otter.ai) is the leading Tactiq alternative with 300 free minutes/month and real-time transcription for Zoom, Teams, and Google Meet.
+
+## Why People Switch From Tactiq to VidText AI
+
+**"I just want to get a YouTube transcript without installing anything"**
+VidText AI is browser-based — no extension, no account, paste and go.
+
+**"I need more than just a transcript"**
+VidText AI generates blog posts, summaries, notes, and Shorts scripts from the same video in one click. Tactiq only gives you the transcript and basic summary.
+
+**"I use Safari or Firefox"**
+Tactiq only works in Chromium-based browsers. VidText AI works everywhere.
+
+**"I hit the free limit on Tactiq"**
+VidText AI gives unlimited free transcripts and 3 AI generations per day — no subscription needed.
+
+## Related Guides
+
+- [Best YouTube Transcript Tools in 2026](/blog/best-youtube-transcript-tools)
+- [Best YouTube Transcript & Note-Taking Chrome Extensions](/blog/youtube-transcript-chrome-extension)
+- [Can ChatGPT Transcribe Audio?](/blog/can-chatgpt-transcribe-audio)
+    `.trim(),
+  },
+
+  'instagram-transcript': {
+    title: 'Instagram Transcript: How to Get a Transcript of Any Instagram Reel (Free)',
+    description: 'Get a free transcript of any Instagram Reel or video — no login, no app download required. Step-by-step guide for creators, researchers, and marketers.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** Instagram doesn't have a built-in transcript feature. To get a transcript of an Instagram Reel or video, you need to download the audio and run it through a transcription tool — or use Instagram's own caption feature if you own the content. Full methods below.
+
+## Why Get an Instagram Transcript?
+
+Common reasons people transcribe Instagram content:
+
+- **Content repurposing** — turn a Reel into a blog post, newsletter, or Twitter thread
+- **Accessibility** — create captions for your own Reels
+- **Research** — extract quotes from influencer or brand content
+- **SEO** — add transcript text to your video posts for better indexing
+- **Study** — save key information from educational Instagram content
+
+## Method 1: Download + Whisper (Any Reel, Free)
+
+The most reliable method for transcribing any public Instagram Reel:
+
+**Step 1 — Download the Reel video/audio**
+Use a browser tool like [SnapInsta](https://snapinsta.app) or [SaveFrom.net](https://savefrom.net) to download the Reel as an MP4 file. Paste the Instagram Reel URL and download.
+
+**Step 2 — Transcribe with OpenAI Whisper**
+\`\`\`
+pip install openai-whisper
+whisper reel.mp4 --model small --output_format txt
+\`\`\`
+
+Whisper extracts the audio and returns a full text transcript. Takes about 30 seconds for a typical 60-second Reel.
+
+**Step 3 — Edit and use**
+The transcript is saved as a .txt file. Open it in any text editor to copy, edit, or use as the basis for a blog post.
+
+**Cost:** Free. Works offline. No account required.
+
+## Method 2: Instagram's Auto-Captions (Your Own Reels)
+
+If you're creating Reels and want a transcript of your own content, Instagram has a built-in auto-captions feature:
+
+1. Open the Instagram app → create a new Reel
+2. After recording, tap **Stickers** → **Captions**
+3. Instagram auto-generates captions using speech recognition
+4. Edit any errors → publish
+
+The caption text isn't exported as a file, but you can read and copy the generated text from within the app.
+
+**For existing Reels you've published:**
+Go to the Reel → tap **⋮** → **Edit** → **Stickers** → **Captions** to add auto-captions retroactively.
+
+## Method 3: Rev.com or AssemblyAI (Highest Accuracy)
+
+For professional-quality transcription of Instagram content:
+
+**Rev.com:** Upload any video file and get a human-reviewed transcript within hours. Cost: $1.50/minute. Best for high-stakes content (legal, medical, journalism).
+
+**AssemblyAI API:** Programmatic transcription with speaker identification. Free 100-hour trial.
+\`\`\`python
+import assemblyai as aai
+aai.settings.api_key = "YOUR_KEY"
+transcriber = aai.Transcriber()
+transcript = transcriber.transcribe("reel.mp4")
+print(transcript.text)
+\`\`\`
+
+## Method 4: Descript (Best for Creators)
+
+If you produce Instagram content and want to transcribe and edit it:
+
+1. Export your Reel video from your phone to your computer
+2. Upload to [Descript](https://www.descript.com) (free: 1 hour/month)
+3. Descript auto-transcribes on upload
+4. Export transcript as .txt or .docx
+
+Descript also lets you edit the video by editing the transcript text — delete a word in the transcript and the video audio is automatically cut.
+
+## Transcribing Instagram Reels vs YouTube Videos
+
+| Platform | Built-In Transcript | Best Free Method |
+|----------|--------------------|--------------------|
+| YouTube | ✅ Yes (auto-captions) | VidText AI — paste URL, instant |
+| Instagram | ❌ No | Download MP4 + Whisper |
+| TikTok | ❌ No (limited) | Download MP4 + Whisper |
+| Spotify | ✅ Partial (some podcasts) | Spotify app transcript view |
+
+For YouTube videos, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest option — no download required. For Instagram, the download + Whisper workflow is currently the most reliable free method.
+
+## Turn an Instagram Reel Transcript into a Blog Post
+
+Once you have the transcript text:
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript) → paste your YouTube equivalent (if available) OR
+2. Use this ChatGPT prompt with your transcript:
+
+\`\`\`
+Turn this Instagram Reel transcript into a blog post.
+Write a strong introduction, 3-4 H2 sections expanding on the key points,
+include the best quotes from the speaker, and end with a CTA.
+Target length: 600-800 words.
+
+[paste transcript]
+\`\`\`
+
+## Related Guides
+
+- [Podcast Transcripts: How to Transcribe Any Podcast Free](/blog/podcast-and-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [TikTok Transcript: How to Transcribe Any TikTok Video Free](/blog/tiktok-transcript)
+    `.trim(),
+  },
+
+  'tiktok-transcript': {
+    title: 'TikTok Transcript: How to Transcribe Any TikTok Video Free (2026)',
+    description: 'Get a full text transcript of any TikTok video free — for research, content repurposing, captions, or accessibility. No special app required.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** TikTok doesn't have a built-in transcript export. To transcribe a TikTok video, download the video and run it through OpenAI Whisper (free) or use TikTok's built-in auto-captions if you're the creator. Full methods below.
+
+## Why Transcribe TikTok Videos?
+
+- **Content repurposing** — convert TikTok scripts into blog posts, tweets, or newsletters
+- **Caption creation** — generate accurate captions for your own TikTok videos
+- **Research** — extract quotes from creators or brand content for analysis
+- **Accessibility** — make TikTok content readable for deaf and hard-of-hearing viewers
+- **Learning** — save key insights from educational TikToks without rewatching
+
+## Method 1: Download + Whisper (Any TikTok, Free)
+
+The most reliable method for transcribing any public TikTok video:
+
+**Step 1 — Download the TikTok video (without watermark)**
+Use [SnapTik](https://snaptik.app) or [SSSTikTok](https://ssstiktok.io) — paste the TikTok URL and download the MP4 without a watermark.
+
+**Step 2 — Transcribe with Whisper**
+\`\`\`
+pip install openai-whisper
+whisper tiktok.mp4 --model small --output_format txt
+\`\`\`
+
+Whisper transcribes a 60-second TikTok in about 15-20 seconds on a standard laptop.
+
+**Get an SRT file with timestamps:**
+\`\`\`
+whisper tiktok.mp4 --model small --output_format srt
+\`\`\`
+
+**Cost:** Free. Works offline. Supports 99 languages.
+
+## Method 2: TikTok Auto-Captions (Your Own Videos)
+
+TikTok has a built-in auto-caption feature for creators:
+
+**When uploading a new video:**
+1. After recording or uploading your video in TikTok
+2. On the editing screen, tap **Captions**
+3. TikTok auto-generates captions using speech recognition
+4. Review and edit any errors
+5. Post — captions appear as a text overlay
+
+**For existing videos:**
+Currently TikTok doesn't allow adding auto-captions to already-posted videos. You'd need to re-upload with captions enabled.
+
+**Limitation:** TikTok's auto-captions are displayed as on-screen text overlays only — you can't export the caption text as a file.
+
+## Method 3: TikTok Creator Tools (Web)
+
+TikTok's web creator interface provides some caption editing:
+
+1. Go to [TikTok Studio](https://studio.tiktok.com) (web)
+2. Select your video → **Edit**
+3. Click **Captions** → TikTok shows the auto-generated caption text
+4. You can copy the text from the caption editor
+
+This only works for **your own videos** and requires a TikTok account.
+
+## Method 4: CapCut Auto-Captions (No Code, Fast)
+
+CapCut is TikTok's sister app — it has excellent auto-caption generation:
+
+1. Import your TikTok video into CapCut (download TikTok video first)
+2. Tap **Text** → **Auto Captions**
+3. CapCut generates captions automatically
+4. You can read, edit, and copy the caption text
+5. Export the video with burned-in captions, or export the .SRT file
+
+**Best for:** Creators who use CapCut to edit TikToks anyway.
+
+## TikTok vs YouTube Transcription
+
+| | TikTok | YouTube |
+|--|--------|---------|
+| **Built-in transcript** | ❌ No | ✅ Yes |
+| **Auto-captions** | ✅ For creators | ✅ For all videos |
+| **Free transcript without download** | ❌ | ✅ VidText AI |
+| **Best free method** | Download + Whisper | VidText AI |
+| **Time needed** | ~2-3 min | <10 seconds |
+
+For YouTube videos, [VidText AI](https://www.vidtextai.com/tools/transcript) is dramatically faster — no download required, just paste the URL. For TikTok, Whisper is the best free option available.
+
+## Turn a TikTok Transcript into a Blog Post
+
+Once you have the transcript text from your TikTok:
+
+\`\`\`
+Convert this TikTok script into a blog post.
+The original was a short-form video, so expand each point with 2-3 sentences of context.
+Add an introduction, use H2 headers for each main point, and add a conclusion.
+Target length: 500-800 words. Keep the tone casual and direct.
+
+[paste transcript]
+\`\`\`
+
+For YouTube-based content, use [VidText AI's blog generator](https://www.vidtextai.com/tools/blog) to go from video URL to blog post in one click.
+
+## Related Guides
+
+- [Instagram Transcript: How to Get a Transcript of Any Instagram Reel](/blog/instagram-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+    `.trim(),
+  },
+
+  'spotify-podcast-transcript': {
+    title: 'Spotify Podcast Transcript: How to Get a Transcript of Any Spotify Podcast (2026)',
+    description: 'Get a full transcript of any Spotify podcast episode free — using Spotify\'s built-in feature, Whisper, or third-party tools. No special software required.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '4 min read',
+    content: `
+**Quick answer:** Spotify has built-in transcripts for many podcasts — tap the speech bubble icon in the episode player. If the podcast doesn't have Spotify transcripts, download the episode and use OpenAI Whisper (free) to transcribe it. Full guide below.
+
+## Method 1: Spotify's Built-In Transcript (Easiest)
+
+Spotify added automatic podcast transcripts in 2024. Here's how to access them:
+
+**On iPhone (iOS):**
+1. Open the Spotify app → play any podcast episode
+2. Tap the episode to open the Now Playing screen
+3. Look for the **speech bubble icon** (transcript button) in the bottom controls
+4. Tap it — the full transcript opens and scrolls alongside playback
+
+**On Android:**
+1. Play the episode → tap the episode artwork to expand
+2. Swipe up on the player → look for **Transcript** tab
+3. If available, tap to open the scrolling transcript
+
+**On Desktop:**
+1. Play the episode in Spotify (web or app)
+2. Look for the **Transcript** button in the episode detail panel
+3. Click to open — text highlights in real-time as audio plays
+
+**Important:** Not all podcasts have Spotify transcripts. Availability depends on whether the podcast host has enabled it. Popular podcasts from major networks are most likely to have them.
+
+## What to Do When Spotify Transcript Isn't Available
+
+If the podcast doesn't have Spotify transcripts, here are your options:
+
+### Option A: Find It on YouTube
+
+Many podcasts upload full episodes to YouTube. If so:
+1. Search for the podcast episode title on YouTube
+2. If found, paste the YouTube URL into [VidText AI](https://www.vidtextai.com/tools/transcript)
+3. Get the full transcript in under 10 seconds — free, no sign-up
+
+This is the fastest option when available.
+
+### Option B: Download + Whisper (Any Episode)
+
+**Step 1 — Download the podcast episode**
+- Use the Spotify app's **Download** feature (requires Premium) to save the episode
+- Or find the podcast's RSS feed and download the MP3 directly
+- Many podcast websites also link to direct MP3 downloads
+
+**Step 2 — Transcribe with Whisper**
+\`\`\`
+pip install openai-whisper
+whisper episode.mp3 --model medium --output_format txt
+\`\`\`
+
+For a 1-hour episode, this takes 4-8 minutes on a standard laptop. The \`medium\` model gives the best balance of accuracy and speed for speech content.
+
+**Step 3 — Review and use the transcript**
+The output is saved as \`episode.txt\` in the same folder. Open in any text editor to copy, edit, or repurpose.
+
+### Option C: Podcast Website Show Notes
+
+Many podcasts publish transcripts directly on their website. Before transcribing manually:
+1. Go to the podcast's website
+2. Find the episode page
+3. Check for a "Transcript" or "Show Notes" tab below the player
+
+Podcasts that commonly publish full transcripts: Tim Ferriss Show, Lex Fridman, Huberman Lab, Diary of a CEO.
+
+## Spotify Transcript Accuracy
+
+Spotify uses automatic speech recognition (ASR) for transcripts — similar accuracy to YouTube's auto-captions:
+
+- ~90-95% accurate for clear, native-speaker English
+- Lower accuracy for: strong accents, technical jargon, multiple speakers talking simultaneously, background music
+- Spotify allows podcast creators to review and correct transcripts in Spotify for Podcasters
+
+## Use Cases: What to Do With a Podcast Transcript
+
+| Use Case | How |
+|----------|-----|
+| **Study notes** | Paste into ChatGPT → "Extract the 10 most important insights" |
+| **Blog post** | Paste into ChatGPT → "Convert to a 1000-word blog post" |
+| **Show notes** | Extract timestamps and key topics for episode page SEO |
+| **Quote cards** | Find the best 1-2 sentence quotes for social media |
+| **Translation** | Paste into DeepL for other-language versions |
+
+## Comparing Podcast Transcript Options
+
+| Method | Cost | Works Without Premium | Accuracy | Speed |
+|--------|------|-----------------------|----------|-------|
+| Spotify built-in | Free | ✅ | Good | Instant |
+| YouTube + VidText AI | Free | ✅ | High | <10 sec |
+| Whisper (local) | Free | ✅ | Very high | 4-8 min/hr |
+| Rev.com | $1.50/min | ✅ | Highest | Hours |
+| Descript | Free 1hr/mo | ✅ | Very high | 2-3 min |
+
+## Related Guides
+
+- [Podcast Transcripts: How to Transcribe Any Podcast Free](/blog/podcast-and-transcript)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [YouTube Video to Audio: Extract & Transcribe Free](/blog/youtube-video-to-audio)
+    `.trim(),
+  },
+
+  'chatgpt-vs-claude-transcript': {
+    title: 'ChatGPT vs Claude for Summarizing Transcripts: Which Is Better? (2026)',
+    description: 'Tested both ChatGPT and Claude on the same YouTube transcripts. Here\'s which AI gives better summaries, handles longer videos, and which prompts work best for each.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '5 min read',
+    content: `
+Both ChatGPT and Claude can summarize video transcripts — but they have real differences in quality, context length, and output style. Here's what actually matters when choosing between them.
+
+## The Setup: How to Summarize a Transcript with Either AI
+
+**Step 1:** Get the transcript
+Go to [VidText AI](https://www.vidtextai.com/tools/transcript) → paste any YouTube URL → copy the full transcript. Takes under 10 seconds.
+
+**Step 2:** Paste into your AI of choice with a prompt
+
+**Step 3:** Get your summary
+
+The key difference is what happens in Step 3.
+
+## ChatGPT vs Claude: Head-to-Head Comparison
+
+| Feature | ChatGPT (GPT-4o) | Claude 3.7 Sonnet |
+|---------|-----------------|-------------------|
+| **Free tier** | 40 messages/3 hours | Yes (Claude.ai) |
+| **Context window** | 128K tokens (~90K words) | 200K tokens (~150K words) |
+| **Best for** | Action items, structured output | Analysis, long-form, nuance |
+| **Tone** | Direct, formatted | Conversational, thorough |
+| **Speed** | Faster | Slightly slower |
+| **Max video length** | ~3-4 hours of transcript | ~5-6 hours of transcript |
+
+## Where ChatGPT Wins
+
+**1. Structured output and formatting**
+ChatGPT (GPT-4o) reliably produces clean bullet points, numbered lists, and tables. If you need a summary in a specific format — executive brief, action item list, Twitter thread — ChatGPT follows format instructions more consistently.
+
+**2. Speed**
+GPT-4o is noticeably faster at generating responses for short-to-medium transcripts (under 30 minutes of video).
+
+**3. Integration**
+ChatGPT has more integrations with tools like Notion, Zapier, and various APIs for automation workflows.
+
+**Best ChatGPT prompt for transcripts:**
+\`\`\`
+Summarize this transcript in exactly this format:
+
+**Main Topic:** (1 sentence)
+**Key Points:** (5 bullet points, each starting with an action verb)
+**Best Quote:** (the single most memorable line)
+**Action Items:** (what the viewer should do based on this content)
+
+[paste transcript]
+\`\`\`
+
+## Where Claude Wins
+
+**1. Longer transcripts**
+Claude's 200K token context window handles longer videos without truncation. For 2+ hour lectures, conference talks, or podcast episodes, Claude processes the full transcript while ChatGPT may need chunking.
+
+**2. Nuanced analysis**
+Claude tends to capture more subtle themes and underlying arguments. For academic content, legal discussions, or complex technical topics, Claude's summaries are often more analytically complete.
+
+**3. Critical thinking**
+Claude is better at identifying what's *not* said, spotting contradictions, or offering a balanced perspective on opinionated content.
+
+**4. Writing quality**
+For turning a transcript into flowing prose — a blog post, newsletter section, or essay — Claude's output tends to read more naturally.
+
+**Best Claude prompt for transcripts:**
+\`\`\`
+Read this transcript carefully and provide:
+1. A one-paragraph overview of the main argument or topic
+2. The 5 most important insights (not just summaries — actual insights the speaker reveals)
+3. Any claims that seem questionable or that lack supporting evidence
+4. The single best takeaway someone could apply today
+
+[paste transcript]
+\`\`\`
+
+## Which Should You Use?
+
+**Use ChatGPT when:**
+- You need fast, structured output (bullet points, tables, action items)
+- The video is under 1 hour
+- You're feeding the output into another workflow (Notion, Zapier, etc.)
+- You need consistent formatting for templates
+
+**Use Claude when:**
+- The video is over 1 hour (longer context window)
+- You need analytical depth or critical perspective
+- You're writing long-form content from the transcript
+- You're analyzing dense, technical, or nuanced material
+
+## Skip the Prompting Entirely
+
+If you just want a clean YouTube video summary without pasting transcripts and crafting prompts, [VidText AI](https://www.vidtextai.com/tools/summary) summarizes any YouTube video in one click:
+
+1. Paste the YouTube URL
+2. Click **Summarize**
+3. Get a structured summary in under 30 seconds
+
+Free, no sign-up, no context window limits to manage.
+
+## Gemini as a Third Option
+
+Google's Gemini 1.5 Pro has a **1 million token context window** — the largest of any consumer AI. For very long transcripts (full-day conferences, 8-hour lectures), Gemini handles content that would overflow both ChatGPT and Claude.
+
+Gemini is available free at [gemini.google.com](https://gemini.google.com). Use the same prompt structure as Claude.
+
+## Related Guides
+
+- [Best Video Summarizer Prompts for ChatGPT, Claude & Gemini](/blog/video-summarizer-prompt)
+- [Can ChatGPT Summarize a YouTube Video?](/blog/chatgpt-summarize-youtube-video)
+- [Best YouTube Video Summarizer Prompts for ChatGPT & AI](/blog/best-youtube-summarizer-prompts)
+    `.trim(),
+  },
+
+  'm4a-to-transcript': {
+    title: 'M4A to Transcript: How to Convert M4A Audio Files to Text Free (2026)',
+    description: 'Convert any .M4A audio file to a text transcript free — voice memos, iPhone recordings, podcast exports, and meeting audio. No upload required with Whisper.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '4 min read',
+    content: `
+**Fastest method:** Install OpenAI Whisper and run \`whisper recording.m4a --output_format txt\` — completely free, works offline, no upload required. Full guide below.
+
+## What Is an M4A File?
+
+M4A (MPEG-4 Audio) is Apple's standard audio format. M4A files are created by:
+- **iPhone Voice Memos** — the default format for recorded memos
+- **QuickTime** — when exporting audio from Mac
+- **GarageBand** — exported audio tracks
+- **Podcast apps** — many podcasts download as M4A
+- **Zoom/Teams** — some meeting recordings export as M4A
+
+M4A files are essentially AAC audio inside an MPEG-4 container — high quality, small file size, widely compatible.
+
+## Method 1: OpenAI Whisper (Free, Best Accuracy)
+
+Whisper is OpenAI's open-source transcription model. It accepts M4A files directly and runs entirely on your machine — no file uploads, no internet connection needed after installation.
+
+**Install:**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Transcribe M4A to text:**
+\`\`\`
+whisper recording.m4a --output_format txt
+\`\`\`
+
+**Get an SRT file with timestamps:**
+\`\`\`
+whisper recording.m4a --output_format srt
+\`\`\`
+
+**For better accuracy (slower):**
+\`\`\`
+whisper recording.m4a --model medium --output_format txt
+\`\`\`
+
+**Recommended models:**
+
+| Model | Accuracy | Speed | RAM |
+|-------|----------|-------|-----|
+| tiny | Basic | Very fast | ~1GB |
+| base | Good | Fast | ~1GB |
+| small | Better | Moderate | ~2GB |
+| **medium** | **High** | **Moderate** | **~5GB** |
+| large | Best | Slow | ~10GB |
+
+For voice memos and meetings, \`small\` or \`medium\` gives excellent results.
+
+## Method 2: Convert M4A to MP3 First (If Needed)
+
+Most tools accept M4A directly — but if you encounter compatibility issues, convert to MP3 first using FFmpeg (free):
+
+\`\`\`
+ffmpeg -i recording.m4a -codec:a libmp3lame -qscale:a 2 recording.mp3
+\`\`\`
+
+Then transcribe the MP3 with any tool of your choice.
+
+## Method 3: AssemblyAI (Online API, Speaker Labels)
+
+For M4A files where you need to identify who said what (multiple speakers):
+
+\`\`\`python
+import assemblyai as aai
+
+aai.settings.api_key = "YOUR_API_KEY"
+config = aai.TranscriptionConfig(speaker_labels=True)
+transcriber = aai.Transcriber()
+transcript = transcriber.transcribe("recording.m4a", config=config)
+
+for utterance in transcript.utterances:
+    print(f"Speaker {utterance.speaker}: {utterance.text}")
+\`\`\`
+
+**Free tier:** 100 hours at signup. Great for interview transcriptions.
+
+## Method 4: Descript (No Code)
+
+1. Sign up at [descript.com](https://www.descript.com) (free: 1 hour/month)
+2. Click **New Project** → **Import File**
+3. Upload your M4A file
+4. Descript auto-transcribes on upload
+5. **File** → **Export** → **Transcript** → **.txt** or **.docx**
+
+## M4A Transcription Use Cases
+
+| Source | Use Case | Best Method |
+|--------|----------|-------------|
+| iPhone Voice Memo | Meeting notes, interview | Whisper |
+| Podcast episode (M4A download) | Show notes, blog post | Whisper or Descript |
+| Zoom recording (M4A export) | Meeting minutes, action items | Whisper + ChatGPT summary |
+| GarageBand audio | Lyrics transcription | Whisper |
+| Language learning audio | Study notes | Whisper |
+
+## Turn Your M4A Transcript into Content
+
+Once you have the transcript text, use these prompts with ChatGPT or Claude:
+
+**For meeting notes:**
+\`\`\`
+Convert this meeting transcript into structured meeting notes with:
+- Key decisions made
+- Action items (who, what, by when)
+- Open questions
+Keep it under one page.
+[paste transcript]
+\`\`\`
+
+**For a podcast show notes page:**
+\`\`\`
+Create show notes for this podcast transcript:
+- 3-sentence episode summary
+- 5 key takeaways (bullet points)
+- Resources mentioned
+- Best quote from the episode
+[paste transcript]
+\`\`\`
+
+For YouTube content, [VidText AI](https://www.vidtextai.com/tools/transcript) handles everything automatically — no command line needed.
+
+## Related Guides
+
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+- [MP4 to Transcript: How to Convert Any Video to Text Free](/blog/mp4-to-transcript)
+- [Zoom Transcription: How to Get a Full Transcript of Any Zoom Meeting](/blog/zoom-transcription)
+    `.trim(),
+  },
+
+  'how-to-turn-on-captions-youtube': {
+    title: 'How to Turn On Captions on YouTube (Every Device, 2026)',
+    description: 'Turn on YouTube captions in one click — on desktop, iPhone, Android, and TV. Includes how to change caption language, size, and style.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '3 min read',
+    content: `
+**Fastest way:** On desktop, press **C** on your keyboard while the video is playing. On mobile, tap the video → tap **CC** in the controls. That's it — captions appear instantly on any YouTube video.
+
+## Turn On Captions on YouTube Desktop (PC/Mac)
+
+**Method 1 — Keyboard shortcut (fastest):**
+Press **C** while watching any YouTube video. Press **C** again to turn them off.
+
+**Method 2 — Click the CC button:**
+1. Play any YouTube video
+2. Look for the **CC** button in the bottom right of the player controls
+3. Click it to toggle captions on/off
+
+**Method 3 — Via Settings:**
+1. Click the **⚙️ Settings** icon in the video controls
+2. Select **Subtitles/CC**
+3. Choose a language from the list
+
+## Turn On Captions on YouTube iPhone/iPad
+
+1. Play the YouTube video in the app
+2. Tap the video once to show controls
+3. Tap the **CC** button in the top-right corner of the video
+4. Captions appear on screen
+
+If you don't see the CC button, the video may not have captions available. YouTube only shows the CC button when a caption track exists (auto-generated or manually uploaded).
+
+## Turn On Captions on YouTube Android
+
+1. Open the YouTube app → play a video
+2. Tap the video to show controls
+3. Tap the **CC** icon (top right of the video)
+4. Select your preferred caption language
+
+## Turn On Captions on YouTube TV (Smart TV / Roku / Fire TV)
+
+1. Play a video on YouTube TV app
+2. Press **Select** or **OK** on your remote while the video is playing
+3. Navigate to the **CC** icon using the directional pad
+4. Press **Select/OK** to enable captions
+
+On most smart TVs, you can also enable captions via the TV's system accessibility settings, which applies globally to all apps.
+
+## Change Caption Language on YouTube
+
+YouTube videos may have multiple caption tracks (English, Spanish, auto-generated, etc.):
+
+**Desktop:**
+1. Click **⚙️ Settings** → **Subtitles/CC**
+2. Select **Auto-translate** if you want any language
+3. Or choose a specific available track
+
+**Mobile:**
+1. Tap the three-dot **⋮** menu → **Captions**
+2. Select your preferred language
+
+## Change Caption Size and Style
+
+**Desktop:**
+1. Click **⚙️ Settings** → **Subtitles/CC** → **Caption options**
+2. Adjust: **Font family**, **Font color**, **Font size**, **Background color**, **Background opacity**, **Window color**
+
+**iPhone/iPad:**
+Caption appearance is controlled by iOS accessibility settings:
+1. Go to iOS **Settings** → **Accessibility** → **Subtitles & Captioning**
+2. Tap **Style** → customize font, size, color, and background
+
+## Turn On Captions for All YouTube Videos (Default)
+
+To make captions always on by default on YouTube desktop:
+
+1. Click your **profile picture** (top right) → **Settings**
+2. Go to **Playback and performance**
+3. Enable **Always show captions**
+
+Now captions will automatically turn on for every video, even without pressing C.
+
+## What If Captions Don't Work or Look Wrong?
+
+**No CC button visible:** The video has no caption track. Not all YouTube videos have captions — this is common for older videos, very new uploads (auto-captions take a few hours), or videos in less common languages.
+
+**Captions are inaccurate:** YouTube's auto-generated captions use speech recognition that's ~90-95% accurate for clear English. For corrected captions, the video creator needs to manually edit and upload a caption file.
+
+**Want to get the full transcript text:** Open the transcript panel — click **⋮** below the video → **Open transcript**. Or use [VidText AI](https://www.vidtextai.com/tools/transcript) for a clean, copyable version.
+
+## Related Guides
+
+- [What Are Captions? (Video Captions Explained Simply)](/blog/what-are-captions)
+- [Closed Captions vs Subtitles: What's the Difference?](/blog/closed-captions-vs-subtitles)
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+    `.trim(),
+  },
+
+  'how-to-save-youtube-transcript': {
+    title: 'How to Save a YouTube Transcript (Download as Text File, 2026)',
+    description: 'Save the transcript from any YouTube video as a text file — free, no sign-up, no extension required. 3 methods that work in under 30 seconds.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '3 min read',
+    content: `
+**Fastest method:** Go to [VidText AI](https://www.vidtextai.com/tools/transcript), paste the YouTube URL, get the full transcript, and copy or download it in under 10 seconds. Free, no account required.
+
+## 3 Ways to Save a YouTube Transcript
+
+### Method 1: VidText AI (Fastest — Download in Seconds)
+
+1. Copy the YouTube video URL from your browser
+2. Open [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript)
+3. Paste the URL and click **Get Transcript**
+4. The full timestamped transcript appears
+5. Click **Copy** to copy to clipboard, or select all text and **Ctrl+S** to save
+
+Works with any public YouTube video that has captions. Takes under 10 seconds.
+
+### Method 2: YouTube's Built-In Transcript (No Tools)
+
+YouTube provides a transcript panel directly in the video player:
+
+1. Open any YouTube video in a **desktop browser**
+2. Click the **⋮** (three-dot menu) below the video
+3. Select **Open transcript**
+4. The transcript panel appears on the right with timestamps
+
+**To save it as a text file:**
+1. Click inside the transcript panel
+2. Press **Ctrl+A** (Windows) or **Cmd+A** (Mac) to select all text
+3. Press **Ctrl+C** / **Cmd+C** to copy
+4. Open Notepad (Windows) or TextEdit (Mac)
+5. Paste and save as .txt
+
+**To remove timestamps before saving:**
+In the transcript panel, click the **⋮** menu (inside the panel) → toggle off **Show timestamps**.
+
+### Method 3: YouTube Studio (For Your Own Videos — .SRT Format)
+
+If you own the video and want a properly formatted subtitle file:
+
+1. Go to [studio.youtube.com](https://studio.youtube.com)
+2. Click **Subtitles** in the left sidebar
+3. Find your video → click **⋮** next to the subtitle track
+4. Click **Download** → choose **.srt**, **.vtt**, or **.sbv**
+
+This gives you a professionally formatted subtitle file for use in video editors.
+
+## What Format Should You Save the Transcript In?
+
+| Format | Best For |
+|--------|----------|
+| **.txt** | Reading, notes, blog posts, AI input |
+| **.srt** | Video editors, adding captions to other videos |
+| **.vtt** | Web players, YouTube re-upload |
+| **.docx** | Sharing with colleagues, editing in Word |
+
+For most uses — notes, research, blog posts, AI summaries — plain **.txt** is perfect.
+
+## What to Do With a Saved YouTube Transcript
+
+**Create study notes:**
+Paste the .txt into ChatGPT → *"Extract the 10 most important concepts from this transcript with a one-sentence explanation of each."*
+
+**Write a blog post:**
+Use [VidText AI's blog generator](https://www.vidtextai.com/tools/blog) to go from YouTube URL → formatted blog post in one click.
+
+**Get an AI summary:**
+Use [VidText AI's summary tool](https://www.vidtextai.com/tools/summary) → paste URL → structured summary in 30 seconds.
+
+**Translate to another language:**
+Paste the saved transcript into [DeepL](https://www.deepl.com) for high-quality translation.
+
+**Search for specific quotes:**
+Open the saved .txt in any text editor → Ctrl+F to search any word or phrase.
+
+## Related Guides
+
+- [How to See, Get & Download a YouTube Transcript (4 Ways)](/blog/how-to-see-transcript-on-youtube)
+- [How to Open, View & Save a YouTube Transcript](/blog/how-to-open-transcript-on-youtube)
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+    `.trim(),
+  },
+
+  'download-youtube-video-with-captions': {
+    title: 'Download YouTube Video With Captions Embedded (Free, 2026)',
+    description: 'Download any YouTube video with captions burned in or as a separate subtitle file — free tools compared, step-by-step guide, no software required for most methods.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '4 min read',
+    content: `
+**Just need the caption text?** [VidText AI](https://www.vidtextai.com/tools/transcript) gives you the full caption text from any YouTube video in under 10 seconds — free, no download, no sign-up. For downloading the video file with captions, read on.
+
+## Two Types of "Download with Captions"
+
+There are two different things people mean by "download YouTube video with captions":
+
+1. **Download the video + a separate subtitle file (.SRT)** — video and captions as separate files
+2. **Download the video with captions burned in** — captions permanently visible in the video frame (hard-coded)
+
+Both are covered below.
+
+## Method 1: Download Caption Text Only (Fastest)
+
+If you just need the caption text (for notes, translation, or repurposing content):
+
+1. Go to [VidText AI](https://www.vidtextai.com/tools/transcript)
+2. Paste the YouTube video URL
+3. Get the full timestamped caption text instantly
+
+This gives you the complete caption content without downloading any video file.
+
+## Method 2: yt-dlp — Video + Subtitle File (Separate)
+
+yt-dlp is the most powerful free tool for downloading YouTube videos with subtitle files:
+
+**Install:**
+\`\`\`
+pip install yt-dlp
+\`\`\`
+
+**Download video + auto-generated subtitle file:**
+\`\`\`
+yt-dlp --write-auto-subs --sub-lang en --convert-subs srt "VIDEO_URL"
+\`\`\`
+
+This downloads:
+- The video file (MP4)
+- A separate \`video-title.en.srt\` subtitle file
+
+**Download video + all available subtitle languages:**
+\`\`\`
+yt-dlp --write-subs --all-subs "VIDEO_URL"
+\`\`\`
+
+**Download subtitle file only (no video):**
+\`\`\`
+yt-dlp --write-auto-subs --skip-download --sub-lang en --convert-subs srt "VIDEO_URL"
+\`\`\`
+
+The SRT file can then be imported into any video editor or player.
+
+## Method 3: Burn Captions Into the Video (FFmpeg)
+
+Once you have the video and SRT file, burn the captions permanently into the video:
+
+\`\`\`
+ffmpeg -i video.mp4 -vf subtitles=subtitles.srt output_with_captions.mp4
+\`\`\`
+
+The output video has captions permanently embedded — no separate file needed. Viewers see them on any player, even without subtitle support.
+
+**Style the captions (font size, color, position):**
+\`\`\`
+ffmpeg -i video.mp4 -vf "subtitles=subtitles.srt:force_style='FontSize=24,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000'" output.mp4
+\`\`\`
+
+## Method 4: CapCut (No Code — Burn-In Captions)
+
+For creators who want to add captions to a downloaded video without command line:
+
+1. Import the video into CapCut
+2. **Captions** → **Auto Captions** (generate new) OR **Import** → upload the .SRT file
+3. Customize caption style (font, size, color, position)
+4. **Export** → the video exports with burned-in captions
+
+## Why You'd Want YouTube Videos With Captions
+
+- **Repurpose for other platforms** — Instagram, TikTok, LinkedIn require burned-in captions for silent autoplay
+- **Accessibility** — ensure captions are always visible regardless of player
+- **Translation** — add a translated subtitle file for international audiences
+- **Editing** — use the SRT as reference while editing the video in Premiere or DaVinci
+
+## Getting Just the Caption File (Your Own Videos)
+
+For videos you own, YouTube Studio provides direct subtitle file downloads:
+
+1. Go to [studio.youtube.com](https://studio.youtube.com) → **Subtitles**
+2. Select your video → **⋮** → **Download**
+3. Choose .srt, .vtt, or .sbv
+
+## Related Guides
+
+- [How to Download Subtitles from YouTube (Free, Any Format)](/blog/download-subtitles-from-youtube)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+- [YouTube Caption Downloader: How to Download Captions Free](/blog/youtube-caption-downloader)
+    `.trim(),
+  },
+
+  'tiktok-caption-downloader': {
+    title: 'TikTok Caption Downloader: How to Download TikTok Captions Free (2026)',
+    description: 'Download captions and subtitles from any TikTok video free — as text or SRT format. No special app required, works on any device.',
+    category: 'Guide',
+    date: 'May 28, 2026',
+    readTime: '3 min read',
+    content: `
+**Quick answer:** TikTok doesn't offer direct caption file downloads. To get TikTok captions, download the video and run it through OpenAI Whisper (free) to generate a transcript or SRT caption file. For your own TikTok videos, use CapCut to export captions.
+
+## Method 1: Download TikTok Video + Whisper (Any Video)
+
+**Step 1 — Download the TikTok video**
+Use [SnapTik](https://snaptik.app) or [SSSTikTok](https://ssstiktok.io):
+1. Copy the TikTok video URL from the app (Share → Copy Link)
+2. Paste into the downloader website
+3. Download the MP4 file (without watermark)
+
+**Step 2 — Generate captions with Whisper**
+\`\`\`
+pip install openai-whisper
+\`\`\`
+
+**Get plain text transcript:**
+\`\`\`
+whisper tiktok.mp4 --model small --output_format txt
+\`\`\`
+
+**Get SRT caption file with timestamps:**
+\`\`\`
+whisper tiktok.mp4 --model small --output_format srt
+\`\`\`
+
+For a 60-second TikTok, Whisper runs in about 15 seconds. The output files are saved in the same folder as the video.
+
+**Cost:** Free. Works offline. Supports 99 languages.
+
+## Method 2: CapCut (For Your Own TikToks)
+
+CapCut (TikTok's sister editing app) generates captions from your videos and lets you export them:
+
+1. Import your TikTok video into CapCut
+2. Tap **Text** → **Auto Captions**
+3. CapCut generates captions automatically
+4. Review and edit any errors
+5. To export: **Share** → **Export SRT** (available on desktop version)
+
+**CapCut desktop** offers more export options including SRT file export.
+
+## Method 3: TikTok's Built-In Captions (Creator View)
+
+If you created the TikTok video, you can view and edit auto-generated captions in TikTok Studio:
+
+1. Go to [TikTok Studio](https://studio.tiktok.com)
+2. Find your video → **Edit**
+3. Click **Captions** to view the auto-generated caption text
+4. You can manually copy the caption text from the editor
+
+**Limitation:** TikTok Studio doesn't offer a direct "download caption file" button — you'd need to copy and paste the text manually.
+
+## Method 4: Descript (Best for Repurposing)
+
+If you want to transcribe TikTok content and repurpose it:
+
+1. Download the TikTok video (Step 1 above)
+2. Upload to [Descript](https://www.descript.com) (free: 1 hour/month)
+3. Descript auto-transcribes on import
+4. Export caption text as .txt, .docx, or .srt
+
+Descript also lets you edit the video by editing the transcript.
+
+## What to Do With TikTok Captions
+
+- **Re-upload with captions to Instagram Reels** — burn captions into the video using CapCut
+- **Create a blog post** — paste the transcript text into ChatGPT to expand it into an article
+- **Cross-post to YouTube** — upload the video to YouTube and add the .SRT file as a caption track
+- **Translate for international audiences** — paste the transcript into DeepL to create a translated caption file
+- **Accessibility** — ensure your content is accessible to deaf and hard-of-hearing audiences
+
+## TikTok vs YouTube Caption Download
+
+| | TikTok | YouTube |
+|--|--------|---------|
+| **Built-in caption download** | ❌ | ✅ (YouTube Studio) |
+| **Third-party caption download** | Via Whisper | VidText AI, yt-dlp |
+| **Ease of getting captions** | Harder (need download first) | Very easy |
+| **Auto-caption quality** | Good (via CapCut) | Good (YouTube AI) |
+
+For YouTube videos, [VidText AI](https://www.vidtextai.com/tools/transcript) gives you captions in under 10 seconds — no download needed. TikTok requires more steps since there's no direct API access to captions.
+
+## Related Guides
+
+- [TikTok Transcript: How to Transcribe Any TikTok Video Free](/blog/tiktok-transcript)
+- [Video to SRT: How to Convert Any Video to a Subtitle File](/blog/video-to-srt)
+- [Audio to Transcript: Convert Any Audio File to Text Free](/blog/audio-to-transcript)
+    `.trim(),
+  },
 }
 
 
