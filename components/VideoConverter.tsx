@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe, FileText } from 'lucide-react'
+import { Search, Loader2, Copy, Download, CheckCircle2, RefreshCw, Zap, Globe, FileText, History, ChevronDown, ChevronUp, Settings2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -12,10 +12,12 @@ import { formatTimestamp, wordCount, extractVideoId } from '@/lib/utils'
 
 const MODES: { id: ProcessingMode; label: string; desc: string; emoji: string }[] = [
   { id: 'transcript', label: 'Transcript', desc: 'Full timestamped text', emoji: '📝' },
-  { id: 'summary', label: 'Summary', desc: 'Key points & takeaways', emoji: '✨' },
-  { id: 'blog', label: 'Blog Post', desc: 'SEO-ready article', emoji: '📖' },
-  { id: 'notes', label: 'Study Notes', desc: 'Structured notes', emoji: '🗒️' },
-  { id: 'shorts', label: 'Shorts Script', desc: '3-5 short scripts', emoji: '🎬' },
+  { id: 'summary',    label: 'Summary',    desc: 'Key points & takeaways', emoji: '✨' },
+  { id: 'blog',       label: 'Blog Post',  desc: 'SEO-ready article', emoji: '📖' },
+  { id: 'notes',      label: 'Study Notes',desc: 'Structured notes', emoji: '🗒️' },
+  { id: 'shorts',     label: 'Shorts',     desc: '3-5 short scripts', emoji: '🎬' },
+  { id: 'thread',     label: 'X Thread',   desc: 'Twitter/X thread', emoji: '🐦' },
+  { id: 'linkedin',   label: 'LinkedIn',   desc: 'LinkedIn post', emoji: '💼' },
 ]
 
 const LANGUAGES = [
@@ -43,6 +45,14 @@ interface ProcessResult {
   cached: boolean
 }
 
+interface HistoryItem {
+  videoId: string
+  title: string
+  thumbnailUrl: string
+  url: string
+  savedAt: number
+}
+
 // ─── Markdown renderer ───────────────────────────────────────────────────────
 function renderMarkdown(raw: string): string {
   const lines = raw.split('\n')
@@ -54,15 +64,12 @@ function renderMarkdown(raw: string): string {
     const line = lines[i]
     const trimmed = line.trim()
 
-    // Horizontal rule
     if (/^-{3,}$/.test(trimmed) || /^\*{3,}$/.test(trimmed)) {
       if (inList) { out.push('</ul>'); inList = false }
       if (inOl) { out.push('</ol>'); inOl = false }
       out.push('<hr class="my-4 border-gray-200" />')
       continue
     }
-
-    // Headings
     if (trimmed.startsWith('### ')) {
       if (inList) { out.push('</ul>'); inList = false }
       if (inOl) { out.push('</ol>'); inOl = false }
@@ -81,32 +88,24 @@ function renderMarkdown(raw: string): string {
       out.push(`<h1 class="text-xl font-bold text-gray-900 mt-6 mb-3">${inlineFormat(trimmed.slice(2))}</h1>`)
       continue
     }
-
-    // Bullet list: - or *
     if (/^[-*]\s+/.test(trimmed)) {
       if (inOl) { out.push('</ol>'); inOl = false }
       if (!inList) { out.push('<ul class="my-2 space-y-1 pl-5">'); inList = true }
       out.push(`<li class="list-disc text-gray-700 leading-relaxed">${inlineFormat(trimmed.replace(/^[-*]\s+/, ''))}</li>`)
       continue
     }
-
-    // Numbered list
     if (/^\d+\.\s+/.test(trimmed)) {
       if (inList) { out.push('</ul>'); inList = false }
       if (!inOl) { out.push('<ol class="my-2 space-y-1 pl-5">'); inOl = true }
       out.push(`<li class="list-decimal text-gray-700 leading-relaxed">${inlineFormat(trimmed.replace(/^\d+\.\s+/, ''))}</li>`)
       continue
     }
-
-    // Close list on blank line
     if (trimmed === '') {
       if (inList) { out.push('</ul>'); inList = false }
       if (inOl) { out.push('</ol>'); inOl = false }
       out.push('<div class="h-2"></div>')
       continue
     }
-
-    // Paragraph
     if (inList) { out.push('</ul>'); inList = false }
     if (inOl) { out.push('</ol>'); inOl = false }
     out.push(`<p class="text-gray-700 leading-relaxed">${inlineFormat(trimmed)}</p>`)
@@ -123,7 +122,8 @@ function inlineFormat(text: string): string {
     .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
     .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-1 rounded text-sm font-mono">$1</code>')
 }
-// ─── Cookie-based usage tracker (persists across page refreshes) ─────────────
+
+// ─── Cookie-based usage tracker ───────────────────────────────────────────────
 const FREE_LIMIT = 3
 
 function getCookieKey(): string {
@@ -146,6 +146,41 @@ function saveUsedToCookie(used: number): void {
   tomorrow.setUTCHours(24, 0, 0, 0)
   document.cookie = `${key}=${used}; expires=${tomorrow.toUTCString()}; path=/; SameSite=Strict`
 }
+
+// ─── SRT format helper ────────────────────────────────────────────────────────
+function toSrtTime(seconds: number): string {
+  const h = Math.floor(seconds / 3600)
+  const m = Math.floor((seconds % 3600) / 60)
+  const s = Math.floor(seconds % 60)
+  const ms = Math.round((seconds % 1) * 1000)
+  return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')},${String(ms).padStart(3,'0')}`
+}
+
+function buildSrt(segments: TranscriptSegment[]): string {
+  return segments.map((seg, i) => {
+    const start = toSrtTime(seg.start)
+    const end = toSrtTime(seg.start + (seg.duration || 3))
+    return `${i + 1}\n${start} --> ${end}\n${seg.text}`
+  }).join('\n\n')
+}
+
+// ─── Local history helpers ────────────────────────────────────────────────────
+const HISTORY_KEY = 'vidtext_history'
+const HISTORY_MAX = 10
+
+function loadHistory(): HistoryItem[] {
+  if (typeof window === 'undefined') return []
+  try {
+    const raw = localStorage.getItem(HISTORY_KEY)
+    return raw ? JSON.parse(raw) : []
+  } catch { return [] }
+}
+
+function saveHistory(items: HistoryItem[]): void {
+  if (typeof window === 'undefined') return
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(items)) } catch { /* ignore */ }
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface VideoConverterProps {
@@ -168,6 +203,12 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
   const [isPro, setIsPro] = useState(false)
   const [proToken, setProToken] = useState<string | null>(null)
   const [proChecked, setProChecked] = useState(false)
+  // New feature state
+  const [customPrompt, setCustomPrompt] = useState('')
+  const [showCustomPrompt, setShowCustomPrompt] = useState(false)
+  const [history, setHistory] = useState<HistoryItem[]>([])
+  const [showHistory, setShowHistory] = useState(false)
+
   const playerRef = useRef<any>(null)
   const playerContainerRef = useRef<HTMLDivElement>(null)
 
@@ -218,23 +259,35 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [transcriptData])
 
-  // Load usage from cookie on mount + check pro token
+  // Load usage from cookie + pro token + history on mount
   useEffect(() => {
-    // Check Pro status from localStorage
     const token = localStorage.getItem('vidtext_pro_token')
     if (token) {
       setProToken(token)
       setIsPro(true)
-      setRemaining(999) // Pro = effectively unlimited
+      setRemaining(999)
     } else {
-      // Free tier: load usage from cookie
       const used = getUsedFromCookie()
       setUsedCount(used)
       setRemaining(Math.max(0, FREE_LIMIT - used))
       if (used >= FREE_LIMIT) setShowUpgrade(true)
     }
     setProChecked(true)
+    setHistory(loadHistory())
   }, [])
+
+  // Save to history when a video successfully loads
+  useEffect(() => {
+    if (!transcriptData?.videoInfo || !url) return
+    const { videoId: vid, title, thumbnailUrl } = transcriptData.videoInfo
+    const item: HistoryItem = { videoId: vid, title, thumbnailUrl, url, savedAt: Date.now() }
+    setHistory(prev => {
+      const updated = [item, ...prev.filter(h => h.videoId !== vid)].slice(0, HISTORY_MAX)
+      saveHistory(updated)
+      return updated
+    })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [transcriptData?.videoInfo])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -245,6 +298,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     setTranscriptData(null)
     setResults({})
     setActiveMode(initialMode)
+    setShowHistory(false)
 
     try {
       const res = await fetch(`/api/transcript?url=${encodeURIComponent(url)}`)
@@ -284,8 +338,11 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          url, mode: selectedMode, language,
+          url,
+          mode: selectedMode,
+          language,
           ...(proToken ? { pro_token: proToken } : {}),
+          ...(customPrompt.trim() ? { customPrompt: customPrompt.trim() } : {}),
         }),
       })
       const data = await res.json()
@@ -303,7 +360,6 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         return
       }
 
-      // Update remaining count — Pro users skip this
       if (!data.cached && !isPro) {
         const newUsed = usedCount + 1
         const newRemaining = Math.max(0, FREE_LIMIT - newUsed)
@@ -332,6 +388,14 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     return results[modeId]?.content || ''
   }
 
+  function getDownloadFilename(modeId: ProcessingMode, ext = 'txt'): string {
+    const title = transcriptData?.videoInfo?.title
+    const slug = title
+      ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50)
+      : modeId
+    return `${slug}-${modeId}.${ext}`
+  }
+
   function handleCopy(modeId: ProcessingMode) {
     const text = getTabText(modeId)
     if (!text) return
@@ -346,8 +410,37 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     const blob = new Blob([text], { type: 'text/plain' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = `${modeId}.txt`
+    a.download = getDownloadFilename(modeId, 'txt')
     a.click()
+  }
+
+  function handleDownloadSrt() {
+    if (!transcriptData?.transcript.length) return
+    const srt = buildSrt(transcriptData.transcript)
+    const blob = new Blob([srt], { type: 'text/plain' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = getDownloadFilename('transcript', 'srt')
+    a.click()
+  }
+
+  function handleHistoryClick(item: HistoryItem) {
+    setUrl(item.url)
+    setShowHistory(false)
+  }
+
+  function clearHistory() {
+    setHistory([])
+    saveHistory([])
+  }
+
+  const generateDesc: Partial<Record<ProcessingMode, string>> = {
+    summary:  'Get a concise overview with key points',
+    blog:     'Turn this video into an SEO blog post',
+    notes:    'Extract structured study notes',
+    shorts:   'Create short-form video scripts',
+    thread:   'Turn key insights into a Twitter/X thread',
+    linkedin: 'Create a LinkedIn post from this video',
   }
 
   return (
@@ -358,6 +451,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
           <Input
             value={url}
             onChange={(e) => setUrl(e.target.value)}
+            onFocus={() => !transcriptData && history.length > 0 && setShowHistory(true)}
             placeholder="Paste YouTube URL here..."
             className="h-11 text-sm flex-1 min-w-0"
           />
@@ -374,7 +468,6 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
             value={language}
             onChange={(e) => {
               setLanguage(e.target.value)
-              // Clear cached results when language changes
               setResults({})
             }}
             className="h-11 w-full sm:w-auto appearance-none rounded-lg border border-input bg-background pl-8 pr-8 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-ring cursor-pointer text-gray-700"
@@ -388,6 +481,48 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         </div>
       </form>
 
+      {/* Recent History panel */}
+      {showHistory && !transcriptData && history.length > 0 && (
+        <div className="mt-1 rounded-xl border border-gray-200 bg-white shadow-lg z-20 relative">
+          <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100">
+            <span className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+              <History className="h-3.5 w-3.5" /> Recent
+            </span>
+            <button
+              type="button"
+              onClick={clearHistory}
+              className="text-xs text-gray-400 hover:text-red-500 transition-colors"
+            >
+              Clear
+            </button>
+          </div>
+          <div className="divide-y divide-gray-50">
+            {history.slice(0, 5).map((item) => (
+              <button
+                key={item.videoId}
+                type="button"
+                onClick={() => handleHistoryClick(item)}
+                className="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-gray-50 transition-colors text-left"
+              >
+                <img
+                  src={item.thumbnailUrl}
+                  alt={item.title}
+                  className="h-9 w-16 rounded object-cover shrink-0"
+                />
+                <span className="text-sm text-gray-700 line-clamp-1 flex-1">{item.title}</span>
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowHistory(false)}
+            className="w-full py-2 text-xs text-gray-400 hover:text-gray-600 border-t border-gray-100 transition-colors"
+          >
+            Close
+          </button>
+        </div>
+      )}
+
       {/* Upgrade modal */}
       {showUpgrade && (
         <UpgradePrompt
@@ -397,7 +532,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         />
       )}
 
-      {/* Usage indicator — only render after pro check to avoid flash */}
+      {/* Usage indicator */}
       <div className={`mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400 transition-opacity ${proChecked ? 'opacity-100' : 'opacity-0'}`}>
         {isPro ? (
           <div className="flex items-center gap-1.5 text-amber-600 font-medium">
@@ -455,14 +590,14 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         </div>
       )}
 
-      {/* YouTube embed — shows after transcript loads */}
+      {/* YouTube embed */}
       {transcriptData && videoId && (
         <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 bg-black">
           <div ref={playerContainerRef} className="w-full aspect-video" />
         </div>
       )}
 
-      {/* Language hint (shown after transcript loads for AI tabs) */}
+      {/* Language hint */}
       {transcriptData && language !== 'en' && (
         <div className="mt-2 flex items-center gap-1.5 text-xs text-blue-600 bg-blue-50 rounded-lg px-3 py-1.5 border border-blue-100">
           <Globe className="h-3 w-3 shrink-0" />
@@ -484,14 +619,43 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
                 <TabsTrigger
                   key={m.id}
                   value={m.id}
-                  className="flex-1 min-w-[3.5rem] flex-col h-auto py-2 px-1 text-xs gap-0.5 rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-red-600 whitespace-nowrap"
+                  className="flex-1 min-w-[3rem] flex-col h-auto py-2 px-1 text-xs gap-0.5 rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:text-red-600 whitespace-nowrap"
                 >
                   <span className="text-base leading-none">{m.emoji}</span>
                   <span className="font-semibold text-[10px] leading-none mt-0.5 hidden xs:block sm:block">{m.label}</span>
-                  <span className="text-[9px] opacity-60 hidden lg:block leading-none mt-0.5">{m.desc}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
+
+            {/* Custom Prompt toggle */}
+            <div className="mt-2">
+              <button
+                type="button"
+                onClick={() => setShowCustomPrompt(v => !v)}
+                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors py-1"
+              >
+                <Settings2 className="h-3.5 w-3.5" />
+                <span>Custom instruction</span>
+                {showCustomPrompt ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                {customPrompt.trim() && (
+                  <span className="ml-1 rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] font-medium text-red-600">active</span>
+                )}
+              </button>
+              {showCustomPrompt && (
+                <div className="mt-1.5 rounded-lg border border-gray-200 bg-gray-50 p-3">
+                  <textarea
+                    value={customPrompt}
+                    onChange={(e) => setCustomPrompt(e.target.value)}
+                    placeholder='e.g. "Summarize for a 10-year-old" or "Focus only on actionable tips" or "Use a formal academic tone"'
+                    rows={2}
+                    className="w-full resize-none rounded-md border border-gray-200 bg-white px-3 py-2 text-xs text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-red-400"
+                  />
+                  <p className="mt-1 text-[10px] text-gray-400">
+                    This instruction will be applied when you generate any AI content. Clear to use default prompts.
+                  </p>
+                </div>
+              )}
+            </div>
 
             {MODES.map((m) => {
               const hasContent = m.id === 'transcript'
@@ -552,11 +716,23 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
                             size="sm"
                             className="h-7 w-7 p-0 sm:w-auto sm:px-2 text-xs text-gray-500 hover:text-gray-700"
                             onClick={() => handleDownload(m.id)}
-                            title="Download"
+                            title="Download .txt"
                           >
                             <Download className="h-3.5 w-3.5" />
                             <span className="ml-1 hidden sm:inline">Save</span>
                           </Button>
+                          {/* SRT download — transcript tab only */}
+                          {m.id === 'transcript' && (
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-7 px-2 text-xs text-gray-500 hover:text-gray-700 hidden sm:flex"
+                              onClick={handleDownloadSrt}
+                              title="Download .srt subtitle file"
+                            >
+                              .srt
+                            </Button>
+                          )}
                         </div>
                       )}
                     </div>
@@ -564,7 +740,6 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
                     {/* Content Area */}
                     <div className="max-h-[480px] overflow-y-auto sm:max-h-[560px]">
                       {m.id === 'transcript' ? (
-                        /* Transcript: timestamped lines */
                         <div className="divide-y divide-gray-50">
                           {videoId && (
                             <div className="px-3 py-2 bg-red-50 border-b border-red-100 flex items-center gap-1.5 text-xs text-red-600">
@@ -586,28 +761,27 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
                           ))}
                         </div>
                       ) : isLoading ? (
-                        /* Loading state */
                         <div className="flex flex-col items-center justify-center py-16 gap-3 sm:py-20">
                           <Loader2 className="h-8 w-8 animate-spin text-red-500" />
                           <p className="text-sm text-gray-500">Generating {m.label} with AI...</p>
                           <p className="text-xs text-gray-400">This may take 10–30 seconds</p>
                         </div>
                       ) : results[m.id] ? (
-                        /* Rendered markdown content */
                         <div
                           className="px-4 py-4 text-left sm:px-6 sm:py-5"
                           dangerouslySetInnerHTML={{ __html: renderMarkdown(results[m.id]!.content) }}
                         />
                       ) : (
-                        /* Generate button */
                         <div className="flex flex-col items-center justify-center py-12 gap-3 sm:py-16 px-4">
                           <div className="text-3xl">{m.emoji}</div>
                           <p className="text-sm text-gray-400 text-center">
-                            {m.id === 'summary' && 'Get a concise overview with key points'}
-                            {m.id === 'blog' && 'Turn this video into an SEO blog post'}
-                            {m.id === 'notes' && 'Extract structured study notes'}
-                            {m.id === 'shorts' && 'Create short-form video scripts'}
+                            {generateDesc[m.id] || `Generate ${m.label}`}
                           </p>
+                          {customPrompt.trim() && (
+                            <p className="text-xs text-red-500 bg-red-50 rounded-lg px-3 py-1.5 text-center">
+                              ⚙ Custom instruction active
+                            </p>
+                          )}
                           {language !== 'en' && (
                             <p className="text-xs text-blue-500">
                               Output: {LANGUAGES.find(l => l.code === language)?.label}

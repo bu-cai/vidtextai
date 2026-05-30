@@ -6,6 +6,8 @@ export type ProcessingMode =
   | 'blog'
   | 'notes'
   | 'shorts'
+  | 'thread'
+  | 'linkedin'
 
 export interface VideoInfo {
   videoId: string

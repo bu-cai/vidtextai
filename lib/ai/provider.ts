@@ -24,6 +24,10 @@ function buildSystemPrompt(mode: ProcessingMode): string {
       'You are a professional note-taker. Extract the key points, important concepts, action items, and memorable quotes from this transcript. Format as structured study notes with clear sections.',
     shorts:
       'You are a YouTube Shorts/TikTok script writer. Create 3-5 short-form video scripts based on the most engaging parts of this transcript. Each script should be 30-60 seconds when read aloud. Include hook, main point, and call to action.',
+    thread:
+      'You are a social media expert. Transform this YouTube video transcript into an engaging Twitter/X thread. Format as numbered tweets (1/, 2/, 3/ etc.). Each tweet must be under 280 characters. Start with a compelling hook tweet, write 5-8 content tweets with the key insights, and end with a summary/CTA tweet. Add 2-3 relevant hashtags in the final tweet only. Make it punchy and shareable.',
+    linkedin:
+      'You are a LinkedIn content strategist. Transform this YouTube video transcript into a high-performing LinkedIn post. Rules: (1) Start with a bold hook sentence — do NOT start with "I". (2) Use short paragraphs of 1-3 lines with blank lines between them. (3) Share a clear insight or lesson from the video. (4) End with an open question to drive comments. (5) Add 3-5 relevant hashtags on the last line. Target length: 150-250 words. Make it professional yet conversational.',
   }
   return prompts[mode]
 }
