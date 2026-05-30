@@ -144,6 +144,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full antialiased">
       <head>
+        {/* AI crawler documentation */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="VidText AI — LLM Documentation" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="VidText AI — Full LLM Documentation" />
         {/* Google AdSense */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
