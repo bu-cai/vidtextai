@@ -208,9 +208,15 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
   const [showCustomPrompt, setShowCustomPrompt] = useState(false)
   const [history, setHistory] = useState<HistoryItem[]>([])
   const [showHistory, setShowHistory] = useState(false)
+  // Animation state
+  const [typingContent, setTypingContent] = useState<Partial<Record<ProcessingMode, string>>>({})
+  const [loadingProgress, setLoadingProgress] = useState(0)
+  const [loadingStatus, setLoadingStatus] = useState('')
 
   const playerRef = useRef<any>(null)
   const playerContainerRef = useRef<HTMLDivElement>(null)
+  const typingTimers = useRef<Partial<Record<ProcessingMode, ReturnType<typeof setInterval>>>>({})
+  const progressTimer = useRef<ReturnType<typeof setInterval> | null>(null)
 
   // Load YouTube IFrame API once
   useEffect(() => {
@@ -297,14 +303,17 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     setError('')
     setTranscriptData(null)
     setResults({})
+    setTypingContent({})
     setActiveMode(initialMode)
     setShowHistory(false)
+    startLoadingProgress(true)
 
     try {
       const res = await fetch(`/api/transcript?url=${encodeURIComponent(url)}`)
       const data = await res.json()
 
       if (!res.ok) {
+        completeLoadingProgress()
         const isDisabled = data.error?.includes('disabled') || data.error?.includes('No transcript')
         setError(
           isDisabled
@@ -313,9 +322,11 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         )
         return
       }
+      completeLoadingProgress()
       setTranscriptData(data)
       setVideoId(extractVideoId(url))
     } catch {
+      completeLoadingProgress()
       setError('Network error. Please try again.')
     } finally {
       setLoading(false)
@@ -332,6 +343,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     setLoading(true)
     setError('')
     setActiveMode(selectedMode)
+    startLoadingProgress(false)
 
     try {
       const res = await fetch('/api/process', {
@@ -348,6 +360,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
       const data = await res.json()
 
       if (!res.ok) {
+        completeLoadingProgress()
         if (data.error === 'rate_limit_exceeded') {
           const used = FREE_LIMIT
           setUsedCount(used)
@@ -359,6 +372,8 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         setError(data.error || 'AI processing failed')
         return
       }
+
+      completeLoadingProgress()
 
       if (!data.cached && !isPro) {
         const newUsed = usedCount + 1
@@ -373,6 +388,7 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
         ...prev,
         [selectedMode]: { content: data.content, wordCount: data.wordCount, cached: data.cached },
       }))
+      startTypewriter(selectedMode, data.content)
 
     } catch {
       setError('Network error. Please try again.')
@@ -422,6 +438,58 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
     a.href = URL.createObjectURL(blob)
     a.download = getDownloadFilename('transcript', 'srt')
     a.click()
+  }
+
+  // ── Typewriter effect ─────────────────────────────────────────────────────
+  function startTypewriter(mode: ProcessingMode, content: string) {
+    if (typingTimers.current[mode]) clearInterval(typingTimers.current[mode])
+    setTypingContent(prev => ({ ...prev, [mode]: '' }))
+    let i = 0
+    typingTimers.current[mode] = setInterval(() => {
+      i += 18
+      if (i >= content.length) {
+        setTypingContent(prev => ({ ...prev, [mode]: content }))
+        clearInterval(typingTimers.current[mode])
+      } else {
+        setTypingContent(prev => ({ ...prev, [mode]: content.slice(0, i) }))
+      }
+    }, 16)
+  }
+
+  // ── Progress bar simulation ───────────────────────────────────────────────
+  function startLoadingProgress(isTranscript: boolean) {
+    if (progressTimer.current) clearInterval(progressTimer.current)
+    setLoadingProgress(0)
+    const stages = isTranscript
+      ? [
+          { target: 35, label: 'Connecting to YouTube...' },
+          { target: 70, label: 'Fetching transcript...' },
+          { target: 92, label: 'Processing...' },
+        ]
+      : [
+          { target: 22, label: 'Reading transcript...' },
+          { target: 52, label: 'Analyzing content...' },
+          { target: 78, label: 'Generating with AI...' },
+          { target: 93, label: 'Almost there...' },
+        ]
+    let stageIdx = 0
+    let cur = 0
+    setLoadingStatus(stages[0].label)
+    progressTimer.current = setInterval(() => {
+      if (stageIdx >= stages.length) return
+      const { target, label } = stages[stageIdx]
+      cur = Math.min(cur + 1.5, target)
+      setLoadingProgress(Math.round(cur))
+      setLoadingStatus(label)
+      if (cur >= target) stageIdx++
+    }, 40)
+  }
+
+  function completeLoadingProgress() {
+    if (progressTimer.current) clearInterval(progressTimer.current)
+    setLoadingProgress(100)
+    setLoadingStatus('Done!')
+    setTimeout(() => { setLoadingProgress(0); setLoadingStatus('') }, 700)
   }
 
   function handleHistoryClick(item: HistoryItem) {
@@ -520,6 +588,25 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
           >
             Close
           </button>
+        </div>
+      )}
+
+      {/* Progress bar — shown while fetching transcript */}
+      {loading && !transcriptData && loadingProgress > 0 && (
+        <div className="mt-3 space-y-1.5">
+          <div className="flex items-center justify-between text-xs text-gray-500">
+            <span className="flex items-center gap-1.5">
+              <Loader2 className="h-3 w-3 animate-spin text-red-500" />
+              {loadingStatus}
+            </span>
+            <span className="font-mono tabular-nums text-gray-400">{loadingProgress}%</span>
+          </div>
+          <div className="h-1 w-full rounded-full bg-gray-100 overflow-hidden">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-red-500 to-red-400 transition-all duration-200 ease-out"
+              style={{ width: `${loadingProgress}%` }}
+            />
+          </div>
         </div>
       )}
 
@@ -761,15 +848,28 @@ export function VideoConverter({ initialMode = 'transcript' }: VideoConverterPro
                           ))}
                         </div>
                       ) : isLoading ? (
-                        <div className="flex flex-col items-center justify-center py-16 gap-3 sm:py-20">
-                          <Loader2 className="h-8 w-8 animate-spin text-red-500" />
-                          <p className="text-sm text-gray-500">Generating {m.label} with AI...</p>
-                          <p className="text-xs text-gray-400">This may take 10–30 seconds</p>
+                        <div className="flex flex-col items-center justify-center py-14 gap-4 sm:py-18 px-6">
+                          <div className="w-full max-w-xs space-y-3">
+                            <div className="flex items-center justify-between text-xs text-gray-500">
+                              <span className="flex items-center gap-1.5">
+                                <Loader2 className="h-3.5 w-3.5 animate-spin text-red-500" />
+                                {loadingStatus || `Generating ${m.label}...`}
+                              </span>
+                              <span className="font-mono tabular-nums text-gray-400">{loadingProgress}%</span>
+                            </div>
+                            <div className="h-1.5 w-full rounded-full bg-gray-100 overflow-hidden">
+                              <div
+                                className="h-full rounded-full bg-gradient-to-r from-red-500 to-red-400 transition-all duration-200 ease-out"
+                                style={{ width: `${loadingProgress}%` }}
+                              />
+                            </div>
+                            <p className="text-center text-xs text-gray-400">This may take 10–30 seconds</p>
+                          </div>
                         </div>
                       ) : results[m.id] ? (
                         <div
                           className="px-4 py-4 text-left sm:px-6 sm:py-5"
-                          dangerouslySetInnerHTML={{ __html: renderMarkdown(results[m.id]!.content) }}
+                          dangerouslySetInnerHTML={{ __html: renderMarkdown(typingContent[m.id] ?? results[m.id]!.content) }}
                         />
                       ) : (
                         <div className="flex flex-col items-center justify-center py-12 gap-3 sm:py-16 px-4">
