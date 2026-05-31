@@ -19,6 +19,8 @@ const POSTS: Record<string, {
     date: 'May 15, 2026',
     readTime: '3 min read',
     content: `
+> **Quick answer:** Paste any YouTube URL into [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) — get the full timestamped transcript in under 10 seconds. Free, no sign-up, no extension required.
+
 **The fastest way to get a YouTube transcript:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and get the full timestamped transcript in under 10 seconds — free, no sign-up, no extension required. Works on any public YouTube video with captions.
 
 ## What Is a YouTube Transcript?
@@ -774,6 +776,8 @@ Try [VidText AI Blog Post Generator](https://www.vidtextai.com/tools/blog) free 
     date: 'May 16, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** Click the three-dot menu (⋯) below any YouTube video → "Open transcript." To download it, paste the URL into [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) — free, no sign-up, results in seconds.
+
 ## Why You'd Want to See a YouTube Transcript
 
 Before diving into the how-to, here's why so many people look for YouTube transcripts:
@@ -1234,6 +1238,8 @@ Try [VidText AI](https://www.vidtextai.com) free — get transcripts, summaries,
     date: 'May 17, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** ChatGPT can't access YouTube directly. Get the transcript first at [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript), then paste it into ChatGPT — or use VidText AI's built-in [Summary tool](https://www.vidtextai.com/tools/summary) for a one-click result.
+
 ## Can ChatGPT Summarize a YouTube Video?
 
 Yes — but not directly. ChatGPT cannot watch or access YouTube videos on its own. To summarize a YouTube video with ChatGPT, you first need to get the video's transcript (the text version of what was spoken), then paste it into ChatGPT with a prompt.
@@ -1517,6 +1523,8 @@ Try [VidText AI Caption Downloader](https://www.vidtextai.com/tools/transcript) 
     date: 'May 17, 2026',
     readTime: '6 min read',
     content: `
+> **Quick answer:** The best free YouTube transcript tool in 2026 is [VidText AI](https://www.vidtextai.com/tools/transcript) — no Chrome extension, no sign-up, unlimited free transcripts. Alternatives include Tactiq (requires extension), NoteGPT, and YouTube's built-in transcript viewer.
+
 **Bottom line:** VidText AI is the best free YouTube transcript tool in 2026 for most users — no installation, no sign-up, works on any public video, and outputs AI-powered summaries, blog posts, and study notes in under 30 seconds.
 
 ## Quick Comparison: Top YouTube Transcript Tools
@@ -3028,6 +3036,8 @@ Searching within YouTube transcripts is one of the most powerful ways to save ti
     date: 'May 18, 2026',
     readTime: '4 min read',
     content: `
+> **Quick answer:** On iPhone or Android, open [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) in your mobile browser, paste the YouTube URL, and get the full transcript in seconds — no app download, no account required.
+
 **The fastest way to get a YouTube transcript on your phone:** Open [vidtextai.com](https://www.vidtextai.com) in your mobile browser, paste the YouTube URL, tap Convert, and get the full timestamped transcript instantly — no app download, no account, works on any iPhone or Android.
 
 ## Can You Get YouTube Transcripts on Mobile?
@@ -3135,6 +3145,8 @@ Getting a YouTube transcript on your phone is simple with VidText AI — it work
     date: 'May 18, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** Go to [vidtextai.com](https://www.vidtextai.com), paste the YouTube URL, select your language from the dropdown, and click Generate — get the full content in Spanish, Chinese, French, Japanese, or 7 other languages in under 30 seconds. Free.
+
 **The fastest way to get a translated YouTube transcript:** Go to [VidText AI](https://www.vidtextai.com), paste the YouTube URL, select your target language from the dropdown, and click Generate — you get the full AI content in your language in under 30 seconds. Free, no sign-up.
 
 ## Why Translate YouTube Transcripts?
@@ -3265,6 +3277,8 @@ Translating YouTube transcripts is now a one-click process with VidText AI. Sele
     date: 'May 18, 2026',
     readTime: '4 min read',
     content: `
+> **Quick answer:** Go to [vidtextai.com/tools/summary](https://www.vidtextai.com/tools/summary), paste any YouTube URL, and get a free AI summary in under 30 seconds. No sign-up, no extension needed.
+
 **The fastest free YouTube video summarizer:** Go to [VidText AI Summary Tool](https://www.vidtextai.com/tools/summary), paste any YouTube URL, click Generate — get a full AI summary with key points in under 30 seconds. Completely free, no account required.
 
 ## Why Summarize YouTube Videos?
@@ -3374,6 +3388,8 @@ Summarizing YouTube videos for free has never been easier. VidText AI gives you 
     date: 'May 23, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** ChatGPT can transcribe audio files you upload (GPT-4o), but cannot access YouTube directly. For YouTube transcription, [VidText AI](https://www.vidtextai.com/tools/transcript) is faster and free — paste the URL, get the transcript in under 10 seconds.
+
 **Short answer:** ChatGPT (with GPT-4o) can transcribe audio files you upload, but it cannot access YouTube videos directly. For transcribing YouTube content, [VidText AI](https://www.vidtextai.com/tools/transcript) is faster and completely free — paste a YouTube URL and get the full transcript in under 10 seconds.
 
 ## Can ChatGPT Transcribe Audio Files?
@@ -3747,6 +3763,8 @@ Converting an MP4 to a transcript is free in 2026. For YouTube videos, [VidText 
     date: 'May 24, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** For YouTube audio, paste the URL into [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) — transcript in under 10 seconds, free. For MP3/WAV/M4A files, use OpenAI Whisper: \`whisper audio.mp3 --model medium\` (free, runs locally).
+
 **Fastest method for YouTube audio:** Paste any YouTube URL into [VidText AI](https://www.vidtextai.com/tools/transcript) and get the full transcript in under 10 seconds — free, no sign-up. For MP3, WAV, M4A, and other audio files, see the methods below.
 
 ## What "Audio to Transcript" Means
@@ -3887,6 +3905,8 @@ Once you have the text:
     date: 'May 24, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** Zoom's built-in transcription requires a paid plan. For free accounts: record the meeting locally → run the video through Whisper (\`whisper meeting.mp4 --model medium\`). For real-time, use Otter.ai free tier (300 min/month).
+
 **Quick answer:** Zoom has built-in transcription for paid plans. For free accounts, record the meeting locally and transcribe it with OpenAI Whisper (free) or upload the recording to an AI transcription service. Full guide below.
 
 ## Why Transcribe Zoom Meetings?
@@ -4307,6 +4327,8 @@ For most English-language content creators, the highest-ROI subtitle translation
     date: 'May 24, 2026',
     readTime: '4 min read',
     content: `
+> **Quick answer:** Paste any YouTube URL into [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript) and click Save — downloads as a .txt file instantly. For .srt format, use yt-dlp: \`yt-dlp --write-sub --skip-download [url]\`.
+
 **Fastest method:** Go to [vidtextai.com/tools/transcript](https://www.vidtextai.com/tools/transcript), paste any YouTube URL, and download the subtitle text instantly — free, no sign-up, no extension required.
 
 ## 4 Ways to Download Subtitles from YouTube
@@ -6810,6 +6832,8 @@ For most content creation and business purposes, **clean transcription** (filler
     date: 'May 28, 2026',
     readTime: '5 min read',
     content: `
+> **Quick answer:** The best free Tactiq alternative is [VidText AI](https://www.vidtextai.com) — no Chrome extension, no sign-up, unlimited YouTube transcripts. Tactiq requires both an extension install and a Google account.
+
 **Bottom line:** If you want a Tactiq alternative that requires no Chrome extension and no sign-up, [VidText AI](https://www.vidtextai.com/tools/transcript) is the fastest free option — paste any YouTube URL and get the full transcript in under 10 seconds.
 
 ## What Is Tactiq?
@@ -7909,7 +7933,11 @@ function renderContent(md: string): string {
       continue
     }
     if (inTable) flushTable()
-    if (t.startsWith('## ')) {
+    if (t.startsWith('> ')) {
+      if (inList) { out.push('</ul>'); inList = false }
+      const bq = t.slice(2).replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-red-600 hover:underline font-medium">$1</a>').replace(/`(.*?)`/g, '<code class="bg-green-100 px-1 rounded text-xs font-mono">$1</code>')
+      out.push(`<div class="my-5 rounded-xl border-l-4 border-green-500 bg-green-50 px-5 py-4 text-sm text-gray-800 leading-relaxed">${bq}</div>`)
+    } else if (t.startsWith('## ')) {
       if (inList) { out.push('</ul>'); inList = false }
       out.push(`<h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">${t.slice(3)}</h2>`)
     } else if (t.startsWith('### ')) {
